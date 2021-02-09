@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from "next/link";
 
-import { IHeaderComponent } from "src/interfaces/HeaderComponent";
+import { IHeaderComponent } from "interfaces/index";
 import styles from 'src/styles/Home.module.css';
 import headerStyles from 'src/styles/Header.module.css';
 
@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import React from 'react';
 
-const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logoHeight }) => {
+const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logoHeight, bgHeaderColor }) => {
 
     const [isNavVisible, setNavVisibility] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -29,7 +29,7 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
         };
     }, []);
     
-    const handleMediaQueryChange = mediaQuery => {
+    const handleMediaQueryChange = (mediaQuery : any) => {
         if (mediaQuery.matches) {
             setIsSmallScreen(false);
         } else {
@@ -48,7 +48,7 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
 
-            <header className={headerStyles.Header} sx={{ backgroundColor: "#7a7a7a" }}>
+            <header className={headerStyles.Header} sx={{ backgroundColor: bgHeaderColor }}>
                 <Box>
                     <Image 
                         src={logoUrl}

@@ -1,8 +1,4 @@
-// You can include shared interfaces/types in a separate file
-// and then use them in any component by importing them. For
-// example, to import the interface below do:
-//
-// import { User } from 'path/to/interfaces';
+import { ReactChild } from "react";
 
 export type User = {
   id: number
@@ -12,9 +8,19 @@ export type User = {
 export type IHeaderComponent = {
   logoUrl: string,
   logoWidth: number,
-  logoHeight: number 
+  logoHeight: number,
+  bgHeaderColor: string
 }
 
 export type IFullSection = {
-  bgImage: string
+  bgImage: string,
+  children: ReactChild
+}
+
+export type ISearchForm = {
+
+}
+
+export type IDropDown = {
+  
 }

@@ -1,0 +1,24 @@
+.sectionContainer {
+    width: 100vw;
+    margin-top: 90px;
+    background-image: url("../../assets/images/house.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 575px;
+    display: flex;
+    align-items: center;  
+    justify-content: center;  
+}
+
+
+
+@media (min-width: 1024px) {
+    .sectionContainer {
+        width: 100vw;
+        height: 750px;          
+    }
+}
+
+
