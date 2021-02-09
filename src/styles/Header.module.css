@@ -1,0 +1,100 @@
+.Header {
+    position: fixed;
+    top: 0; /* Stick it to the top */
+    max-height: 90px;
+    height: 100%;
+    width: 100vw;
+
+    display: flex;
+    padding: 0 2.4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Nav {
+    background-color: rgb(82, 82, 82);
+    display: grid;
+    grid-area: nav;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 2rem 0;
+    grid-template-rows: repeat(6, auto);
+    row-gap: 18px;
+    align-items: center;
+    justify-items: center; 
+    width: 100vw;
+}
+
+.Burger {
+    display: inline;
+    grid-area: burger;
+    margin: 0 20px 0 0;
+    padding: 0;
+    justify-self: end;
+    font-size: 40px;
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.1s;
+}
+
+.Burger:active {
+    transform: scale(1.2);
+}
+
+.Nav a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.5s;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.Nav a:hover {
+    transform: scale(1.1);
+}
+
+@media (min-width: 1024px) {
+
+    .Header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;     
+    }
+      
+    .Logo {
+        height: auto;
+        width: auto;        
+    }
+    
+    .Nav {
+        display: flex;    
+        position: initial;    
+        align-items: center;
+        background-color: #fff;
+        padding: 0;
+        width: auto;
+    }
+
+    .Nav a {
+        color: #222;
+        font-size: 18px;
+        font-weight: 500;
+        transition: 0.5s;
+        text-decoration: none;
+        padding: 0 1rem;
+    }
+
+    .Nav a:hover {
+        transform: scale(1.1);
+    }
+    
+    .Burger {
+        display: none;
+    }      
+}

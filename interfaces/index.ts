@@ -8,3 +8,13 @@ export type User = {
   id: number
   name: string
 }
+
+export type IHeaderComponent = {
+  logoUrl: string,
+  logoWidth: number,
+  logoHeight: number 
+}
+
+export type IFullSection = {
+  bgImage: string
+}
