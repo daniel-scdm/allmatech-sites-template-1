@@ -43,6 +43,9 @@ const SearchForm : FC<ISearchForm> = () => {
                             <DropDownComponent 
                                 Label="Preço minimo"
                                 ListOptions={[]}
+                                extraStyles={{
+                                    paddingRight: 25  
+                                }}
                             />  
 
                             <DropDownComponent 
@@ -55,6 +58,9 @@ const SearchForm : FC<ISearchForm> = () => {
                             <DropDownComponent 
                                 Label="Quartos minimo"
                                 ListOptions={[]}
+                                extraStyles={{
+                                    paddingRight: 25  
+                                }}
                             />  
 
                             <DropDownComponent 

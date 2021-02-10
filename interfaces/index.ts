@@ -23,6 +23,6 @@ export type ISearchForm = {
 
 export type IDropDown = {
   ListOptions : Array<String>,
-  Label: String,
-  
+  Label : String,
+  extraStyles? : object
 }

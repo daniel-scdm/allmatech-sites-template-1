@@ -6,10 +6,12 @@ import { IDropDown } from "interfaces/index";
 
 import Form from "src/styles/Form.module.css";
 
-const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions }) => {
+const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions, extraStyles }) => {
 
     return (
-        <div className={Form.DropDownContainer}>
+        <div className={Form.DropDownContainer}
+            sx={extraStyles}
+        >
             <label>
                 {Label}
             </label>

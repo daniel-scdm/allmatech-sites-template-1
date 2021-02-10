@@ -1,5 +1,4 @@
 .sectionContainer {
-    width: 100vw;
     margin-top: 90px;
     background-image: url("../../assets/images/house.jpg");
     background-repeat: no-repeat;
@@ -12,12 +11,26 @@
     justify-content: center;  
 }
 
+.sectionDiv {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.catchPhrase {
+    display: none;
+}
+
 
 
 @media (min-width: 1024px) {
     .sectionContainer {
         width: 100vw;
         height: 750px;          
+    }
+
+    .catchPhrase {
+        display: block;
     }
 }
 
