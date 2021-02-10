@@ -1,17 +1,15 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Flex } from 'theme-ui'
 
-import { FC, useState } from 'react';
+import { FC, useState, memo } from 'react';
 import { ISearchForm } from "interfaces/index";
 
 import Form from "src/styles/Form.module.css";
+import DropDownComponent from "src/components/DropDownComponent";
 
 const SearchForm : FC<ISearchForm> = () => {
 
     const [selectdTab, setSelectdTab] = useState(true);
-
-    const handleTab = () => setSelectdTab(!selectdTab);
-
 
     return (
         <div className={Form.form}>
@@ -20,7 +18,7 @@ const SearchForm : FC<ISearchForm> = () => {
                     sx={{
                         backgroundColor: selectdTab ?  "#00205c" : "#444"
                     }}
-                    onClick={handleTab}
+                    onClick={() => setSelectdTab(true)}
                 >
                     Venda
                 </li>
@@ -28,7 +26,7 @@ const SearchForm : FC<ISearchForm> = () => {
                     sx={{
                         backgroundColor: !selectdTab ?  "#00205c" : "#444"
                     }}
-                    onClick={handleTab}
+                    onClick={() => setSelectdTab(false)}
                 >
                     Aluguel
                 </li>
@@ -37,25 +35,52 @@ const SearchForm : FC<ISearchForm> = () => {
             <div className={Form.container}>
                 {selectdTab && (
                     <form>
-                        <div>
-                            <label>
+                        <DropDownComponent 
+                            Label="Local"
+                            ListOptions={[]}
+                        /> 
+                        <Flex>
+                            <DropDownComponent 
+                                Label="Preço minimo"
+                                ListOptions={[]}
+                            />  
 
-                            </label>
-                            <input placeholder="Local"/>
-                        </div>                    
-                    
+                            <DropDownComponent 
+                                Label="Preço maximo"
+                                ListOptions={[]}
+                            />
+                        </Flex>
+                          
+                        <Flex>
+                            <DropDownComponent 
+                                Label="Quartos minimo"
+                                ListOptions={[]}
+                            />  
+
+                            <DropDownComponent 
+                                Label="Quartos maximo"
+                                ListOptions={[]}
+                            />
+                        </Flex>
+                        <DropDownComponent 
+                            Label="Banheiros"
+                            ListOptions={[]}
+                        />  
+
+                        <input 
+                            type="submit" 
+                            value="Buscar" 
+                            className={Form.SubmitButton}
+                        />                   
                     </form>
                 )}
 
                 {!selectdTab && (
                     <form>
-                        <div>
-                            <label>
-
-                            </label>
-                            <input placeholder="Deslocal"/>
-                        </div>                    
-                    
+                        <DropDownComponent 
+                            Label="Local"
+                            ListOptions={[]}
+                        />                   
                     </form>
                 )}
                 
@@ -64,4 +89,4 @@ const SearchForm : FC<ISearchForm> = () => {
     );
 }
 
-export default SearchForm;
+export default memo(SearchForm);

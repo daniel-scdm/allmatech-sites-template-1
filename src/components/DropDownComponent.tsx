@@ -6,16 +6,19 @@ import { IDropDown } from "interfaces/index";
 
 import Form from "src/styles/Form.module.css";
 
-const SearchForm : React.FC<IDropDown> = () => {
+const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions }) => {
 
     return (
-        <div className={Form.form}>
+        <div className={Form.DropDownContainer}>
             <label>
-                Local
+                {Label}
             </label>
-            <input placeholder="Local"/>
+            <select>
+                <option>Local</option>
+                {ListOptions.map(opt => <option>{opt}</option>)}
+            </select>
         </div>   
     );
 }
 
-export default SearchForm;
+export default DropdownComponent;
