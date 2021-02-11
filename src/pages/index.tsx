@@ -5,6 +5,7 @@ import AllmatechLogo from  "assets/images/Allmatech-logo-complete.jpeg";
 
 import SectionFull from "src/components/fullSection";
 import SearchForm from "src/components/SearchForm";
+import CatchPhrase from "src/components/AnimatedCatchPhrase";
 
 import HouseImage from "assets/images/house.jpg";
 import { Flex } from '@theme-ui/components';
@@ -23,11 +24,7 @@ export default function Home() {
       >
         <Flex className={Section.sectionDiv}>
           <SearchForm />
-          <div className={Section.catchPhrase}>
-              <h1>Encontre sua</h1>
-              <span>propriedade dos sonhos</span>
-              <span>em 1 clique</span>
-          </div>
+          <CatchPhrase />
         </Flex>
         
       </SectionFull>      

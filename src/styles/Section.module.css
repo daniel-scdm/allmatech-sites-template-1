@@ -25,12 +25,20 @@
 
 @media (min-width: 1024px) {
     .sectionContainer {
-        width: 100vw;
         height: 750px;          
     }
 
     .catchPhrase {
         display: block;
+    }
+
+    .sectionDiv {
+        justify-content: center;        
+    }
+
+    .sectionDiv > div:first-child {
+        margin-right: 80px; 
+        margin-left: -80px;   
     }
 }
 

@@ -1,0 +1,222 @@
+.section > div:nth-child(1) {
+    margin-right: 25px;
+}
+
+.section > div {
+    font-size: 3rem;
+    color: aliceblue;
+    font-weight: 700;
+    position: relative;
+}
+
+.FirstAnimatedContainer > div > div,
+.SecoundAnimatedContainer > div {
+    font-size: 2.2rem;
+    color: aliceblue;
+    font-weight: 500;
+}
+
+.CPFirst > div,
+.CPSecound > div,
+.SCPFirst > div,
+.SCPSecound > div,
+.SCPThird > div {
+    display: inline-block;
+    position: relative;
+    left: -250px;
+    opacity: 0;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-name: letter;
+    animation-fill-mode: forwards;
+}
+
+.CPFirst > div:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.CPFirst > div:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.CPFirst > div:nth-child(3) {
+    animation-delay: .3s;
+}
+
+.CPFirst > div:nth-child(4) {
+    animation-delay: .4s;
+}
+
+.CPFirst > div:nth-child(5) {
+    animation-delay: .5s;
+}
+
+.CPFirst > div:nth-child(6) {
+    animation-delay: .6s;
+}
+
+.CPFirst > div:nth-child(7) {
+    animation-delay: .7s;
+}
+
+.CPFirst > div:nth-child(8) {
+    animation-delay: .8s;
+}
+
+
+.CPSecound > div:nth-child(1) {
+    animation-delay: .9s;
+}
+
+.CPSecound > div:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.CPSecound > div:nth-child(3) {
+    animation-delay: 1.1s;
+}
+
+
+/* White Containers */
+
+
+.FirstAnimatedWhiteContainer,
+.SecoundAnimatedWhiteContainer {
+    background-color: #fff;
+}
+
+.FirstAnimatedContainer > div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.FirstAnimatedWhiteContainer,
+.FirstAnimatedContainer {
+    height: 65px!important;
+    width: 0px;
+    animation-timing-function: ease;
+    animation-duration: .6s;
+    animation-name: container;
+    animation-fill-mode: forwards;
+}
+
+.FirstAnimatedContainer {
+    background-color: brown;
+    padding: .5rem 0 .5rem .3rem;
+    animation-delay: 1.6s;
+}
+
+
+.SCPFirst > div:nth-child(1) {
+    animation-delay: 2.1s;
+}
+
+.SCPFirst > div:nth-child(2) {
+    animation-delay: 2.2s;
+}
+
+.SCPFirst > div:nth-child(3) {
+    animation-delay: 2.3s;
+}
+
+.SCPFirst > div:nth-child(4) {
+    animation-delay: 2.4s;
+}
+
+.SCPFirst > div:nth-child(5) {
+    animation-delay: 2.5s;
+}
+
+.SCPFirst > div:nth-child(6) {
+    animation-delay: 2.6s;
+}
+
+.SCPFirst > div:nth-child(7) {
+    animation-delay: 2.7s;
+}
+
+.SCPFirst > div:nth-child(8) {
+    animation-delay: 2.8s;
+}
+
+
+.SCPFirst > div:nth-child(9) {
+    animation-delay: 2.9s;
+}
+
+.SCPFirst > div:nth-child(10) {
+    animation-delay: 3s;
+}
+
+.SCPFirst > div:nth-child(11) {
+    animation-delay: 3.1s;
+}
+
+
+.SCPSecound > div:nth-child(1) {
+    animation-delay: 3.2s;
+}
+
+.SCPSecound > div:nth-child(2) {
+    animation-delay: 3.3s;
+}
+
+.SCPSecound > div:nth-child(3) {
+    animation-delay: 3.4s;
+}
+
+
+.SCPThird > div:nth-child(1) {
+    animation-delay: 3.5s;
+}
+
+.SCPThird > div:nth-child(2) {
+    animation-delay: 3.6s;
+}
+
+.SCPThird > div:nth-child(3) {
+    animation-delay: 3.7s;
+}
+
+.SCPThird > div:nth-child(4) {
+    animation-delay: 3.8s;
+}
+
+.SCPThird > div:nth-child(5) {
+    animation-delay: 3.9s;
+}
+
+.SCPThird > div:nth-child(6) {
+    animation-delay: 4s;
+}
+
+
+  
+@keyframes letter {
+    0% { 
+        left: -250px;
+        opacity: 0;
+        transform: rotate(360deg);
+    }    
+    100% { 
+        left: 0px; 
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes container {
+    0% { 
+        width: 0;
+    }    
+    100% { 
+        width: 500px;
+    }
+}
+
+/*
+
+25%  { left: 10px; transform: rotate(200deg) }
+50%  { left: 30px; transform: rotate(160deg) }
+75%  { left: 50px; transform: rotate(100deg) }
+*/

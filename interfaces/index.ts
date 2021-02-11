@@ -26,3 +26,7 @@ export type IDropDown = {
   Label : String,
   extraStyles? : object
 }
+
+export type IAnimatedCatchPhrase = {
+
+}
