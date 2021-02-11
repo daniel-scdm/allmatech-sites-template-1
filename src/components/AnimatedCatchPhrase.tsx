@@ -61,9 +61,26 @@ const AnimatedCatchPhrase : React.FC<IAnimatedCatchPhrase> = () => {
                     </div>
                 </div>
             </div>
+
             <div className={Animation.SecoundAnimatedWhiteContainer}>
                 <div className={Animation.SecoundAnimatedContainer}>
-                    <span>em 1 clique</span>
+                    <div className={Animation.TCPFirst}>
+                        <div>E</div>
+                        <div>M</div>                        
+                    </div>
+
+                    <div className={Animation.TCPSecound}>
+                        <div>1</div>
+                    </div>
+
+                    <div className={Animation.TCPThird}>
+                        <div>C</div>
+                        <div>L</div> 
+                        <div>I</div>                       
+                        <div>Q</div>                        
+                        <div>U</div>                        
+                        <div>E</div>
+                    </div>
                 </div>
             </div>
         </div>  

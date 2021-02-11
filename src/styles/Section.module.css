@@ -21,11 +21,106 @@
     display: none;
 }
 
+.card {
+    border: 1px solid #eee;
+    max-width: 480px;
+    margin-top: 3rem;
+}
+
+.offer {
+    background-color: #f15455;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+    top: 35px;
+    left: 0;
+}
+
+.houseIcon {
+    text-align: center;
+}
+
+.missingImageCard {
+    
+    min-height: 280px;
+    min-width: 350px;
+    background-image: url("../../assets/images/missing-image.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.cardInfo {
+    padding: 1rem;
+}
+
+.cardInfo > p {
+    font-size: 1.8rem;
+    color: #222;
+    font-weight: 600;
+}
+
+.cardText {
+    font-size: 1.4rem;
+    text-align: justify;
+    color: rgb(168, 168, 168);
+}
+
+.cardPrice {
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    color: #24bd75;
+    font-weight: 600;
+}
+
+
+.cardFeatures {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: darkgrey;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: .5rem 0;
+}
+
+.cardFeatures > div {
+    margin-left: .5rem;
+}
+
+.cardFeatures > div::after {
+    content: "|";
+    font-size: 2rem;
+    font-weight: 100;
+    margin-left: 1.5rem;
+}
 
 
 @media (min-width: 1024px) {
     .sectionContainer {
         height: 750px;          
+    }
+
+    .cardInfo > p,
+    .cardPrice {
+        font-size: 1.4rem;
+    }
+
+    .cardFeatures {        
+        font-size: 1.3rem;
+    }
+
+    .cardFeatures > div::after {
+        font-size: 1.6rem;
+    }   
+
+    .cardText {
+        font-size: 1.2rem;
     }
 
     .catchPhrase {

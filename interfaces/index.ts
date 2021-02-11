@@ -1,4 +1,5 @@
 import { ReactChild } from "react";
+import { IconBaseProps } from "react-icons";
 
 export type User = {
   id: number
@@ -29,4 +30,21 @@ export type IDropDown = {
 
 export type IAnimatedCatchPhrase = {
 
+}
+
+export type IFeatureComponent = {
+    icon: IconBaseProps,
+    title: string,
+    text: string
+}
+
+export type ICard = {
+  offer? : boolean,
+  image? : IconBaseProps,
+  title : string,
+  text : string,
+  bedrooms : number,
+  bathrooms : number,
+  garages : number,
+  price : number
 }

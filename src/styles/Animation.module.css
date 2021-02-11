@@ -20,7 +20,10 @@
 .CPSecound > div,
 .SCPFirst > div,
 .SCPSecound > div,
-.SCPThird > div {
+.SCPThird > div,
+.TCPFirst > div,
+.TCPSecound > div,
+.TCPThird > div {
     display: inline-block;
     position: relative;
     left: -250px;
@@ -85,25 +88,43 @@
     background-color: #fff;
 }
 
-.FirstAnimatedContainer > div {
+.FirstAnimatedContainer > div,
+.SecoundAnimatedContainer > div {
     display: inline-block;
     margin-right: 10px;
 }
 
 .FirstAnimatedWhiteContainer,
-.FirstAnimatedContainer {
+.FirstAnimatedContainer,
+.SecoundAnimatedContainer,
+.SecoundAnimatedWhiteContainer {
     height: 65px!important;
     width: 0px;
     animation-timing-function: ease;
     animation-duration: .6s;
-    animation-name: container;
     animation-fill-mode: forwards;
+}
+
+.FirstAnimatedWhiteContainer,
+.FirstAnimatedContainer {
+    animation-name: container;
+}
+
+.SecoundAnimatedWhiteContainer,
+.SecoundAnimatedContainer {
+    animation-name: secoundContainer;
 }
 
 .FirstAnimatedContainer {
     background-color: brown;
     padding: .5rem 0 .5rem .3rem;
-    animation-delay: 1.6s;
+    animation-delay: 1s;
+}
+
+.SecoundAnimatedContainer {
+    background-color: darkblue;
+    padding: .5rem 0 .5rem .3rem;
+    animation-delay: 1.2s;
 }
 
 
@@ -191,6 +212,47 @@
 }
 
 
+
+.TCPFirst > div:nth-child(1) {
+    animation-delay: 2.1s;
+}
+
+.TCPFirst > div:nth-child(2) {
+    animation-delay: 2.2s;
+}
+
+
+.TCPSecound > div:nth-child(1) {
+    animation-delay: 2.3s;
+}
+
+
+
+.TCPThird > div:nth-child(1) {
+    animation-delay: 2.4s;
+}
+
+.TCPThird > div:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+.TCPThird > div:nth-child(3) {
+    animation-delay: 2.6s;
+}
+
+.TCPThird > div:nth-child(4) {
+    animation-delay: 2.7s;
+}
+
+.TCPThird > div:nth-child(5) {
+    animation-delay: 2.8s;
+}
+
+.TCPThird > div:nth-child(6) {
+    animation-delay: 2.9s;
+}
+
+
   
 @keyframes letter {
     0% { 
@@ -211,6 +273,16 @@
     }    
     100% { 
         width: 500px;
+    }
+}
+
+
+@keyframes secoundContainer {
+    0% { 
+        width: 0;
+    }    
+    100% { 
+        width: 260px;
     }
 }
 
