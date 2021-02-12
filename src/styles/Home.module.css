@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+.spacingContainer {
+  padding: 1rem;
+}
+
 .feature {
   display: flex;
   justify-content: center;
@@ -23,7 +27,6 @@
   flex-direction: column;
   text-align: center;
   margin-top: 1rem;
-  max-width: 440px;
   position: relative;
   top: 75px;
   opacity: 0;
@@ -78,11 +81,84 @@
   padding: 0;
 }
 
+.paginationButton {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.paginationButton > button {
+    padding: 1rem;
+    border: none;
+    background-color: #00205c;
+    color: #fff;
+    transition: all .5s;    
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.paginationButton > button:hover {  
+  background-color: #00153b; 
+}
+
+.contactContainer {
+  background-color: #1c1e1e;
+  width: 100%;  
+}
+
+.contactContainer > section {
+  padding: 1.4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+  height: 100%;
+  min-height: 561px;
+}
+
+.contactContainer > section > h1 {
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.contactContainer > section > p:nth-child(2) {
+  font-size: 1.2rem;
+  color: #f15455;
+  font-weight: 600;
+}
+
+.contactContainer > section > p:nth-child(3) {
+  color: #eee;
+  font-size: 1.1rem;
+  line-height: 35px;
+}
+
+.contactContainer > section:nth-child(2) {
+  display: none;
+}
+
+.contactContainer > section > button {
+  padding: 1rem;
+  border: 1px solid #f15455;
+  background: none;
+  color: #f15455;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  transition: all .5s;
+}
+
+.contactContainer > section > button:hover {  
+  background: #f15455;
+  color: #fff;  
+}
+
+
 @media (min-width: 1024px) {
   .featureContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 6rem;
+    padding: 4rem 5rem;
   }
 
   .latestCards {
@@ -106,10 +182,41 @@
 
   .feature > div:nth-child(3) {
     margin: .6rem 0;
-    padding: 0 .9rem;
+    padding: 0 2.6rem;
     font-size: 1rem;
     color: rgb(168, 168, 168);
   }
+
+  .paginationButton {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 4rem;
+  }
+
+  .paginationButton > button:first-child {
+      margin-right: 1rem;
+  }
+
+  .contactContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contactContainer > section:first-child {
+    padding: 0 8rem;
+  }
+
+  .contactContainer > section:nth-child(2) {
+    display: block;
+    background-image: url("../../assets/images/business-man.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
@@ -125,6 +232,10 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .paginationButton > button {  
+    font-size: .8rem;
   }
 
   .recentPropertiesContainer > div:first-child {
