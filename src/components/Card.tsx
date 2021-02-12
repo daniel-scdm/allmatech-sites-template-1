@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { ICard } from "interfaces/index";
 import Section from "src/styles/Section.module.css";
 
-const Card : FC<ICard> = ({ offer, bathrooms, bedrooms, garages, image, price, text, title }) => {
+const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, price, text, title }) => {
 
     return (
         <div className={Section.card}>
@@ -16,9 +16,11 @@ const Card : FC<ICard> = ({ offer, bathrooms, bedrooms, garages, image, price, t
                         backgroundImage: require("../../assets/images/missing-image.png")
                     }}
                 >
-                    <div className={Section.offer}>
-                        Sob Oferta
-                    </div>
+                    {OfferMessage && (
+                        <div className={Section.offer}>
+                            {OfferMessage}
+                        </div>
+                    )}                    
                 </div>
             </div>
             <div className={Section.cardInfo}>

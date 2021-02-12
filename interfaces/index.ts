@@ -39,7 +39,7 @@ export type IFeatureComponent = {
 }
 
 export type ICard = {
-  offer? : boolean,
+  OfferMessage? : string,
   image? : IconBaseProps,
   title : string,
   text : string,
@@ -48,3 +48,22 @@ export type ICard = {
   garages : number,
   price : number
 }
+
+export type ITeamCard = {
+  image? : IconBaseProps,
+  name : string,
+  cellphone : string,
+  linkFB? : string,
+  linkLI? : string,
+  linkTW? : string,
+  linkI? : string
+}
+
+
+export type INewsCard = {
+  image? : any,
+  text : string,
+  link : string
+}
+
+

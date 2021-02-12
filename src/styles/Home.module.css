@@ -93,7 +93,7 @@
     background-color: #00205c;
     color: #fff;
     transition: all .5s;    
-    font-size: 1.2rem;
+    font-size: .8rem;
     text-transform: uppercase;
 }
 
@@ -153,20 +153,84 @@
   color: #fff;  
 }
 
+.specialOffer {
+  background-color: #27384a;
+  width: 100%;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.specialOffer > button {
+  background-color: #f15455;
+  color: #fff;
+  font-size: 100%;  
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: none;
+  padding: 1.2rem;
+  font-size: 1rem;
+  transition: all .3s;
+}
+
+.specialOffer > button:hover {
+  background-color: #fff;
+  color: #f15455;  
+}
+
+@media (min-width: 960px) {
+  .specialOffer {     
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    text-align: start;
+    color: #fff;    
+  }
+}
+
+@media (max-width: 1130px) {
+  .specialOffer > button {    
+    font-size: .8rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .latestCards {
+    display: grid;
+    column-gap: 35px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 790px) and (max-width: 1024px) {
+  .latestCards {
+    display: grid;
+    column-gap: 35px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .latestCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 35px;    
+  }
+}
+
 
 @media (min-width: 1024px) {
   .featureContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 4rem 5rem;
-  }
-
-  .latestCards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 35px;
-    padding: 0 4rem;
-  }
+  } 
 
   .feature > div:first-child {
       margin: 1rem 0;
@@ -190,8 +254,7 @@
   .paginationButton {
       margin-top: 2rem;
       display: flex;
-      justify-content: flex-end;
-      padding: 0 4rem;
+      justify-content: center;
   }
 
   .paginationButton > button:first-child {
