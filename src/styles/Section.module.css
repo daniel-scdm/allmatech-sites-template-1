@@ -12,9 +12,10 @@
 }
 
 .sectionDiv {
-    justify-content: center;
-    align-items: center;
+    max-width: 1366px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .catchPhrase {
@@ -298,15 +299,12 @@
 
     .catchPhrase {
         display: block;
+        padding-top: 120px;
     }
 
     .sectionDiv {
-        justify-content: center;        
-    }
-
-    .sectionDiv > div:first-child {
-        margin-right: 80px; 
-        margin-left: -80px;   
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
 }

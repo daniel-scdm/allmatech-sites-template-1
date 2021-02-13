@@ -19,7 +19,8 @@ import dinamic from 'next/dynamic';
 import Card from "src/components/Card";
 import TeamCard from "src/components/TeamCard";
 import NewsCard from "src/components/NewsCard";
-import { url } from 'inspector';
+
+import Footer from "src/components/Footer";
 
 const LazyFeatures = dinamic(import("../components/Features"));
 
@@ -35,10 +36,10 @@ export default function Home() {
       <SectionFull
         bgImage={HouseImage}
       >
-        <Flex className={Section.sectionDiv}>
+        <div className={Section.sectionDiv}>
           <SearchForm />
           <CatchPhrase />
-        </Flex>        
+        </div>        
       </SectionFull>      
       <div 
         sx={{
@@ -389,21 +390,21 @@ export default function Home() {
           >
             <div className={styles.latestCards}>
               <NewsCard 
-                image={require("../../assets/images/house-1.jpg")}
+                image="/assets/images/house-1.jpg"
                 text={`
                   Lorem ipsum dolor sit amet
                 `}
                 link="#"                
               />
               <NewsCard 
-                image={{ url: "../../assets/images/house-1.jpg" }}
+                image="/assets/images/house-2.jpg"
                 text={`
                   Lorem ipsum dolor sit amet
                 `}
                 link="#"                
               />
               <NewsCard 
-                image={require("../../assets/images/house-1.jpg")}
+                image="/assets/images/house-1.jpg"
                 text={`
                   Lorem ipsum dolor sit amet
                 `}
@@ -412,6 +413,7 @@ export default function Home() {
             </div>            
           </section>          
       </section>
+      <Footer />
     </>    
   )
 }

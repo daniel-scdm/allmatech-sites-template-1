@@ -61,7 +61,7 @@ export type ITeamCard = {
 
 
 export type INewsCard = {
-  image? : any,
+  image? : string,
   text : string,
   link : string
 }
