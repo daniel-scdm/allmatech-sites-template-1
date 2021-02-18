@@ -2,6 +2,14 @@
     max-width: 530px;
     width: 100%;
     min-height: 450px;
+    position: relative;
+    top: 15px;
+    opacity: 0;
+    z-index: 20;
+    animation-name: fadeInForm;
+    animation-duration: 1s;
+    animation-delay: .3s;
+    animation-fill-mode: forwards;
 }
 
 .form ul {
@@ -80,5 +88,17 @@
 @media (max-width: 370px) {
     .DropDownContainer label {
         font-size: .8rem;
+    }
+}
+
+@keyframes fadeInForm {
+    0% {
+        opacity: 0;
+        top: 15px;
+    }
+
+    100% {
+        opacity: 1;
+        top: -10px;
     }
 }

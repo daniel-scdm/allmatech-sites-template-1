@@ -4,6 +4,8 @@ import { jsx, Flex } from 'theme-ui'
 import { FC, useState, memo } from 'react';
 import { ISearchForm } from "interfaces/index";
 
+import Router from "next/router";
+
 import Form from "src/styles/Form.module.css";
 import DropDownComponent from "src/components/DropDownComponent";
 
@@ -11,7 +13,12 @@ const SearchForm : FC<ISearchForm> = () => {
 
     const [selectdTab, setSelectdTab] = useState(true);
 
-    return (
+    const handleSearch = () => {
+        Router.push("/list")
+    }
+
+
+    return (        
         <div className={Form.form}>
             <ul>
                 <li 
@@ -34,7 +41,7 @@ const SearchForm : FC<ISearchForm> = () => {
             <div className={Form.baseTab}></div>
             <div className={Form.container}>
                 {selectdTab && (
-                    <form>
+                    <form onSubmit={handleSearch}>
                         <DropDownComponent 
                             Label="Local"
                             ListOptions={[]}
@@ -53,7 +60,7 @@ const SearchForm : FC<ISearchForm> = () => {
                                 ListOptions={[]}
                             />
                         </Flex>
-                          
+                        
                         <Flex>
                             <DropDownComponent 
                                 Label="Quartos minimo"
@@ -82,16 +89,55 @@ const SearchForm : FC<ISearchForm> = () => {
                 )}
 
                 {!selectdTab && (
-                    <form>
+                    <form onSubmit={handleSearch}>
                         <DropDownComponent 
                             Label="Local"
                             ListOptions={[]}
+                        /> 
+                        <Flex>
+                            <DropDownComponent 
+                                Label="Preço minimo"
+                                ListOptions={[]}
+                                extraStyles={{
+                                    paddingRight: 25  
+                                }}
+                            />  
+
+                            <DropDownComponent 
+                                Label="Preço maximo"
+                                ListOptions={[]}
+                            />
+                        </Flex>
+                        
+                        <Flex>
+                            <DropDownComponent 
+                                Label="Quartos minimo"
+                                ListOptions={[]}
+                                extraStyles={{
+                                    paddingRight: 25  
+                                }}
+                            />  
+
+                            <DropDownComponent 
+                                Label="Quartos maximo"
+                                ListOptions={[]}
+                            />
+                        </Flex>
+                        <DropDownComponent 
+                            Label="Banheiros"
+                            ListOptions={[]}
+                        />  
+
+                        <input 
+                            type="submit" 
+                            value="Buscar" 
+                            className={Form.SubmitButton}
                         />                   
                     </form>
                 )}
                 
             </div>
-        </div>   
+        </div>
     );
 }
 

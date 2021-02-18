@@ -1,15 +1,21 @@
 import React from 'react';
 import styles from 'src/styles/Home.module.css';
+import LazyLoad from "react-lazyload";
 
 import { IFeatureComponent } from "interfaces/index";
 
 const FeatureComponent : React.FC<IFeatureComponent> = ({ icon, text, title }) => {
   return (
-    <div className={styles.feature}>
-        <div>{icon}</div>
-        <div>{title}</div>
-        <div>{text}</div>
-    </div>  
+    <LazyLoad
+        offset={100}  
+        debounce={true}      
+    >
+      <div className={styles.feature}>
+          <div>{icon}</div>
+          <div>{title}</div>
+          <div>{text}</div>
+      </div> 
+    </LazyLoad>     
   );
 }
 

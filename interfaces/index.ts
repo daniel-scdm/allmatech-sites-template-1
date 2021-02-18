@@ -25,7 +25,8 @@ export type ISearchForm = {
 export type IDropDown = {
   ListOptions : Array<String>,
   Label : String,
-  extraStyles? : object
+  extraStyles? : object,
+  extraDropdownStyles? : object
 }
 
 export type IAnimatedCatchPhrase = {
@@ -65,5 +66,3 @@ export type INewsCard = {
   text : string,
   link : string
 }
-
-

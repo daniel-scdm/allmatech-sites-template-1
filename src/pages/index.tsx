@@ -12,7 +12,6 @@ import SearchForm from "src/components/SearchForm";
 import CatchPhrase from "src/components/AnimatedCatchPhrase";
 
 import HouseImage from "assets/images/house.jpg";
-import { Flex } from '@theme-ui/components';
 
 import dinamic from 'next/dynamic';
 
@@ -21,6 +20,7 @@ import TeamCard from "src/components/TeamCard";
 import NewsCard from "src/components/NewsCard";
 
 import Footer from "src/components/Footer";
+import LazyLoad from 'react-lazy-load';
 
 const LazyFeatures = dinamic(import("../components/Features"));
 
@@ -116,20 +116,22 @@ export default function Home() {
       <section
         className={styles.contactContainer}
       >
-        <section>
-          <h1>Precisa de conselho?</h1>
-          <p>Nossos agentes podem te ajudar</p>
-          <p>
-              Fusce rutrum auctor odio vel sodales maecenas sit amet dignissim ex. 
-              Sed volutpat hendrerit nisl eget at mattis praesent maximus lectus in 
-              nulla fringilla, id euismod libero consequat etiam tellus justot.
-          </p>
-          <button>
-              Contate 
-          </button>
-        </section>
-        <section className={styles.contactImage}>          
-        </section>          
+          <LazyLoad offset={200}  offsetVertical={200} height={620} >
+            <section className={styles.advice}>
+              <h1>Precisa de conselho?</h1>
+              <p>Nossos agentes podem te ajudar</p>
+              <p>
+                  Fusce rutrum auctor odio vel sodales maecenas sit amet dignissim ex. 
+                  Sed volutpat hendrerit nisl eget at mattis praesent maximus lectus in 
+                  nulla fringilla, id euismod libero consequat etiam tellus justot.
+              </p>
+              <button>
+                  Contate 
+              </button>
+            </section>
+          </LazyLoad>        
+          <section className={styles.contactImage}>          
+          </section>          
       </section>
 
       <section 
