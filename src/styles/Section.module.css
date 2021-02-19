@@ -33,7 +33,9 @@
 }
 
 .author,
-.filterForm {
+.filterForm,
+.sponsor,
+.search {
     background-color: #fff;
     -webkit-box-shadow: 0 0 5px 2px rgb(0 0 0 / 5%);
     box-shadow: 0 0 5px 2px rgb(0 0 0 / 5%); 
@@ -55,6 +57,57 @@
 
 .filterForm {
     padding: 35px;
+}
+
+.checkContainer {
+    margin-top: 1.4rem;
+}
+
+.sponsor,
+.search {
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.sponsor > img {
+    max-width: 100%;
+    width: auto 9;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+.search > form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 52px;
+    border: 1px solid #eee;
+}
+
+.search > form > input,
+.search > form > button {
+    height: 100%;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    outline:none;
+    color: #707070;
+}
+
+.search > form > input:first-child {
+    max-width: 210px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.search > form > button {
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .author > div > span {
@@ -102,12 +155,12 @@
 
 .missingImageCard {    
     min-height: 280px;
-    min-width: 350px;
     background-image: url("../../assets/images/missing-image.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
+    width: 100%;
 }
 
 .cardInfo {
@@ -146,10 +199,26 @@
 
 .cardFeatures > div {
     margin-left: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardFeatures > div > svg {
+    padding: .4rem;
+    margin-left: .3rem;
+    font-size: 2.3rem;
 }
 
 .cardFeatures > div::after {
-    content: "|";
+    content: '|';
+    font-size: 2rem;
+    font-weight: 100;
+    margin-left: 1.5rem;
+}
+
+.garages::after {
+    content: ''!important;
     font-size: 2rem;
     font-weight: 100;
     margin-left: 1.5rem;

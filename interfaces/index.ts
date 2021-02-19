@@ -41,7 +41,7 @@ export type IFeatureComponent = {
 
 export type ICard = {
   OfferMessage? : string,
-  image? : IconBaseProps,
+  image? : string,
   title : string,
   text : string,
   bedrooms : number,
@@ -65,4 +65,18 @@ export type INewsCard = {
   image? : string,
   text : string,
   link : string
+}
+
+export type IListProperties = {
+  List : Array<ICard>,
+  total : number,
+  pageNumber : number,
+  totalPages : number
+}
+
+export type IPagination = {
+  total : number,
+  pageLimit : number,
+  pageNeighbours : number,
+  onPageChanged : Function
 }

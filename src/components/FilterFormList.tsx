@@ -7,7 +7,6 @@ import Form from 'src/styles/Form.module.css';
 
 import DropDownComponent from "src/components/DropDownComponent";
 
-
 export default function PropertyAuthor() {
   return (
     <div className={Section.filterForm}>
@@ -54,27 +53,27 @@ export default function PropertyAuthor() {
                 ListOptions={[]}
             />
 
-            <div>
-                <div>
+            <div className={Section.checkContainer}>
+                <Flex>
                     <Checkbox 
                         id="ar"
                     />
                     <label htmlFor="ar">Ar condicionado</label>
-                </div>
+                </Flex>
 
-                <div>
+                <Flex>
                     <Checkbox 
                         id="piscina"
                     />
                     <label htmlFor="piscina">Piscina</label>
-                </div>
+                </Flex>
 
-                <div>
+                <Flex>
                     <Checkbox 
                         id="seguranca"
                     />
                     <label htmlFor="seguranca">Segurança</label>
-                </div>
+                </Flex>
                 
             </div>
             

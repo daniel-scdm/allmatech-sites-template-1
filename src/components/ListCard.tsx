@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Image } from 'theme-ui'
 
 import { FC } from 'react';
 import { ICard } from "interfaces/index";
@@ -10,26 +10,18 @@ import LazyLoad from "react-lazyload";
 import { FaBed, FaBath } from "react-icons/fa";
 import { GiHomeGarage } from "react-icons/gi";
 
-const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, price, text, title }) => {
+const ListCard : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, price, text, title }) => {
 
     return (
         <LazyLoad
             offset={200}
         >
             <div className={Section.card}>
-                <div>                
-                    <div 
+                <div>      
+                    <Image                     
                         className={Section.missingImageCard}
-                        sx={{
-                            backgroundImage: require("../../assets/images/missing-image.png")
-                        }}
-                    >
-                        {OfferMessage && (
-                            <div className={Section.offer}>
-                                {OfferMessage}
-                            </div>
-                        )}                    
-                    </div>
+                        src={image}
+                    />        
                 </div>
                 <div className={Section.cardInfo}>
                     <p>
@@ -50,7 +42,7 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
                         </div>
                     </div>
                     <div className={Section.cardPrice}>
-                        R$ {price}
+                       A partidr de R$ {price}
                     </div>
                 </div>
             </div>
@@ -58,4 +50,4 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
     );
 }
 
-export default Card;
+export default ListCard;
