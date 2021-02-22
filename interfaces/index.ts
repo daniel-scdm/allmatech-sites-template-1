@@ -47,7 +47,8 @@ export type ICard = {
   bedrooms : number,
   bathrooms : number,
   garages : number,
-  price : number
+  price : number,
+  indexKey? : number
 }
 
 export type ITeamCard = {
@@ -57,7 +58,7 @@ export type ITeamCard = {
   linkFB? : string,
   linkLI? : string,
   linkTW? : string,
-  linkI? : string
+  linkI? : string,
 }
 
 

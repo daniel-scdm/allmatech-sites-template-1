@@ -10,7 +10,7 @@ import DropDownComponent from "src/components/DropDownComponent";
 export default function PropertyAuthor() {
   return (
     <div className={Section.filterForm}>
-        <form>
+        <form className={Section.filterList}>
             <DropDownComponent 
                 Label="Local"
                 ListOptions={[]}

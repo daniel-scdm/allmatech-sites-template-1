@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-import { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { IPagination } from "interfaces/index";
 import ListStyle from "src/styles/List.module.css";
 
-import ListCard from "src/components/ListCard";
-import Pagination from "src/components/Pagination";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 
 const LEFT_PAGE = 'LEFT';
@@ -26,7 +25,7 @@ const range = (from, to, step = 1) => {
 
 const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pageNeighbours }) => {
 
-    const [totalPages, setTotalPages] = useState(Math.ceil(total / pageLimit));
+    const [totalPages] = useState(Math.ceil(total / pageLimit));
     const [currentPage, setCurrentPage] = useState(1);
 
 
@@ -87,10 +86,73 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
         return range(1, totalPages);
     }
 
-    return (
-        <div className={ListStyle.container}>
-            
-        </div>            
+    useEffect(() => {
+      gotoPage(1);      
+    }, []);
+
+    const gotoPage = (page : number) => {
+      const currentPage = Math.max(0, Math.min(page, totalPages));
+      const paginationData = {
+        currentPage,
+        totalPages: totalPages,
+        pageLimit: pageLimit,
+        totalRecords: total
+      };
+  
+      setCurrentPage(currentPage);
+
+      onPageChanged(paginationData);
+    }
+
+    const handleClick = (e : React.MouseEvent, page : number) => {
+      e.preventDefault();
+      gotoPage(page);
+    }
+
+
+    const handleMoveLeft = (e : React.MouseEvent) => {
+      e.preventDefault();
+      gotoPage(currentPage - (pageNeighbours * 2) - 1);
+    }
+  
+    const handleMoveRight = (e : React.MouseEvent) => {
+      e.preventDefault();
+      gotoPage(currentPage + (pageNeighbours * 2) + 1);
+    }
+
+    if(totalPages === 1 || !total) return null;
+
+    const pages = fetchPageNumbers();
+
+    return (        
+      <nav arial-label="Properties Pagination">
+          <ul className={ListStyle.pagination}>
+              {pages.map((page, index) => {
+
+                    if(page === LEFT_PAGE) return (
+                      <li key={index} className={ListStyle.pageItem}>
+                          <a href="#" onClick={handleMoveLeft}>
+                            <MdKeyboardArrowLeft />
+                          </a>
+                      </li>
+                    );
+
+                    if(page === RIGHT_PAGE) return (
+                      <li key={index} className={ListStyle.pageItem}>
+                          <a href="#" onClick={handleMoveRight}>
+                            <MdKeyboardArrowRight />
+                          </a>
+                      </li>
+                    );
+
+                    return (
+                      <li key={index} className={currentPage === page ? 'page-item-actived' : ''}>
+                          <a href="#" onClick={(e) => handleClick(e, page)}>{page}</a>
+                      </li>
+                    );
+              })}
+          </ul>
+      </nav>                   
     );
 }
 

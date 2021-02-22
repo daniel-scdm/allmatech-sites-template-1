@@ -17,21 +17,6 @@
     background-color: #eee;    
 }
 
-.content {
-    max-width: 1366px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.container > main {
-    
-}
-
-.container > aside {
-    
-}
-
 .author,
 .filterForm,
 .sponsor,
@@ -57,6 +42,10 @@
 
 .filterForm {
     padding: 35px;
+}
+
+.filterList > div select {
+    border: 1px solid #eee;
 }
 
 .checkContainer {
@@ -153,16 +142,6 @@
     text-align: center;
 }
 
-.missingImageCard {    
-    min-height: 280px;
-    background-image: url("../../assets/images/missing-image.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
-    background-size: cover;
-    width: 100%;
-}
-
 .cardInfo {
     padding: 1rem;
 }
@@ -202,6 +181,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cardFeatures > div:first-child {
+    margin-left: 0;
 }
 
 .cardFeatures > div > svg {
@@ -438,6 +421,11 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 25px;
     }
+
+    .content {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
 }
 
 @media (min-width: 960px) and (max-width: 1200px) {
@@ -446,6 +434,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 25px;
     }
+
+    .content {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
@@ -453,6 +446,17 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 25px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 20px;
+    }
+
+    .filterList > div,
+    .filterList > div select {
+        font-size: .8rem;
     }
 }
 

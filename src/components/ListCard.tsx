@@ -3,50 +3,43 @@ import { jsx, Image } from 'theme-ui'
 
 import { FC } from 'react';
 import { ICard } from "interfaces/index";
-import Section from "src/styles/Section.module.css";
+import ListStyle from "src/styles/List.module.css";
 
-import LazyLoad from "react-lazyload";
+import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
 
-import { FaBed, FaBath } from "react-icons/fa";
-import { GiHomeGarage } from "react-icons/gi";
+const ListCard : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, price, text, title, indexKey }) => {
 
-const ListCard : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, price, text, title }) => {
-
-    return (
-        <LazyLoad
-            offset={200}
-        >
-            <div className={Section.card}>
-                <div>      
-                    <Image                     
-                        className={Section.missingImageCard}
-                        src={image}
-                    />        
+    return (        
+        <div className={ListStyle.listCard} key={indexKey}>
+            <div className={ListStyle.imageCardContainer}>      
+                <Image                     
+                    className={ListStyle.missingImageCard}
+                    src={image}
+                />        
+            </div>
+            <div className={ListStyle.cardInfo}>
+                <p>
+                    {title}
+                </p>
+                <div className={ListStyle.cardText}>
+                    {text}
                 </div>
-                <div className={Section.cardInfo}>
-                    <p>
-                        {title}
-                    </p>
-                    <div className={Section.cardText}>
-                        {text}
+                <div className={ListStyle.cardFeatures}>
+                    <div>
+                        <GiPersonInBed size={45} /> {bedrooms}                            
                     </div>
-                    <div className={Section.cardFeatures}>
-                        <div>
-                            <FaBed /> {bedrooms}                            
-                        </div>
-                        <div>
-                            <FaBath /> {bathrooms}
-                        </div>
-                        <div className={Section.garages}>
-                            <GiHomeGarage /> {garages}
-                        </div>
+                    <div>
+                        <GiBathtub size={40} /> {bathrooms}
                     </div>
-                    <div className={Section.cardPrice}>
-                       A partidr de R$ {price}
+                    <div className={ListStyle.garages}>
+                        <GiHomeGarage size={40} /> {garages}
                     </div>
+                </div>
+                <div className={ListStyle.cardPrice}>
+                    A partir de R$ {price}
                 </div>
             </div>
-        </LazyLoad>            
+        </div>
     );
 }
 

@@ -109,6 +109,10 @@ footer ul li a:hover {
   color:#f15455;
 }
 
+.page-item-actived > a {
+  background-color: #fa2e2e!important;
+}
+
 .subscribe-container > h3,
 .subscribe-container > form > input[type="submit"] {
   color: #fff;
@@ -166,6 +170,14 @@ footer ul li a:hover {
   transition: opacity 350ms, transform 350ms;
 }
 
+.current-page {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.current-page {
+  line-height: 1;
+}
 
 @media (min-width: 490px) {
     footer ul {
