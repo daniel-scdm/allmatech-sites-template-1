@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 
 import React, { FC, useState, useEffect } from 'react';
 import { IPagination } from "interfaces/index";
-import ListStyle from "src/styles/List.module.css";
+import property from "src/styles/Property.module.css";
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
@@ -126,11 +126,11 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
 
     return (        
       <nav arial-label="Properties Pagination">
-          <ul className={ListStyle.pagination}>
+          <ul className={property.pagination}>
               {pages.map((page, index) => {
 
                     if(page === LEFT_PAGE) return (
-                      <li key={index} className={ListStyle.pageItem}>
+                      <li key={index} className={property.pageItem}>
                           <a href="#" onClick={handleMoveLeft}>
                             <MdKeyboardArrowLeft />
                           </a>
@@ -138,7 +138,7 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
                     );
 
                     if(page === RIGHT_PAGE) return (
-                      <li key={index} className={ListStyle.pageItem}>
+                      <li key={index} className={property.pageItem}>
                           <a href="#" onClick={handleMoveRight}>
                             <MdKeyboardArrowRight />
                           </a>

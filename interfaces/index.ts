@@ -81,3 +81,15 @@ export type IPagination = {
   pageNeighbours : number,
   onPageChanged : Function
 }
+
+export type IProperty = {
+  OfferMessage? : string,
+  image? : string,
+  title : string,
+  text : string,
+  bedrooms : number,
+  bathrooms : number,
+  garages : number,
+  price : number,
+  indexKey? : number
+}

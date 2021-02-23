@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 
 import { FC } from 'react';
 import { IListProperties } from "interfaces/index";
-import ListStyle from "src/styles/List.module.css";
+import property from "src/styles/Property.module.css";
 
 import ListCard from "src/components/ListCard";
 import Pagination from "src/components/Pagination";
@@ -11,7 +11,7 @@ import Pagination from "src/components/Pagination";
 const ListProperties : FC<IListProperties> = ({ List, pageNumber, total, totalPages }) => {
 
     return (
-        <div className={ListStyle.container}>
+        <div className={property.container}>
             <div>
                 {List.map((p, i) => (
                     <ListCard 

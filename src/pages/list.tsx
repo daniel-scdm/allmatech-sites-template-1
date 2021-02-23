@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 
 import Section from 'src/styles/Section.module.css';
-import ListStyle from 'src/styles/List.module.css';
+import property from 'src/styles/Property.module.css';
 
 import Header from "src/components/header";
 import AllmatechLogo from  "assets/images/Allmatech-logo-complete.jpeg";
@@ -129,7 +129,7 @@ const lista = [
   }
 ];
 
-export default function List() {
+function List() {
   return (
     <>
       <Header 
@@ -140,7 +140,7 @@ export default function List() {
       />
 
       <section className={Section.container}>
-          <div className={ListStyle.content}>
+          <div className={property.contentReverse}>
             <main>
               <ListProperties 
                 List={lista}
@@ -162,3 +162,5 @@ export default function List() {
     </>    
   )
 }
+
+export default List;
