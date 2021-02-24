@@ -2,6 +2,11 @@
     min-height: 3350px;
 }
 
+.containerProperty {
+    max-width: 100%;
+    width: auto;
+}
+
 .content {
     max-width: 1366px;
     margin: 0 auto;
@@ -183,6 +188,7 @@
     font-size: 2rem;
     line-height: 40px;
     margin-bottom: 5px;
+    margin-top: 0;
     font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
 
@@ -222,11 +228,6 @@
     line-height: 1.8rem;
 }
 
-.image {
-    width: 100%;
-    max-height: 500px;
-}
-
 .featureList {
     list-style-type: none;
     margin: 0;
@@ -248,6 +249,33 @@
     width: 100%;
     max-height: 450px;
     border: none;
+}
+
+.propertyMap {
+    width: 100%;
+    max-height: 450px;
+    border: none;
+    margin-top: 1.4rem;
+}
+
+.gallery {
+    width: 100%;
+}
+
+.alice-carousel ul li {
+    max-width: 941px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.image {    
+    padding: 2px;
+    box-sizing: border-box;
+    font-size: 0;
+    color: transparent;
 }
 
 @media (min-width: 1200px) {

@@ -8,13 +8,20 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@types/leaflet": "^1.5.23",
+    "leaflet": "^1.7.1",
+    "leaflet-defaulticon-compatibility": "^0.1.1",
+    "leaflet-geosearch": "^3.2.1",
     "next": "latest",
     "next-images": "^1.7.0",
     "react": "^16.12.0",
+    "react-alice-carousel": "^2.4.0",
     "react-dom": "^16.12.0",
     "react-icons": "^4.2.0",
+    "react-image-gallery": "^1.0.9",
     "react-lazy-load": "^3.1.13",
     "react-lazyload": "^3.2.0",
+    "react-leaflet": "^3.1.0",
     "react-transition-group": "^4.4.1",
     "theme-ui": "^0.3.5"
   },
@@ -22,6 +29,7 @@
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "@types/react-image-gallery": "^1.0.2",
     "@types/react-lazyload": "^3.1.0",
     "@types/react-transition-group": "^4.4.0",
     "@types/theme-ui": "^0.3.7",
