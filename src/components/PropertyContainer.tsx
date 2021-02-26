@@ -1,30 +1,22 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import React from 'react';  
 
 import property from 'src/styles/Property.module.css';
 import { IProperty } from "interfaces/index";
 
 import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
-
-import React from 'react';  
-
 import dynamic from "next/dynamic";
-import ImageGallery from "react-image-gallery";
 
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+import Image from "next/image";
 
-const loader = () => {
-    return "https://dunk.brickthemes.com/wp-content/uploads/2020/01/interior-design-house-and-modern-white-kitchen-Z53XFYH-min.jpg"
+import Carousel from "src/components/Carousel";
+
+const myLoader = ({ src, width, quality } : any) => {
+    return `https://picsum.photos/id/1018/1000/600/`
 }
 
 const features = ["Casa", "2 banheiros", "3 quartos", "ar condicionado", "3 garagens"];
-
-const images = [
-    <img src="https://picsum.photos/id/1018/1000/600/" className={property.image} alt="" />,
-    <img src="https://picsum.photos/id/1015/1000/600/" className={property.image} alt="" />,
-    <img src="https://picsum.photos/id/1019/1000/600/" className={property.image} alt="" />,
-];
 
 const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms, garages, bedrooms, }) => {
 
@@ -43,18 +35,14 @@ const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms
                 </span>
             </div>
 
-            <div className={property.gallery}>
-                <AliceCarousel 
-                    items={images} 
-                    mouseTracking  
-                    autoWidth={true}                   
-                    responsive={{
-                        0: { items: 1 },
-                        1024: { items: 1 },
-                    }}
-                    
+            <div className={property.image}>
+                <Image
+                    loader={myLoader}
+                    src="https://picsum.photos/id/1018/1000/600/"
+                    layout="fill"
                 />
             </div>
+                      
 
             <div className={property.propertyInfoContainer}>
                 <div className={property.cardFeatures}>
@@ -109,15 +97,3 @@ const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms
 }
 
 export default PropertyContainer;
-
-/**
- * 
- * <Image 
-                loader={loader}
-                src="https://dunk.brickthemes.com/wp-content/uploads/2020/01/interior-design-house-and-modern-white-kitchen-Z53XFYH-min.jpg"
-                alt="Picture of the author"
-                height={800}
-                width={800}  
-                className={property.image}      
-            />
- */

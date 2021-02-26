@@ -179,6 +179,13 @@ footer ul li a:hover {
   line-height: 1;
 }
 
+
+.thumb, .thumb > .item {
+  width: 200px;
+  height: 100px;
+}
+    
+
 @media (min-width: 490px) {
     footer ul {
         columns: 2;
@@ -204,4 +211,99 @@ footer ul li a:hover {
   .footer-logo-container {
     justify-content: flex-start;
   }
+}
+
+@media (min-width: 640px) {
+  .s-main {
+    
+  }
+}
+
+
+/**
+
+.s-main {
+  width: 100%;
+  height: 100%;
+  max-width: 940px;
+  min-width: 320px;
+  box-sizing: border-box;
+  margin: auto;
+  overflow-x: hidden;
+  height: auto;
+  padding-top: 0;
+}
+
+.alice-carousel {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  direction: ltr;
+}
+
+
+.item:before {
+  content: attr(data-value);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 300;
+  user-select: none;
+  color: #fff;
+  background-color: #C7CDDE;
+}
+
+.alice-carousel__wrapper {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+
+.alice-carousel__stage {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  transform-style: flat;
+  -webkit-transform-style: flat;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.alice-carousel__wrapper {
+  border: solid 1px rgba(67, 87, 148, 0.3);
+}
+
+.alice-carousel__stage-item.__active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: solid 1px transparent;
+  transition: border 0.8s;
+}
+
+.alice-carousel__stage-item.__target:after {
+  border: solid 1px rgba(33, 37, 253, 0.8);
+}
+
+.item {
+   height: 200px; 
+  padding: 2px;
+  box-sizing: border-box;
+  font-size: 0;
+  color: transparent;
+  width: 100%;
 }

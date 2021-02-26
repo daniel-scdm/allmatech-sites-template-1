@@ -278,6 +278,31 @@
     color: transparent;
 }
 
+.thumbs {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 0 100px;
+    position: relative;
+    max-height: 102px;
+}
+  
+.thumbs .btnPrev {
+    left: 17px;
+}
+  
+.thumbs .btnNext {
+    right: 17px;
+}
+  
+.thumbs .btnPrev, 
+.thumbs .btnNext {
+    position: absolute;
+    top: 17px;
+    font-size: 50px;
+    color: #c7cdde;
+    cursor: pointer;
+}
+
 @media (min-width: 1200px) {
     .contentReverse,
     .content {
