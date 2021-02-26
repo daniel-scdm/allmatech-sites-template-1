@@ -39,7 +39,9 @@ const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms
                 <Image
                     loader={myLoader}
                     src="https://picsum.photos/id/1018/1000/600/"
-                    layout="fill"
+                    layout="responsive"
+                    width={800}
+                    height={500}
                 />
             </div>
                       
