@@ -93,3 +93,8 @@ export type IProperty = {
   price : number,
   indexKey? : number
 }
+
+export type ICarousel = {
+  activeModal : boolean,
+  setActiveModal : (activeModal : boolean) => void
+}

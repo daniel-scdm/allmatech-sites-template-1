@@ -3,10 +3,14 @@ import { jsx } from 'theme-ui';
 import React, { useState } from 'react';  
 
 import property from 'src/styles/Property.module.css';
+import { CSSTransition } from 'react-transition-group';
 
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
+import { GrClose } from "react-icons/gr";
+
+import { ICarousel } from "interfaces/index";
 
 const images = [
     <img src="https://picsum.photos/id/1018/1000/600/" className="item" alt="" />,
@@ -22,7 +26,9 @@ const thumbItems = (images : Array<any>, [setThumbIndex, setThumbAnimation] : Ar
     ));
 };
 
-const Carousel : React.FC = () => {
+const Carousel : React.FC<ICarousel> = ({ activeModal, setActiveModal }) => {
+
+    const closeModal = () => setActiveModal(false);
 
     const [mainIndex, setMainIndex] = useState(0);
     const [mainAnimation, setMainAnimation] = useState(false);
@@ -72,36 +78,55 @@ const Carousel : React.FC = () => {
     };
 
     return (
-        <div className={property.gallery}>
-            <AliceCarousel 
-                activeIndex={mainIndex}
-                animationType="fadeout"
-                animationDuration={800}
-                disableDotsControls
-                disableButtonsControls
-                infinite
-                items={images}
-                mouseTracking={!thumbAnimation}
-                onSlideChange={syncMainBeforeChange}
-                onSlideChanged={syncMainAfterChange}
-                touchTracking={!thumbAnimation}               
-            />
+        <CSSTransition 
+            in={activeModal}
+            timeout={300}
+            classNames="alert"
+            unmountOnExit
+            
+        >
+            <div className={property.modal}>
+                <div className={property.modalActions}>
+                    <a href="#" onClick={closeModal}>
+                        <GrClose 
+                            size={25}
+                            color={"#707070"}
+                        />
+                    </a>                    
+                </div>
 
-            <div className={property.thumbs}>
-                <AliceCarousel
-                    activeIndex={thumbIndex}
-                    autoWidth
-                    disableDotsControls
-                    disableButtonsControls
-                    items={thumbs}
-                    mouseTracking={false}
-                    onSlideChanged={syncThumbs}
-                    touchTracking={!mainAnimation}
-                />
-                <div className={property.btnPrev} onClick={slidePrev}>&lang;</div>
-                <div className={property.btnNext} onClick={slideNext}>&rang;</div>
+                <div className={property.gallery}>
+                    <AliceCarousel 
+                        activeIndex={mainIndex}
+                        animationType="fadeout"
+                        animationDuration={800}
+                        disableDotsControls
+                        disableButtonsControls
+                        infinite
+                        items={images}
+                        mouseTracking={!thumbAnimation}
+                        onSlideChange={syncMainBeforeChange}
+                        onSlideChanged={syncMainAfterChange}
+                        touchTracking={!thumbAnimation}               
+                    />
+
+                    <div className={property.thumbs}>
+                        <AliceCarousel
+                            activeIndex={thumbIndex}
+                            autoWidth
+                            disableDotsControls
+                            disableButtonsControls
+                            items={thumbs}
+                            mouseTracking={false}
+                            onSlideChanged={syncThumbs}
+                            touchTracking={!mainAnimation}
+                        />
+                        <div className={property.btnPrev} onClick={slidePrev}>&lang;</div>
+                        <div className={property.btnNext} onClick={slideNext}>&rang;</div>
+                    </div>
+                </div> 
             </div>
-        </div> 
+        </CSSTransition> 
     );
 }
 

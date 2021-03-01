@@ -1,16 +1,17 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import React from 'react';  
+import React, { useEffect, useState } from 'react';  
 
 import property from 'src/styles/Property.module.css';
 import { IProperty } from "interfaces/index";
 
 import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
+import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
 import dynamic from "next/dynamic";
 
-import Image from "next/image";
-
 import Carousel from "src/components/Carousel";
+
+import Image from "next/image";
 
 const myLoader = ({ src, width, quality } : any) => {
     return `https://picsum.photos/id/1018/1000/600/`
@@ -20,12 +21,30 @@ const features = ["Casa", "2 banheiros", "3 quartos", "ar condicionado", "3 gara
 
 const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms, garages, bedrooms, }) => {
 
+    const [showGallery, setShowGallery] = useState(false);
+
     const MapWithNoSSR = dynamic(() => import("src/components/Map"), {
         ssr: false
     });
 
+    useEffect(() => {
+        if(showGallery) {
+            document.body.style.overflowY = "hidden";
+            return;
+        }
+
+        document.body.style.overflowY = "scroll";
+    }, [showGallery]);
+
+    const handleShowModal = (showGalleryModal : boolean) => setShowGallery(showGalleryModal);
+
     return (
         <div className={property.containerProperty}>
+            <Carousel 
+                activeModal={showGallery}
+                setActiveModal={handleShowModal}
+            />
+            
             <h3 className={property.propertyTitle}>
                 {title}
             </h3> 
@@ -43,6 +62,22 @@ const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms
                     width={800}
                     height={500}
                 />
+
+                <ul className={property.galleryButton}>
+                    <li>
+                        <a 
+                            href="#" 
+                            onClick={() => setShowGallery(true)}
+                        >
+                            <FaCamera size={20} color={"#fff"} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <FaMapMarkedAlt size={20}  color={"#fff"}/>
+                        </a>
+                    </li>
+                </ul>
             </div>
                       
 
