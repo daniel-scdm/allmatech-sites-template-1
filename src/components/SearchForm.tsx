@@ -2,21 +2,20 @@
 import { jsx, Flex } from 'theme-ui'
 
 import { FC, useState, memo } from 'react';
-import { ISearchForm } from "interfaces/index";
+import { ISearchFormBuy, ISearchFormRent } from "interfaces/index";
 
 import Router from "next/router";
 
 import Form from "src/styles/Form.module.css";
 import DropDownComponent from "src/components/DropDownComponent";
 
-const SearchForm : FC<ISearchForm> = () => {
+const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet }) => {
 
     const [selectdTab, setSelectdTab] = useState(true);
 
     const handleSearch = () => {
         Router.push("/list")
     }
-
 
     return (        
         <div className={Form.form}>
@@ -43,8 +42,13 @@ const SearchForm : FC<ISearchForm> = () => {
                 {selectdTab && (
                     <form onSubmit={handleSearch}>
                         <DropDownComponent 
-                            Label="Local"
-                            ListOptions={[]}
+                            Label="Cidade"
+                            ListOptions={cityList}
+                            updateSimbling={updateStreet}
+                        /> 
+                        <DropDownComponent 
+                            Label="Bairro"
+                            ListOptions={streetList}
                         /> 
                         <Flex>
                             <DropDownComponent 
@@ -91,9 +95,14 @@ const SearchForm : FC<ISearchForm> = () => {
                 {!selectdTab && (
                     <form onSubmit={handleSearch}>
                         <DropDownComponent 
-                            Label="Local"
-                            ListOptions={[]}
+                            Label="Cidade"
+                            ListOptions={cityList}
+                            updateSimbling={updateStreet}
                         /> 
+                        <DropDownComponent 
+                            Label="Bairro"
+                            ListOptions={streetList}
+                        />
                         <Flex>
                             <DropDownComponent 
                                 Label="Preço minimo"

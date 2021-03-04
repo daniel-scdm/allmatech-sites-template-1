@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { useEffect, useState } from "react";
 
 import styles from 'src/styles/Home.module.css';
 import Section from 'src/styles/Section.module.css';
@@ -22,9 +23,59 @@ import NewsCard from "src/components/NewsCard";
 import Footer from "src/components/Footer";
 import LazyLoad from 'react-lazy-load';
 
+import { useFetch } from "src/hooks/useFetch";
+
 const LazyFeatures = dinamic(import("../components/Features"));
 
 export default function Home() {
+
+  const { parsedXml, state } = useFetch();
+
+  const [cities, setCities] = useState<Array<string> | undefined>([]);
+  const [streets, setStreets] = useState<Array<string> | undefined>([]);
+
+  useEffect(() => {
+      if(state === "done") {
+          const extractedCities = extractCity(parsedXml.Carga.Imoveis.Imovel);
+          setCities(extractedCities);
+      }
+  }, [state]);
+
+  const extractCity = (Imoveis : Array<object>) => {
+      const mappedCities = Imoveis.map(imovel => {
+        if(imovel && imovel.Cidade)
+          return imovel.Cidade._text;
+
+        return;
+      });
+
+      const filteredCities = mappedCities.filter(filterUnique);
+      return filteredCities;
+      
+  }
+
+  const extractStreets = (selectedCity : string) => {
+    const mappedStreets = parsedXml.Carga.Imoveis.Imovel.map(imovel => {
+      if(imovel.Cidade._text === selectedCity && imovel.Bairro)
+        return imovel.Bairro._text;
+
+      return;
+    });
+
+    const filteredStreets = mappedStreets.filter(filterUnique);
+    setStreets(filteredStreets);    
+}
+
+  const filterUnique = (value, index, self) => self.indexOf(value) === index && value !== undefined;
+
+  if(state !== "done") {
+    return (
+      <div>
+
+      </div>
+    )
+  }
+
   return (
     <>
       <Header 
@@ -37,7 +88,11 @@ export default function Home() {
         bgImage={HouseImage}
       >
         <div className={Section.sectionDiv}>
-          <SearchForm />
+          <SearchForm 
+            cityList={cities}
+            updateStreet={extractStreets}
+            streetList={streets}
+          />
           <CatchPhrase />
         </div>        
       </SectionFull>      

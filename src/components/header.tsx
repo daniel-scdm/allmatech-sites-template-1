@@ -50,13 +50,18 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
 
             <header className={headerStyles.Header} sx={{ backgroundColor: bgHeaderColor }}>
                 <Box>
-                    <Image 
-                        src={logoUrl}
-                        width={logoWidth}
-                        height={logoHeight}
-                        alt="Picture of the author"
-                        className={styles.imageLogo}
-                    />
+                    <Link href="/">
+                        <a>
+                            <Image 
+                                src={logoUrl}
+                                width={logoWidth}
+                                height={logoHeight}
+                                alt="Picture of the author"
+                                className={styles.imageLogo}
+                            />
+                        </a>
+                    </Link>
+                    
                 </Box>
                 
                 <CSSTransition

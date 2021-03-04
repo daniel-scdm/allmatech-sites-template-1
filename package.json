@@ -22,8 +22,10 @@
     "react-lazy-load": "^3.1.13",
     "react-lazyload": "^3.2.0",
     "react-leaflet": "^3.1.0",
+    "react-responsive-carousel": "^3.2.12",
     "react-transition-group": "^4.4.1",
-    "theme-ui": "^0.3.5"
+    "theme-ui": "^0.3.5",
+    "xml-js": "^1.6.11"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",

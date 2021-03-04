@@ -1,5 +1,5 @@
 import 'src/styles/globals.css';
-import 'react-alice-carousel/lib/alice-carousel.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import type { AppProps } from 'next/app';
 

@@ -3,6 +3,8 @@ import { jsx } from 'theme-ui';
 import React, { useEffect, useState } from 'react';  
 
 import property from 'src/styles/Property.module.css';
+import Section from 'src/styles/Section.module.css';
+
 import { IProperty } from "interfaces/index";
 
 import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
@@ -128,6 +130,27 @@ const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms
                 <div className={property.propertyMap}>
                     <MapWithNoSSR />
                 </div>
+            </div>
+
+            <div className={property.contactContainer}>
+                <h3>Contato</h3>
+
+                <form onSubmit={() => {}} className={property.comment}>
+                    <textarea name="name" id="" placeholder="Comentário" rows={10}>
+                        
+                    </textarea>
+
+                    <div>
+                        <input type="text" name="name" id="" placeholder="Nome (Obrigatório)" />
+                        <input type="text" name="" id="" placeholder="Email (Obrigatório)" />
+                        <input type="text" name="" id="" placeholder="Website" />
+                    </div>
+
+                    <button type="submit" value="">
+                        Enviar mensagem
+                    </button>
+                </form>
+
             </div>
         </div> 
     )

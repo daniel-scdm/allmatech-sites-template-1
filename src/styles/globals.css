@@ -179,12 +179,19 @@ footer ul li a:hover {
   line-height: 1;
 }
 
-
-.thumb, .thumb > .item {
-  width: 200px;
-  height: 100px;
+.thumb {
+  height: auto;
 }
 
+.carousel-root {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Classes Alert */
 
 .alert-enter {
   opacity: 0;

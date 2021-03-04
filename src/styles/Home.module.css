@@ -37,12 +37,9 @@
 
 .advice {
   position: relative;
-  top: 15px;
-  opacity: 0;
-  animation-duration: 1s;
-  animation-name: lazy;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
+  top: 0;
+  opacity: 1;
+  
 }
 
 .feature > div:first-child {

@@ -439,6 +439,13 @@
     }
 }
 
+@media (max-width: 1366px) {
+    .sectionDiv {
+        
+        max-width: 1124px;
+    }
+}
+
 @media (min-width: 960px) and (max-width: 1200px) {
     .TeamMembers {
         display: grid;

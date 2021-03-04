@@ -202,11 +202,16 @@
     padding-bottom: 20px;
 }
 
-.propertyInfoContainer {
+.propertyInfoContainer,
+.contactContainer  {
     margin-top: 0rem;
     background-color: #fff;
     box-shadow: 0 0 5px 2px rgb(0 0 0 / 5%);
     padding: 1rem;
+}
+
+.contactContainer {
+    margin: 1rem 0
 }
 
 .propertyDescription,
@@ -260,6 +265,9 @@
 
 .gallery {
     width: 100%;
+    padding: 2rem;
+    max-height: 95vh;
+    height: 100%;
 }
 
 .alice-carousel ul li {
@@ -277,6 +285,12 @@
     font-size: 0;
     color: transparent;
     position: relative;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .galleryButton {
@@ -346,6 +360,42 @@
     font-size: 50px;
     color: #c7cdde;
     cursor: pointer;
+}
+
+.comment {
+
+}
+
+.comment > textarea,
+.comment > div > input {
+    width: 100%;
+    padding: .4rem;
+    margin: .4rem 0;
+    border: 1px solid #eee;
+}
+
+.comment > textarea {
+    font-size: large;
+    resize: none;
+}
+
+.comment > div > input {
+    padding: 1rem;
+}
+
+.comment > button {
+    padding: .6rem;
+    margin-top: 1rem;
+    background-color: #f15455;
+    transition: all .3s;
+    color: #eee;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+.comment > button:hover {
+    background-color: #fa2e2e;
 }
 
 @media (min-width: 1200px) {

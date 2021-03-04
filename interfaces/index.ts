@@ -18,15 +18,23 @@ export type IFullSection = {
   children: ReactChild
 }
 
-export type ISearchForm = {
-
+export type ISearchFormBuy = {
+    cityList? : Array<string>,
+    streetList? : Array<string>,
+    updateStreet? : (value : string) => void 
 }
 
+export type ISearchFormRent = {
+  cityList? : Array<string> 
+}
+
+
 export type IDropDown = {
-  ListOptions : Array<String>,
+  ListOptions? : Array<string>,
   Label : String,
   extraStyles? : object,
-  extraDropdownStyles? : object
+  extraDropdownStyles? : object,
+  updateSimbling? : (value : string) => void 
 }
 
 export type IAnimatedCatchPhrase = {
