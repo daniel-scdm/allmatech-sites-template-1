@@ -6,11 +6,11 @@ import { IDropDown } from "interfaces/index";
 
 import Form from "src/styles/Form.module.css";
 
-const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions, extraStyles, extraDropdownStyles, updateSimbling }) => {
+const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions, extraStyles, extraDropdownStyles, updateSimbling, defaultValue }) => {
 
-    const [selected, setSelected] = useState("Todos");
+    const [selected, setSelected] = useState(defaultValue ? defaultValue : "Todos");
 
-    const handleChange = (event : React.FormEvent) => {
+    const handleChange = (event : React.FormEvent<HTMLSelectElement>) => {
         if(event.target && event.target.value && updateSimbling) 
             updateSimbling(event.target.value);
         
@@ -30,7 +30,7 @@ const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions, extraStyl
                 onChange={handleChange}
                 value={selected}
             >
-                <option>Todos</option>                
+                <option>{defaultValue ? defaultValue : "Todos"}</option>                
                 {ListOptions && ListOptions.map((opt, index) => <option key={index.toString()}>{opt}</option>)}
             </select>
         </div>   

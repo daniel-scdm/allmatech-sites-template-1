@@ -34,7 +34,15 @@ export type IDropDown = {
   Label : String,
   extraStyles? : object,
   extraDropdownStyles? : object,
-  updateSimbling? : (value : string) => void 
+  updateSimbling? : (value : string) => void,
+  defaultValue? : string
+}
+
+export type ISlider = {
+  Label : String,
+  extraStyles? : object,
+  updateSimbling? : (value : string) => void,
+  defaultValue? : string
 }
 
 export type IAnimatedCatchPhrase = {
