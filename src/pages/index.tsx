@@ -55,16 +55,16 @@ export default function Home() {
   }
 
   const extractStreets = (selectedCity : string) => {
-    const mappedStreets = parsedXml.Carga.Imoveis.Imovel.map(imovel => {
-      if(imovel.Cidade._text === selectedCity && imovel.Bairro)
-        return imovel.Bairro._text;
+      const mappedStreets = parsedXml.Carga.Imoveis.Imovel.map(imovel => {
+        if(imovel.Cidade._text === selectedCity && imovel.Bairro)
+          return imovel.Bairro._text;
 
-      return;
-    });
+        return;
+      });
 
-    const filteredStreets = mappedStreets.filter(filterUnique);
-    setStreets(filteredStreets);    
-}
+      const filteredStreets = mappedStreets.filter(filterUnique);
+      setStreets(filteredStreets);    
+  }
 
   const filterUnique = (value, index, self) => self.indexOf(value) === index && value !== undefined;
 

@@ -5,9 +5,6 @@ import React, { useState } from 'react';
 import property from 'src/styles/Property.module.css';
 import { CSSTransition } from 'react-transition-group';
 
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
-
 import Image from "next/image";
 
 import { GrClose } from "react-icons/gr";

@@ -1,45 +1,19 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-import React, { useState } from 'react';
+import React from 'react';
 import { ISlider } from "interfaces/index";
 import Slider from "rc-slider";
-import MaskedInput from "react-text-mask";
-import createNumberMask from "text-mask-addons/dist/createNumberMask";
 
 import Form from "src/styles/Form.module.css";
+import CurrencyInput from "src/components/CurrencyInput";
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
 
-const defaultMaskOptions = {
-    prefix: '',
-    suffix: '',
-    includeThousandsSeparator: true,
-    thousandsSeparatorSymbol: '.',
-    allowDecimal: true,
-    decimalSymbol: ',',
-    decimalLimit: 2, // how many digits allowed after the decimal
-    integerLimit: 9, // limit length of integer numbers
-    allowNegative: false,
-    allowLeadingZeroes: false
-}
-
-const CurrencyInput = ({ maskOptions, ...inputProps }) => {
-    const currencyMask = createNumberMask({
-        ...defaultMaskOptions,
-        ...maskOptions,
-    })
-
-    return <MaskedInput mask={currencyMask} {...inputProps} />
-}
-
-
-const SliderComponent : React.FC<ISlider> = ({ Label, defaultValue, extraStyles, updateSimbling }) => {
-
-    const [value, setValue] = useState<Array<number>>([0, 200000000]);
+const SliderComponent : React.FC<ISlider> = ({ Label, extraStyles, values, onChangeValue, errorMessage }) => {
     
-    const handleChange = (e : Array<number>) => setValue(e);
+    const handleChange = (e : Array<number>) => onChangeValue(e);
     const formatValue = (e : number) => e.toLocaleString("pt");
 
 
@@ -47,37 +21,17 @@ const SliderComponent : React.FC<ISlider> = ({ Label, defaultValue, extraStyles,
         e.preventDefault();
 
         const convertedValue = parseInt(e.currentTarget.value.split('.').join(""));
-        if(convertedValue < value[1]){
-            const values = [convertedValue, value[1]];
-            setValue(values);
-        }            
+        const updatedValues = [convertedValue, values[1]];
+        onChangeValue(updatedValues);
+                    
     }
 
     const handleChangeInputMax = (e : React.FormEvent<HTMLInputElement>) => {
         e.preventDefault();
 
         const convertedValue = parseInt(e.currentTarget.value.split('.').join(""));
-
-        if(convertedValue > value[0]){
-            const values = [value[0], convertedValue];
-            setValue(values);
-        } 
-        
-    }
-
-    var mask = function (rawValue) {
-        console.log(rawValue)
-
-        const numberMask = createNumberMask({
-            decimalLimit: 2,
-            decimalSymbol: ",",
-            prefix: '',
-            thousandsSeparatorSymbol: ".",
-            allowDecimal: true,
-            allowLeadingZeroes: true
-        });
-
-        return numberMask;
+        const updatedValues = [values[0], convertedValue];
+        onChangeValue(updatedValues);        
     }
 
     return (
@@ -90,20 +44,28 @@ const SliderComponent : React.FC<ISlider> = ({ Label, defaultValue, extraStyles,
                 max={200000000}
                 defaultValue={[0, 200000000]}
                 onChange={handleChange}
-                value={value}
+                value={values}
                 autoFocus
                 tipFormatter={formatValue}
             />
 
             <div className={Form.SliderInputContainer}>
                 <div>
-                    <CurrencyInput placeholder="R$0,00" type="text" value={value[0]} onChange={handleChangeInputMin} />
+                    <CurrencyInput placeholder="R$0,00" type="text" value={values[0]} onChange={handleChangeInputMin} />
+                    <span>Min.</span>
                 </div>
 
                 <div>
-                    <CurrencyInput placeholder="R$0,00" type="text" value={value[1]} onChange={handleChangeInputMax} />
-                </div>
+                    <CurrencyInput placeholder="R$0,00" type="text" value={values[1]} onChange={handleChangeInputMax} />
+                    <span>Max.</span>
+                </div>                
             </div>
+            {errorMessage && (
+                <div className={Form.ErrorMessage}>
+                    <span>{errorMessage}</span>
+                </div>
+            )}
+            
         </div>   
     );
 }

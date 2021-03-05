@@ -2,30 +2,49 @@
 import { jsx, Flex } from 'theme-ui'
 
 import { FC, useState, memo } from 'react';
-import { ISearchFormBuy, ISearchFormRent } from "interfaces/index";
+import { ISearchFormBuy } from "interfaces";
 import { useForm } from "src/hooks/useForm";
 
-import Router from "next/router";
+import { useRouter } from "next/router";
 
 import Form from "src/styles/Form.module.css";
 import DropDownComponent from "src/components/DropDownComponent";
-import SliderComponent from "src/components/slider";
+import SliderComponent from "src/components/Slider";
 
 const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet }) => {
 
     const [selectdTab, setSelectdTab] = useState(true);
+    const router = useRouter();
 
-    const { buyValues, handleChangeBuy } = useForm({
+    const { 
+        buyValues, 
+        handleChangeBuy, 
+        handleSliderChange, 
+        errMessage, 
+        handleForm 
+    } = useForm({
         cidade: "",
         bairro: "",
         valores: [0, 200000000],
         quartos: 0,
         banheiros: 0,
         garagem: 0
-    }, () => {});
+    }, () => submitForm());
 
-    const handleSearch = () => {
-        Router.push("/list")
+    const submitForm = () => {
+        console.log("redirecionando...")
+
+        const filterOptions = {
+            ...buyValues,
+            purchaseType: selectdTab 
+        }
+
+        console.log(filterOptions)
+
+        router.push({
+            pathname: "/list",
+            query: filterOptions
+        });
     }
 
     return (        
@@ -51,7 +70,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
             <div className={Form.baseTab}></div>
             <div className={Form.container}>
                 {selectdTab && (
-                    <form onSubmit={handleSearch}>
+                    <form onSubmit={handleForm}>
                         <DropDownComponent 
                             Label="Cidade"
                             ListOptions={cityList}
@@ -69,7 +88,10 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
                         /> 
                         
                         <SliderComponent 
-                            Label="Valor (R$)"                            
+                            Label="Valor (R$)"   
+                            values={buyValues["valores"]}  
+                            onChangeValue={handleSliderChange} 
+                            errorMessage={errMessage}                      
                         />
                         
                         <Flex>
@@ -142,7 +164,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
                 )}
 
                 {!selectdTab && (
-                    <form onSubmit={handleSearch}>
+                    <form onSubmit={handleForm}>
                         
                         <input 
                             type="submit" 

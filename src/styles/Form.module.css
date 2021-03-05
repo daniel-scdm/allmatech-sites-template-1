@@ -90,6 +90,16 @@
     border: none;
 }
 
+.SliderInputContainer > div > span {
+    font-size: .8rem;
+} 
+
+.ErrorMessage {
+    margin-top: .6rem;
+    color: rgb(197, 0, 10);
+    font-weight: 600;
+}
+
 .sliderContainer {
     position: relative;
 }

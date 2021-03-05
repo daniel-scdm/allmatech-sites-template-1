@@ -18,7 +18,6 @@ const reducer = (state, action) => action;
 export const useFetch = () => {
 
     const [parsedXml, setParsedXml] = useState<object>({});
-
     const [state, dispatch] = useReducer(reducer, initState);
 
     useEffect(() => {
@@ -40,5 +39,9 @@ export const useFetch = () => {
             .catch(err => console.log(err));
     }
 
-    return { parsedXml, state }
+    const filterList = () => {
+
+    }
+
+    return { parsedXml, state, filterList }
 }
