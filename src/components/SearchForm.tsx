@@ -3,6 +3,7 @@ import { jsx, Flex } from 'theme-ui'
 
 import { FC, useState, memo } from 'react';
 import { ISearchFormBuy, ISearchFormRent } from "interfaces/index";
+import { useForm } from "src/hooks/useForm";
 
 import Router from "next/router";
 
@@ -13,6 +14,15 @@ import SliderComponent from "src/components/slider";
 const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet }) => {
 
     const [selectdTab, setSelectdTab] = useState(true);
+
+    const { buyValues, handleChangeBuy } = useForm({
+        cidade: "",
+        bairro: "",
+        valores: [0, 200000000],
+        quartos: 0,
+        banheiros: 0,
+        garagem: 0
+    }, () => {});
 
     const handleSearch = () => {
         Router.push("/list")
@@ -45,16 +55,21 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
                         <DropDownComponent 
                             Label="Cidade"
                             ListOptions={cityList}
+                            selectedValue={buyValues["cidade"]}
                             updateSimbling={updateStreet}
+                            onChangeValue={handleChangeBuy}
+                            KeyName="cidade"
                         /> 
                         <DropDownComponent 
                             Label="Bairro"
                             ListOptions={streetList}
+                            selectedValue={buyValues["bairro"]}
+                            onChangeValue={handleChangeBuy}
+                            KeyName="bairro"
                         /> 
                         
                         <SliderComponent 
-                            Label="Valor (R$)"
-                            
+                            Label="Valor (R$)"                            
                         />
                         
                         <Flex>
@@ -71,10 +86,13 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
                                     "9+",
                                     "10+"
                                 ]}
+                                selectedValue={buyValues["quartos"] + "+"}                                
                                 extraStyles={{
                                     paddingRight: 25  
                                 }}
+                                onChangeValue={handleChangeBuy}
                                 defaultValue={"1+"}
+                                KeyName="quartos"
                             />  
 
                             <DropDownComponent 
@@ -90,7 +108,10 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
                                     "9+",
                                     "10+"
                                 ]}
+                                selectedValue={buyValues["banheiros"] + "+"}                                
+                                onChangeValue={handleChangeBuy}
                                 defaultValue={"1+"}
+                                KeyName="banheiros"
                             />
                         </Flex>
                         <DropDownComponent 
@@ -106,6 +127,9 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
                                 "9+",
                                 "10+"
                             ]}
+                            selectedValue={buyValues["garagem"] + "+"}                                
+                            onChangeValue={handleChangeBuy}
+                            KeyName="garagem"
                             defaultValue={"1+"}
                         />  
 
@@ -119,54 +143,12 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
 
                 {!selectdTab && (
                     <form onSubmit={handleSearch}>
-                        <DropDownComponent 
-                            Label="Cidade"
-                            ListOptions={cityList}
-                            updateSimbling={updateStreet}
-                        /> 
-                        <DropDownComponent 
-                            Label="Bairro"
-                            ListOptions={streetList}
-                        />
-                        <Flex>
-                            <DropDownComponent 
-                                Label="Preço minimo"
-                                ListOptions={[]}
-                                extraStyles={{
-                                    paddingRight: 25  
-                                }}
-                            />  
-
-                            <DropDownComponent 
-                                Label="Preço maximo"
-                                ListOptions={[]}
-                            />
-                        </Flex>
                         
-                        <Flex>
-                            <DropDownComponent 
-                                Label="Qtd. Quartos"
-                                ListOptions={[]}
-                                extraStyles={{
-                                    paddingRight: 25  
-                                }}
-                            />  
-
-                            <DropDownComponent 
-                                Label="Quartos maximo"
-                                ListOptions={[]}
-                            />
-                        </Flex>
-                        <DropDownComponent 
-                            Label="Banheiros"
-                            ListOptions={[]}
-                        />  
-
                         <input 
                             type="submit" 
                             value="Buscar" 
                             className={Form.SubmitButton}
-                        />                   
+                        />                    
                     </form>
                 )}
                 

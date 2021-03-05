@@ -31,11 +31,14 @@ export type ISearchFormRent = {
 
 export type IDropDown = {
   ListOptions? : Array<string>,
-  Label : String,
+  Label : string,
   extraStyles? : object,
   extraDropdownStyles? : object,
   updateSimbling? : (value : string) => void,
-  defaultValue? : string
+  defaultValue? : string,
+  onChangeValue : (value: string, key : string) => void,
+  selectedValue : string,
+  KeyName: string
 }
 
 export type ISlider = {
@@ -44,6 +47,17 @@ export type ISlider = {
   updateSimbling? : (value : string) => void,
   defaultValue? : string
 }
+
+export type IinitValues = {
+  cidade: string,
+  bairro: string,
+  valores: Array<number>,
+  quartos: number,
+  banheiros: number,
+  garagem: number
+}
+
+export type ISubmitForm = () => void
 
 export type IAnimatedCatchPhrase = {
 

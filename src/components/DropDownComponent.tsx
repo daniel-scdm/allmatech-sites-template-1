@@ -1,21 +1,18 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-import React, { useState } from 'react';
+import React from 'react';
 import { IDropDown } from "interfaces/index";
 
 import Form from "src/styles/Form.module.css";
 
-const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions, extraStyles, extraDropdownStyles, updateSimbling, defaultValue }) => {
-
-    const [selected, setSelected] = useState(defaultValue ? defaultValue : "Todos");
+const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions, extraStyles, extraDropdownStyles, updateSimbling, defaultValue, onChangeValue, selectedValue, KeyName }) => {
 
     const handleChange = (event : React.FormEvent<HTMLSelectElement>) => {
         if(event.target && event.target.value && updateSimbling) 
             updateSimbling(event.target.value);
         
-        setSelected(event.target.value);
-
+        onChangeValue(event.target.value, KeyName);
     }
 
     return (
@@ -28,7 +25,7 @@ const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions, extraStyl
             <select
                 sx={extraDropdownStyles}
                 onChange={handleChange}
-                value={selected}
+                value={selectedValue}
             >
                 <option>{defaultValue ? defaultValue : "Todos"}</option>                
                 {ListOptions && ListOptions.map((opt, index) => <option key={index.toString()}>{opt}</option>)}

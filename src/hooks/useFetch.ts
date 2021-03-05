@@ -1,5 +1,4 @@
 import { useEffect, useState, useReducer } from "react";
-import { readFile } from "fs";
 import convertXML from "xml-js";
 
 const headers = new Headers();
