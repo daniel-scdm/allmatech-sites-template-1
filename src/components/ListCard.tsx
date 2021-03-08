@@ -2,7 +2,7 @@
 import { jsx, Image } from 'theme-ui'
 
 import { FC } from 'react';
-import { ICard } from "interfaces/index";
+import { IPropertyXML } from "interfaces/index";
 import property from "src/styles/Property.module.css";
 
 import Link from "next/link";
@@ -10,18 +10,18 @@ import Link from "next/link";
 import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
 
-const ListCard : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, price, text, title, indexKey }) => {
+const ListCard : FC<IPropertyXML> = ({ CodigoImovel ,TipoOferta, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, indexKey, PrecoVenda, PrecoLocacao }) => {
 
     return (        
         <div className={property.listCard} key={indexKey}>
             <div className={property.imageCardContainer}>   
                 <Image                     
                     className={property.missingImageCard}
-                    src={image}
+                    src={thumbnail}
                 />
                 <Link href={{
                     pathname: "/property",
-                    query: { code: 231123 }
+                    query: { code: CodigoImovel?._text }
                 }}>
                     <a>
                         <BiSearch  size={40}/>
@@ -30,24 +30,26 @@ const ListCard : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, imag
             </div>
             <div className={property.cardInfo}>
                 <p>
-                    {title}
+                    {TituloImovel?._text}
                 </p>
                 <div className={property.cardText}>
-                    {text}
+                    {Observacao?._cdata}
                 </div>
                 <div className={property.cardFeatures}>
                     <div>
-                        <GiPersonInBed size={38} /> <span>{bedrooms} </span>                           
+                        <GiPersonInBed size={38} /> <span>{QtdDormitorios?._text ? QtdDormitorios._text : 0} </span>                           
                     </div>
                     <div>
-                        <GiBathtub size={32} /> <span>{bathrooms}</span>
+                        <GiBathtub size={32} /> <span>{QtdBanheiros?._text ? QtdBanheiros._text : 0}</span>
                     </div>
                     <div className={property.garages}>
-                        <GiHomeGarage size={32} /> <span>{garages}</span>
+                        <GiHomeGarage size={32} /> <span>{QtdVagas?._text ? QtdVagas._text : 0}</span>
                     </div>
                 </div>
                 <div className={property.cardPrice}>
-                    A partir de R$ {price}
+                    {PrecoVenda?._text && <span>Venda: R$ {PrecoVenda._text}</span>}
+
+                    {PrecoLocacao?._text && <span>Aluguel: R$ {PrecoLocacao._text}</span>}
                 </div>
             </div>
         </div>

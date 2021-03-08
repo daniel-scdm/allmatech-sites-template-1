@@ -32,14 +32,11 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
     }, () => submitForm());
 
     const submitForm = () => {
-        console.log("redirecionando...")
 
         const filterOptions = {
             ...buyValues,
-            purchaseType: selectdTab 
+            tipoImovel: selectdTab 
         }
-
-        console.log(filterOptions)
 
         router.push({
             pathname: "/list",

@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-import { FC, useEffect } from 'react';
-import { IListProperties } from "interfaces/index";
+import { FC } from 'react';
+import { IListProperties, IPropertyXML } from "interfaces/index";
 import property from "src/styles/Property.module.css";
 
 import ListCard from "src/components/ListCard";
@@ -35,28 +35,34 @@ const ListProperties : FC<IListProperties> = ({ List, pageNumber, total, totalPa
             );            
         }
 
+        const handlePageChange = (page) => {
+
+            console.log(page, typeof page, List.length);
+        }
+
         return (
             <>
                 <div>                
-                    {List.map((p, i) => (
+                    {List.map((p : IPropertyXML, i) => (
                         <ListCard 
-                            image="https://dunk.brickthemes.com/wp-content/uploads/2020/01/interior-design-house-and-modern-white-kitchen-Z53XFYH-min-470x340.jpg"
-                            bathrooms={p.bathrooms}
-                            bedrooms={p.bedrooms}
-                            garages={p.garages}
-                            price={p.price}
-                            text={p.text}
-                            title={p.title}
-                            OfferMessage={"Oferta"}
-                            key={i}
+                            CodigoImovel={p.CodigoImovel}
+                            thumbnail={p.Fotos?.Foto[0].Link[0].URLArquivo._text}
+                            QtdBanheiros={p.QtdBanheiros}
+                            QtdDormitorios={p.QtdDormitorios}
+                            QtdVagas={p.QtdVagas}
+                            PrecoVenda={p.PrecoVenda}
+                            PrecoLocacao={p.PrecoLocacao}
+                            Observacao={p.Observacao}
+                            TituloImovel={p.TituloImovel}
+                            indexKey={i.toString()}
                         />
                     ))}
                 </div>            
                 <Pagination
                     pageLimit={15}
                     pageNeighbours={2}
-                    total={200}
-                    onPageChanged={() => {}} 
+                    total={List.length}
+                    onPageChanged={handlePageChange} 
                 />                
             </> 
         );     

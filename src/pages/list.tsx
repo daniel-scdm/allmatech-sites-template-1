@@ -17,31 +17,37 @@ import Sponsor from "src/components/Sponsor";
 import Search from "src/components/Search";
 
 import Footer from "src/components/Footer";
-import { IinitValues } from 'interfaces';
+import { IPropertyXML } from 'interfaces';
 
 import { useRouter } from 'next/router';
 import { useFetch } from "src/hooks/useFetch";
+import { useFilter } from "src/hooks/useFilter";
 
 function List() {
 
   const { parsedXml, state } = useFetch();
   const router = useRouter();
+  const { filterProperties } = useFilter();
 
   const [cities, setCities] = useState<Array<string> | undefined>([]);
   const [streets, setStreets] = useState<Array<string> | undefined>([]);
 
-  const [listProperties, setListProperties] = useState([]);
+  const [listProperties, setListProperties] = useState<Array<any>>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
       if(state === "done") {
+
           const { query } = router;
-          filterProperties(parsedXml.Carga.Imoveis.Imovel, query);  
+          const filteredProperties = filterProperties(parsedXml.Carga.Imoveis.Imovel, query); 
+          setListProperties(filteredProperties);
           extractCity(parsedXml.Carga.Imoveis.Imovel);   
+          setIsLoading(false);
+          
       }     
   }, [state]);
 
-  const extractCity = (Imoveis : Array<object>) => {
+  const extractCity = (Imoveis : Array<IPropertyXML>) => {
       const mappedCities = Imoveis.map(imovel => {
         if(imovel && imovel.Cidade)
           return imovel.Cidade._text;
@@ -65,33 +71,7 @@ function List() {
       setStreets(filteredStreets);    
   }
 
-  const filterUnique = (value, index, self) => self.indexOf(value) === index && value !== undefined;
-
-  const filterProperties = (properties : Array<object>, filterQuery : IinitValues) => {
-
-      const Filter = Object.entries(filterQuery).map((entries : Array<any>) => {
-        switch(entries[0]) {
-            case "cidade" || "bairro": 
-              if(entries[1] !== "") {
-                return { [entries[0]]: entries[1] }
-              }
-              return;
-            case "banheiros" || "garagem" || "quartos": 
-              if(entries[1] !== 0) {
-                return { [entries[0]]: entries[1] }
-              }
-              return;
-            case "valores":               
-              return { [entries[0]]: entries[1] }
-            default: 
-              break;
-        }
-        
-      }).filter((entry : object) => entry);
-
-      console.log(Filter)
-        
-  }
+  const filterUnique = (value : any, index, self) => self.indexOf(value) === index && value !== undefined;
 
   return (
     <>
@@ -107,7 +87,7 @@ function List() {
             <main>
               <ListProperties 
                 isLoading={isLoading}
-                List={[{}, {}]}
+                List={listProperties}
                 pageNumber={1}
                 total={200}
                 totalPages={20}

@@ -80,11 +80,20 @@
 .cardText {
     font-size: 1.1rem;
     text-align: justify;
-    min-height: 80px;
+    min-height: 95px;
     color: rgb(168, 168, 168);
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    
 }
 
 .cardPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 1.4rem;
     font-size: 1.3rem;
     color: #24bd75;
@@ -174,7 +183,7 @@
 }
 
 .missingImageCard {    
-    min-height: 280px;
+    min-height: 320px;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
@@ -416,6 +425,37 @@
     border-radius: 0!important;
 }
 
+.skeletonImage {
+    height: 530px;
+}
+
+.skeletonBody {
+    height: 700px;
+}
+
+.skeletonMessage {
+    height: 420px;
+}
+
+.emptyProperty {
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.emptyProperty div {
+    font-size: 4rem;
+    color: #707070;
+}
+
+.emptyProperty h3 {
+    font-size: 1rem;
+    color: #707070;
+}
+
 @media (min-width: 1200px) {
     .contentReverse,
     .content {
@@ -475,6 +515,14 @@
 
     .skeletonContainer > span > span:first-child {
         margin-top: 0;
+    }
+
+    .emptyProperty div {
+        font-size: 7rem;
+    }
+    
+    .emptyProperty h3 {
+        font-size: 3rem;
     }
 }
 

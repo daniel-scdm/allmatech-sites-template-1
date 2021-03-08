@@ -27,12 +27,16 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
 
     const [totalPages] = useState(Math.ceil(total / pageLimit));
     const [currentPage, setCurrentPage] = useState(1);
+    const [nPageNeighbours] = useState(
+      typeof pageNeighbours === 'number'
+      ? Math.max(0, Math.min(pageNeighbours, 2))
+      : 0);
 
 
     const fetchPageNumbers = () => {
         const cTotalPages = totalPages;
         const cCurrentPage = currentPage;
-        const cPageNeightbours = pageNeighbours;
+        const cPageNeightbours = nPageNeighbours;
 
         /**
          * totalNumbers: the total page numbers to show on the control
