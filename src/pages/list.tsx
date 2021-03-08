@@ -87,7 +87,7 @@ function List() {
               break;
         }
         
-      });
+      }).filter((entry : object) => entry);
 
       console.log(Filter)
         
