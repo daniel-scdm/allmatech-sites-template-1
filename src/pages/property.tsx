@@ -34,24 +34,37 @@ function Property() {
 
   const { getPropertyByCode } = useFilter();
   const [prt, setPrt] = useState<IPropertyXML | null>(null);
-  const [features, setFeatures] = useState([]);
+  const [features, setFeatures] = useState<Array<string>>([]);
+
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if(state === "done") {
         const { code } = query;
         const p = getPropertyByCode(parsedXml.Carga.Imoveis.Imovel, code);
         extractFeatures(p);
-        console.log(p)
         setPrt(p);
+        setIsLoading(false); 
     }     
   }, [state]);
 
   const extractFeatures = (property : IPropertyXML) => {
-      
+      if(property.AreaServico) pushArray("Área de serviço");
+      if(property.Sauna) pushArray("Sauna");
+      if(property.Varanda) pushArray("Varanda");
+      if(property.Jardim) pushArray("Jardim");
+      if(property.QuartoWCEmpregada) pushArray("Quarto de empregada");
+      if(property.InfraInternet) pushArray("Infraestrutura de Internet");
+  }
+
+  const pushArray = (ft : string) => {
+    let aux = features;
+    aux.push(ft);
+    setFeatures(aux);
   }
 
   const handlePropertyLoading = () => {
-    if(state != "done" && !prt) {
+    if(state != "done" && !prt && !isLoading) {
       return (
           <SkeletonTheme color="#ddd" highlightColor="#ccc">
               <div className={property.skeletonContainer}>
@@ -63,7 +76,7 @@ function Property() {
       );
     }
 
-    if(state === "done" && !prt) {
+    if(state === "done" && !prt && !isLoading) {
       return (
         <div className={property.emptyProperty}>
             <div>
@@ -85,8 +98,10 @@ function Property() {
         PrecoVenda={prt?.PrecoVenda}
         Observacao={prt?.Observacao}
         TituloImovel={prt?.TipoImovel}
+        Fotos={prt?.Fotos}
         indexKey={"1"}  
         thumbnail={prt?.Fotos?.Foto[0].Link[1].URLArquivo._text}    
+        features={features}
       />
     );
   }

@@ -88,6 +88,14 @@ export type IFoto = {
   }>
 }
 
+export type IVideo = {
+  Legenda: { _text: string },
+  Link: Array<{
+    Tamanho: { _text: string },
+    URLArquivo: { _text: string }
+  }>
+}
+
 export type IPropertyXML = {
   AreaServico?: { _text: string }
   AreaTotal?: {_text: string}
@@ -108,7 +116,9 @@ export type IPropertyXML = {
   Endereco?: {_text: string }
   EstradaAsfaltada?: {_text: string }
   EstudaPermuta?: {_text: string }
-  Fotos?: { Foto: Array<IFoto> }
+  Fotos?: { Foto: Array<IFoto> },
+  Sauna?: {_text: string },
+  Varanda?: {_text: string },
   InfraInternet?: {_text: string }
   Interfone?: {_text: string }
   Jardim?: {_text: string }
@@ -135,8 +145,12 @@ export type IPropertyXML = {
   TituloImovel?: {_text: string }
   UF?: {_text: string },
   thumbnail? : string,
+  features?: Array<string>,
+  Videos?: { Foto: Array<IVideo> },
   indexKey : string
 }
+
+export type IFeatures = Array<string>;
 
 export type ITeamCard = {
   image? : IconBaseProps,
@@ -184,5 +198,6 @@ export type IProperty = {
 
 export type ICarousel = {
   activeModal : boolean,
-  setActiveModal : (activeModal : boolean) => void
+  setActiveModal : (activeModal : boolean) => void,
+  ListPhotos? : Array<object>
 }

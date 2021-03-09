@@ -5,7 +5,8 @@ import React, { useEffect, useState } from 'react';
 import property from 'src/styles/Property.module.css';
 import Section from 'src/styles/Section.module.css';
 
-import { IProperty, IPropertyXML } from "interfaces/index";
+import { IPropertyXML } from "interfaces/index";
+import EmptyImage from "assets/images/empty.jpg"
 
 import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
 import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
@@ -16,12 +17,10 @@ import Carousel from "src/components/Carousel";
 import Image from "next/image";
 
 const myLoader = ({ src, width, quality } : any) => {
-    return src
+    return src;
 }
 
-const features = ["Casa", "2 banheiros", "3 quartos", "ar condicionado", "3 garagens"];
-
-const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail }) => {
+const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail, Fotos, features, Videos }) => {
 
     const [showGallery, setShowGallery] = useState(false);
 
@@ -40,11 +39,14 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
 
     const handleShowModal = (showGalleryModal : boolean) => setShowGallery(showGalleryModal);
 
+    console.log(features)
+
     return (
         <div className={property.containerProperty}>
             <Carousel 
                 activeModal={showGallery}
                 setActiveModal={handleShowModal}
+                ListPhotos={Fotos?.Foto}
             />
             
             <h3 className={property.propertyTitle}>
@@ -59,7 +61,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
             <div className={property.image}>
                 <Image
                     loader={myLoader}
-                    src={thumbnail ? thumbnail : ""}
+                    src={thumbnail ? thumbnail : EmptyImage}
                     layout="responsive"
                     width={800}
                     height={500}
@@ -101,27 +103,32 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
 
                     <p>
                         {Observacao?._cdata}
-                    </p>                   
+                    </p> 
 
-                    <iframe
-                        height="400"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                    </iframe>
+                    {Videos && (
+                        <iframe
+                            height="400"
+                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>
+                    )}
+                    
                 </div>
 
                 <div className={property.propertyDescription}>
                     <h3>Mais detalhes</h3>
 
-                    <ul className={property.featureList}>
-                        {features.map((f, i) => {
-                            if(i % 2 === 1) {
-                                return <li className={property.featureOdd} key={i.toString()}>{f}</li>;
-                            } 
+                    {features && (
+                        <ul className={property.featureList}>
+                            {features.map((f, i) => {
+                                if(i % 2 === 1) {
+                                    return <li className={property.featureOdd} key={i.toString()}>{f}</li>;
+                                } 
 
-                            return <li className={property.featureEven} key={i.toString()}>{f}</li>;
-                        })}
-                    </ul>
-                    
+                                return <li className={property.featureEven} key={i.toString()}>{f}</li>;
+                            })}
+                        </ul>
+                    )}
+
                 </div>
 
                 <div className={property.propertyMap}>
