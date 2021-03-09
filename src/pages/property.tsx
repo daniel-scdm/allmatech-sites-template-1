@@ -21,6 +21,8 @@ import { useFetch } from "src/hooks/useFetch";
 
 import { FaHouseDamage } from "react-icons/fa";
 
+import { IPropertyXML } from "interfaces";
+
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 import Footer from "src/components/Footer";
@@ -31,15 +33,22 @@ function Property() {
   const { query } = useRouter();
 
   const { getPropertyByCode } = useFilter();
-  const [prt, setPrt] = useState<any>(null);
+  const [prt, setPrt] = useState<IPropertyXML | null>(null);
+  const [features, setFeatures] = useState([]);
 
   useEffect(() => {
     if(state === "done") {
         const { code } = query;
         const p = getPropertyByCode(parsedXml.Carga.Imoveis.Imovel, code);
+        extractFeatures(p);
+        console.log(p)
         setPrt(p);
     }     
   }, [state]);
+
+  const extractFeatures = (property : IPropertyXML) => {
+      
+  }
 
   const handlePropertyLoading = () => {
     if(state != "done" && !prt) {
@@ -69,24 +78,15 @@ function Property() {
 
     return (
       <PropertyContainer 
-        bathrooms={3}
-        bedrooms={4}
-        garages={2}
-        price={40000}
-        text={`
-            Lorem ipsum dolor sit amet, consec tetur adi piscing elit. 
-            Aliquam necsa pien inleo ultrices tempus sedat justo. 
-            Suspen disse molestie adipiscing turpis, ut scelerisque mauris. 
-            Mauris at dictum lectus, at sodales ante. 
-            Suspendisse sollicitudin velit id accumsan sodales. 
-            Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-            Curabitur id purus enim. Ut porta vulputate odio, ac sollicitudin lectus iaculis nec. 
-            Etiam porttitor lobortis ligula quis condimentum. 
-            Nullam hendrerit eros hendrerit sem varius, a tincidunt mi eleifend. 
-            Fusce congue eu odio ut convallis.
-        `}
-        title="9 Ashmore Way, Sorrento WA 6020"
-      
+        QtdBanheiros={prt?.QtdBanheiros}
+        QtdDormitorios={prt?.QtdBanheiros}
+        QtdVagas={prt?.QtdBanheiros}
+        PrecoLocacao={prt?.PrecoLocacao}
+        PrecoVenda={prt?.PrecoVenda}
+        Observacao={prt?.Observacao}
+        TituloImovel={prt?.TipoImovel}
+        indexKey={"1"}  
+        thumbnail={prt?.Fotos?.Foto[0].Link[1].URLArquivo._text}    
       />
     );
   }

@@ -175,10 +175,10 @@ export type IProperty = {
   image? : string,
   title : string,
   text : string,
-  bedrooms : number,
-  bathrooms : number,
-  garages : number,
-  price : number,
+  bedrooms : number | string | undefined,
+  bathrooms : number | string | undefined,
+  garages : number | string | undefined,
+  price : number | string | undefined,
   indexKey? : number
 }
 

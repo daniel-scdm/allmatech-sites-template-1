@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import property from 'src/styles/Property.module.css';
 import Section from 'src/styles/Section.module.css';
 
-import { IProperty } from "interfaces/index";
+import { IProperty, IPropertyXML } from "interfaces/index";
 
 import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
 import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
@@ -16,12 +16,12 @@ import Carousel from "src/components/Carousel";
 import Image from "next/image";
 
 const myLoader = ({ src, width, quality } : any) => {
-    return `https://picsum.photos/id/1018/1000/600/`
+    return src
 }
 
 const features = ["Casa", "2 banheiros", "3 quartos", "ar condicionado", "3 garagens"];
 
-const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms, garages, bedrooms, }) => {
+const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail }) => {
 
     const [showGallery, setShowGallery] = useState(false);
 
@@ -48,18 +48,18 @@ const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms
             />
             
             <h3 className={property.propertyTitle}>
-                {title}
+                {TituloImovel?._text}
             </h3> 
-            <div>
-                <span className={property.propertyPrice}>
-                    A partir de R$ {price}
-                </span>
+            <div className={property.cardPrice}>
+                {PrecoVenda?._text && <span>Venda: R$ {PrecoVenda._text}</span>}
+
+                {PrecoLocacao?._text && <span>Aluguel: R$ {PrecoLocacao._text}</span>}
             </div>
 
             <div className={property.image}>
                 <Image
                     loader={myLoader}
-                    src="https://picsum.photos/id/1018/1000/600/"
+                    src={thumbnail ? thumbnail : ""}
                     layout="responsive"
                     width={800}
                     height={500}
@@ -86,13 +86,13 @@ const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms
             <div className={property.propertyInfoContainer}>
                 <div className={property.cardFeatures}>
                     <div>
-                        <GiPersonInBed size={38} /> <span>{bedrooms} </span>                           
+                        <GiPersonInBed size={38} /> <span>{QtdDormitorios ? QtdDormitorios._text : 0} </span>                           
                     </div>
                     <div>
-                        <GiBathtub size={32} /> <span>{bathrooms}</span>
+                        <GiBathtub size={32} /> <span>{QtdBanheiros ? QtdBanheiros._text : 0}</span>
                     </div>
                     <div className={property.garages}>
-                        <GiHomeGarage size={32} /> <span>{garages}</span>
+                        <GiHomeGarage size={32} /> <span>{QtdVagas ? QtdVagas._text : 0}</span>
                     </div>
                 </div>
 
@@ -100,11 +100,8 @@ const PropertyContainer : React.FC<IProperty> = ({ title, text, price, bathrooms
                     <h3>Descrição</h3>
 
                     <p>
-                        {text}
-                    </p>
-                    <p>
-                        {text}
-                    </p>
+                        {Observacao?._cdata}
+                    </p>                   
 
                     <iframe
                         height="400"

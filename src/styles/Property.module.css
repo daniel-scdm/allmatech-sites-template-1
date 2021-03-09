@@ -456,6 +456,10 @@
     color: #707070;
 }
 
+.containerProperty > .cardPrice {
+    font-size: 1.7rem;
+}
+
 @media (min-width: 1200px) {
     .contentReverse,
     .content {

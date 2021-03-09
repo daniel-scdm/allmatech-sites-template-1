@@ -6,7 +6,7 @@ export const useFilter = () => {
         const f = properties.filter((p : IPropertyXML) => p.CodigoImovel?._text === code);
 
         if(f.length > 0) {
-            return f;
+            return f[0];
         }
 
         return null;
