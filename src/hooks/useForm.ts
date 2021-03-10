@@ -5,31 +5,31 @@ const formatKeys = ["banheiros", "garagem", "quartos"];
 
 export const useForm = (initValues : IinitValues, submitForm : () => void) => {
 
-    const [buyValues, setBuyValues] = useState(initValues);
+    const [formValues, setFormValues] = useState(initValues);
     const [errMessage, setErrMessage] = useState("");
 
-    const handleChangeBuy = (value: string, KeyName : string) => {
+    const handleChangeForm = (value: string, KeyName : string) => {
 
         if(formatKeys.includes(KeyName)) {
             const formatKeyValue = parseInt(value.split("+").join(""));
 
-            setBuyValues({
-                ...buyValues,
+            setFormValues({
+                ...formValues,
                 [KeyName]: formatKeyValue
             });
 
             return;
         }
 
-        setBuyValues({
-            ...buyValues,
+        setFormValues({
+            ...formValues,
             [KeyName]: value
         });
     }
 
     const handleSliderChange = (values: Array<number>) => {
-        setBuyValues({
-            ...buyValues,
+        setFormValues({
+            ...formValues,
             ["valores"] : values
         });
     }
@@ -37,12 +37,12 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
     const handleForm = (e : React.FormEvent) => {
         e.preventDefault();
 
-        if(buyValues["valores"][0] > buyValues["valores"][1]) {
+        if(formValues["valores"][0] > formValues["valores"][1]) {
             setErrMessage("Valor min. não pode ser maior que o valor max.");
             return;
         }            
         
-        if(buyValues["valores"][1] > 200000000) {
+        if(formValues["valores"][1] > 200000000) {
             setErrMessage("Valor max não pode exceder R$ 200.000.000.");
             return;
         }
@@ -52,8 +52,8 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
     }
 
     return { 
-        buyValues, 
-        handleChangeBuy,
+        formValues, 
+        handleChangeForm,
         handleForm,
         handleSliderChange,
         errMessage

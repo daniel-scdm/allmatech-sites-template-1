@@ -23,13 +23,13 @@ export const useFilter = () => {
     }
 
     const filterTypeVenda = (value : IPropertyXML) => {
-        if(value.PrecoVenda) {
+        if(value.PrecoVenda && value.PrecoVenda._text) {
             return true;
         }
     }
 
     const filterTypeLocacao = (value : IPropertyXML) => {
-        if(value.PrecoLocacao) {
+        if(value.PrecoLocacao && value.PrecoLocacao._text) {
             return true;
         }
     }
@@ -138,8 +138,8 @@ export const useFilter = () => {
                     break;
                 case "valores":               
                     return { [entries[0]]: entries[1] }
-                case "tipoImovel":               
-                    return { [entries[0]]: entries[1] }
+                case "buy":               
+                    return { tipoImovel: entries[1] }
                 default: 
                 break;
             }

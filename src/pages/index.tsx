@@ -32,7 +32,8 @@ export default function Home() {
   const { parsedXml, state } = useFetch();
 
   const [cities, setCities] = useState<Array<string> | undefined>([]);
-  const [streets, setStreets] = useState<Array<string> | undefined>([]);
+  const [streetsBuy, setStreetsBuy] = useState<Array<string> | undefined>([]);
+  const [streetsRent, setStreetsRent] = useState<Array<string> | undefined>([]);
 
   useEffect(() => {
       if(state === "done") {
@@ -54,7 +55,7 @@ export default function Home() {
       
   }
 
-  const extractStreets = (selectedCity : string) => {
+  const extractStreetsBuy = (selectedCity : string) => {
       const mappedStreets = parsedXml.Carga.Imoveis.Imovel.map(imovel => {
         if(imovel.Cidade._text === selectedCity && imovel.Bairro)
           return imovel.Bairro._text;
@@ -63,8 +64,20 @@ export default function Home() {
       });
 
       const filteredStreets = mappedStreets.filter(filterUnique);
-      setStreets(filteredStreets);    
+      setStreetsBuy(filteredStreets);    
   }
+
+  const extractStreetsRent = (selectedCity : string) => {
+    const mappedStreets = parsedXml.Carga.Imoveis.Imovel.map(imovel => {
+      if(imovel.Cidade._text === selectedCity && imovel.Bairro)
+        return imovel.Bairro._text;
+
+      return;
+    });
+
+    const filteredStreets = mappedStreets.filter(filterUnique);
+    setStreetsRent(filteredStreets);    
+}
 
   const filterUnique = (value, index, self) => self.indexOf(value) === index && value !== undefined;
 
@@ -90,8 +103,10 @@ export default function Home() {
         <div className={Section.sectionDiv}>
           <SearchForm 
             cityList={cities}
-            updateStreet={extractStreets}
-            streetList={streets}
+            updateStreetBuy={extractStreetsBuy}
+            updateStreetRent={extractStreetsRent}
+            streetListBuy={streetsBuy}
+            streetListRent={streetsRent}
           />
           <CatchPhrase />
         </div>        

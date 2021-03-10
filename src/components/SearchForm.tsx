@@ -11,30 +11,48 @@ import Form from "src/styles/Form.module.css";
 import DropDownComponent from "src/components/DropDownComponent";
 import SliderComponent from "src/components/Slider";
 
-const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet }) => {
+const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRent, updateStreetBuy, updateStreetRent }) => {
 
     const [selectdTab, setSelectdTab] = useState(true);
     const router = useRouter();
 
-    const { 
-        buyValues, 
-        handleChangeBuy, 
-        handleSliderChange, 
-        errMessage, 
-        handleForm 
-    } = useForm({
+    const formBuy = useForm({
+        buy: true,
         cidade: "",
         bairro: "",
         valores: [0, 200000000],
         quartos: 0,
         banheiros: 0,
         garagem: 0
-    }, () => submitForm());
+    }, () => submitFormBuy());
 
-    const submitForm = () => {
+    const formRent = useForm({
+        buy: false,
+        cidade: "",
+        bairro: "",
+        valores: [0, 200000000],
+        quartos: 0,
+        banheiros: 0,
+        garagem: 0
+    }, () => submitFormRent());
+
+    const submitFormBuy = () => {
 
         const filterOptions = {
-            ...buyValues,
+            ...formBuy.formValues,
+            tipoImovel: selectdTab 
+        }
+
+        router.push({
+            pathname: "/list",
+            query: filterOptions
+        });
+    }
+
+    const submitFormRent = () => {
+
+        const filterOptions = {
+            ...formRent.formValues,
             tipoImovel: selectdTab 
         }
 
@@ -67,28 +85,28 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
             <div className={Form.baseTab}></div>
             <div className={Form.container}>
                 {selectdTab && (
-                    <form onSubmit={handleForm}>
+                    <form onSubmit={formBuy.handleForm}>
                         <DropDownComponent 
                             Label="Cidade"
                             ListOptions={cityList}
-                            selectedValue={buyValues["cidade"]}
-                            updateSimbling={updateStreet}
-                            onChangeValue={handleChangeBuy}
+                            selectedValue={formBuy.formValues["cidade"]}
+                            updateSimbling={updateStreetBuy}
+                            onChangeValue={formBuy.handleChangeForm}
                             KeyName="cidade"
                         /> 
                         <DropDownComponent 
                             Label="Bairro"
-                            ListOptions={streetList}
-                            selectedValue={buyValues["bairro"]}
-                            onChangeValue={handleChangeBuy}
+                            ListOptions={streetListBuy}
+                            selectedValue={formBuy.formValues["bairro"]}
+                            onChangeValue={formBuy.handleChangeForm}
                             KeyName="bairro"
                         /> 
                         
                         <SliderComponent 
                             Label="Valor (R$)"   
-                            values={buyValues["valores"]}  
-                            onChangeValue={handleSliderChange} 
-                            errorMessage={errMessage}                      
+                            values={formBuy.formValues["valores"]}  
+                            onChangeValue={formBuy.handleSliderChange} 
+                            errorMessage={formBuy.errMessage}                      
                         />
                         
                         <Flex>
@@ -105,11 +123,11 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
                                     "9+",
                                     "10+"
                                 ]}
-                                selectedValue={buyValues["quartos"] + "+"}                                
+                                selectedValue={formBuy.formValues["quartos"] + "+"}                                
                                 extraStyles={{
                                     paddingRight: 25  
                                 }}
-                                onChangeValue={handleChangeBuy}
+                                onChangeValue={formBuy.handleChangeForm}
                                 defaultValue={"1+"}
                                 KeyName="quartos"
                             />  
@@ -127,8 +145,8 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
                                     "9+",
                                     "10+"
                                 ]}
-                                selectedValue={buyValues["banheiros"] + "+"}                                
-                                onChangeValue={handleChangeBuy}
+                                selectedValue={formBuy.formValues["banheiros"] + "+"}                                
+                                onChangeValue={formBuy.handleChangeForm}
                                 defaultValue={"1+"}
                                 KeyName="banheiros"
                             />
@@ -146,8 +164,8 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
                                 "9+",
                                 "10+"
                             ]}
-                            selectedValue={buyValues["garagem"] + "+"}                                
-                            onChangeValue={handleChangeBuy}
+                            selectedValue={formBuy.formValues["garagem"] + "+"}                                
+                            onChangeValue={formBuy.handleChangeForm}
                             KeyName="garagem"
                             defaultValue={"1+"}
                         />  
@@ -161,8 +179,91 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
                 )}
 
                 {!selectdTab && (
-                    <form onSubmit={handleForm}>
+                    <form onSubmit={formRent.handleForm}>
+                        <DropDownComponent 
+                            Label="Cidade"
+                            ListOptions={cityList}
+                            selectedValue={formRent.formValues["cidade"]}
+                            updateSimbling={updateStreetRent}
+                            onChangeValue={formRent.handleChangeForm}
+                            KeyName="cidade"
+                        /> 
+                        <DropDownComponent 
+                            Label="Bairro"
+                            ListOptions={streetListRent}
+                            selectedValue={formRent.formValues["bairro"]}
+                            onChangeValue={formRent.handleChangeForm}
+                            KeyName="bairro"
+                        /> 
                         
+                        <SliderComponent 
+                            Label="Valor (R$)"   
+                            values={formRent.formValues["valores"]}  
+                            onChangeValue={formRent.handleSliderChange} 
+                            errorMessage={formRent.errMessage}                      
+                        />
+                        
+                        <Flex>
+                            <DropDownComponent 
+                                Label="Qtd. Quartos"
+                                ListOptions={[
+                                    "2+",
+                                    "3+",
+                                    "4+",
+                                    "5+",
+                                    "6+",
+                                    "7+",
+                                    "8+",
+                                    "9+",
+                                    "10+"
+                                ]}
+                                selectedValue={formRent.formValues["quartos"] + "+"}                                
+                                extraStyles={{
+                                    paddingRight: 25  
+                                }}
+                                onChangeValue={formRent.handleChangeForm}
+                                defaultValue={"1+"}
+                                KeyName="quartos"
+                            />  
+
+                            <DropDownComponent 
+                                Label="Qtd. Banheiros"
+                                ListOptions={[
+                                    "2+",
+                                    "3+",
+                                    "4+",
+                                    "5+",
+                                    "6+",
+                                    "7+",
+                                    "8+",
+                                    "9+",
+                                    "10+"
+                                ]}
+                                selectedValue={formRent.formValues["banheiros"] + "+"}                                
+                                onChangeValue={formRent.handleChangeForm}
+                                defaultValue={"1+"}
+                                KeyName="banheiros"
+                            />
+                        </Flex>
+                        <DropDownComponent 
+                            Label="Vagas"
+                            ListOptions={[
+                                "2+",
+                                "3+",
+                                "4+",
+                                "5+",
+                                "6+",
+                                "7+",
+                                "8+",
+                                "9+",
+                                "10+"
+                            ]}
+                            selectedValue={formRent.formValues["garagem"] + "+"}                                
+                            onChangeValue={formRent.handleChangeForm}
+                            KeyName="garagem"
+                            defaultValue={"1+"}
+                        /> 
+
                         <input 
                             type="submit" 
                             value="Buscar" 

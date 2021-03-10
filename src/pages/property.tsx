@@ -91,6 +91,7 @@ function Property() {
 
     return (
       <PropertyContainer 
+        Cidade={{ _text: "" }}
         QtdBanheiros={prt?.QtdBanheiros}
         QtdDormitorios={prt?.QtdBanheiros}
         QtdVagas={prt?.QtdBanheiros}

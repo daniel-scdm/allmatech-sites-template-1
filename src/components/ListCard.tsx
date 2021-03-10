@@ -10,7 +10,7 @@ import Link from "next/link";
 import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
 
-const ListCard : FC<IPropertyXML> = ({ CodigoImovel ,TipoOferta, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, indexKey, PrecoVenda, PrecoLocacao }) => {
+const ListCard : FC<IPropertyXML> = ({ CodigoImovel, TipoOferta, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, indexKey, PrecoVenda, PrecoLocacao }) => {
 
     return (        
         <div className={property.listCard} key={indexKey}>

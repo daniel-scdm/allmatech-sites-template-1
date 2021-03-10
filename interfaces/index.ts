@@ -20,12 +20,15 @@ export type IFullSection = {
 
 export type ISearchFormBuy = {
     cityList? : Array<string>,
-    streetList? : Array<string>,
-    updateStreet? : (value : string) => void 
+    streetListBuy? : Array<string>,
+    updateStreetBuy? : (value : string) => void,
+    streetListRent? : Array<string>,
+    updateStreetRent? : (value : string) => void  
 }
 
 export type IFilterFormList = {
-  propertyList? : Array<IPropertyXML>  
+  propertyList? : Array<IPropertyXML>,
+  callbackList : (query : object) => void
 }
 
 export type ISearchFormRent = {
@@ -53,6 +56,7 @@ export type ISlider = {
 }
 
 export type IinitValues = {
+  buy: boolean,
   cidade: string,
   bairro: string,
   valores: Array<number>,

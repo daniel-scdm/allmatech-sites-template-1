@@ -67,6 +67,7 @@ const ListProperties : FC<IListProperties> = ({ List }) => {
                 <div>                
                     {paginatedList.map((p : IPropertyXML, i) => (
                         <ListCard 
+                            Cidade={{_text: ""}}
                             CodigoImovel={p.CodigoImovel}
                             thumbnail={p.Fotos?.Foto[0].Link[0].URLArquivo._text}
                             QtdBanheiros={p.QtdBanheiros}

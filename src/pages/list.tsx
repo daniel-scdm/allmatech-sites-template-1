@@ -39,6 +39,11 @@ function List() {
       }     
   }, [state]);
 
+  const handleFilter = (query: object) => {
+    const filteredProperties = filterProperties(parsedXml.Carga.Imoveis.Imovel, query); 
+    setListProperties(filteredProperties);  
+  }
+
   return (
     <>
       <Header 
@@ -59,6 +64,7 @@ function List() {
                 <PropertyAuthor />
                 <FilterFormList 
                   propertyList={listProperties}
+                  callbackList={handleFilter}
                 />
                 <Sponsor />
                 <Search />

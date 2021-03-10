@@ -7,29 +7,33 @@ import Section from 'src/styles/Section.module.css';
 import Form from 'src/styles/Form.module.css';
 import { useForm } from "src/hooks/useForm";
 import { useFetch } from "src/hooks/useFetch";
+import { useRouter } from "next/router";
 
 import { IFilterFormList, IPropertyXML, ICarga } from "interfaces";
 import DropDownComponent from "src/components/DropDownComponent";
 import SliderComponent from "src/components/Slider";
 
-const FilterFormList : React.FC<IFilterFormList> = ({ propertyList }) => {
+const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList }) => {
     const { parsedXml, state } = useFetch();
+
+    const router = useRouter();
 
 
     useEffect(() => {
-        if(state === "done") extractCity(parsedXml?.Carga.Imoveis.Imovel);
+        if(state === "done" && parsedXml) extractCity(parsedXml.Carga.Imoveis.Imovel);
     }, [state]);
 
     const [cities, setCities] = useState<Array<string>>([]);
     const [streets, setStreets] = useState<Array<string>>([]);
 
     const { 
-        buyValues, 
-        handleChangeBuy, 
+        formValues, 
+        handleChangeForm, 
         handleSliderChange, 
         errMessage, 
         handleForm 
     } = useForm({
+        buy: true,
         cidade: "",
         bairro: "",
         valores: [0, 200000000],
@@ -39,21 +43,22 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList }) => {
     }, () => submitForm());
 
     const extractCity = (Imoveis : Array<IPropertyXML>) => {
-        if(Imoveis) {
-            const mappedCities = Imoveis.map(imovel => {
-                if(imovel && imovel.Cidade)
-                  return imovel.Cidade._text;
+        const mappedCities = Imoveis.map(imovel => {
+            if(imovel && imovel.Cidade)
+                return imovel.Cidade._text;
+    
+            return;
+        });
+    
+        const filteredCities = mappedCities.filter(filterUnique);
+        setCities(filteredCities);
         
-                return;
-              });
-        
-              const filteredCities = mappedCities.filter(filterUnique);
-              setCities(filteredCities);
-        }             
     }
   
     const extractStreets = (selectedCity : string) => {
-        const mappedStreets : Array<string | undefined> = parsedXml.Carga.Imoveis.Imovel.map((imovel : IPropertyXML) => {
+        handleChangeForm("Todos", "bairro");
+
+        const mappedStreets : Array<string> = parsedXml.Carga.Imoveis.Imovel.map((imovel : IPropertyXML) => {
           if(imovel.Cidade._text === selectedCity && imovel.Bairro)
             return imovel.Bairro._text;
   
@@ -64,31 +69,47 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList }) => {
         setStreets(filteredStreets);    
     }
   
-    const filterUnique = (value : any, index, self) => self.indexOf(value) === index && value !== undefined;
+    const filterUnique = (value : any, index : number, self : any) => self.indexOf(value) === index && value !== undefined;
+
+    const submitForm = () => {
+
+        const filterOptions = {
+            ...formValues
+        }
+
+        if(router.pathname === "/property") {
+            router.push({
+                pathname: "/list",
+                query: filterOptions
+            });
+        } else {
+            callbackList(filterOptions);
+        }
+    }
 
     return (
         <div className={Section.filterForm}>
-            <form className={Section.filterList}>
+            <form className={Section.filterList} onSubmit={handleForm}>
                 <DropDownComponent 
                     Label="Cidade"
                     ListOptions={cities}
-                    selectedValue={buyValues["cidade"]}
+                    selectedValue={formValues["cidade"]}
                     updateSimbling={extractStreets}
-                    onChangeValue={handleChangeBuy}
+                    onChangeValue={handleChangeForm}
                     KeyName="cidade"
                 /> 
 
                 <DropDownComponent 
                     Label="Bairro"
                     ListOptions={streets}
-                    selectedValue={buyValues["bairro"]}
-                    onChangeValue={handleChangeBuy}
+                    selectedValue={formValues["bairro"]}
+                    onChangeValue={handleChangeForm}
                     KeyName="bairro"
                 />
 
                 <SliderComponent 
                     Label="Valor (R$)"   
-                    values={buyValues["valores"]}  
+                    values={formValues["valores"]}  
                     onChangeValue={handleSliderChange} 
                     errorMessage={errMessage}                      
                 />
@@ -107,11 +128,11 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList }) => {
                             "9+",
                             "10+"
                         ]}
-                        selectedValue={buyValues["quartos"] + "+"}                                
+                        selectedValue={formValues["quartos"] + "+"}                                
                         extraStyles={{
                             paddingRight: 25  
                         }}
-                        onChangeValue={handleChangeBuy}
+                        onChangeValue={handleChangeForm}
                         defaultValue={"1+"}
                         KeyName="quartos"
                     />  
@@ -129,8 +150,8 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList }) => {
                             "9+",
                             "10+"
                         ]}
-                        selectedValue={buyValues["banheiros"] + "+"}                                
-                        onChangeValue={handleChangeBuy}
+                        selectedValue={formValues["banheiros"] + "+"}                                
+                        onChangeValue={handleChangeForm}
                         defaultValue={"1+"}
                         KeyName="banheiros"
                     />
@@ -148,8 +169,8 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList }) => {
                         "9+",
                         "10+"
                     ]}
-                    selectedValue={buyValues["garagem"] + "+"}                                
-                    onChangeValue={handleChangeBuy}
+                    selectedValue={formValues["garagem"] + "+"}                                
+                    onChangeValue={handleChangeForm}
                     KeyName="garagem"
                     defaultValue={"1+"}
                 />
