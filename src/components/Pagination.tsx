@@ -116,12 +116,14 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
 
     const handleMoveLeft = (e : React.MouseEvent) => {
       e.preventDefault();
-      gotoPage(currentPage - (pageNeighbours * 2) - 1);
+
+      gotoPage(currentPage - 1);
     }
   
     const handleMoveRight = (e : React.MouseEvent) => {
       e.preventDefault();
-      gotoPage(currentPage + (pageNeighbours * 2) + 1);
+
+      gotoPage(currentPage + 1);
     }
 
     if(totalPages === 1 || !total) return null;

@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-import { FC } from 'react';
-import { IListProperties, IPropertyXML } from "interfaces/index";
+import { FC, useState, useEffect } from 'react';
+import { IListProperties, IPropertyXML, IPageDetails } from "interfaces";
 import property from "src/styles/Property.module.css";
 
 import ListCard from "src/components/ListCard";
@@ -10,7 +10,34 @@ import Pagination from "src/components/Pagination";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
-const ListProperties : FC<IListProperties> = ({ List, pageNumber, total, totalPages, isLoading }) => {
+const PAGE_LIMIT = 15;
+
+const ListProperties : FC<IListProperties> = ({ List }) => {
+
+    const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        if(List) {
+            paginate(1);    
+            setIsLoading(false);  
+        }          
+    }, [List]);
+
+    const paginate = (pg : number) => {      
+        if(List) {
+            const slicedList = List.slice((pg - 1) * PAGE_LIMIT, PAGE_LIMIT * pg);
+            if(slicedList && slicedList.length > 0) {
+                setPaginatedList(slicedList);
+            }
+        }        
+    }
+
+    const handlePageChange = (page : IPageDetails) => {
+        setIsLoading(true);
+        paginate(page.currentPage);
+        setIsLoading(false);
+    }
 
     const renderContainerList = () => {
 
@@ -24,7 +51,7 @@ const ListProperties : FC<IListProperties> = ({ List, pageNumber, total, totalPa
             );
         }
 
-        if(List.length === 0) {
+        if(List && List.length === 0) {
             return (
                 <div className={property.emptyList}>
                     <div>
@@ -33,17 +60,12 @@ const ListProperties : FC<IListProperties> = ({ List, pageNumber, total, totalPa
                     Não foi possível encontrar imóveis
                 </div>
             );            
-        }
-
-        const handlePageChange = (page) => {
-
-            console.log(page, typeof page, List.length);
-        }
+        }       
 
         return (
             <>
                 <div>                
-                    {List.map((p : IPropertyXML, i) => (
+                    {paginatedList.map((p : IPropertyXML, i) => (
                         <ListCard 
                             CodigoImovel={p.CodigoImovel}
                             thumbnail={p.Fotos?.Foto[0].Link[0].URLArquivo._text}
@@ -61,7 +83,7 @@ const ListProperties : FC<IListProperties> = ({ List, pageNumber, total, totalPa
                 <Pagination
                     pageLimit={15}
                     pageNeighbours={2}
-                    total={List.length}
+                    total={List ? List.length : 0}
                     onPageChanged={handlePageChange} 
                 />                
             </> 

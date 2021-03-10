@@ -39,8 +39,6 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
 
     const handleShowModal = (showGalleryModal : boolean) => setShowGallery(showGalleryModal);
 
-    console.log(features)
-
     return (
         <div className={property.containerProperty}>
             <Carousel 

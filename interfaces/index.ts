@@ -106,7 +106,7 @@ export type IPropertyXML = {
   CEP?: {_text: string }
   CategoriaImovel?: {_text: string }
   Cerca?: {_text: string }
-  Cidade?: {_text: string }
+  Cidade: {_text: string }
   Closet?: {_text: string }
   CodigoImovel?: {_text: string }
   Complemento?: {_text: string }
@@ -170,11 +170,7 @@ export type INewsCard = {
 }
 
 export type IListProperties = {
-  List : Array<IPropertyXML>,
-  total : number,
-  isLoading: boolean,
-  pageNumber : number,
-  totalPages : number
+  List? : Array<IPropertyXML>
 }
 
 export type IPagination = {
@@ -182,6 +178,13 @@ export type IPagination = {
   pageLimit : number,
   pageNeighbours : number,
   onPageChanged : Function
+}
+
+export type IPageDetails = {
+  currentPage : number,
+  pageLimit : number,
+  totalPages : number,
+  totalRecords : number
 }
 
 export type IProperty = {

@@ -107,18 +107,17 @@ export const useFilter = () => {
 
     const filterProperties = (properties : Array<IPropertyXML>, filterOptions : object) => {
 
-
         const removeEmpty = (value : any) => value !== undefined;
 
         const Filter = Object.entries(filterOptions).map((entries : Array<any>) => {
             switch(entries[0]) {
                 case "cidade": 
-                    if(entries[1] !== "") {
+                    if(entries[1] !== "" && entries[1] !== "Todos") {
                         return { [entries[0]]: entries[1] }
                     }
                     break;
                 case "bairro": 
-                    if(entries[1] !== "") {
+                    if(entries[1] !== "" && entries[1] !== "Todos") {
                         return { [entries[0]]: entries[1] }
                     }
                     break;

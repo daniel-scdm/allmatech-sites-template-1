@@ -32,8 +32,7 @@ function List() {
   const [cities, setCities] = useState<Array<string> | undefined>([]);
   const [streets, setStreets] = useState<Array<string> | undefined>([]);
 
-  const [listProperties, setListProperties] = useState<Array<any>>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [listProperties, setListProperties] = useState<Array<IPropertyXML> | undefined>(undefined);
 
   useEffect(() => {
       if(state === "done") {
@@ -42,7 +41,6 @@ function List() {
           const filteredProperties = filterProperties(parsedXml.Carga.Imoveis.Imovel, query); 
           setListProperties(filteredProperties);
           extractCity(parsedXml.Carga.Imoveis.Imovel);   
-          setIsLoading(false);
           
       }     
   }, [state]);
@@ -60,7 +58,7 @@ function List() {
   }
 
   const extractStreets = (selectedCity : string) => {
-      const mappedStreets = parsedXml.Carga.Imoveis.Imovel.map(imovel => {
+      const mappedStreets = parsedXml.Carga.Imoveis.Imovel.map((imovel : IPropertyXML) => {
         if(imovel.Cidade._text === selectedCity && imovel.Bairro)
           return imovel.Bairro._text;
 
@@ -86,11 +84,7 @@ function List() {
           <div className={property.contentReverse}>
             <main>
               <ListProperties 
-                isLoading={isLoading}
                 List={listProperties}
-                pageNumber={1}
-                total={200}
-                totalPages={20}
               />
             </main>
             <aside>
