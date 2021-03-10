@@ -1,5 +1,6 @@
 import { useEffect, useState, useReducer } from "react";
 import convertXML from "xml-js";
+import { ICarga } from "interfaces";
 
 const headers = new Headers();
 
@@ -17,7 +18,7 @@ const reducer = (state, action) => action;
 
 export const useFetch = () => {
 
-    const [parsedXml, setParsedXml] = useState<object>({});
+    const [parsedXml, setParsedXml] = useState<ICarga>();
     const [state, dispatch] = useReducer(reducer, initState);
 
     useEffect(() => {

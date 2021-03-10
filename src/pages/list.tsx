@@ -27,49 +27,17 @@ function List() {
 
   const { parsedXml, state } = useFetch();
   const router = useRouter();
-  const { filterProperties } = useFilter();
-
-  const [cities, setCities] = useState<Array<string> | undefined>([]);
-  const [streets, setStreets] = useState<Array<string> | undefined>([]);
+  const { filterProperties } = useFilter();  
 
   const [listProperties, setListProperties] = useState<Array<IPropertyXML> | undefined>(undefined);
 
   useEffect(() => {
       if(state === "done") {
-
           const { query } = router;
           const filteredProperties = filterProperties(parsedXml.Carga.Imoveis.Imovel, query); 
-          setListProperties(filteredProperties);
-          extractCity(parsedXml.Carga.Imoveis.Imovel);   
-          
+          setListProperties(filteredProperties);          
       }     
   }, [state]);
-
-  const extractCity = (Imoveis : Array<IPropertyXML>) => {
-      const mappedCities = Imoveis.map(imovel => {
-        if(imovel && imovel.Cidade)
-          return imovel.Cidade._text;
-
-        return;
-      });
-
-      const filteredCities = mappedCities.filter(filterUnique);
-      setCities(filteredCities);     
-  }
-
-  const extractStreets = (selectedCity : string) => {
-      const mappedStreets = parsedXml.Carga.Imoveis.Imovel.map((imovel : IPropertyXML) => {
-        if(imovel.Cidade._text === selectedCity && imovel.Bairro)
-          return imovel.Bairro._text;
-
-        return;
-      });
-
-      const filteredStreets = mappedStreets.filter(filterUnique);
-      setStreets(filteredStreets);    
-  }
-
-  const filterUnique = (value : any, index, self) => self.indexOf(value) === index && value !== undefined;
 
   return (
     <>
@@ -89,7 +57,9 @@ function List() {
             </main>
             <aside>
                 <PropertyAuthor />
-                <FilterFormList />
+                <FilterFormList 
+                  propertyList={listProperties}
+                />
                 <Sponsor />
                 <Search />
             </aside>

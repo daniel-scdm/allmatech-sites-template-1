@@ -50,10 +50,12 @@ const Carousel : React.FC<ICarousel> = ({ activeModal, setActiveModal, ListPhoto
                 <div className={property.gallery}>
                     <GalleryCarousel
                         showThumbs={false}
+                        showIndicators={false}
+                        className={property.sliderGallery}
                     >
-                        {ListPhotos?.map((photo : any) => (
-                            <div className={property.imageContainer}>
-                                <Image loader={myLoader} src={photo.Link[1].URLArquivo._text} width={800} height={500} />
+                        {ListPhotos?.map((photo : any, i : number) => (
+                            <div className={property.imageContainer} key={i.toString()}>
+                                <Image loader={myLoader} src={photo.Link[1].URLArquivo._text} width={1200} height={800} />
                             </div>
                         ))}                
                     </GalleryCarousel>

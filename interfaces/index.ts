@@ -24,6 +24,10 @@ export type ISearchFormBuy = {
     updateStreet? : (value : string) => void 
 }
 
+export type IFilterFormList = {
+  propertyList? : Array<IPropertyXML>  
+}
+
 export type ISearchFormRent = {
   cityList? : Array<string> 
 }
@@ -148,6 +152,16 @@ export type IPropertyXML = {
   features?: Array<string>,
   Videos?: { Foto: Array<IVideo> },
   indexKey : string
+}
+
+export type ICarga = {
+  Carga: {
+    _attributes: any,
+    Imoveis: {
+      Imovel: Array<IPropertyXML>
+    }
+  },
+  _declaration: any
 }
 
 export type IFeatures = Array<string>;

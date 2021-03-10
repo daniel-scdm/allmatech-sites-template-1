@@ -300,6 +300,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .galleryButton {
@@ -458,6 +459,10 @@
 
 .containerProperty > .cardPrice {
     font-size: 1.7rem;
+}
+
+.sliderGallery {
+    height: 100%;
 }
 
 @media (min-width: 1200px) {

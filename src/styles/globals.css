@@ -183,12 +183,10 @@ footer ul li a:hover {
   height: auto;
 }
 
-.carousel-root {
-  outline: none;
-  display: flex;
-  flex-direction: column;
+.carousel.carousel-slider,
+.carousel .slider-wrapper,
+.carousel .slider-wrapper.axis-horizontal .slider {
   height: 100%;
-  justify-content: space-between;
 }
 
 /* Classes Alert */

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-import React from 'react';
+import React, { memo } from 'react';
 import { ISlider } from "interfaces/index";
 import Slider from "rc-slider";
 
@@ -70,4 +70,4 @@ const SliderComponent : React.FC<ISlider> = ({ Label, extraStyles, values, onCha
     );
 }
 
-export default SliderComponent;
+export default memo(SliderComponent);
