@@ -40,9 +40,5 @@ export const useFetch = () => {
             .catch(err => console.log(err));
     }
 
-    const filterList = () => {
-
-    }
-
-    return { parsedXml, state, filterList }
+    return { parsedXml, state, _fetchData }
 }

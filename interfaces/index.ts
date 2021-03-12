@@ -18,6 +18,12 @@ export type IFullSection = {
   children: ReactChild
 }
 
+export type IContext = {
+  state: string,
+  parsedXml: ICarga,
+  _fetchData: () => void
+}
+
 export type ISearchFormBuy = {
     cityList? : Array<string>,
     streetListBuy? : Array<string>,
@@ -188,7 +194,8 @@ export type INewsCard = {
 }
 
 export type IListProperties = {
-  List? : Array<IPropertyXML>
+  List? : Array<IPropertyXML>,
+  isLoading: boolean
 }
 
 export type IPagination = {

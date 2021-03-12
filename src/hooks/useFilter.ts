@@ -43,7 +43,7 @@ export const useFilter = () => {
 
                 switch (keyValue[0]) {
                     case "tipoImovel":
-                        if(value["tipoImovel"] === "true") {
+                        if(value["tipoImovel"] || value["tipoImovel"] === "true") {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeVenda);
                         } else {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeLocacao);
@@ -152,5 +152,18 @@ export const useFilter = () => {
 
     }
 
-    return { filterProperties, getPropertyByCode }
+    const filterUnique = (value : any, index : number, self : any) => self.indexOf(value) === index && value !== undefined;
+
+    const extractCity = (Imoveis : Array<IPropertyXML>) => {
+        const mappedCities = Imoveis.map(imovel => {
+          if(imovel && imovel.Cidade)
+            return imovel.Cidade._text;
+  
+        });
+  
+        const filteredCities : Array<string | undefined> = mappedCities.filter(filterUnique);
+        return filteredCities;        
+    }
+
+    return { filterProperties, getPropertyByCode, extractCity, filterUnique }
 }

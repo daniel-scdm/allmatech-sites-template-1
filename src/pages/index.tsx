@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { useEffect, useState } from "react";
+import { useAppContext } from "src/context/parseXml";
 
 import styles from 'src/styles/Home.module.css';
 import Section from 'src/styles/Section.module.css';
@@ -23,40 +24,29 @@ import NewsCard from "src/components/NewsCard";
 import Footer from "src/components/Footer";
 import LazyLoad from 'react-lazy-load';
 
-import { useFetch } from "src/hooks/useFetch";
+import { IContext } from "interfaces";
+import { useFilter } from "src/hooks/useFilter";
 
 const LazyFeatures = dinamic(import("../components/Features"));
 
 export default function Home() {
 
-  const { parsedXml, state } = useFetch();
+  const app : IContext = useAppContext();
+  const { extractCity, filterUnique } = useFilter();
 
-  const [cities, setCities] = useState<Array<string> | undefined>([]);
-  const [streetsBuy, setStreetsBuy] = useState<Array<string> | undefined>([]);
-  const [streetsRent, setStreetsRent] = useState<Array<string> | undefined>([]);
+  const [cities, setCities] = useState<Array<string | undefined>>([]);
+  const [streetsBuy, setStreetsBuy] = useState<Array<string | undefined>>([]);
+  const [streetsRent, setStreetsRent] = useState<Array<string | undefined>>([]);
 
   useEffect(() => {
-      if(state === "done") {
-          const extractedCities = extractCity(parsedXml.Carga.Imoveis.Imovel);
-          setCities(extractedCities);
+      if(app.state === "done") {
+          const extractedCities = extractCity(app.parsedXml.Carga.Imoveis.Imovel);
+          if(extractedCities) setCities(extractedCities);          
       }
-  }, [state]);
-
-  const extractCity = (Imoveis : Array<object>) => {
-      const mappedCities = Imoveis.map(imovel => {
-        if(imovel && imovel.Cidade)
-          return imovel.Cidade._text;
-
-        return;
-      });
-
-      const filteredCities = mappedCities.filter(filterUnique);
-      return filteredCities;
-      
-  }
+  }, [app.state]); 
 
   const extractStreetsBuy = (selectedCity : string) => {
-      const mappedStreets = parsedXml.Carga.Imoveis.Imovel.map(imovel => {
+      const mappedStreets = app.parsedXml.Carga.Imoveis.Imovel.map(imovel => {
         if(imovel.Cidade._text === selectedCity && imovel.Bairro)
           return imovel.Bairro._text;
 
@@ -68,7 +58,7 @@ export default function Home() {
   }
 
   const extractStreetsRent = (selectedCity : string) => {
-    const mappedStreets = parsedXml.Carga.Imoveis.Imovel.map(imovel => {
+    const mappedStreets = app.parsedXml.Carga.Imoveis.Imovel.map(imovel => {
       if(imovel.Cidade._text === selectedCity && imovel.Bairro)
         return imovel.Bairro._text;
 
@@ -77,11 +67,10 @@ export default function Home() {
 
     const filteredStreets = mappedStreets.filter(filterUnique);
     setStreetsRent(filteredStreets);    
-}
+  }
 
-  const filterUnique = (value, index, self) => self.indexOf(value) === index && value !== undefined;
 
-  if(state !== "done") {
+  if(app.state !== "done") {
     return (
       <div>
 

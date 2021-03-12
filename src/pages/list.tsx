@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui';
 
 import { useEffect, useState } from "react";
+import { useAppContext } from "src/context/parseXml";
 
 import Section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
@@ -17,31 +18,41 @@ import Sponsor from "src/components/Sponsor";
 import Search from "src/components/Search";
 
 import Footer from "src/components/Footer";
-import { IPropertyXML } from 'interfaces';
+import { IPropertyXML, IContext } from 'interfaces';
 
 import { useRouter } from 'next/router';
-import { useFetch } from "src/hooks/useFetch";
 import { useFilter } from "src/hooks/useFilter";
 
 function List() {
 
-  const { parsedXml, state } = useFetch();
+  const app : IContext = useAppContext();
+
   const router = useRouter();
   const { filterProperties } = useFilter();  
+  const [isLoading, setIsLoading] = useState(true);
 
   const [listProperties, setListProperties] = useState<Array<IPropertyXML> | undefined>(undefined);
 
   useEffect(() => {
-      if(state === "done") {
-          const { query } = router;
-          const filteredProperties = filterProperties(parsedXml.Carga.Imoveis.Imovel, query); 
-          setListProperties(filteredProperties);          
-      }     
-  }, [state]);
+    if(!app.parsedXml) {
+      app._fetchData();
+    }
+  }, []);
+
+  useEffect(() => {
+    if(app.parsedXml) {
+      const { query } = router;
+      const filteredProperties = filterProperties(app.parsedXml.Carga.Imoveis.Imovel, query); 
+      setListProperties(filteredProperties);     
+      setIsLoading(false);
+    }           
+  }, [app.parsedXml]);
 
   const handleFilter = (query: object) => {
-    const filteredProperties = filterProperties(parsedXml.Carga.Imoveis.Imovel, query); 
+    setIsLoading(true);  
+    const filteredProperties = filterProperties(app.parsedXml.Carga.Imoveis.Imovel, query); 
     setListProperties(filteredProperties);  
+    setIsLoading(false);     
   }
 
   return (
@@ -58,12 +69,13 @@ function List() {
             <main>
               <ListProperties 
                 List={listProperties}
+                isLoading={isLoading}
               />
             </main>
             <aside>
                 <PropertyAuthor />
                 <FilterFormList 
-                  propertyList={listProperties}
+                  propertyList={app.parsedXml.Carga.Imoveis.Imovel}
                   callbackList={handleFilter}
                 />
                 <Sponsor />

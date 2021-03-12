@@ -12,15 +12,12 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 const PAGE_LIMIT = 15;
 
-const ListProperties : FC<IListProperties> = ({ List }) => {
+const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
 
     const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
-    const [isLoading, setIsLoading] = useState(true);
-
     useEffect(() => {
         if(List) {
             paginate(1);    
-            setIsLoading(false);  
         }          
     }, [List]);
 
@@ -34,9 +31,7 @@ const ListProperties : FC<IListProperties> = ({ List }) => {
     }
 
     const handlePageChange = (page : IPageDetails) => {
-        setIsLoading(true);
         paginate(page.currentPage);
-        setIsLoading(false);
     }
 
     const renderContainerList = () => {

@@ -5,23 +5,19 @@ import { useState, useEffect, memo } from "react";
 
 import Section from 'src/styles/Section.module.css';
 import Form from 'src/styles/Form.module.css';
-import { useForm } from "src/hooks/useForm";
-import { useFetch } from "src/hooks/useFetch";
-import { useRouter } from "next/router";
 
-import { IFilterFormList, IPropertyXML, ICarga } from "interfaces";
+import { useForm } from "src/hooks/useForm";
+import { useRouter } from "next/router";
+import { useFilter } from "src/hooks/useFilter";
+
+import { IFilterFormList, IPropertyXML } from "interfaces";
 import DropDownComponent from "src/components/DropDownComponent";
 import SliderComponent from "src/components/Slider";
 
 const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList }) => {
-    const { parsedXml, state } = useFetch();
 
+    const { extractCity, filterUnique } = useFilter();
     const router = useRouter();
-
-
-    useEffect(() => {
-        if(state === "done" && parsedXml) extractCity(parsedXml.Carga.Imoveis.Imovel);
-    }, [state]);
 
     const [cities, setCities] = useState<Array<string>>([]);
     const [streets, setStreets] = useState<Array<string>>([]);
@@ -42,23 +38,18 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
         garagem: 0
     }, () => submitForm());
 
-    const extractCity = (Imoveis : Array<IPropertyXML>) => {
-        const mappedCities = Imoveis.map(imovel => {
-            if(imovel && imovel.Cidade)
-                return imovel.Cidade._text;
-    
-            return;
-        });
-    
-        const filteredCities = mappedCities.filter(filterUnique);
-        setCities(filteredCities);
-        
-    }
+
+    useEffect(() => {
+        if(propertyList) {
+            const extractedCities = extractCity(propertyList);
+            setCities(extractedCities);  
+        }              
+    }, []);
   
     const extractStreets = (selectedCity : string) => {
         handleChangeForm("Todos", "bairro");
 
-        const mappedStreets : Array<string> = parsedXml.Carga.Imoveis.Imovel.map((imovel : IPropertyXML) => {
+        const mappedStreets : Array<string> = propertyList.map((imovel : IPropertyXML) => {
           if(imovel.Cidade._text === selectedCity && imovel.Bairro)
             return imovel.Bairro._text;
   
@@ -69,8 +60,6 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
         setStreets(filteredStreets);    
     }
   
-    const filterUnique = (value : any, index : number, self : any) => self.indexOf(value) === index && value !== undefined;
-
     const submitForm = () => {
 
         const filterOptions = {
@@ -90,6 +79,17 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
     return (
         <div className={Section.filterForm}>
             <form className={Section.filterList} onSubmit={handleForm}>
+                <DropDownComponent 
+                    Label="Tipo"
+                    ListOptions={[
+                        "Venda",
+                        "Aluguél"
+                    ]}
+                    selectedValue={formValues["buy"] ? "Venda" : "Aluguél"}
+                    onChangeValue={handleChangeForm}
+                    KeyName="buy"
+                />
+
                 <DropDownComponent 
                     Label="Cidade"
                     ListOptions={cities}

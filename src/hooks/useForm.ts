@@ -10,6 +10,21 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
 
     const handleChangeForm = (value: string, KeyName : string) => {
 
+        if(KeyName === "buy") {
+            if(value === "Venda") {
+                setFormValues({
+                    ...formValues,
+                    buy: true
+                });
+            } else {
+                setFormValues({
+                    ...formValues,
+                    buy: false
+                });
+            }
+            return;
+        }
+
         if(formatKeys.includes(KeyName)) {
             const formatKeyValue = parseInt(value.split("+").join(""));
 
@@ -25,6 +40,7 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
             ...formValues,
             [KeyName]: value
         });
+
     }
 
     const handleSliderChange = (values: Array<number>) => {

@@ -123,7 +123,9 @@ function Property() {
             </main>
             <aside>
                 <PropertyAuthor />
-                <FilterFormList />
+                <FilterFormList 
+                  callbackList={() => {}}
+                />
                 <Sponsor />
                 <Search />
             </aside>
