@@ -71,13 +71,13 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                     unmountOnExit
                 >
                     <nav className={headerStyles.Nav}>
-                        <Link href="#">
+                        <Link href="/">
                             <a>Home</a>
                         </Link>
-                        <Link href="#">
+                        <Link href="/company">
                             <a>Quem Somos</a>
                         </Link>
-                        <Link href="#">
+                        <Link href="/team">
                             <a>Equipe</a>
                         </Link>
                         <Link href="#">
@@ -86,7 +86,7 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                         <Link href="#">
                             <a>Notícias</a>
                         </Link>
-                        <Link href="#">
+                        <Link href="/contact">
                             <a>Contatos</a>
                         </Link>
                     </nav>

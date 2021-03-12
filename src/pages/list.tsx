@@ -23,13 +23,16 @@ import { IPropertyXML, IContext } from 'interfaces';
 import { useRouter } from 'next/router';
 import { useFilter } from "src/hooks/useFilter";
 
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+
 function List() {
 
-  const app : IContext = useAppContext();
+  const app : IContext | any = useAppContext();
 
   const router = useRouter();
   const { filterProperties } = useFilter();  
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingScreen, setIsLoadingScreen] = useState(true);
 
   const [listProperties, setListProperties] = useState<Array<IPropertyXML> | undefined>(undefined);
 
@@ -45,6 +48,7 @@ function List() {
       const filteredProperties = filterProperties(app.parsedXml.Carga.Imoveis.Imovel, query); 
       setListProperties(filteredProperties);     
       setIsLoading(false);
+      setIsLoadingScreen(false);
     }           
   }, [app.parsedXml]);
 
@@ -53,6 +57,33 @@ function List() {
     const filteredProperties = filterProperties(app.parsedXml.Carga.Imoveis.Imovel, query); 
     setListProperties(filteredProperties);  
     setIsLoading(false);     
+  }
+
+  const renderContent = () => {
+
+      if(isLoadingScreen) {
+        return (
+          <SkeletonTheme color="#ddd" highlightColor="#ccc">
+              <div className={property.skeletonContainer}>
+                  <Skeleton className={property.skeletonAuthor} />
+                  <Skeleton className={property.skeletonFilter} />
+                  <Skeleton className={property.skeletonOther} />
+              </div>
+          </SkeletonTheme>
+        );
+      }
+
+      return (
+        <>
+          <PropertyAuthor />
+          <FilterFormList 
+            propertyList={app.parsedXml.Carga.Imoveis.Imovel}
+            callbackList={handleFilter}
+          />
+          <Sponsor />
+          <Search />
+        </>
+      )
   }
 
   return (
@@ -73,13 +104,7 @@ function List() {
               />
             </main>
             <aside>
-                <PropertyAuthor />
-                <FilterFormList 
-                  propertyList={app.parsedXml.Carga.Imoveis.Imovel}
-                  callbackList={handleFilter}
-                />
-                <Sponsor />
-                <Search />
+                {renderContent()}
             </aside>
           </div>          
       </section>

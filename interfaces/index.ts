@@ -177,7 +177,7 @@ export type ICarga = {
 export type IFeatures = Array<string>;
 
 export type ITeamCard = {
-  image? : IconBaseProps,
+  image? : string,
   name : string,
   cellphone : string,
   linkFB? : string,

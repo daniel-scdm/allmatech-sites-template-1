@@ -397,7 +397,7 @@
 }
 
 .comment > button {
-    padding: .6rem;
+    padding: 1rem;
     margin-top: 1rem;
     background-color: #f15455;
     transition: all .3s;
@@ -439,6 +439,18 @@
 
 .skeletonMessage {
     height: 420px;
+}
+
+.skeletonAuthor {
+    height: 230px;
+}
+
+.skeletonFilter {
+    height: 530px;
+}
+
+.skeletonOther {
+    height: 530px;
 }
 
 .emptyProperty {

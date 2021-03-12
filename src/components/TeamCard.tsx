@@ -2,10 +2,15 @@
 import { jsx } from 'theme-ui'
 
 import { FC } from 'react';
-import { ITeamCard } from "interfaces/index";
+import { ITeamCard } from "interfaces";
+import Image, { ImageLoaderProps } from "next/image";
 
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Section from "src/styles/Section.module.css";
+
+const myLoader = ({ src, width, quality } : ImageLoaderProps) => {
+    return src;
+}
 
 const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, linkTW, linkI }) => {
 
@@ -13,22 +18,20 @@ const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, link
         <div className={Section.card}>
             <div>
                 {image && (
-                    <div 
-                        className={Section.missingMemberImage}
-                        sx={{
-                            backgroundImage: require("../../assets/images/missing-image.png")
-                        }}
-                    >                                        
-                    </div>
+                    <Image 
+                        loader={myLoader}
+                        src={image}
+                        width="400"
+                        height="320"
+                    />
                 )} 
                 {!image && (
-                    <div
-                        className={Section.missingMemberImage}
-                        sx={{
-                            backgroundImage: require("../../assets/images/missing-image.png")
-                        }}
-                    >
-                    </div>
+                    <Image 
+                        loader={myLoader}
+                        src={require("../../assets/images/missing-image.png")}
+                        width="400"
+                        height="320"
+                    />                    
                 )}              
             </div>
             <div className={Section.cardInfo}>
