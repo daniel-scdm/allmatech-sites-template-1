@@ -50,14 +50,16 @@ function Contact() {
                     </form>
 
                     <div className={section.infoContainer}>
+
                         <div>
                             <div className={section.infoTitle}>
                                 <GiHouse />
                                 Endereço
                             </div>
                             <p>
-                                2069 Robinson Lane, Columbus, 
-                                OH 43201, United States
+                                Rua Nove Norte, lt. 1 
+                                (Ed., Atlantis Trade Center), 
+                                Brasília, DF, 71908-540
                             </p>
                         </div>
 
@@ -67,7 +69,7 @@ function Contact() {
                                 Telefone
                             </div>
                             <p>
-                                +1 859-698-5236
+                                +55 61 3033-2184
                             </p>
                         </div>
 
@@ -77,7 +79,7 @@ function Contact() {
                                 Email
                             </div>
                             <p>
-                                support@domain-name.com
+                             atendimento@allmatech.com.br
                             </p>
                         </div>
 
@@ -87,7 +89,7 @@ function Contact() {
                                 Horário de trabalho
                             </div>
                             <p>
-                                Mon-Sat: 9:00 AM – 16:00 PM
+                                Seg-Sex: 9:00 – 17:00
                             </p>
                         </div>
                         

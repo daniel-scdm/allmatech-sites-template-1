@@ -84,14 +84,14 @@ export type IFeatureComponent = {
 export type ICard = {
   OfferMessage? : string,
   image? : string,
-  title : string,
-  text : string,
-  bedrooms : number,
-  bathrooms : number,
-  garages : number,
-  indexKey? : number,
-  priceSell? : number,
-  priceRent? : number
+  title? : string,
+  text? : string,
+  bedrooms? : string | number,
+  bathrooms? : string | number,
+  garages? : string | number,
+  indexKey? : string,
+  priceSell? : string | number,
+  priceRent? : string | number
 }
 
 export type IFoto = {

@@ -46,16 +46,7 @@ const Footer : FC = () => {
                             </li>
                             <li>
                                 <a href="#">Notícias</a>
-                            </li>
-                            <li>
-                                <a href="#">Listagem</a>
-                            </li>
-                            <li>
-                                <a href="#">Terrenos</a>
-                            </li>
-                            <li>
-                                <a href="#">Rural</a>
-                            </li>
+                            </li>       
                         </ul>
                     </div>
 
@@ -64,27 +55,28 @@ const Footer : FC = () => {
                             <p>
                                 <GiHouse size={20} spacing={20} /> 
                                 <span>
-                                    2067 – 2069 Robinson Lane, <br />
-                                    Columbus, OH 43201, US
+                                    Rua Nove Norte, lt. 1 <br />
+                                    (Ed., Atlantis Trade Center), <br />
+                                    Brasília, DF, 71908-540
                                 </span>
                             </p>
                         </div>
                         <div>
                             <p>
                                 <GiPhone size={20} /> 
-                                <span>+1 859-698-5236</span>
+                                <span>+55 61 3033-2184</span>
                             </p>
                         </div>
                         <div>
                             <p>
                                 <MdMailOutline size={20} /> 
-                                <span>sales@sample-domain.com</span>
+                                <span>atendimento@allmatech.com.br</span>
                             </p>
                         </div>
                         <div>
                             <p>
                                 <GiCalendar size={20} /> 
-                                <span>Mon-Sat: 9:00 AM – 16:00 PM</span>
+                                <span>Seg-Sex: 9:00 – 17:00</span>
                             </p>
                         </div>
                     </div>

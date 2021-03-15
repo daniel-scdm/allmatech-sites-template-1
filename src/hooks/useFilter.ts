@@ -35,18 +35,18 @@ export const useFilter = () => {
     }
 
     const makeNewPropertyList = (properties : Array<IPropertyXML>, filterOptions : object) => {
-
             let propertiesArrayFiltered = properties;
+            console.log(filterOptions)
 
             Object.values(filterOptions).forEach((value) => {
                 const keyValue = Object.keys(value);
-
                 switch (keyValue[0]) {
                     case "tipoImovel":
                         if(value["tipoImovel"] || value["tipoImovel"] === "true") {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeVenda);
                         } else {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeLocacao);
+                            console.log(propertiesArrayFiltered)
                         }    
                         
                         break;
@@ -165,5 +165,5 @@ export const useFilter = () => {
         return filteredCities;        
     }
 
-    return { filterProperties, getPropertyByCode, extractCity, filterUnique }
+    return { filterProperties, getPropertyByCode, extractCity, filterUnique, makeNewPropertyList }
 }

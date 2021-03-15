@@ -10,11 +10,12 @@ import LazyLoad from "react-lazyload";
 import { FaBed, FaBath } from "react-icons/fa";
 import { GiHomeGarage } from "react-icons/gi";
 
-const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, price, text, title }) => {
+const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, indexKey }) => {
 
     return (
         <LazyLoad
             offset={200}
+            key={indexKey}
         >
             <div className={Section.card}>
                 <div>                
@@ -32,25 +33,25 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
                     </div>
                 </div>
                 <div className={Section.cardInfo}>
-                    <p>
+                    <h3>
                         {title}
-                    </p>
+                    </h3>
                     <div className={Section.cardText}>
                         {text}
                     </div>
                     <div className={Section.cardFeatures}>
                         <div>
-                            <FaBed /> {bedrooms}                            
+                            <FaBed /> {bedrooms ? bedrooms : 0}                            
                         </div>
                         <div>
-                            <FaBath /> {bathrooms}
+                            <FaBath /> {bathrooms ? bathrooms : 0}
                         </div>
                         <div className={Section.garages}>
-                            <GiHomeGarage /> {garages}
+                            <GiHomeGarage /> {garages ? garages : 0}
                         </div>
                     </div>
                     <div className={Section.cardPrice}>
-                        R$ {price}
+                        R$ {priceSell ? priceSell : priceRent}
                     </div>
                 </div>
             </div>

@@ -17,7 +17,6 @@ import HouseImage from "assets/images/house.jpg";
 
 import dinamic from 'next/dynamic';
 
-import Card from "src/components/Card";
 import TeamCard from "src/components/TeamCard";
 import NewsCard from "src/components/NewsCard";
 
@@ -26,12 +25,19 @@ import LazyLoad from 'react-lazy-load';
 
 import { IContext } from "interfaces";
 import { useFilter } from "src/hooks/useFilter";
+import { useRouter } from 'next/router';
+
+import LatestBuyProperties from "src/components/LatestBuyProperties";
+import LatestRentProperties from "src/components/LatestRentProperties";
+import LatestOfferProperties from "src/components/LatestOfferProperties";
+
 
 const LazyFeatures = dinamic(import("../components/Features"));
 
 export default function Home() {
 
   const app : IContext = useAppContext();
+  const router = useRouter();
   const { extractCity, filterUnique } = useFilter();
 
   const [cities, setCities] = useState<Array<string | undefined>>([]);
@@ -68,6 +74,8 @@ export default function Home() {
     const filteredStreets = mappedStreets.filter(filterUnique);
     setStreetsRent(filteredStreets);    
   }
+
+  const handleContact = () => router.push("/contact");
 
 
   if(app.state !== "done") {
@@ -117,59 +125,10 @@ export default function Home() {
               Cheque alguns imóveis nossos mais recentes
           </div>
 
-
-          <section className={styles.spacingContainer}>
-            <div className={styles.latestCards}>
-              <Card 
-                title="Immense, Massive Views to Rottnest"
-                text={`
-                  Lorem ipsum dolor sit amet, consec tetur adi piscing elit. 
-                  Aliquam necsa pien inleo ultrices tempus sedat justo. 
-                  Suspen disse molestie adipiscing...
-                `}
-                bathrooms={4}
-                bedrooms={5}
-                garages={3}
-                price={60000}
-                OfferMessage={'Sobre oferta'}
-              />
-
-              <Card 
-                title="Immense, Massive Views to Rottnest"
-                text={`
-                  Lorem ipsum dolor sit amet, consec tetur adi piscing elit. 
-                  Aliquam necsa pien inleo ultrices tempus sedat justo. 
-                  Suspen disse molestie adipiscing...
-                `}
-                bathrooms={4}
-                bedrooms={5}
-                garages={3}
-                price={60000}
-              />
-
-              <Card 
-                title="Immense, Massive Views to Rottnest"
-                text={`
-                  Lorem ipsum dolor sit amet, consec tetur adi piscing elit. 
-                  Aliquam necsa pien inleo ultrices tempus sedat justo. 
-                  Suspen disse molestie adipiscing...
-                `}
-                bathrooms={4}
-                bedrooms={5}
-                garages={3}
-                price={60000}
-                OfferMessage={'Sobre oferta'}
-              />
-            </div>
-            <div className={styles.paginationButton}>
-              <button>
-              {`<<`} Página anterior 
-              </button>
-              <button>
-                Póxima página {`>>`}
-              </button>
-            </div>
-          </section>
+          <LatestBuyProperties 
+            List={app.parsedXml.Carga.Imoveis.Imovel}
+          />
+          
       </section>
 
       <section
@@ -184,7 +143,7 @@ export default function Home() {
                   Sed volutpat hendrerit nisl eget at mattis praesent maximus lectus in 
                   nulla fringilla, id euismod libero consequat etiam tellus justot.
               </p>
-              <button>
+              <button onClick={handleContact}>
                   Contate 
               </button>
             </section>
@@ -200,68 +159,15 @@ export default function Home() {
         className={styles.recentPropertiesContainer}
       >
           <div>
-              Aberto para inspeção
+              Ultimas ofertas
           </div>
           <div sx={{ color: "#00205c" }}>
               Melhores ofertas do dia
           </div>
 
-
-          <section            
-            className={styles.spacingContainer}
-          >
-            <div className={styles.latestCards}>
-              <Card 
-                title="Immense, Massive Views to Rottnest"
-                text={`
-                  Lorem ipsum dolor sit amet, consec tetur adi piscing elit. 
-                  Aliquam necsa pien inleo ultrices tempus sedat justo. 
-                  Suspen disse molestie adipiscing...
-                `}
-                bathrooms={4}
-                bedrooms={5}
-                garages={3}
-                price={60000}
-                OfferMessage={'Casa Aberta'}
-              />
-
-              <Card 
-                title="Immense, Massive Views to Rottnest"
-                text={`
-                  Lorem ipsum dolor sit amet, consec tetur adi piscing elit. 
-                  Aliquam necsa pien inleo ultrices tempus sedat justo. 
-                  Suspen disse molestie adipiscing...
-                `}
-                bathrooms={4}
-                bedrooms={5}
-                garages={3}
-                price={60000}
-                OfferMessage={'Casa Aberta'}
-              />
-
-              <Card 
-                title="Immense, Massive Views to Rottnest"
-                text={`
-                  Lorem ipsum dolor sit amet, consec tetur adi piscing elit. 
-                  Aliquam necsa pien inleo ultrices tempus sedat justo. 
-                  Suspen disse molestie adipiscing...
-                `}
-                bathrooms={4}
-                bedrooms={5}
-                garages={3}
-                price={60000}
-                OfferMessage={'Casa Aberta'}
-              />
-            </div>
-            <div className={styles.paginationButton}>
-              <button>
-              {`<<`} Página anterior 
-              </button>
-              <button>
-                Póxima página {`>>`}
-              </button>
-            </div>
-          </section>          
+          <LatestOfferProperties 
+              List={app.parsedXml.Carga.Imoveis.Imovel}
+          />          
       </section>
       <div 
         className={Section.diagonalBox} 
@@ -281,62 +187,9 @@ export default function Home() {
               Cheque alguns imóveis nossos mais recentes
           </div>
 
-
-          <section            
-            className={styles.spacingContainer}
-          >
-            <div className={styles.latestCards}>
-              <Card 
-                title="Immense, Massive Views to Rottnest"
-                text={`
-                  Lorem ipsum dolor sit amet, consec tetur adi piscing elit. 
-                  Aliquam necsa pien inleo ultrices tempus sedat justo. 
-                  Suspen disse molestie adipiscing...
-                `}
-                bathrooms={4}
-                bedrooms={5}
-                garages={3}
-                price={60000}
-                OfferMessage={'Casa Aberta'}
-              />
-
-              <Card 
-                title="Immense, Massive Views to Rottnest"
-                text={`
-                  Lorem ipsum dolor sit amet, consec tetur adi piscing elit. 
-                  Aliquam necsa pien inleo ultrices tempus sedat justo. 
-                  Suspen disse molestie adipiscing...
-                `}
-                bathrooms={4}
-                bedrooms={5}
-                garages={3}
-                price={60000}
-                OfferMessage={'Casa Aberta'}
-              />
-
-              <Card 
-                title="Immense, Massive Views to Rottnest"
-                text={`
-                  Lorem ipsum dolor sit amet, consec tetur adi piscing elit. 
-                  Aliquam necsa pien inleo ultrices tempus sedat justo. 
-                  Suspen disse molestie adipiscing...
-                `}
-                bathrooms={4}
-                bedrooms={5}
-                garages={3}
-                price={60000}
-                OfferMessage={'Casa Aberta'}
-              />
-            </div>
-            <div className={styles.paginationButton}>
-              <button>
-              {`<<`} Página anterior 
-              </button>
-              <button>
-                Póxima página {`>>`}
-              </button>
-            </div>
-          </section>          
+          <LatestRentProperties 
+              List={app.parsedXml.Carga.Imoveis.Imovel}
+          />         
       </section>
 
       <div 
