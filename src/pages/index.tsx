@@ -30,6 +30,7 @@ import { useRouter } from 'next/router';
 import LatestBuyProperties from "src/components/LatestBuyProperties";
 import LatestRentProperties from "src/components/LatestRentProperties";
 import LatestOfferProperties from "src/components/LatestOfferProperties";
+import Testimonials from "src/components/Testimonials";
 
 
 const LazyFeatures = dinamic(import("../components/Features"));
@@ -261,28 +262,14 @@ export default function Home() {
               linkLI="#"
               linkTW="#"
               linkI="#"
-            />
-            <TeamCard 
-              name="Jordanna Snow"
-              cellphone="+1 236 456 7898"
-              linkFB="#"
-              linkLI="#"
-              linkTW="#"
-              linkI="#"
-            />
+            />            
           </div>          
         </div>
         
       </section>
 
       <section className={styles.specialOffer}>
-          <h3>            
-            Ofertas especiais para arrendamentos de longa duração 
-            e contratos de aluguel de villas
-          </h3>
-          <button>
-              Agendar agora
-          </button>
+          <Testimonials />
       </section>
 
       <section 
@@ -304,25 +291,24 @@ export default function Home() {
           >
             <div className={styles.latestCards}>
               <NewsCard 
-                image="/assets/images/house-1.jpg"
                 text={`
                   Lorem ipsum dolor sit amet
                 `}
-                link="#"                
+                code={1}
               />
               <NewsCard 
-                image="/assets/images/house-2.jpg"
+                image="https://i.pinimg.com/736x/60/66/d0/6066d00c8b2e571b6853a6437f23a776.jpg"
                 text={`
                   Lorem ipsum dolor sit amet
                 `}
-                link="#"                
+                code={2}                
               />
               <NewsCard 
-                image="/assets/images/house-1.jpg"
+                image="https://www.e-architect.com/images/jpgs/new_zealand/karori_house_h190310_pm3.jpg"
                 text={`
                   Lorem ipsum dolor sit amet
                 `}
-                link="#"                
+                code={3}                
               />              
             </div>            
           </section>          

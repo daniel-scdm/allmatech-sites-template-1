@@ -190,7 +190,7 @@ export type ITeamCard = {
 export type INewsCard = {
   image? : string,
   text : string,
-  link : string
+  code : number
 }
 
 export type IListProperties = {

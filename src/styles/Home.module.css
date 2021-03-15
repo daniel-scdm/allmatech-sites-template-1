@@ -190,21 +190,6 @@
   color: #f15455;  
 }
 
-@media (min-width: 960px) {
-  .specialOffer {     
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    text-align: start;
-    color: #fff;    
-  }
-}
-
-@media (max-width: 1130px) {
-  .specialOffer > button {    
-    font-size: .8rem;
-  }
-}
-
 @media (min-width: 1024px) and (max-width: 1200px) {
   .latestCards {
     display: grid;

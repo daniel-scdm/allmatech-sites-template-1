@@ -252,9 +252,36 @@
     padding: 1.2rem;
     font-size: 1.4rem;
     font-weight: 600;
-    position: relative;
+    position: absolute;
     top: 35px;
     left: 0;
+}
+
+.newsCard {
+    position: relative;
+}
+
+.newsCard > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .3s;
+    display: flex;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    align-items: flex-end;
+    padding: .4rem 1rem;
+    overflow: hidden;
+    font-size: 1.6rem;
+    color: #fff;
+    opacity: 0;
+}
+
+.newsCard > a:hover {
+    background:rgb(0, 0, 0, .4);
+    opacity: 1;
 }
 
 .houseIcon {
@@ -263,6 +290,10 @@
 
 .cardInfo {
     padding: 1rem;
+}
+
+.imageCardContainer {
+    position: relative;
 }
 
 .cardInfo > h3 {
@@ -509,9 +540,42 @@
     margin: 0 .4rem
 }
 
-.newsCardContainer {
-    padding: 1rem;
+.imageNews {
+    position: initial;
 }
+
+.testimonialGallery {
+    background: none;
+    width: 100%;
+}
+
+.testimonialGallery li {
+    background: none;
+}
+
+.Testimonial {
+    min-height: 420px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Testimonial div {
+    width: 100%;
+    padding: 0rem 1rem; 
+    text-align: end; 
+    font-size: 1rem;  
+    font-style: italic;
+}
+
+.Testimonial h3 {
+    padding: 0rem 3rem; 
+    font-size: 1.1rem;  
+    font-style: italic;
+}
+
 
 @media (min-width: 1024px) {
     .sectionContainer {
@@ -556,6 +620,23 @@
 
     .infoContainer {
         margin-top: 0;
+    }
+
+    .Testimonial div,
+    .Testimonial h3 {
+        max-width: 1100px;
+        font-size: 1.5rem; 
+    }    
+
+    .Testimonial div {        
+        width: 100%;
+        padding: 0rem 1rem; 
+        text-align: end; 
+        font-size: 1.3rem;  
+    }
+    
+    .Testimonial h3 {
+        padding: 2rem 5rem;    
     }
 }
 

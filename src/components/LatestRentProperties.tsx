@@ -53,6 +53,7 @@ const LatestRentProperties : React.FC<ListPropterties> = ({ List }) => {
                         priceRent={p.PrecoLocacao?._text}
                         OfferMessage={'Sobre oferta'}
                         indexKey={p.CodigoImovel?._text}
+                        image={p.Fotos?.Foto[0].Link[0].URLArquivo._text}
                     />
                 ))}
             </div>

@@ -4,11 +4,16 @@ import { jsx } from 'theme-ui'
 import { FC } from 'react';
 import { ICard } from "interfaces/index";
 import Section from "src/styles/Section.module.css";
+import Image, { ImageLoaderProps } from "next/image";
 
 import LazyLoad from "react-lazyload";
 
 import { FaBed, FaBath } from "react-icons/fa";
 import { GiHomeGarage } from "react-icons/gi";
+
+const myLoader = ({ src, width, quality } : ImageLoaderProps) => {
+    return src;
+}
 
 const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, indexKey }) => {
 
@@ -18,19 +23,28 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
             key={indexKey}
         >
             <div className={Section.card}>
-                <div>                
-                    <div 
-                        className={Section.missingImageCard}
-                        sx={{
-                            backgroundImage: require("../../assets/images/missing-image.png")
-                        }}
-                    >
-                        {OfferMessage && (
-                            <div className={Section.offer}>
-                                {OfferMessage}
-                            </div>
-                        )}                    
-                    </div>
+                <div className={Section.imageCardContainer}>         
+                    {image && (
+                        <Image 
+                            loader={myLoader}
+                            src={image}
+                            width="480"
+                            height="320"
+                        />
+                    )} 
+                    {!image && (
+                        <Image 
+                            loader={myLoader}
+                            src={require("../../assets/images/missing-image.png")}
+                            width="480"
+                            height="320"
+                        />                    
+                    )}        
+                    {OfferMessage && (
+                        <div className={Section.offer}>
+                            {OfferMessage}
+                        </div>
+                    )}
                 </div>
                 <div className={Section.cardInfo}>
                     <h3>
