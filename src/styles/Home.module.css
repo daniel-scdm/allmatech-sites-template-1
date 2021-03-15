@@ -190,6 +190,14 @@
   color: #f15455;  
 }
 
+.LoadingScreen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 1024px) and (max-width: 1200px) {
   .latestCards {
     display: grid;

@@ -16,7 +16,7 @@ const filterTypeVenda = (value : IPropertyXML) => {
 
 const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
 
-    const [totalPages] = useState(Math.ceil(List.length / 3));
+    const [totalPages, setTotalPages] = useState(Math.ceil(List.length / 3));
     const [pList, setPList] = useState<Array<IPropertyXML>>([]);
     const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
     const [currentPage, setcurrentPage] = useState(1);
@@ -24,6 +24,7 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
     useEffect(() => {
         if(List && List.length > 0) {
             const newList = List.filter(filterTypeVenda);
+            setTotalPages(Math.ceil(newList.length / 3));
             setPList(newList);
         }
     }, [List]);

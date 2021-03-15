@@ -31,6 +31,7 @@ import LatestBuyProperties from "src/components/LatestBuyProperties";
 import LatestRentProperties from "src/components/LatestRentProperties";
 import LatestOfferProperties from "src/components/LatestOfferProperties";
 import Testimonials from "src/components/Testimonials";
+import AnimatedLoadingScreen from "src/components/AnimatedLoadingScreen";
 
 
 const LazyFeatures = dinamic(import("../components/Features"));
@@ -44,11 +45,14 @@ export default function Home() {
   const [cities, setCities] = useState<Array<string | undefined>>([]);
   const [streetsBuy, setStreetsBuy] = useState<Array<string | undefined>>([]);
   const [streetsRent, setStreetsRent] = useState<Array<string | undefined>>([]);
+  const [isLoadingScreen, setIsLoadingScreen] = useState(true);
+
 
   useEffect(() => {
       if(app.state === "done") {
           const extractedCities = extractCity(app.parsedXml.Carga.Imoveis.Imovel);
-          if(extractedCities) setCities(extractedCities);          
+          if(extractedCities) setCities(extractedCities);   
+          setIsLoadingScreen(false);       
       }
   }, [app.state]); 
 
@@ -79,12 +83,8 @@ export default function Home() {
   const handleContact = () => router.push("/contact");
 
 
-  if(app.state !== "done") {
-    return (
-      <div>
-
-      </div>
-    )
+  if(isLoadingScreen) {
+    return <AnimatedLoadingScreen />
   }
 
   return (

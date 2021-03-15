@@ -22,7 +22,7 @@ const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, link
                         loader={myLoader}
                         src={image}
                         width="400"
-                        height="320"
+                        height="300"
                     />
                 )} 
                 {!image && (
@@ -30,7 +30,7 @@ const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, link
                         loader={myLoader}
                         src={require("../../assets/images/missing-image.png")}
                         width="400"
-                        height="320"
+                        height="300"
                     />                    
                 )}              
             </div>

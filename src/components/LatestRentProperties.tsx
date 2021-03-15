@@ -16,15 +16,16 @@ const filterTypeLocacao = (value : IPropertyXML) => {
 
 const LatestRentProperties : React.FC<ListPropterties> = ({ List }) => {
 
-    const [totalPages] = useState(Math.ceil(List.length / 3));
     const [pList, setPList] = useState<Array<IPropertyXML>>([]);
     const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
     const [currentPage, setcurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(Math.ceil(List.length / 3));
 
     useEffect(() => {
         if(List && List.length > 0) {
             const newList = List.filter(filterTypeLocacao);
             setPList(newList);
+            setTotalPages(Math.ceil(newList.length / 3));
         }
     }, []);
 

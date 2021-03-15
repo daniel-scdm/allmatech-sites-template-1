@@ -549,8 +549,8 @@
     width: 100%;
 }
 
-.testimonialGallery li {
-    background: none;
+.testimonialGallery .carousel .slide {
+    background: none!important;
 }
 
 .Testimonial {

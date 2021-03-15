@@ -36,7 +36,6 @@ export const useFilter = () => {
 
     const makeNewPropertyList = (properties : Array<IPropertyXML>, filterOptions : object) => {
             let propertiesArrayFiltered = properties;
-            console.log(filterOptions)
 
             Object.values(filterOptions).forEach((value) => {
                 const keyValue = Object.keys(value);
@@ -46,7 +45,6 @@ export const useFilter = () => {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeVenda);
                         } else {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeLocacao);
-                            console.log(propertiesArrayFiltered)
                         }    
                         
                         break;

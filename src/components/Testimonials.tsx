@@ -26,9 +26,8 @@ const Testimonials : React.FC = () => {
         <GalleryCarousel
             showThumbs={false}
             showIndicators={false}
-            className={Section.testimonialGallery}
-            width={"100%"}
-            
+            className={Section.testimonialGallery}  
+            showStatus={false}            
         >
             {TestimonialsText.map(t => (
                 <div className={Section.Testimonial}>
