@@ -36,14 +36,17 @@ export const useFilter = () => {
 
     const makeNewPropertyList = (properties : Array<IPropertyXML>, filterOptions : object) => {
             let propertiesArrayFiltered = properties;
+            let isVenda = true;
 
             Object.values(filterOptions).forEach((value) => {
                 const keyValue = Object.keys(value);
                 switch (keyValue[0]) {
                     case "tipoImovel":
                         if(value["tipoImovel"] || value["tipoImovel"] === "true") {
+                            isVenda = true;
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeVenda);
                         } else {
+                            isVenda = false;
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeLocacao);
                         }    
                         
@@ -93,7 +96,25 @@ export const useFilter = () => {
                         }   
 
                         break; 
-                    
+                    case "valores":
+
+                        if(isVenda) {
+                            propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
+                                if(property.PrecoVenda && property.PrecoVenda._text){
+                                    const entreValores = parseInt(value['valores'][1]) >= parseInt(property.PrecoVenda._text) && parseInt(property.PrecoVenda._text) >= parseInt(value['valores'][0]);
+                                    return entreValores;
+                                }
+                            });
+                        } else {
+                            propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
+                                if(property.PrecoLocacao && property.PrecoLocacao._text){
+                                    const entreValores = parseInt(value['valores'][1]) >= parseInt(property.PrecoLocacao._text) && parseInt(property.PrecoLocacao._text) >= parseInt(value['valores'][0]);
+                                    return entreValores;
+                                }
+                            });
+                        }                       
+
+                        break;
                     default:
                         break;
                 }
@@ -144,6 +165,7 @@ export const useFilter = () => {
             
         }).filter(removeEmpty);
 
+        console.log(Filter)
         const propertyList = makeNewPropertyList(properties, Filter);
 
         return Object.values(propertyList);

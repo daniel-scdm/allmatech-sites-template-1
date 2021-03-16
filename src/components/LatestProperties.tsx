@@ -8,12 +8,6 @@ type ListPropterties = {
     List: Array<IPropertyXML>
 };
 
-const filterTypeVenda = (value : IPropertyXML) => {
-    if(value.PrecoVenda && value.PrecoVenda._text) {
-        return true;
-    }
-}
-
 const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
 
     const [totalPages, setTotalPages] = useState(Math.ceil(List.length / 3));
@@ -23,9 +17,10 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
 
     useEffect(() => {
         if(List && List.length > 0) {
-            const newList = List.filter(filterTypeVenda);
-            setTotalPages(Math.ceil(newList.length / 3));
-            setPList(newList);
+
+            const orderedList = List.reverse().slice(0, 6);
+            setTotalPages(Math.ceil(orderedList.length / 3));
+            setPList(orderedList);
         }
     }, [List]);
 
@@ -55,6 +50,7 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
                         OfferMessage={'Sobre oferta'}
                         indexKey={p.CodigoImovel?._text}
                         image={p.Fotos?.Foto[0].Link[0].URLArquivo._text}
+                        code={p.CodigoImovel?._text}
                     />
                 ))}
             </div>

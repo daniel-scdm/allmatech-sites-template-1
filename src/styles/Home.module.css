@@ -168,28 +168,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: #fff;
   flex-direction: column;
   font-size: 1.5rem;
   padding: 1rem;
-}
-
-.specialOffer > button {
-  background-color: #f15455;
-  color: #fff;
-  font-size: 100%;  
-  text-transform: uppercase;
-  border-radius: 30px;
-  border: none;
-  padding: 1.2rem;
-  font-size: 1rem;
-  transition: all .3s;
-}
-
-.specialOffer > button:hover {
-  background-color: #fff;
-  color: #f15455;  
+  padding-top: 8rem;
 }
 
 .LoadingScreen {
@@ -201,7 +184,7 @@
 }
 
 .partnersContainer {
-  margin-top: 4rem;
+  margin: 4rem 0;
 }
 
 .partnersContainer {

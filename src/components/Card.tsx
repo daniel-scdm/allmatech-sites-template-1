@@ -10,12 +10,15 @@ import LazyLoad from "react-lazyload";
 
 import { FaBed, FaBath } from "react-icons/fa";
 import { GiHomeGarage } from "react-icons/gi";
+import { BiSearch } from "react-icons/bi";
 
-const myLoader = ({ src, width, quality } : ImageLoaderProps) => {
+import Link from "next/link";
+
+const myLoader = ({ src } : ImageLoaderProps) => {
     return src;
 }
 
-const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, indexKey }) => {
+const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, indexKey, code }) => {
 
     return (
         <LazyLoad
@@ -45,6 +48,14 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
                             {OfferMessage}
                         </div>
                     )}
+                    <Link href={{
+                        pathname: "/property",
+                        query: { code: code }
+                    }}>
+                        <a>
+                            <BiSearch  size={40}/>
+                        </a>
+                    </Link>
                 </div>
                 <div className={Section.cardInfo}>
                     <h3>

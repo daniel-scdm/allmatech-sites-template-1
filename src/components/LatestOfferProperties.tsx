@@ -9,7 +9,7 @@ type ListPropterties = {
 };
 
 const filterTypeVenda = (value : IPropertyXML) => {
-    if(value.TipoOferta && value.TipoOferta._text === "2") {
+    if(value.TipoOferta && value.TipoOferta._text === "3") {
         return true;
     }
 }
@@ -52,9 +52,11 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
                         bedrooms={p.QtdDormitorios?._text}
                         garages={p.QtdVagas?._text}
                         priceSell={p.PrecoVenda?._text}
+                        priceRent={p.PrecoLocacao?._text}
                         OfferMessage={'Sobre oferta'}
                         indexKey={p.CodigoImovel?._text}
                         image={p.Fotos?.Foto[0].Link[0].URLArquivo._text}
+                        code={p.CodigoImovel?._text}
                     />
                 ))}
             </div>

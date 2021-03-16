@@ -27,7 +27,7 @@ import { IContext } from "interfaces";
 import { useFilter } from "src/hooks/useFilter";
 import { useRouter } from 'next/router';
 
-import LatestBuyProperties from "src/components/LatestBuyProperties";
+import LatestProperties from "src/components/LatestProperties";
 import LatestRentProperties from "src/components/LatestRentProperties";
 import LatestOfferProperties from "src/components/LatestOfferProperties";
 import Testimonials from "src/components/Testimonials";
@@ -132,13 +132,13 @@ export default function Home() {
 
       <section className={styles.recentPropertiesContainer}>
           <div>
-              Destaques
+              Últimas aquisições
           </div>
           <div sx={{ color: "#00205c" }}>
               Cheque alguns de nossos imóveis em destaque
           </div>
 
-          <LatestBuyProperties 
+          <LatestProperties 
             List={app.parsedXml.Carga.Imoveis.Imovel}
           />
           
@@ -178,23 +178,19 @@ export default function Home() {
       >        
       </div>
 
-      <section 
-        sx={{
-          marginTop: 120 
-        }}
-        className={styles.recentPropertiesContainer}
-      >
-          <div>
-              Propriedades para aluguél
-          </div>
-          <div sx={{ color: "#00205c" }}>
-              Cheque alguns imóveis nossos mais recentes
-          </div>
-
-          <LatestRentProperties 
-              List={app.parsedXml.Carga.Imoveis.Imovel}
-          />         
+      <section className={styles.specialOffer}>
+          <Testimonials />
       </section>
+
+      <section className={styles.partners}>
+        <div>
+              Parceiros
+        </div>
+        <div className={styles.partnersContainer}>
+            <Partners />
+        </div>
+      </section>
+      
 
       <div 
         className={Section.invertedDiagonalBox} 
@@ -271,28 +267,7 @@ export default function Home() {
         
       </section>
 
-      <section className={styles.specialOffer}>
-          <Testimonials />
-      </section>
-
       <section 
-        sx={{
-          backgroundColor: "#eee"
-        }}
-        className={styles.partners}
-      >
-        <div>
-              Parceiros
-        </div>
-        <div className={styles.partnersContainer}>
-            <Partners />
-        </div>
-      </section>
-
-      <section 
-        sx={{
-          backgroundColor: "#eee"
-        }}
         className={styles.recentPropertiesContainer}
       >
           <div>

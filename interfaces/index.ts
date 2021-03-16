@@ -89,6 +89,7 @@ export type IPartnerComponent = {
 
 export type ICard = {
   OfferMessage? : string,
+  code? : string,
   image? : string,
   title? : string,
   text? : string,
@@ -131,7 +132,7 @@ export type IPropertyXML = {
   CodigoImovel?: {_text: string }
   Complemento?: {_text: string }
   Copa?: {_text: string }
-  DataCadastro?: {_text: string }
+  DataCadastro?: {_text: string | number }
   DataUltimateracao?: {_text: string }
   Endereco?: {_text: string }
   EstradaAsfaltada?: {_text: string }

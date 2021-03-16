@@ -8,7 +8,7 @@ import Image, { ImageLoaderProps } from "next/image";
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Section from "src/styles/Section.module.css";
 
-const myLoader = ({ src, width, quality } : ImageLoaderProps) => {
+const myLoader = ({ src } : ImageLoaderProps) => {
     return src;
 }
 

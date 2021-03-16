@@ -94,7 +94,7 @@ function Property() {
         Cidade={{ _text: "" }}
         QtdBanheiros={prt?.QtdBanheiros}
         QtdDormitorios={prt?.QtdBanheiros}
-        QtdVagas={prt?.QtdBanheiros}
+        QtdVagas={prt?.QtdVagas}
         PrecoLocacao={prt?.PrecoLocacao}
         PrecoVenda={prt?.PrecoVenda}
         Observacao={prt?.Observacao}
