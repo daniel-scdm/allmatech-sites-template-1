@@ -32,9 +32,10 @@ import LatestRentProperties from "src/components/LatestRentProperties";
 import LatestOfferProperties from "src/components/LatestOfferProperties";
 import Testimonials from "src/components/Testimonials";
 import AnimatedLoadingScreen from "src/components/AnimatedLoadingScreen";
+import Partners from "src/components/Partners";
 
+import LazyFeatures from "src/components/Features";
 
-const LazyFeatures = dinamic(import("../components/Features"));
 
 export default function Home() {
 
@@ -108,22 +109,33 @@ export default function Home() {
           />
           <CatchPhrase />
         </div>        
-      </SectionFull>      
-      <div 
+      </SectionFull>   
+
+      <section 
         sx={{
           backgroundColor: "#eee"
         }}
-        className={styles.featureContainer}
+        className={styles.recentPropertiesContainer}
       >
-        <LazyFeatures />
-      </div>
+          <div>
+              Super destaques
+          </div>
+          <div sx={{ color: "#00205c" }}>
+              Cheque alguns de nossos imóveis em  super destaque
+          </div>
+
+          <LatestOfferProperties 
+              List={app.parsedXml.Carga.Imoveis.Imovel}
+          />          
+      </section>   
+      
 
       <section className={styles.recentPropertiesContainer}>
           <div>
-              Propriedates mais recentes
+              Destaques
           </div>
           <div sx={{ color: "#00205c" }}>
-              Cheque alguns imóveis nossos mais recentes
+              Cheque alguns de nossos imóveis em destaque
           </div>
 
           <LatestBuyProperties 
@@ -157,18 +169,9 @@ export default function Home() {
         sx={{
           backgroundColor: "#eee"
         }}
-        className={styles.recentPropertiesContainer}
+        className={styles.featureContainer}
       >
-          <div>
-              Ultimas ofertas
-          </div>
-          <div sx={{ color: "#00205c" }}>
-              Melhores ofertas do dia
-          </div>
-
-          <LatestOfferProperties 
-              List={app.parsedXml.Carga.Imoveis.Imovel}
-          />          
+        <LazyFeatures />
       </section>
       <div 
         className={Section.diagonalBox} 
@@ -270,6 +273,20 @@ export default function Home() {
 
       <section className={styles.specialOffer}>
           <Testimonials />
+      </section>
+
+      <section 
+        sx={{
+          backgroundColor: "#eee"
+        }}
+        className={styles.partners}
+      >
+        <div>
+              Parceiros
+        </div>
+        <div className={styles.partnersContainer}>
+            <Partners />
+        </div>
       </section>
 
       <section 

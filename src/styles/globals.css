@@ -189,6 +189,10 @@ footer ul li a:hover {
   height: 100%;
 }
 
+.testimonial-gallery .carousel .slide {
+  background: none!important;
+}
+
 /* Classes Alert */
 
 .alert-enter {

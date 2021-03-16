@@ -81,6 +81,12 @@ export type IFeatureComponent = {
     text: string
 }
 
+export type IPartnerComponent = {
+    logoImage: string,
+    width: number,
+    height: number   
+}
+
 export type ICard = {
   OfferMessage? : string,
   image? : string,
