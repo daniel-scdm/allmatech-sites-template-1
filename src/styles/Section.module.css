@@ -428,7 +428,6 @@
 .invertedDiagonalBoxLeft {
     background-color: #FFF; 
     position: relative;
-    
 }
 
 .invertedDiagonalBoxLeft::after {
@@ -441,6 +440,24 @@
     left: 0;
     bottom: 0;
     background-color: #eee; 
+    clip-path: polygon(130% 50%, 100% 100%, 0% 100%, 0% 85%)
+}
+
+.invertedDiagonalBoxLeftBlue {
+    background-color: #fff; 
+    position: relative;
+}
+
+.invertedDiagonalBoxLeftBlue::after {
+    content: '';
+	position: absolute;
+    height: 250px;
+    width: 100%;
+    top: -249px;;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff; 
     clip-path: polygon(130% 50%, 100% 100%, 0% 100%, 0% 85%)
 }
 
@@ -476,7 +493,8 @@
     align-items: center;
 }
 
-.BuyOrSellActions > button {
+.BuyOrSellActions > button,
+.BuyOrSellActions > a {
     display: block;
     padding: 1.2rem 1rem;
     font-weight: 600;
@@ -487,7 +505,8 @@
     transition: all .3s;
 }
 
-.BuyOrSellActions > button:hover {
+.BuyOrSellActions > button:hover,
+.BuyOrSellActions > a:hover {
     opacity: .6;
 }
 
@@ -495,7 +514,7 @@
     background-color: #1ea69a;
 }
 
-.BuyOrSellActions > button:nth-child(2) {
+.BuyOrSellActions > a {
     background-color: #f15455;
 }
 
@@ -564,12 +583,7 @@
 }
 
 .testimonialGallery {
-    background: none;
     width: 100%;
-}
-
-.testimonialGallery .carousel .slide {
-    background: none!important;
 }
 
 .Testimonial {

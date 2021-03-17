@@ -99,8 +99,8 @@ function Property() {
         PrecoVenda={prt?.PrecoVenda}
         Observacao={prt?.Observacao}
         TituloImovel={prt?.TipoImovel}
+        CodigoImovel={prt?.CodigoImovel}
         Fotos={prt?.Fotos}
-        indexKey={"1"}  
         thumbnail={prt?.Fotos?.Foto[0].Link[1].URLArquivo._text}    
         features={features}
       />

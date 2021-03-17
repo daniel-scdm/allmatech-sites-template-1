@@ -19,9 +19,10 @@ const myLoader = ({ src, width, quality } : any) => {
     return src;
 }
 
-const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail, Fotos, features, Videos }) => {
+const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail, Fotos, features, Videos, CodigoImovel }) => {
 
     const [showGallery, setShowGallery] = useState(false);
+    const [isSending, setIsSending] = useState(false);
 
     const MapWithNoSSR = dynamic(() => import("src/components/Map"), {
         ssr: false
@@ -37,6 +38,22 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
     }, [showGallery]);
 
     const handleShowModal = (showGalleryModal : boolean) => setShowGallery(showGalleryModal);
+
+    const handleContact = (e : React.FormEvent) => {
+        e.preventDefault();
+        setIsSending(true);
+
+        const data = {
+            comment: e.target.comment.value,
+            name: e.target.name.value,
+            email: e.target.email.value,
+            website: e.target.website.value,
+            code: CodigoImovel?._text
+        }
+
+        console.log(data)
+        setIsSending(false);
+    }
 
     return (
         <div className={property.containerProperty}>
@@ -136,19 +153,19 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
             <div className={property.contactContainer}>
                 <h3>Contato</h3>
 
-                <form onSubmit={() => {}} className={property.comment}>
-                    <textarea name="name" id="" placeholder="Comentário" rows={10}>
+                <form onSubmit={handleContact} className={property.comment}>
+                    <textarea name="comment" placeholder="Comentário" rows={10}>
                         
                     </textarea>
 
                     <div>
                         <input type="text" name="name" id="" placeholder="Nome (Obrigatório)" />
-                        <input type="text" name="" id="" placeholder="Email (Obrigatório)" />
-                        <input type="text" name="" id="" placeholder="Website" />
+                        <input type="text" name="email" id="" placeholder="Email (Obrigatório)" />
+                        <input type="text" name="website" id="" placeholder="Website" />
                     </div>
 
-                    <button type="submit" value="">
-                        Enviar mensagem
+                    <button type="submit" disabled={isSending}>
+                        {isSending ? "Enviando..." : "Enviar mensagem"}
                     </button>
                 </form>
 

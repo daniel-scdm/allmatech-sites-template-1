@@ -18,6 +18,12 @@
 
 .spacingContainer {
   padding: 1rem;
+  min-height: 725px;
+}
+
+.spacingContainerNews {
+  padding: 1rem;
+  min-height: 350px;
 }
 
 .feature {
@@ -147,7 +153,7 @@
   display: none;
 }
 
-.contactContainer > div > section > button {
+.contactContainer > div > section > a {
   padding: 1rem;
   border: 1px solid #f15455;
   background: none;
@@ -157,7 +163,7 @@
   transition: all .5s;
 }
 
-.contactContainer > div > section > button:hover {  
+.contactContainer > div > section > a:hover {  
   background: #f15455;
   color: #fff;  
 }
@@ -167,12 +173,10 @@
   width: 100%;   
   display: flex;
   justify-content: center;
-  align-items: center;
   color: #fff;
   flex-direction: column;
   font-size: 1.5rem;
-  padding: 1rem;
-  padding-top: 8rem;
+  padding: 8rem 1rem 4rem 1rem;
 }
 
 .LoadingScreen {

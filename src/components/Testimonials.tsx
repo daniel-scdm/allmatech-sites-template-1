@@ -27,7 +27,13 @@ const Testimonials : React.FC = () => {
             showThumbs={false}
             showIndicators={false}
             className="testimonial-gallery"  
-            showStatus={false}            
+            showStatus={false}     
+            autoPlay
+            infiniteLoop
+            dynamicHeight
+            transitionTime={1000}
+            interval={6000}
+            showArrows={false}      
         >
             {TestimonialsText.map(t => (
                 <div className={Section.Testimonial} key={t.citation}>

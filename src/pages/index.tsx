@@ -19,11 +19,12 @@ import TeamCard from "src/components/TeamCard";
 import NewsCard from "src/components/NewsCard";
 
 import Footer from "src/components/Footer";
-import LazyLoad from 'react-lazy-load';
+import LazyLoad from "react-lazyload";
 
 import { IContext } from "interfaces";
 import { useFilter } from "src/hooks/useFilter";
 import { useRouter } from 'next/router';
+import Link from "next/link";
 
 import LatestProperties from "src/components/LatestProperties";
 import LatestOfferProperties from "src/components/LatestOfferProperties";
@@ -77,9 +78,6 @@ export default function Home() {
     const filteredStreets = mappedStreets.filter(filterUnique);
     setStreetsRent(filteredStreets);    
   }
-
-  const handleContact = () => router.push("/contact");
-
 
   if(isLoadingScreen) {
     return <AnimatedLoadingScreen />
@@ -144,7 +142,11 @@ export default function Home() {
       <section
         className={styles.contactContainer}
       >
-          <LazyLoad offset={200}  offsetVertical={200} height={620} >
+          <LazyLoad 
+            offset={100}  
+            debounce={true} 
+            once 
+          >
             <section className={styles.advice}>
               <h1>Precisa de conselho?</h1>
               <p>Nossos agentes podem te ajudar</p>
@@ -153,11 +155,14 @@ export default function Home() {
                   Sed volutpat hendrerit nisl eget at mattis praesent maximus lectus in 
                   nulla fringilla, id euismod libero consequat etiam tellus justot.
               </p>
-              <button onClick={handleContact}>
+              <Link href="/contact">
+                <a>
                   Contate 
-              </button>
+                </a>
+              </Link>
             </section>
-          </LazyLoad>        
+          </LazyLoad>  
+
           <section className={styles.contactImage}>          
           </section>          
       </section>
@@ -170,15 +175,21 @@ export default function Home() {
       >
         <LazyFeatures />
       </section>
+
       <div 
         className={Section.diagonalBox} 
       >        
       </div>
 
       <section className={styles.specialOffer}>
-          <Testimonials />
+          <Testimonials />          
       </section>
 
+      <div 
+        className={Section.invertedDiagonalBoxLeftBlue} 
+      >        
+      </div>
+      
       <section className={styles.partners}>
         <div>
               Parceiros
@@ -187,7 +198,6 @@ export default function Home() {
             <Partners />
         </div>
       </section>
-      
 
       <div 
         className={Section.invertedDiagonalBox} 
@@ -212,9 +222,11 @@ export default function Home() {
                 Envie seu imóvel
             </button>
 
-            <button>
+            <Link href="/list">
+              <a>
                 Procure em nosso catálogo
-            </button>
+              </a>
+            </Link>
           </div>          
         </div>
         <div 
@@ -276,7 +288,7 @@ export default function Home() {
 
 
           <section            
-            className={styles.spacingContainer}
+            className={styles.spacingContainerNews}
           >
             <div className={styles.latestCards}>
               {latestNews.map((a, i) => (
