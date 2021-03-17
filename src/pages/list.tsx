@@ -44,11 +44,13 @@ function List() {
 
   useEffect(() => {
     if(app.parsedXml) {
+
       const { query } = router;
       const filteredProperties = filterProperties(app.parsedXml.Carga.Imoveis.Imovel, query); 
       setListProperties(filteredProperties);     
       setIsLoading(false);
       setIsLoadingScreen(false);
+      
     }           
   }, [app.parsedXml]);
 

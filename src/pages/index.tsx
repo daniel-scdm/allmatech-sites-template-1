@@ -15,8 +15,6 @@ import CatchPhrase from "src/components/AnimatedCatchPhrase";
 
 import HouseImage from "assets/images/house.jpg";
 
-import dinamic from 'next/dynamic';
-
 import TeamCard from "src/components/TeamCard";
 import NewsCard from "src/components/NewsCard";
 
@@ -28,14 +26,12 @@ import { useFilter } from "src/hooks/useFilter";
 import { useRouter } from 'next/router';
 
 import LatestProperties from "src/components/LatestProperties";
-import LatestRentProperties from "src/components/LatestRentProperties";
 import LatestOfferProperties from "src/components/LatestOfferProperties";
 import Testimonials from "src/components/Testimonials";
 import AnimatedLoadingScreen from "src/components/AnimatedLoadingScreen";
 import Partners from "src/components/Partners";
 
 import LazyFeatures from "src/components/Features";
-
 
 export default function Home() {
 
@@ -48,6 +44,7 @@ export default function Home() {
   const [streetsRent, setStreetsRent] = useState<Array<string | undefined>>([]);
   const [isLoadingScreen, setIsLoadingScreen] = useState(true);
 
+  const [latestNews] = useState(app.Articles.slice(app.Articles.length - 3, app.Articles.length));
 
   useEffect(() => {
       if(app.state === "done") {
@@ -282,26 +279,14 @@ export default function Home() {
             className={styles.spacingContainer}
           >
             <div className={styles.latestCards}>
-              <NewsCard 
-                text={`
-                  Lorem ipsum dolor sit amet
-                `}
-                code={1}
-              />
-              <NewsCard 
-                image="https://i.pinimg.com/736x/60/66/d0/6066d00c8b2e571b6853a6437f23a776.jpg"
-                text={`
-                  Lorem ipsum dolor sit amet
-                `}
-                code={2}                
-              />
-              <NewsCard 
-                image="https://www.e-architect.com/images/jpgs/new_zealand/karori_house_h190310_pm3.jpg"
-                text={`
-                  Lorem ipsum dolor sit amet
-                `}
-                code={3}                
-              />              
+              {latestNews.map((a, i) => (
+                <NewsCard 
+                  key={i.toString()}
+                  text={a.title}
+                  image={a.image}
+                  code={i}
+                />
+              ))}                            
             </div>            
           </section>          
       </section>

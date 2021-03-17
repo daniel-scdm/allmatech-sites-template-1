@@ -46,6 +46,7 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
             <div className={styles.latestCards}>
                 {paginatedList.map((p) => (
                     <Card 
+                        key={p.CodigoImovel?._text}
                         title={p.TituloImovel?._text}
                         text={p.Observacao?._cdata}
                         bathrooms={p.QtdBanheiros?._text}
@@ -54,7 +55,6 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
                         priceSell={p.PrecoVenda?._text}
                         priceRent={p.PrecoLocacao?._text}
                         OfferMessage={'Sobre oferta'}
-                        indexKey={p.CodigoImovel?._text}
                         image={p.Fotos?.Foto[0].Link[0].URLArquivo._text}
                         code={p.CodigoImovel?._text}
                     />

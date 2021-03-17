@@ -42,7 +42,7 @@ export const useFilter = () => {
                 const keyValue = Object.keys(value);
                 switch (keyValue[0]) {
                     case "tipoImovel":
-                        if(value["tipoImovel"] || value["tipoImovel"] === "true") {
+                        if(value["tipoImovel"]) {
                             isVenda = true;
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeVenda);
                         } else {
@@ -157,8 +157,8 @@ export const useFilter = () => {
                     break;
                 case "valores":               
                     return { [entries[0]]: entries[1] }
-                case "buy":               
-                    return { tipoImovel: entries[1] }
+                case "buy": 
+                    return { tipoImovel: (entries[1] === "true" || entries[1] === true) }
                 default: 
                 break;
             }

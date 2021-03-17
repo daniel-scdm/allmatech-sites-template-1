@@ -7,17 +7,17 @@ const TestimonialsText = [
         text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit erat sed fermentum tincidunt. 
         Nunc nec placerat turpis, sed convallis ante. Morbi hendrerit finibus enim eu ultrices. 
         Donec luctus lacus ornare, suscipit purus sit amet, suscipit ante.`,
-        sitation: "Pessoa 1"
+        citation: "Pessoa 1"
     }, {
         text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit erat sed fermentum tincidunt. 
         Nunc nec placerat turpis, sed convallis ante. Morbi hendrerit finibus enim eu ultrices. 
         Donec luctus lacus ornare, suscipit purus sit amet, suscipit ante.`,
-        sitation: "Pessoa 2"
+        citation: "Pessoa 2"
     }, {
         text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit erat sed fermentum tincidunt. 
         Nunc nec placerat turpis, sed convallis ante. Morbi hendrerit finibus enim eu ultrices. 
         Donec luctus lacus ornare, suscipit purus sit amet, suscipit ante.`,
-        sitation: "Pessoa 3"
+        citation: "Pessoa 3"
     }
 ];
 
@@ -30,12 +30,12 @@ const Testimonials : React.FC = () => {
             showStatus={false}            
         >
             {TestimonialsText.map(t => (
-                <div className={Section.Testimonial}>
+                <div className={Section.Testimonial} key={t.citation}>
                     <h3>
                         "{t.text}"
                     </h3>
                     <div>
-                        - {t.sitation}
+                        - {t.citation}
                     </div>
                 </div>
             ))}

@@ -186,7 +186,6 @@ export type IPropertyXML = {
   thumbnail? : string,
   features?: Array<string>,
   Videos?: { Foto: Array<IVideo> },
-  indexKey : string
 }
 
 export type ICarga = {
