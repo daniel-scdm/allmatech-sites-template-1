@@ -83,7 +83,7 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                         <Link href="#">
                             <a>Serviços</a>
                         </Link>
-                        <Link href="#">
+                        <Link href="/news">
                             <a>Notícias</a>
                         </Link>
                         <Link href="/contact">

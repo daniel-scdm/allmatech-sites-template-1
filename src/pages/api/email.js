@@ -31,7 +31,6 @@ const Index = (req, res) => {
                 error: error
             });
 
-            console.log(error);
         } else {
             res.status(200).json({ 
                 Message: "Sent" ,

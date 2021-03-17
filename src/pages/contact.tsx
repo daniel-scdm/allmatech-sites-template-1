@@ -58,7 +58,6 @@ function Contact() {
             })
             .catch(err => {
                 setError("Ocorreu um error ao enviar sua mensagem, tente mais tarde.");
-                console.log(err)
             });
 
     } 

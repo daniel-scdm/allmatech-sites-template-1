@@ -165,7 +165,6 @@ export const useFilter = () => {
             
         }).filter(removeEmpty);
 
-        console.log(Filter)
         const propertyList = makeNewPropertyList(properties, Filter);
 
         return Object.values(propertyList);

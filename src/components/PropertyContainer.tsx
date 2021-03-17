@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui';
 import React, { useEffect, useState } from 'react';  
 
 import property from 'src/styles/Property.module.css';
-import Section from 'src/styles/Section.module.css';
 
 import { IPropertyXML } from "interfaces/index";
 import EmptyImage from "assets/images/empty.jpg"

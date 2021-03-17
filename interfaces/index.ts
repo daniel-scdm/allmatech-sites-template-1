@@ -1,4 +1,4 @@
-import { ReactChild } from "react";
+import React, { ReactChild } from "react";
 import { IconBaseProps } from "react-icons";
 
 export type User = {
@@ -21,7 +21,15 @@ export type IFullSection = {
 export type IContext = {
   state: string,
   parsedXml: ICarga,
-  _fetchData: () => void
+  _fetchData: () => void,
+  Articles: Array<ICardNews>
+}
+
+export type ICardNews = {
+  image: string,
+  text: string,
+  title: string
+  indexKey? : string 
 }
 
 export type ISearchFormBuy = {
@@ -35,6 +43,10 @@ export type ISearchFormBuy = {
 export type IFilterFormList = {
   propertyList? : Array<IPropertyXML>,
   callbackList : (query : object) => void
+}
+
+export type IFilterNewsList = {
+  callbackList : (e : React.FormEvent) => void
 }
 
 export type ISearchFormRent = {
@@ -51,6 +63,12 @@ export type IDropDown = {
   onChangeValue : (value: string, key : string) => void,
   selectedValue : string,
   KeyName: string
+}
+
+export type IInputText = {
+  Label : string,
+  nameField: string,
+  placeholder: string
 }
 
 export type ISlider = {
@@ -202,6 +220,11 @@ export type INewsCard = {
 
 export type IListProperties = {
   List? : Array<IPropertyXML>,
+  isLoading: boolean
+}
+
+export type IListNews = {
+  List? : Array<ICardNews>,
   isLoading: boolean
 }
 

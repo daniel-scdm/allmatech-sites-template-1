@@ -46,6 +46,7 @@
 
 .DropDownContainer,
 .DropDownContainer select,
+.DropDownContainer input
 .sliderContainer,
 .sliderContainer input {
     width: 100%;
@@ -80,6 +81,7 @@
 }
 
 .DropDownContainer select,
+.DropDownContainer input,
 .sliderContainer input,
 .SliderInputContainer input {
     padding: .6rem .5rem;
@@ -88,6 +90,11 @@
     border-radius: 0;
     outline: none;
     border: none;
+}
+
+.DropDownContainer input {
+    border: 1px solid #eee;
+    width: 100%;
 }
 
 .SliderInputContainer > div > span {
