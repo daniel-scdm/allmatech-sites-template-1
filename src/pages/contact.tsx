@@ -4,12 +4,7 @@ import { jsx } from 'theme-ui';
 import section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
 
-import Header from "src/components/header";
-import AllmatechLogo from  "assets/images/Allmatech-logo-complete.jpeg";
-
 import Footer from "src/components/Footer";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-
 import { GiHouse, GiPhone, GiCalendar } from "react-icons/gi";
 import { FiMail } from "react-icons/fi";
 import React, { useState } from 'react';
@@ -24,18 +19,15 @@ let myInit = {
     headers: headers
 };
 
-
 function Contact() {
 
     const [isSending, setIsSending] = useState(false);
     const [error, setError] = useState("");
 
-
     const handleContactForm = (e : React.FormEvent) => {
         e.preventDefault();
         setIsSending(true);
         setError("");
-
 
         const formValues = {
             name: e.target.name.value,
@@ -64,13 +56,6 @@ function Contact() {
 
     return (
         <>
-        <Header 
-            logoUrl={AllmatechLogo}
-            logoHeight={40}
-            logoWidth={190}  
-            bgHeaderColor={"#f9f9f9"}      
-        />
-
             <div className={section.banner}>
                 <div className={section.bannerText}>
                     <h1>Contatos</h1>

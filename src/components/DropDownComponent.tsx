@@ -27,7 +27,8 @@ const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions, extraStyl
                 onChange={handleChange}
                 value={selectedValue}
             >
-                <option>{defaultValue ? defaultValue : "Todos"}</option>                
+                <option>{defaultValue ? defaultValue : "Todos"}</option>
+                                
                 {ListOptions && ListOptions.map((opt, index) => <option key={index.toString()}>{opt}</option>)}
             </select>
         </div>   

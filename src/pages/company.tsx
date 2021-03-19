@@ -3,9 +3,6 @@ import { jsx } from 'theme-ui';
 
 import section from 'src/styles/Section.module.css';
 
-import Header from "src/components/header";
-import AllmatechLogo from  "assets/images/Allmatech-logo-complete.jpeg";
-
 import Footer from "src/components/Footer";
 import Image, { ImageLoaderProps } from "next/image";
 
@@ -17,13 +14,6 @@ function Company() {
 
   return (
     <>
-      <Header 
-        logoUrl={AllmatechLogo}
-        logoHeight={40}
-        logoWidth={190}  
-        bgHeaderColor={"#f9f9f9"}      
-      />
-
         <div className={section.bannerCompany}>
             <div className={section.bannerOverlay}>
                 <div className={section.bannerText}>

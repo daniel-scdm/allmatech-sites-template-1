@@ -5,9 +5,6 @@ import { useAppContext } from "src/context/parseXml";
 
 import styles from 'src/styles/Home.module.css';
 import Section from 'src/styles/Section.module.css';
-import Header from "src/components/header";
-
-import AllmatechLogo from  "assets/images/Allmatech-logo-complete.jpeg";
 
 import SectionFull from "src/components/fullSection";
 import SearchForm from "src/components/SearchForm";
@@ -23,7 +20,6 @@ import LazyLoad from "react-lazyload";
 
 import { IContext } from "interfaces";
 import { useFilter } from "src/hooks/useFilter";
-import { useRouter } from 'next/router';
 import Link from "next/link";
 
 import LatestProperties from "src/components/LatestProperties";
@@ -37,7 +33,6 @@ import LazyFeatures from "src/components/Features";
 export default function Home() {
 
   const app : IContext = useAppContext();
-  const router = useRouter();
   const { extractCity, filterUnique } = useFilter();
 
   const [cities, setCities] = useState<Array<string | undefined>>([]);
@@ -85,12 +80,7 @@ export default function Home() {
 
   return (
     <>
-      <Header 
-        logoUrl={AllmatechLogo}
-        logoHeight={40}
-        logoWidth={190}  
-        bgHeaderColor={"#f9f9f9"}      
-      />
+      
       <SectionFull
         bgImage={HouseImage}
       >

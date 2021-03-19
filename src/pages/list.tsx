@@ -7,9 +7,6 @@ import { useAppContext } from "src/context/parseXml";
 import Section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
 
-import Header from "src/components/header";
-import AllmatechLogo from  "assets/images/Allmatech-logo-complete.jpeg";
-
 import ListProperties from "src/components/ListProperties";
 
 import PropertyAuthor from "src/components/propertyAuthor";
@@ -90,13 +87,6 @@ function List() {
 
   return (
     <>
-      <Header 
-        logoUrl={AllmatechLogo}
-        logoHeight={40}
-        logoWidth={190}  
-        bgHeaderColor={"#f9f9f9"}      
-      />
-
       <section className={Section.container}>
           <div className={property.contentReverse}>
             <main>

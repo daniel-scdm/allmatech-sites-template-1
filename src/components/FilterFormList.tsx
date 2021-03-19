@@ -198,7 +198,6 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                     </Flex>
                     
                 </div>
-                
 
                 <input 
                     type="submit" 

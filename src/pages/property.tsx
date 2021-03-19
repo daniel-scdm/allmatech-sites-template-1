@@ -5,9 +5,6 @@ import { useEffect, useState } from "react";
 import Section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
 
-import Header from "src/components/header";
-import AllmatechLogo from  "assets/images/Allmatech-logo-complete.jpeg";
-
 import PropertyAuthor from "src/components/propertyAuthor";
 import FilterFormList from "src/components/FilterFormList";
 import Sponsor from "src/components/Sponsor";
@@ -93,7 +90,7 @@ function Property() {
       <PropertyContainer 
         Cidade={{ _text: "" }}
         QtdBanheiros={prt?.QtdBanheiros}
-        QtdDormitorios={prt?.QtdBanheiros}
+        QtdDormitorios={prt?.QtdDormitorios}
         QtdVagas={prt?.QtdVagas}
         PrecoLocacao={prt?.PrecoLocacao}
         PrecoVenda={prt?.PrecoVenda}
@@ -109,13 +106,6 @@ function Property() {
 
   return (
     <>
-      <Header 
-        logoUrl={AllmatechLogo}
-        logoHeight={40}
-        logoWidth={190}  
-        bgHeaderColor={"#f9f9f9"}      
-      />
-
       <section className={Section.container}>          
           <div className={property.content}>
             <main>

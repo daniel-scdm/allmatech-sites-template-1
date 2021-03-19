@@ -1,4 +1,4 @@
-import { useEffect, useState, memo } from "react";
+import React, { useEffect, useState, memo } from "react";
 import Card from "src/components/Card";
 import styles from 'src/styles/Home.module.css';
 
@@ -20,6 +20,7 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
     const [pList, setPList] = useState<Array<IPropertyXML>>([]);
     const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
     const [currentPage, setcurrentPage] = useState(1);
+    const [numberOfCards, setNumberOfCards] = useState(3);
 
     useEffect(() => {
         if(List && List.length > 0) {
@@ -30,11 +31,32 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
     }, [List]);
 
     useEffect(() => {
-        setPaginationList(currentPage)
+        const mediaQuery = window.matchMedia("(min-width: 860px)");
+        mediaQuery.addEventListener("change", handleMediaQueryChange);
+        handleMediaQueryChange(mediaQuery);
+        return () => {
+            mediaQuery.removeEventListener("change", handleMediaQueryChange);
+        };
+    }, []);
+
+    useEffect(() => {        
+        setPaginationList(currentPage);        
     }, [currentPage, pList]);
 
+    const handleMediaQueryChange = (mediaQuery : any) => {
+        if (mediaQuery.matches) {
+            setNumberOfCards(3);
+            setPaginationList(currentPage);        
+        } else {
+            setNumberOfCards(1);
+            setPaginationList(currentPage);        
+        }
+
+    };
+
     const setPaginationList = (page: number) => {
-        const slicedList = pList.slice((page - 1) * 3, 3 * page);
+        const slicedList = pList.slice((page - 1) * numberOfCards, numberOfCards * page);
+        console.log(numberOfCards, page)
         setPaginatedList(slicedList);
     }
 
@@ -63,12 +85,12 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
             <div className={styles.paginationButton}>
                 {currentPage !== 1 && (
                     <button onClick={back}>
-                        {`<<`} Página anterior 
+                        {`<<`} 
                     </button>
                 )}
                 {currentPage !== totalPages && (
                     <button onClick={foward}>
-                        Póxima página {`>>`}
+                        {`>>`}
                     </button>
                 )}              
             </div>

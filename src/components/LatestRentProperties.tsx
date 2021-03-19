@@ -62,12 +62,12 @@ const LatestRentProperties : React.FC<ListPropterties> = ({ List }) => {
             <div className={styles.paginationButton}>
                 {currentPage !== 1 && (
                     <button onClick={back}>
-                        {`<<`} Página anterior 
+                        {`<<`} 
                     </button>
                 )}
                 {currentPage !== totalPages && (
                     <button onClick={foward}>
-                        Póxima página {`>>`}
+                        {`>>`}
                     </button>
                 )}              
             </div>

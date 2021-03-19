@@ -16,13 +16,16 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
                     ...formValues,
                     buy: true
                 });
-            } else {
+                return;
+            } 
+            
+            if(value === "Aluguél") {
                 setFormValues({
                     ...formValues,
                     buy: false
                 });
+                return;
             }
-            return;
         }
 
         if(formatKeys.includes(KeyName)) {

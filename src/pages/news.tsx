@@ -6,9 +6,6 @@ import React, { useEffect, useState } from "react";
 import Section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
 
-import Header from "src/components/header";
-import AllmatechLogo from  "assets/images/Allmatech-logo-complete.jpeg";
-
 import ListNews from "src/components/NewsList";
 
 import PropertyAuthor from "src/components/propertyAuthor";
@@ -83,13 +80,6 @@ function News() {
 
   return (
     <>
-      <Header 
-        logoUrl={AllmatechLogo}
-        logoHeight={40}
-        logoWidth={190}  
-        bgHeaderColor={"#f9f9f9"}      
-      />
-
       <section className={Section.container}>
           <div className={property.contentReverse}>
             <main>
