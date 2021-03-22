@@ -113,6 +113,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                             <DropDownComponent 
                                 Label="Qtd. Quartos"
                                 ListOptions={[
+                                    "1+",
                                     "2+",
                                     "3+",
                                     "4+",
@@ -128,13 +129,14 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                                     paddingRight: 25  
                                 }}
                                 onChangeValue={formBuy.handleChangeForm}
-                                defaultValue={"1+"}
+                                defaultValue={"0+"}
                                 KeyName="quartos"
                             />  
 
                             <DropDownComponent 
                                 Label="Qtd. Banheiros"
                                 ListOptions={[
+                                    "1+",
                                     "2+",
                                     "3+",
                                     "4+",
@@ -147,13 +149,14 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                                 ]}
                                 selectedValue={formBuy.formValues["banheiros"] + "+"}                                
                                 onChangeValue={formBuy.handleChangeForm}
-                                defaultValue={"1+"}
+                                defaultValue={"0+"}
                                 KeyName="banheiros"
                             />
                         </Flex>
                         <DropDownComponent 
                             Label="Vagas"
                             ListOptions={[
+                                "1+",
                                 "2+",
                                 "3+",
                                 "4+",
@@ -167,7 +170,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                             selectedValue={formBuy.formValues["garagem"] + "+"}                                
                             onChangeValue={formBuy.handleChangeForm}
                             KeyName="garagem"
-                            defaultValue={"1+"}
+                            defaultValue={"0+"}
                         />  
 
                         <input 
@@ -207,6 +210,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                             <DropDownComponent 
                                 Label="Qtd. Quartos"
                                 ListOptions={[
+                                    "1+",
                                     "2+",
                                     "3+",
                                     "4+",
@@ -222,13 +226,14 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                                     paddingRight: 25  
                                 }}
                                 onChangeValue={formRent.handleChangeForm}
-                                defaultValue={"1+"}
+                                defaultValue={"0+"}
                                 KeyName="quartos"
                             />  
 
                             <DropDownComponent 
                                 Label="Qtd. Banheiros"
                                 ListOptions={[
+                                    "1+",
                                     "2+",
                                     "3+",
                                     "4+",
@@ -241,13 +246,14 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                                 ]}
                                 selectedValue={formRent.formValues["banheiros"] + "+"}                                
                                 onChangeValue={formRent.handleChangeForm}
-                                defaultValue={"1+"}
+                                defaultValue={"0+"}
                                 KeyName="banheiros"
                             />
                         </Flex>
                         <DropDownComponent 
                             Label="Vagas"
                             ListOptions={[
+                                "1+",
                                 "2+",
                                 "3+",
                                 "4+",
@@ -261,7 +267,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                             selectedValue={formRent.formValues["garagem"] + "+"}                                
                             onChangeValue={formRent.handleChangeForm}
                             KeyName="garagem"
-                            defaultValue={"1+"}
+                            defaultValue={"0+"}
                         /> 
 
                         <input 

@@ -118,6 +118,7 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                     <DropDownComponent 
                         Label="Qtd. Quartos"
                         ListOptions={[
+                            "1+",
                             "2+",
                             "3+",
                             "4+",
@@ -133,13 +134,14 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                             paddingRight: 25  
                         }}
                         onChangeValue={handleChangeForm}
-                        defaultValue={"1+"}
+                        defaultValue={"0+"}
                         KeyName="quartos"
                     />  
 
                     <DropDownComponent 
                         Label="Qtd. Banheiros"
                         ListOptions={[
+                            "1+",
                             "2+",
                             "3+",
                             "4+",
@@ -152,13 +154,14 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                         ]}
                         selectedValue={formValues["banheiros"] + "+"}                                
                         onChangeValue={handleChangeForm}
-                        defaultValue={"1+"}
+                        defaultValue={"0+"}
                         KeyName="banheiros"
                     />
                 </Flex>
                 <DropDownComponent 
                     Label="Vagas"
                     ListOptions={[
+                        "1+",
                         "2+",
                         "3+",
                         "4+",
@@ -172,7 +175,7 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                     selectedValue={formValues["garagem"] + "+"}                                
                     onChangeValue={handleChangeForm}
                     KeyName="garagem"
-                    defaultValue={"1+"}
+                    defaultValue={"0+"}
                 />
 
                 <div className={Section.checkContainer}>
