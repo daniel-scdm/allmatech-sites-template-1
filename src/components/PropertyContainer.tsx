@@ -28,6 +28,10 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
         ssr: false
     });
 
+    const numberWithCommas = (x : string | number) => {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
+    }
+
     useEffect(() => {
         if(showGallery) {
             document.body.style.overflowY = "hidden";
@@ -67,9 +71,9 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
                 {TituloImovel?._text}
             </h3> 
             <div className={property.cardPrice}>
-                {PrecoVenda?._text && <span>Venda: R$ {PrecoVenda._text}</span>}
+                {PrecoVenda?._text && <span>Venda: R$ {numberWithCommas(PrecoVenda._text)}</span>}
 
-                {PrecoLocacao?._text && <span>Aluguel: R$ {PrecoLocacao._text}</span>}
+                {PrecoLocacao?._text && <span>Aluguel: R$ {numberWithCommas(PrecoLocacao._text)}</span>}
             </div>
 
             <div className={property.image}>

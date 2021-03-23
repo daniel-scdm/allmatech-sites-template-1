@@ -12,6 +12,10 @@ import { BiSearch } from "react-icons/bi";
 
 const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, indexKey, PrecoVenda, PrecoLocacao }) => {
 
+    const numberWithCommas = (x : string | number) => {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
+    }
+
     return (        
         <div className={property.listCard} key={indexKey}>
             <div className={property.imageCardContainer}>   
@@ -47,9 +51,9 @@ const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorio
                     </div>
                 </div>
                 <div className={property.cardPrice}>
-                    {PrecoVenda?._text && <span>Venda: R$ {PrecoVenda._text}</span>}
+                    {PrecoVenda?._text && <span>Venda: R$ {numberWithCommas(PrecoVenda._text)}</span>}
 
-                    {PrecoLocacao?._text && <span>Aluguel: R$ {PrecoLocacao._text}</span>}
+                    {PrecoLocacao?._text && <span>Aluguel: R$ {numberWithCommas(PrecoLocacao._text)}</span>}
                 </div>
             </div>
         </div>

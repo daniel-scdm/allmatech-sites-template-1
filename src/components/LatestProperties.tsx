@@ -25,12 +25,13 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
     }, [List]);
 
     useEffect(() => {
-        setPaginationList(currentPage)
+        setPaginationList(currentPage);
     }, [currentPage, pList]);
 
     const setPaginationList = (page: number) => {
         const slicedList = pList.slice((page - 1) * 3, 3 * page);
-        setPaginatedList(slicedList);
+        console.log(slicedList)
+        if(slicedList.length > 0) setPaginatedList(slicedList);
     }
 
     const foward = () => setcurrentPage(currentPage + 1);

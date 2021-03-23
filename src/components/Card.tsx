@@ -20,6 +20,10 @@ const myLoader = ({ src } : ImageLoaderProps) => {
 
 const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, indexKey, code }) => {
 
+    const numberWithCommas = (x : string | number) => {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
+    }
+
     return (
         <LazyLoad
             offset={200}
@@ -76,7 +80,7 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
                         </div>
                     </div>
                     <div className={Section.cardPrice}>
-                        R$ {priceSell ? priceSell : priceRent}
+                        R$ {priceSell ? numberWithCommas(priceSell) : numberWithCommas(priceRent)}
                     </div>
                 </div>
             </div>

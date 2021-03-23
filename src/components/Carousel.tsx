@@ -55,7 +55,7 @@ const Carousel : React.FC<ICarousel> = ({ activeModal, setActiveModal, ListPhoto
                     >
                         {ListPhotos?.map((photo : any, i : number) => (
                             <div className={property.imageContainer} key={i.toString()}>
-                                <Image loader={myLoader} src={photo.Link[1].URLArquivo._text} width={1200} height={800} />
+                                <Image loader={myLoader} src={photo.Link[1].URLArquivo._text} width={1200} height={800} loading="lazy" placeholder="Carregando..." />
                             </div>
                         ))}                
                     </GalleryCarousel>
