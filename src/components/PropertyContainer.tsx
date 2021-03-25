@@ -13,31 +13,36 @@ import dynamic from "next/dynamic";
 
 import Carousel from "src/components/Carousel";
 
-import Image from "next/image";
-
 const myLoader = ({ src, width, quality } : any) => {
     return src;
+}
+
+const LazyImage = dynamic(
+    () => import("next/image"), 
+    {
+        ssr: false,
+        loading: () => <p></p>
+    },    
+);
+
+const MapWithNoSSR = dynamic(() => import("src/components/Map"), {
+    ssr: false
+});
+
+const numberWithCommas = (x : string | number) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
 }
 
 const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail, Fotos, features, Videos, CodigoImovel }) => {
 
     const [showGallery, setShowGallery] = useState(false);
-    const [isSending, setIsSending] = useState(false);
-
-    const MapWithNoSSR = dynamic(() => import("src/components/Map"), {
-        ssr: false
-    });
-
-    const numberWithCommas = (x : string | number) => {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
-    }
+    const [isSending, setIsSending] = useState(false);    
 
     useEffect(() => {
         if(showGallery) {
             document.body.style.overflowY = "hidden";
             return;
         }
-
         document.body.style.overflowY = "scroll";
     }, [showGallery]);
 
@@ -55,7 +60,6 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
             code: CodigoImovel?._text
         }
 
-        console.log(data)
         setIsSending(false);
     }
 
@@ -77,7 +81,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
             </div>
 
             <div className={property.image}>
-                <Image
+                <LazyImage
                     loader={myLoader}
                     src={thumbnail ? thumbnail : EmptyImage}
                     layout="responsive"
@@ -100,8 +104,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
                         </a>
                     </li>
                 </ul>
-            </div>
-                      
+            </div>                      
 
             <div className={property.propertyInfoContainer}>
                 <div className={property.cardFeatures}>

@@ -30,7 +30,6 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
 
     const setPaginationList = (page: number) => {
         const slicedList = pList.slice((page - 1) * 3, 3 * page);
-        console.log(slicedList)
         if(slicedList.length > 0) setPaginatedList(slicedList);
     }
 

@@ -19,8 +19,8 @@ const Footer : FC = () => {
                 <div className="footer-logo-container">
                     <Image 
                         src={AllmatechLogo}
-                        height={80}
-                        width={280}  
+                        height={50}
+                        width={250}  
                         alt="Picture of the author"
                     />
                 </div>

@@ -15,6 +15,7 @@ const PAGE_LIMIT = 15;
 const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
 
     const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
+    
     useEffect(() => {
         if(List) {
             paginate(1);    

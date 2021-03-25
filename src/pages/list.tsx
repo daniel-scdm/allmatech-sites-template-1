@@ -7,8 +7,6 @@ import { useAppContext } from "src/context/parseXml";
 import Section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
 
-import ListProperties from "src/components/ListProperties";
-
 import PropertyAuthor from "src/components/propertyAuthor";
 import FilterFormList from "src/components/FilterFormList";
 import Sponsor from "src/components/Sponsor";
@@ -19,6 +17,8 @@ import { IPropertyXML, IContext } from 'interfaces';
 
 import { useRouter } from 'next/router';
 import { useFilter } from "src/hooks/useFilter";
+
+import ListProperties from "src/components/ListProperties";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
@@ -89,7 +89,7 @@ function List() {
     <>
       <section className={Section.container}>
           <div className={property.contentReverse}>
-            <main>
+            <main>              
               <ListProperties 
                 List={listProperties}
                 isLoading={isLoading}

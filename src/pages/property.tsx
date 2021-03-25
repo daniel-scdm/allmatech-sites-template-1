@@ -12,6 +12,8 @@ import Search from "src/components/Search";
 
 import PropertyContainer from "src/components/PropertyContainer";
 
+import dynamic from "next/dynamic";
+
 import { useRouter } from 'next/router';
 import { useFilter } from "src/hooks/useFilter";
 import { useFetch } from "src/hooks/useFetch";
@@ -23,6 +25,37 @@ import { IPropertyXML } from "interfaces";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 import Footer from "src/components/Footer";
+
+const LazyPropertyComponent = dynamic(
+  () => import("src/components/PropertyContainer"),
+  { 
+    loading: ({ error }) => {
+      if(error) {
+        return (
+          <SkeletonTheme color="#ddd" highlightColor="#ccc">
+              <div className={property.skeletonContainer}>
+                  <Skeleton className={property.skeletonImage} />
+                  <Skeleton className={property.skeletonBody} />
+                  <Skeleton className={property.skeletonMessage} />
+              </div>
+          </SkeletonTheme>
+        );
+      }
+
+      return (
+        <div className={property.emptyProperty}>
+            <div>
+              <FaHouseDamage />
+            </div>
+            <h3>
+              Imovel não encontrado.
+            </h3>
+        </div>
+      );
+  },
+  ssr: false
+}
+);
 
 function Property() {
 
@@ -72,36 +105,6 @@ function Property() {
           </SkeletonTheme>
       );
     }
-
-    if(state === "done" && !prt && !isLoading) {
-      return (
-        <div className={property.emptyProperty}>
-            <div>
-              <FaHouseDamage />
-            </div>
-            <h3>
-              Imovel não encontrado.
-            </h3>
-        </div>
-      );
-    }
-
-    return (
-      <PropertyContainer 
-        Cidade={{ _text: "" }}
-        QtdBanheiros={prt?.QtdBanheiros}
-        QtdDormitorios={prt?.QtdDormitorios}
-        QtdVagas={prt?.QtdVagas}
-        PrecoLocacao={prt?.PrecoLocacao}
-        PrecoVenda={prt?.PrecoVenda}
-        Observacao={prt?.Observacao}
-        TituloImovel={prt?.TipoImovel}
-        CodigoImovel={prt?.CodigoImovel}
-        Fotos={prt?.Fotos}
-        thumbnail={prt?.Fotos?.Foto[0].Link[1].URLArquivo._text}    
-        features={features}
-      />
-    );
   }
 
   return (
@@ -109,7 +112,20 @@ function Property() {
       <section className={Section.container}>          
           <div className={property.content}>
             <main>
-                {handlePropertyLoading()}
+              <LazyPropertyComponent 
+                  Cidade={{ _text: "" }}
+                  QtdBanheiros={prt?.QtdBanheiros}
+                  QtdDormitorios={prt?.QtdDormitorios}
+                  QtdVagas={prt?.QtdVagas}
+                  PrecoLocacao={prt?.PrecoLocacao}
+                  PrecoVenda={prt?.PrecoVenda}
+                  Observacao={prt?.Observacao}
+                  TituloImovel={prt?.TipoImovel}
+                  CodigoImovel={prt?.CodigoImovel}
+                  Fotos={prt?.Fotos}
+                  thumbnail={prt?.Fotos?.Foto[0].Link[1].URLArquivo._text}    
+                  features={features}
+              />
             </main>
             <aside>
                 <PropertyAuthor />
