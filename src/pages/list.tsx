@@ -82,7 +82,7 @@ function List() {
           <Sponsor />
           <Search />
         </>
-      )
+      );
   }
 
   return (

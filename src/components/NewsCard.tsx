@@ -30,7 +30,7 @@ const NewsCard : FC<INewsCard> = ({ image, code, text }) => {
                 {!image && (
                     <Image 
                         loader={myLoader}
-                        src={require("../../assets/images/missing-image.png")}
+                        src={require("assets/images/missing-image.png")}
                         width="480"
                         height="320"
                         className={Section.imageNews}

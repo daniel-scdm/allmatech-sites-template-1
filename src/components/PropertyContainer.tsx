@@ -12,18 +12,11 @@ import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
 import dynamic from "next/dynamic";
 
 import Carousel from "src/components/Carousel";
+import Image, { ImageLoaderProps } from "next/image";
 
-const myLoader = ({ src, width, quality } : any) => {
+const myLoader = ({ src, width, quality } : ImageLoaderProps) => {
     return src;
 }
-
-const LazyImage = dynamic(
-    () => import("next/image"), 
-    {
-        ssr: false,
-        loading: () => <p></p>
-    },    
-);
 
 const MapWithNoSSR = dynamic(() => import("src/components/Map"), {
     ssr: false
@@ -81,7 +74,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
             </div>
 
             <div className={property.image}>
-                <LazyImage
+                <Image
                     loader={myLoader}
                     src={thumbnail ? thumbnail : EmptyImage}
                     layout="responsive"
