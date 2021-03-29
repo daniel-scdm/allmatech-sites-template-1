@@ -80,7 +80,7 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
                         </div>
                     </div>
                     <div className={Section.cardPrice}>
-                        R$ {priceSell ? numberWithCommas(priceSell) : numberWithCommas(priceRent)}
+                        R$ {priceSell ? numberWithCommas(priceSell) : priceRent ? numberWithCommas(priceRent) : ""}
                     </div>
                 </div>
             </div>

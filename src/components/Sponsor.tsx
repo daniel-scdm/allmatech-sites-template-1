@@ -1,11 +1,6 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-
+import { jsx } from 'theme-ui';
 import { FC } from 'react';
-import { INewsCard } from "interfaces/index";
-import Image from "next/image";
-
-
 import Section from "src/styles/Section.module.css";
 
 const Sponsor : FC = () => {

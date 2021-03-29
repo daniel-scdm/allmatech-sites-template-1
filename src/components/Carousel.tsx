@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import React, { useState } from 'react';  
+import React from 'react';  
 
 import property from 'src/styles/Property.module.css';
 import { CSSTransition } from 'react-transition-group';
@@ -9,21 +9,13 @@ import Image from "next/image";
 
 import { GrClose } from "react-icons/gr";
 
-import { ICarousel, IFoto } from "interfaces";
+import { ICarousel } from "interfaces";
 import { Carousel as GalleryCarousel } from 'react-responsive-carousel';
 
 
-const myLoader = ({ src, width, quality } : any) => {
+const myLoader = ({ src } : any) => {
     return src
 }
-
-const thumbItems = (images : Array<any>, [setThumbIndex, setThumbAnimation] : Array<Function>) => {
-    return images.map((item : any , i : number) => (
-        <div className="thumb" onClick={() => (setThumbIndex(i), setThumbAnimation(true))}>
-            {item}
-        </div>
-    ));
-};
 
 const Carousel : React.FC<ICarousel> = ({ activeModal, setActiveModal, ListPhotos }) => {
 

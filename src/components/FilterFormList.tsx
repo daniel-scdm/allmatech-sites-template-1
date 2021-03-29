@@ -42,22 +42,24 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
     useEffect(() => {
         if(propertyList) {
             const extractedCities = extractCity(propertyList);
-            setCities(extractedCities);  
+            if(extractedCities) setCities(extractedCities);  
         }              
     }, []);
   
     const extractStreets = (selectedCity : string) => {
         handleChangeForm("Todos", "bairro");
 
-        const mappedStreets : Array<string> = propertyList.map((imovel : IPropertyXML) => {
-          if(imovel.Cidade._text === selectedCity && imovel.Bairro)
-            return imovel.Bairro._text;
-  
-          return;
-        });
-  
-        const filteredStreets = mappedStreets.filter(filterUnique);
-        setStreets(filteredStreets);    
+        if(propertyList) {
+            const mappedStreets : Array<any> = propertyList.map((imovel : IPropertyXML) => {
+                if(imovel.Cidade._text === selectedCity && imovel.Bairro)
+                  return imovel.Bairro._text;
+        
+                return;
+            });
+
+            const filteredStreets = mappedStreets.filter(filterUnique);
+            setStreets(filteredStreets); 
+        }   
     }
   
     const submitForm = () => {

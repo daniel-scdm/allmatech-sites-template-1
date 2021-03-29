@@ -2,7 +2,7 @@
 import { jsx, Box, MenuButton } from "theme-ui";
 
 import Head from 'next/head'
-import Image from 'next/image'
+import Image, { ImageLoaderProps } from 'next/image'
 import Link from "next/link";
 
 import { IHeaderComponent } from "interfaces/index";
@@ -13,6 +13,10 @@ import { useState, useEffect } from "react";
 
 import { CSSTransition } from "react-transition-group";
 import React from 'react';
+
+const myLoader = ({ src } : ImageLoaderProps) => {
+    return src;
+}
 
 const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logoHeight, bgHeaderColor }) => {
 
@@ -58,6 +62,7 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                                 height={logoHeight}
                                 alt="Picture of the author"
                                 className={styles.imageLogo}
+                                loader={myLoader}
                             />
                         </a>
                     </Link>

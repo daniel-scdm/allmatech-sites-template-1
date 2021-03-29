@@ -11,7 +11,7 @@ import CurrencyInput from "src/components/CurrencyInput";
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
 
-const SliderComponent : React.FC<ISlider> = ({ Label, extraStyles, values, onChangeValue, errorMessage }) => {
+const SliderComponent : React.FC<ISlider> = ({ Label, values, onChangeValue, errorMessage }) => {
     
     const handleChange = (e : Array<number>) => onChangeValue(e);
     const formatValue = (e : number) => e.toLocaleString("pt");

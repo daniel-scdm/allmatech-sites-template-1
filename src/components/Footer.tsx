@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 
 import { FC } from 'react';
-import Image from "next/image";
+import Image, { ImageLoaderProps } from "next/image";
 
 import AllmatechLogo from  "assets/images/logo_w.png";
 
@@ -10,6 +10,10 @@ import { GiHouse, GiPhone, GiCalendar } from "react-icons/gi";
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 import { MdMailOutline } from "react-icons/md";
+
+const myLoader = ({ src } : ImageLoaderProps) => {
+    return src;
+}
 
 const Footer : FC = () => {
 
@@ -22,6 +26,7 @@ const Footer : FC = () => {
                         height={50}
                         width={250}  
                         alt="Picture of the author"
+                        loader={myLoader}
                     />
                 </div>
 

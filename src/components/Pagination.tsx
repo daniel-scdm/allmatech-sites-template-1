@@ -11,7 +11,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 const LEFT_PAGE = 'LEFT';
 const RIGHT_PAGE = 'RIGHT';
 
-const range = (from, to, step = 1) => {
+const range = (from : number, to : number, step : number = 1) => {
     let i  = from;
     const range = [];
 
@@ -27,19 +27,12 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
 
       const [totalPages, setTotalPages] = useState(Math.ceil(total / pageLimit));
       const [currentPage, setCurrentPage] = useState(1);
-      const [nPageNeighbours] = useState(
-        typeof pageNeighbours === 'number'
-        ? Math.max(0, Math.min(pageNeighbours, 2))
-        : 0);
 
       useEffect(() => {
         setTotalPages(Math.ceil(total / pageLimit));
       }, [total]);
 
       const fetchPageNumbers = () => {
-          const cTotalPages = totalPages;
-          const cCurrentPage = currentPage;
-          const cPageNeightbours = nPageNeighbours;
 
           /**
            * totalNumbers: the total page numbers to show on the control
@@ -52,7 +45,7 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
           if(totalPages > totalBlocks) {
               const startPage = Math.max(2, currentPage - pageNeighbours);
               const endPage = Math.min(totalPages - 1, currentPage + pageNeighbours);
-              let pages = range(startPage, endPage);
+              let pages : Array<string | number> = range(startPage, endPage);
 
               /**
                * hasLeftSpill: has hidden pages to the left
@@ -97,21 +90,24 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
         gotoPage(1);      
       }, []);
 
-      const gotoPage = (page : number) => {
-        const currentPage = Math.max(0, Math.min(page, totalPages));
-        const paginationData = {
-          currentPage,
-          totalPages: totalPages,
-          pageLimit: pageLimit,
-          totalRecords: total
-        };
-    
-        setCurrentPage(currentPage);
-
-        onPageChanged(paginationData);
+      const gotoPage = (page : number | string) => {
+        if (typeof page === 'number') {
+          const currentPage = Math.max(0, Math.min(page, totalPages));
+          const paginationData = {
+            currentPage,
+            totalPages: totalPages,
+            pageLimit: pageLimit,
+            totalRecords: total
+          };
+      
+          setCurrentPage(currentPage);
+  
+          onPageChanged(paginationData);
+        }
+        
       }
 
-      const handleClick = (e : React.MouseEvent, page : number) => {
+      const handleClick = (e : React.MouseEvent, page : number | string) => {
         e.preventDefault();
         gotoPage(page);
       }

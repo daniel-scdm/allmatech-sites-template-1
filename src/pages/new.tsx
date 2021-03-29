@@ -16,7 +16,7 @@ import { useAppContext } from "src/context/parseXml";
 
 import { FaNewspaper } from "react-icons/fa";
 
-import { ICardNews, IContext } from "interfaces";
+import { ICardNews, IContext, IArticle } from "interfaces";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 
@@ -33,14 +33,14 @@ function New() {
       const { code } = query;
 
       if(code && typeof code === 'string') {
-        const selectedNews = Articles.filter(a => Articles.indexOf(a) === parseInt(code));
+        const selectedNews = Articles.filter((a : IArticle) => Articles.indexOf(a) === parseInt(code));
         if(selectedNews && selectedNews.length) setNews(selectedNews[0]);
       }
 
       setIsLoading(false);     
   }, []);
 
-  const handleFilter = (e: React.FormEvent) => {
+  const handleFilter = (e: any) => {
     e.preventDefault();
     setIsLoading(true);
     
@@ -77,13 +77,15 @@ function New() {
       );
     }
 
-    return (
-      <NewsContainer 
-        image={news.image}
-        text={news.text}
-        title={news.title}
-      />
-    );
+    if(news) {
+      return (
+        <NewsContainer 
+          image={news.image}
+          text={news.text}
+          title={news.title}
+        />
+      );
+    }   
   }
 
   return (

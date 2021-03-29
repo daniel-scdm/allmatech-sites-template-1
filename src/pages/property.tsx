@@ -10,8 +10,6 @@ import FilterFormList from "src/components/FilterFormList";
 import Sponsor from "src/components/Sponsor";
 import Search from "src/components/Search";
 
-import PropertyContainer from "src/components/PropertyContainer";
-
 import dynamic from "next/dynamic";
 
 import { useRouter } from 'next/router';
@@ -66,45 +64,33 @@ function Property() {
   const [prt, setPrt] = useState<IPropertyXML | null>(null);
   const [features, setFeatures] = useState<Array<string>>([]);
 
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if(state === "done") {
         const { code } = query;
-        const p = getPropertyByCode(parsedXml.Carga.Imoveis.Imovel, code);
-        extractFeatures(p);
-        setPrt(p);
-        setIsLoading(false); 
+        if(parsedXml && typeof code === "string") {
+          const p = getPropertyByCode(parsedXml.Carga.Imoveis.Imovel, code);
+          extractFeatures(p);
+          setPrt(p);
+        }         
     }     
   }, [state]);
 
-  const extractFeatures = (property : IPropertyXML) => {
+  const extractFeatures = (property : IPropertyXML | null) => {
+    if(property) {
       if(property.AreaServico) pushArray("Área de serviço");
       if(property.Sauna) pushArray("Sauna");
       if(property.Varanda) pushArray("Varanda");
       if(property.Jardim) pushArray("Jardim");
       if(property.QuartoWCEmpregada) pushArray("Quarto de empregada");
       if(property.InfraInternet) pushArray("Infraestrutura de Internet");
+    }      
   }
 
   const pushArray = (ft : string) => {
     let aux = features;
     aux.push(ft);
     setFeatures(aux);
-  }
-
-  const handlePropertyLoading = () => {
-    if(state != "done" && !prt && !isLoading) {
-      return (
-          <SkeletonTheme color="#ddd" highlightColor="#ccc">
-              <div className={property.skeletonContainer}>
-                  <Skeleton className={property.skeletonImage} />
-                  <Skeleton className={property.skeletonBody} />
-                  <Skeleton className={property.skeletonMessage} />
-              </div>
-          </SkeletonTheme>
-      );
-    }
   }
 
   return (

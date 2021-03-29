@@ -16,7 +16,8 @@ headers.append("X-Custom-Header", "ProcessThisImmediately");
 
 let myInit = { 
     method: 'POST',
-    headers: headers
+    headers: headers,
+    body : null
 };
 
 function Contact() {
@@ -29,7 +30,8 @@ function Contact() {
         setIsSending(true);
         setError("");
 
-        const formValues = {
+        /**
+         *  const formValues = {
             name: e.target.name.value,
             email: e.target.email.value,
             subject: e.target.subject.value,
@@ -37,6 +39,9 @@ function Contact() {
         }
 
         myInit.body = JSON.stringify(formValues);
+         */
+
+       
 
         fetch("http://localhost:3000/api/email", myInit)
             .then((data) => data.json())
@@ -48,7 +53,7 @@ function Contact() {
 
                 setIsSending(false);
             })
-            .catch(err => {
+            .catch(() => {
                 setError("Ocorreu um error ao enviar sua mensagem, tente mais tarde.");
             });
 

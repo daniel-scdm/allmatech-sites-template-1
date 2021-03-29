@@ -18,9 +18,10 @@ import NewsCard from "src/components/NewsCard";
 import Footer from "src/components/Footer";
 import LazyLoad from "react-lazyload";
 
-import { IContext } from "interfaces";
 import { useFilter } from "src/hooks/useFilter";
 import Link from "next/link";
+
+import { IContext } from "interfaces";
 
 import LatestProperties from "src/components/LatestProperties";
 import LatestOfferProperties from "src/components/LatestOfferProperties";
@@ -35,9 +36,9 @@ export default function Home() {
   const app : IContext = useAppContext();
   const { extractCity, filterUnique } = useFilter();
 
-  const [cities, setCities] = useState<Array<string | undefined>>([]);
-  const [streetsBuy, setStreetsBuy] = useState<Array<string | undefined>>([]);
-  const [streetsRent, setStreetsRent] = useState<Array<string | undefined>>([]);
+  const [cities, setCities] = useState<Array<any>>([]);
+  const [streetsBuy, setStreetsBuy] = useState<Array<any>>([]);
+  const [streetsRent, setStreetsRent] = useState<Array<any>>([]);
   const [isLoadingScreen, setIsLoadingScreen] = useState(true);
 
   const [latestNews] = useState(app.Articles.slice(app.Articles.length - 3, app.Articles.length));
@@ -51,7 +52,7 @@ export default function Home() {
   }, [app.state]); 
 
   const extractStreetsBuy = (selectedCity : string) => {
-      const mappedStreets = app.parsedXml.Carga.Imoveis.Imovel.map(imovel => {
+      const mappedStreets = app.parsedXml.Carga.Imoveis.Imovel.map((imovel : any) => {
         if(imovel.Cidade._text === selectedCity && imovel.Bairro)
           return imovel.Bairro._text;
 
@@ -63,7 +64,7 @@ export default function Home() {
   }
 
   const extractStreetsRent = (selectedCity : string) => {
-    const mappedStreets = app.parsedXml.Carga.Imoveis.Imovel.map(imovel => {
+    const mappedStreets = app.parsedXml.Carga.Imoveis.Imovel.map((imovel : any) => {
       if(imovel.Cidade._text === selectedCity && imovel.Bairro)
         return imovel.Bairro._text;
 
@@ -71,7 +72,10 @@ export default function Home() {
     });
 
     const filteredStreets = mappedStreets.filter(filterUnique);
-    setStreetsRent(filteredStreets);    
+
+    if(!filteredStreets.includes(undefined)) {
+      setStreetsRent(filteredStreets); 
+    }       
   }
 
   if(isLoadingScreen) {
@@ -281,7 +285,7 @@ export default function Home() {
             className={styles.spacingContainerNews}
           >
             <div className={styles.latestCards}>
-              {latestNews.map((a, i) => (
+              {latestNews.map((a : any, i : number) => (
                 <NewsCard 
                   key={i.toString()}
                   text={a.title}

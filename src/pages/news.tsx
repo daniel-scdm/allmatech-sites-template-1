@@ -32,7 +32,7 @@ function News() {
     setListNews(app.Articles);
     const { text } = query;
 
-    if(text) {
+    if(typeof text === 'string') {
       const regEx = new RegExp(text, "g");
       const filteredList = app.Articles.filter((a: ICardNews) => regEx.test(a.title));
       setListNews(filteredList);
@@ -42,7 +42,7 @@ function News() {
     setIsLoading(false);
   }, []);
 
-  const handleFilter = (e: React.FormEvent, filter? : string) => {
+  const handleFilter = (e: any) => {
     e.preventDefault();
     setIsLoading(true);
 

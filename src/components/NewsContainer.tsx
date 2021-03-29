@@ -8,7 +8,7 @@ import { ICardNews } from "interfaces/index";
 import EmptyImage from "assets/images/empty.jpg"
 import Image, { ImageLoaderProps } from "next/image";
 
-const myLoader = ({ src, width, quality } : ImageLoaderProps) => {
+const myLoader = ({ src } : ImageLoaderProps) => {
     return src;
 }
 

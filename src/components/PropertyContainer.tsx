@@ -14,7 +14,7 @@ import dynamic from "next/dynamic";
 import Carousel from "src/components/Carousel";
 import Image, { ImageLoaderProps } from "next/image";
 
-const myLoader = ({ src, width, quality } : ImageLoaderProps) => {
+const myLoader = ({ src } : ImageLoaderProps) => {
     return src;
 }
 
@@ -26,7 +26,7 @@ const numberWithCommas = (x : string | number) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
 }
 
-const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail, Fotos, features, Videos, CodigoImovel }) => {
+const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail, Fotos, features, Videos }) => {
 
     const [showGallery, setShowGallery] = useState(false);
     const [isSending, setIsSending] = useState(false);    
@@ -45,13 +45,16 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
         e.preventDefault();
         setIsSending(true);
 
-        const data = {
+        /**
+         * const data = {
             comment: e.target.comment.value,
             name: e.target.name.value,
             email: e.target.email.value,
             website: e.target.website.value,
             code: CodigoImovel?._text
         }
+         */
+        
 
         setIsSending(false);
     }

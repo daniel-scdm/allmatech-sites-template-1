@@ -171,7 +171,14 @@ export const useFilter = () => {
 
     }
 
-    const filterUnique = (value : any, index : number, self : any) => self.indexOf(value) === index && value !== undefined;
+    const filterUnique = (value : any, index : number, self : any) => self.indexOf(value) === index;
+
+    const filterUndefined = (value : string | undefined) => {
+        if(value !== undefined) {
+            return value;
+        }
+    };
+
 
     const extractCity = (Imoveis : Array<IPropertyXML>) => {
         const mappedCities = Imoveis.map(imovel => {
@@ -180,7 +187,10 @@ export const useFilter = () => {
   
         });
   
-        const filteredCities : Array<string | undefined> = mappedCities.filter(filterUnique);
+        const filteredRepeatedCities : Array<string | undefined> = mappedCities.filter(filterUnique);
+
+        const filteredCities : Array<any> = filteredRepeatedCities.map(filterUndefined);
+
         return filteredCities;        
     }
 

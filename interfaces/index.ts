@@ -6,6 +6,12 @@ export type User = {
   name: string
 }
 
+export type IArticle = { 
+  title: string,
+  image: string,
+  text: string
+}
+
 export type IHeaderComponent = {
   logoUrl: string,
   logoWidth: number,
@@ -19,10 +25,10 @@ export type IFullSection = {
 }
 
 export type IContext = {
-  state: string,
   parsedXml: ICarga,
+  state: string,
   _fetchData: () => void,
-  Articles: Array<ICardNews>
+  Articles: Array<IArticle>
 }
 
 export type ICardNews = {

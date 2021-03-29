@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import styles from 'src/styles/Home.module.css';
 import Section from 'src/styles/Section.module.css';
 
 export default function PropertyAuthor() {

@@ -1,4 +1,4 @@
-import { useEffect, useState, useReducer } from "react";
+import { useEffect, useState } from "react";
 import convertXML from "xml-js";
 import { ICarga } from "interfaces";
 
@@ -12,14 +12,10 @@ const myInit = {
     headers: headers,
 };
 
-const initState : string = "waiting";
-
-const reducer = (state, action) => action;
-
 export const useFetch = () => {
 
     const [parsedXml, setParsedXml] = useState<ICarga>();
-    const [state, dispatch] = useReducer(reducer, initState);
+    const [state, setState] = useState("waiting");
 
     useEffect(() => {
         _fetchData();      
@@ -29,13 +25,14 @@ export const useFetch = () => {
         fetch("http://localhost:3000/api/hello", myInit)
             .then((data) => data.json())
             .then(res => {
-                dispatch("processing");
+                setState("processing");
                 const parsedXml = convertXML.xml2json(res.data, { compact: true, spaces: 4 });
                 const parsedJSON = JSON.parse(parsedXml);
 
-                setParsedXml(parsedJSON);
-
-                dispatch("done");
+                if(parsedJSON) {
+                    setParsedXml(parsedJSON);                
+                    setState("done");
+                }
             })
             .catch(err => console.log(err));
     }

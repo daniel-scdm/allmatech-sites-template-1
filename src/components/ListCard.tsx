@@ -1,5 +1,7 @@
 /** @jsx jsx */
-import { jsx, Image } from 'theme-ui'
+import { jsx } from 'theme-ui'
+
+import Image, { ImageLoaderProps } from "next/image";
 
 import { FC } from 'react';
 import { IPropertyXML } from "interfaces/index";
@@ -10,27 +12,37 @@ import Link from "next/link";
 import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
 
-const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, indexKey, PrecoVenda, PrecoLocacao }) => {
+const myLoader = ({ src } : ImageLoaderProps) => {
+    return src;
+}
+
+const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, PrecoVenda, PrecoLocacao }) => {
 
     const numberWithCommas = (x : string | number) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
     }
 
     return (        
-        <div className={property.listCard} key={indexKey}>
+        <div className={property.listCard}>
             <div className={property.imageCardContainer}>   
-                <Image                     
-                    className={property.missingImageCard}
-                    src={thumbnail}
-                />
-                <Link href={{
-                    pathname: "/property",
-                    query: { code: CodigoImovel?._text }
-                }}>
-                    <a>
-                        <BiSearch  size={40}/>
-                    </a>
-                </Link>                     
+            {thumbnail && (
+                <>
+                    <Image                     
+                        className={property.missingImageCard}
+                        src={thumbnail}
+                        loader={myLoader}
+                        layout="fill"
+                    />
+                    <Link href={{
+                        pathname: "/property",
+                        query: { code: CodigoImovel?._text }
+                    }}>
+                        <a>
+                            <BiSearch  size={40}/>
+                        </a>
+                    </Link>
+                </>  
+            )}                                     
             </div>
             <div className={property.cardInfo}>
                 <p>

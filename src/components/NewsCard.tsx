@@ -8,7 +8,7 @@ import Link from "next/link";
 
 import Section from "src/styles/Section.module.css";
 
-const myLoader = ({ src, width, quality } : ImageLoaderProps) => {
+const myLoader = ({ src } : ImageLoaderProps) => {
     return src;
 }
 

@@ -6,7 +6,7 @@ import section from 'src/styles/Section.module.css';
 import Footer from "src/components/Footer";
 import Image, { ImageLoaderProps } from "next/image";
 
-const myLoader = ({ src, width, quality } : ImageLoaderProps) => {
+const myLoader = ({ src } : ImageLoaderProps) => {
     return src;
 }
 

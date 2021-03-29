@@ -14,7 +14,7 @@ const defaultMaskOptions = {
     allowLeadingZeroes: false
 }
 
-const CurrencyInput = ({ maskOptions, ...inputProps }) => {
+const CurrencyInput = ({ maskOptions, ...inputProps } : any) => {
     const currencyMask = createNumberMask({
         ...defaultMaskOptions,
         ...maskOptions,
