@@ -1,10 +1,10 @@
 import 'src/styles/globals.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import 'rc-slider/assets/index.css';
+import 'rc-slider/public/index.css';
 
 import Header from "src/components/header";
 
-import AllmatechLogo from  "assets/images/Allmatech-logo-complete.jpeg";
+import AllmatechLogo from  "public/images/Allmatech-logo-complete.jpeg";
 
 import { AppWrapper } from "src/context/parseXml";
 import type { AppProps } from 'next/app';

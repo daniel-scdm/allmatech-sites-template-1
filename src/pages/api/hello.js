@@ -6,7 +6,7 @@ const Index = (req, res) => {
     res.setHeader("Content-Type", "application/json");
 
     fs.readFile(
-      "assets/allmatech.xml", 
+      "public/allmatech.xml", 
       "utf8", 
       (err, data) => {
           if(err) {

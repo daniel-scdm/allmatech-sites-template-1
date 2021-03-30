@@ -1,6 +1,6 @@
 .sectionContainer {
     margin-top: 90px;
-    background-image: url("../../assets/images/house.jpg");
+    background-image: url("../../public/images/house.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
@@ -47,7 +47,7 @@
 
 .missingImageCard {    
     min-height: 280px;
-    background-image: url("../../assets/images/missing-image.png");
+    background-image: url("../../public/images/missing-image.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
@@ -537,7 +537,7 @@
     max-width: 450px;
     height: 100%;
     width: 100%;
-    background-image: url("../../assets/images/person-icon.png");
+    background-image: url("../../public/images/person-icon.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;

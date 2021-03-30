@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import property from 'src/styles/Property.module.css';
 
 import { IPropertyXML } from "interfaces/index";
-import EmptyImage from "assets/images/empty.jpg"
+import EmptyImage from "public/images/empty.jpg"
 
 import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
 import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";

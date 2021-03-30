@@ -28,7 +28,7 @@ const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, link
                 {!image && (
                     <Image 
                         loader={myLoader}
-                        src={require("assets/images/missing-image.png")}
+                        src={require("public/images/missing-image.png")}
                         width="400"
                         height="300"
                     />                    

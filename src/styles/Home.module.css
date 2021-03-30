@@ -272,7 +272,7 @@
 
   .contactContainer > section:nth-child(2) {
     display: block;
-    background-image: url("../../assets/images/business-man.jpg");
+    background-image: url("../../public/images/business-man.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;

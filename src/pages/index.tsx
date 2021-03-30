@@ -10,7 +10,7 @@ import SectionFull from "src/components/fullSection";
 import SearchForm from "src/components/SearchForm";
 import CatchPhrase from "src/components/AnimatedCatchPhrase";
 
-import HouseImage from "assets/images/house.jpg";
+import HouseImage from "public/images/house.jpg";
 
 import TeamCard from "src/components/TeamCard";
 import NewsCard from "src/components/NewsCard";

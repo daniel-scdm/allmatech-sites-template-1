@@ -42,7 +42,7 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
                     {!image && (
                         <Image 
                             loader={myLoader}
-                            src={require("../../assets/images/missing-image.png")}
+                            src={require("../../public/images/missing-image.png")}
                             width="480"
                             height="320"
                         />                    

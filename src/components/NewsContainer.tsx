@@ -5,7 +5,7 @@ import React from 'react';
 import property from 'src/styles/Property.module.css';
 
 import { ICardNews } from "interfaces/index";
-import EmptyImage from "assets/images/empty.jpg"
+import EmptyImage from "public/images/empty.jpg"
 import Image, { ImageLoaderProps } from "next/image";
 
 const myLoader = ({ src } : ImageLoaderProps) => {
