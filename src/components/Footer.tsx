@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 import { FC } from 'react';
 import Image, { ImageLoaderProps } from "next/image";
 
-import AllmatechLogo from  "public/images/logo_w.png";
+import AllmatechLogo from "public/images/logo_w.png";
 
 import { GiHouse, GiPhone, GiCalendar } from "react-icons/gi";
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
