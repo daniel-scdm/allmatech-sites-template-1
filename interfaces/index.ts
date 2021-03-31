@@ -20,7 +20,6 @@ export type IHeaderComponent = {
 }
 
 export type IFullSection = {
-  bgImage: string,
   children: ReactChild
 }
 
@@ -112,7 +111,6 @@ export type IPartnerComponent = {
 }
 
 export type ICard = {
-  OfferMessage? : string,
   code? : string,
   image? : string,
   title? : string,

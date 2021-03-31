@@ -1,5 +1,6 @@
 .sectionContainer {
     margin-top: 90px;
+    background-image: url("public/images/house.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
@@ -249,6 +250,10 @@
     background-color: #fff;
 }
 
+.card > div > img {
+    width: 100%;
+}
+
 .offer {
     background-color: #f15455;
     color: #fff;
@@ -264,6 +269,10 @@
 
 .newsCard {
     position: relative;
+}
+
+.newsCard  > img {
+    width: 100%;
 }
 
 .newsCard > a {
@@ -318,6 +327,10 @@
 .imageCardContainer > a:hover {
     background:rgb(0, 0, 0, .4);
     opacity: 1;
+}
+
+.imageCardContainer > img {
+    width: 100%;
 }
 
 .cardInfo > h3 {

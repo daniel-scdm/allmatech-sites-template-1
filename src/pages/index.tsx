@@ -70,9 +70,7 @@ export default function Home() {
 
   return (
     <>
-      
       <SectionFull
-        bgImage={"public/images/house.jpg"}
       >
         <div className={Section.sectionDiv}>
           <SearchForm 

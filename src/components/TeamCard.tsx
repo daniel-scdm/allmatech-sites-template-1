@@ -17,15 +17,13 @@ const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, link
             <div>
                 {image && (
                     <img 
-                            src={image}
-                        width="400"
+                        src={image}
                         height="300"
                     />
                 )} 
                 {!image && (
                     <img 
-                            src={"public/images/missing-image.png"}
-                        width="400"
+                        src={"public/images/missing-image.png"}
                         height="300"
                     />                    
                 )}              

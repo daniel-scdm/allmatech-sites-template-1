@@ -14,7 +14,7 @@ import { BiSearch } from "react-icons/bi";
 
 import Link from "next/link";
 
-const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, indexKey, code }) => {
+const Card : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, indexKey, code }) => {
 
     const numberWithCommas = (x : string | number) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
@@ -41,23 +41,17 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
                 <div className={Section.imageCardContainer}>         
                     {image && (
                         <img 
-                                    src={image}
-                            width="480"
+                            src={image}
                             height="320"
                         />
                     )} 
                     {!image && (
                         <img 
-                                    src={"../../public/images/missing-image.png"}
-                            width="480"
+                            src={"../../public/images/missing-image.png"}
                             height="320"
                         />                    
-                    )}        
-                    {OfferMessage && (
-                        <div className={Section.offer}>
-                            {OfferMessage}
-                        </div>
-                    )}
+                    )}       
+                    
                     <Link href={{
                         pathname: "/property",
                         query: { code: code }
