@@ -1,14 +1,7 @@
 import React from 'react';
 import styles from 'src/styles/Home.module.css';
 import LazyLoad from "react-lazyload";
-
-import Image, { ImageLoaderProps } from "next/image"
-
 import { IPartnerComponent } from "interfaces";
-
-const myLoader = ({ src } : ImageLoaderProps) => {
-    return src;
-}
 
 const PartnerComponent : React.FC<IPartnerComponent> = ({ logoImage, height, width }) => {
   return (
@@ -17,8 +10,7 @@ const PartnerComponent : React.FC<IPartnerComponent> = ({ logoImage, height, wid
         debounce={true}      
     >
       <div className={styles.partner}>
-        <Image 
-            loader={myLoader}
+        <img 
             src={logoImage}
             width={width}
             height={height}

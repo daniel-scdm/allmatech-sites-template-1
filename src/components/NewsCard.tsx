@@ -3,14 +3,12 @@ import { jsx } from 'theme-ui'
 
 import { FC } from 'react';
 import { INewsCard } from "interfaces/index";
-import Image, { ImageLoaderProps } from "next/image";
+ 
 import Link from "next/link";
 
 import Section from "src/styles/Section.module.css";
 
-const myLoader = ({ src } : ImageLoaderProps) => {
-    return src;
-}
+
 
 const NewsCard : FC<INewsCard> = ({ image, code, text }) => {
 
@@ -18,9 +16,8 @@ const NewsCard : FC<INewsCard> = ({ image, code, text }) => {
         <div className={Section.card}>
             <div className={Section.newsCard}>
                 {image && (
-                    <Image
-                        loader={myLoader}
-                        src={image}
+                    <img
+                            src={image}
                         width="480"
                         height="320"
                         className={Section.imageNews}
@@ -28,9 +25,8 @@ const NewsCard : FC<INewsCard> = ({ image, code, text }) => {
                 )}
 
                 {!image && (
-                    <Image 
-                        loader={myLoader}
-                        src={require("public/images/missing-image.png")}
+                    <img 
+                            src={"public/images/missing-image.png"}
                         width="480"
                         height="320"
                         className={Section.imageNews}

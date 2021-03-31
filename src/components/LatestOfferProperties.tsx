@@ -9,7 +9,7 @@ type ListPropterties = {
 };
 
 const filterTypeVenda = (value : IPropertyXML) => {
-    if(value.TipoOferta && value.TipoOferta._text === "3") {
+    if(value.TipoOferta && value.TipoOferta === "3") {
         return true;
     }
 }
@@ -62,22 +62,30 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
     const foward = () => setcurrentPage(currentPage + 1);
     const back = () => setcurrentPage(currentPage - 1);
 
+    if(List && pList.length === 0) {
+        return (
+            <section className={styles.spacingContainer}>
+                <p>Não há anuncios em super destaques.</p>
+            </section>
+        );        
+    }
+
     return (
         <section className={styles.spacingContainer}>
             <div className={styles.latestCards}>
                 {paginatedList.map((p) => (
                     <Card 
-                        key={p.CodigoImovel?._text}
-                        title={p.TituloImovel?._text}
-                        text={p.Observacao?._cdata}
-                        bathrooms={p.QtdBanheiros?._text}
-                        bedrooms={p.QtdDormitorios?._text}
-                        garages={p.QtdVagas?._text}
-                        priceSell={p.PrecoVenda?._text}
-                        priceRent={p.PrecoLocacao?._text}
+                        key={p.CodigoImovel}
+                        title={p.TituloImovel}
+                        text={p.Observacao}
+                        bathrooms={p.QtdBanheiros}
+                        bedrooms={p.QtdDormitorios}
+                        garages={p.QtdVagas}
+                        priceSell={p.PrecoVenda}
+                        priceRent={p.PrecoLocacao}
                         OfferMessage={'Sobre oferta'}
-                        image={p.Fotos?.Foto[0].Link[0].URLArquivo._text}
-                        code={p.CodigoImovel?._text}
+                        image={p.Fotos?.Foto[0].Link[0].URLArquivo}
+                        code={p.CodigoImovel}
                     />
                 ))}
             </div>

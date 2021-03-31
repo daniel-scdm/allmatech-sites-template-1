@@ -10,8 +10,6 @@ import SectionFull from "src/components/fullSection";
 import SearchForm from "src/components/SearchForm";
 import CatchPhrase from "src/components/AnimatedCatchPhrase";
 
-import HouseImage from "public/images/house.jpg";
-
 import TeamCard from "src/components/TeamCard";
 import NewsCard from "src/components/NewsCard";
 
@@ -26,7 +24,6 @@ import { IContext } from "interfaces";
 import LatestProperties from "src/components/LatestProperties";
 import LatestOfferProperties from "src/components/LatestOfferProperties";
 import Testimonials from "src/components/Testimonials";
-import AnimatedLoadingScreen from "src/components/AnimatedLoadingScreen";
 import Partners from "src/components/Partners";
 
 import LazyFeatures from "src/components/Features";
@@ -39,24 +36,21 @@ export default function Home() {
   const [cities, setCities] = useState<Array<any>>([]);
   const [streetsBuy, setStreetsBuy] = useState<Array<any>>([]);
   const [streetsRent, setStreetsRent] = useState<Array<any>>([]);
-  const [isLoadingScreen, setIsLoadingScreen] = useState(true);
 
   const [latestNews] = useState(app.Articles.slice(app.Articles.length - 3, app.Articles.length));
 
   useEffect(() => {
       if(app.state === "done") {
-          const extractedCities = extractCity(app.parsedXml.Carga.Imoveis.Imovel);
+          const extractedCities = extractCity(app.parsedXml.Imoveis.Imovel);
           if(extractedCities) setCities(extractedCities);   
-          setIsLoadingScreen(false);       
       }
   }, [app.state]); 
 
   const extractStreetsBuy = (selectedCity : string) => {
-      const mappedStreets = app.parsedXml.Carga.Imoveis.Imovel.map((imovel : any) => {
-        if(imovel.Cidade._text === selectedCity && imovel.Bairro)
-          return imovel.Bairro._text;
+      const mappedStreets = app.parsedXml.Imoveis.Imovel.map((imovel : any) => {
+        if(imovel.Cidade === selectedCity && imovel.Bairro)
+          return imovel.Bairro;
 
-        return;
       });
 
       const filteredStreets = mappedStreets.filter(filterUnique);
@@ -64,29 +58,21 @@ export default function Home() {
   }
 
   const extractStreetsRent = (selectedCity : string) => {
-    const mappedStreets = app.parsedXml.Carga.Imoveis.Imovel.map((imovel : any) => {
-      if(imovel.Cidade._text === selectedCity && imovel.Bairro)
-        return imovel.Bairro._text;
+    const mappedStreets = app.parsedXml.Imoveis.Imovel.map((imovel : any) => {
+      if(imovel.Cidade === selectedCity && imovel.Bairro)
+        return imovel.Bairro;
 
-      return;
     });
 
     const filteredStreets = mappedStreets.filter(filterUnique);
-
-    if(!filteredStreets.includes(undefined)) {
-      setStreetsRent(filteredStreets); 
-    }       
-  }
-
-  if(isLoadingScreen) {
-    return <AnimatedLoadingScreen />
+    setStreetsRent(filteredStreets);    
   }
 
   return (
     <>
       
       <SectionFull
-        bgImage={HouseImage}
+        bgImage={"public/images/house.jpg"}
       >
         <div className={Section.sectionDiv}>
           <SearchForm 
@@ -114,7 +100,7 @@ export default function Home() {
           </div>
 
           <LatestOfferProperties 
-              List={app.parsedXml.Carga.Imoveis.Imovel}
+              List={app.parsedXml.Imoveis.Imovel}
           />          
       </section>   
       
@@ -128,7 +114,7 @@ export default function Home() {
           </div>
 
           <LatestProperties 
-            List={app.parsedXml.Carga.Imoveis.Imovel}
+            List={app.parsedXml.Imoveis.Imovel}
           />
           
       </section>

@@ -51,8 +51,8 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
 
         if(propertyList) {
             const mappedStreets : Array<any> = propertyList.map((imovel : IPropertyXML) => {
-                if(imovel.Cidade._text === selectedCity && imovel.Bairro)
-                  return imovel.Bairro._text;
+                if(imovel.Cidade === selectedCity && imovel.Bairro)
+                  return imovel.Bairro;
         
                 return;
             });

@@ -121,87 +121,83 @@ export type ICard = {
   bathrooms? : string | number,
   garages? : string | number,
   indexKey? : string,
-  priceSell? : string | number,
-  priceRent? : string | number
+  priceSell? : string | number | Array<any>,
+  priceRent? : string | number | Array<any>
 }
 
 export type IFoto = {
-  Legenda: { _text: string },
+  Legenda: string,
   Link: Array<{
-    Tamanho: { _text: string },
-    URLArquivo: { _text: string }
+    Tamanho: string,
+    URLArquivo: string,
   }>
 }
 
 export type IVideo = {
-  Legenda: { _text: string },
+  Legenda: string,
   Link: Array<{
-    Tamanho: { _text: string },
-    URLArquivo: { _text: string }
+    Tamanho: string,
+    URLArquivo: string,
   }>
 }
 
 export type IPropertyXML = {
-  AreaServico?: { _text: string }
-  AreaTotal?: {_text: string}
-  AreaUtil?: {_text: string}
-  ArmarioCozinha?: {_text: string }
-  ArmarioEmbutido?: {_text: string }
-  Bairro?: {_text: string }
-  CEP?: {_text: string }
-  CategoriaImovel?: {_text: string }
-  Cerca?: {_text: string }
-  Cidade: {_text: string }
-  Closet?: {_text: string }
-  CodigoImovel?: {_text: string }
-  Complemento?: {_text: string }
-  Copa?: {_text: string }
-  DataCadastro?: {_text: string | number }
-  DataUltimateracao?: {_text: string }
-  Endereco?: {_text: string }
-  EstradaAsfaltada?: {_text: string }
-  EstudaPermuta?: {_text: string }
+  Cidade : string,
+  AreaServico?: string,
+  AreaTotal?: string,
+  AreaUtil?: string,
+  ArmarioCozinha?: string,
+  ArmarioEmbutido?: string,
+  Bairro?: string,
+  CEP?: string,
+  CategoriaImovel?: string,
+  Cerca?: string,
+  Closet?: string,
+  CodigoImovel?: string,
+  Complemento?: string,
+  Copa?: string,
+  DataCadastro?: string | number,
+  DataUltimateracao?: string,
+  Endereco?: string,
+  EstradaAsfaltada?: string,
+  EstudaPermuta?: string,
   Fotos?: { Foto: Array<IFoto> },
-  Sauna?: {_text: string },
-  Varanda?: {_text: string },
-  InfraInternet?: {_text: string }
-  Interfone?: {_text: string }
-  Jardim?: {_text: string }
-  Latitude?: {_text: string }
-  Lavabo?: {_text: string }
-  Longitude?: {_text: string }
-  Numero?: {_text: string }
-  Observacao?: {_cdata: string }
-  PrecoLocacao?: { _text: string }
-  PrecoLocacaoTemporada?: { _text: string}
-  PrecoVenda?: {_text: string }
-  QtdAndar?: {_text: string }
-  QtdBanheiros?: {_text: string }
-  QtdDormitorios?: {_text: string }
-  QtdSalas?: {_text: string }
-  QtdSuites?: {_text: string }
-  QtdVagas?: {_text: string }
-  QuartoWCEmpregada?: {_text: string }
-  SalaoFestas?: {_text: string }
-  SubTipoImovel?: {_text: string }
-  Telefone?: {_text: string }
-  TipoImovel?: {_text: string }
-  TipoOferta?: {_text: string }
-  TituloImovel?: {_text: string }
-  UF?: {_text: string },
+  Sauna?: string,
+  Varanda?: string,
+  InfraInternet?: string,
+  Interfone?: string,
+  Jardim?: string,
+  Latitude?: string,
+  Lavabo?: string,
+  Longitude?: string,
+  Numero?: string,
+  Observacao?: string,
+  PrecoLocacao?: string| Array<any>,
+  PrecoLocacaoTemporada?: string| Array<any>,
+  PrecoVenda?: string | Array<any>,
+  QtdAndar?: string,
+  QtdBanheiros?: string,
+  QtdDormitorios?: string,
+  QtdSalas?: string,
+  QtdSuites?: string,
+  QtdVagas?: string,
+  QuartoWCEmpregada?: string,
+  SalaoFestas?: string,
+  SubTipoImovel?: string,
+  Telefone?: string,
+  TipoImovel?: string,
+  TipoOferta?: string,
+  TituloImovel?: string,
+  UF?: string,
   thumbnail? : string,
   features?: Array<string>,
   Videos?: { Foto: Array<IVideo> },
 }
 
 export type ICarga = {
-  Carga: {
-    _attributes: any,
-    Imoveis: {
-      Imovel: Array<IPropertyXML>
-    }
-  },
-  _declaration: any
+  Imoveis: {
+    Imovel: Array<IPropertyXML>
+  }
 }
 
 export type IFeatures = Array<string>;

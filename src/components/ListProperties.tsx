@@ -63,10 +63,10 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
                 <div>                
                     {paginatedList.map((p : IPropertyXML) => (
                         <ListCard 
-                            key={p.CodigoImovel?._text}
-                            Cidade={{_text: ""}}
+                            key={p.CodigoImovel}
+                            Cidade={""}
                             CodigoImovel={p.CodigoImovel}
-                            thumbnail={p.Fotos?.Foto[0].Link[0].URLArquivo._text}
+                            thumbnail={p.Fotos?.Foto[0].Link[0].URLArquivo}
                             QtdBanheiros={p.QtdBanheiros}
                             QtdDormitorios={p.QtdDormitorios}
                             QtdVagas={p.QtdVagas}

@@ -5,17 +5,10 @@ import React from 'react';
 import property from 'src/styles/Property.module.css';
 import { CSSTransition } from 'react-transition-group';
 
-import Image from "next/image";
-
 import { GrClose } from "react-icons/gr";
 
 import { ICarousel } from "interfaces";
 import { Carousel as GalleryCarousel } from 'react-responsive-carousel';
-
-
-const myLoader = ({ src } : any) => {
-    return src
-}
 
 const Carousel : React.FC<ICarousel> = ({ activeModal, setActiveModal, ListPhotos }) => {
 
@@ -47,7 +40,7 @@ const Carousel : React.FC<ICarousel> = ({ activeModal, setActiveModal, ListPhoto
                     >
                         {ListPhotos?.map((photo : any, i : number) => (
                             <div className={property.imageContainer} key={i.toString()}>
-                                <Image loader={myLoader} src={photo.Link[1].URLArquivo._text} width={1200} height={800} loading="lazy" placeholder="Carregando..." />
+                                <img src={photo.Link[1].URLArquivo} width={1200} height={800} loading="lazy" placeholder="Carregando..." />
                             </div>
                         ))}                
                     </GalleryCarousel>

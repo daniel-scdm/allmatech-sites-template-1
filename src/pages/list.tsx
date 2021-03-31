@@ -43,7 +43,7 @@ function List() {
     if(app.parsedXml) {
 
       const { query } = router;
-      const filteredProperties = filterProperties(app.parsedXml.Carga.Imoveis.Imovel, query); 
+      const filteredProperties = filterProperties(app.parsedXml.Imoveis.Imovel, query); 
       setListProperties(filteredProperties);     
       setIsLoading(false);
       setIsLoadingScreen(false);
@@ -53,7 +53,7 @@ function List() {
 
   const handleFilter = (query: object) => {
     setIsLoading(true);  
-    const filteredProperties = filterProperties(app.parsedXml.Carga.Imoveis.Imovel, query); 
+    const filteredProperties = filterProperties(app.parsedXml.Imoveis.Imovel, query); 
     setListProperties(filteredProperties);  
     setIsLoading(false);     
   }
@@ -76,7 +76,7 @@ function List() {
         <>
           <PropertyAuthor />
           <FilterFormList 
-            propertyList={app.parsedXml.Carga.Imoveis.Imovel}
+            propertyList={app.parsedXml.Imoveis.Imovel}
             callbackList={handleFilter}
           />
           <Sponsor />

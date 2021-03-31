@@ -5,12 +5,8 @@ import React from 'react';
 import property from 'src/styles/Property.module.css';
 
 import { ICardNews } from "interfaces/index";
-import EmptyImage from "public/images/empty.jpg"
-import Image, { ImageLoaderProps } from "next/image";
 
-const myLoader = ({ src } : ImageLoaderProps) => {
-    return src;
-}
+
 
 const NewsContainer : React.FC<ICardNews> = ({ image, text, title }) => {
     return (
@@ -21,11 +17,8 @@ const NewsContainer : React.FC<ICardNews> = ({ image, text, title }) => {
             </h3>             
 
             <div className={property.image}>
-                <Image
-                    loader={myLoader}
-                    src={image ? image : EmptyImage}
-                    layout="responsive"
-                    width={800}
+                <img
+                    src={image ? image : "public/images/empty.jpg"}
                     height={500}
                 />                
             </div>    

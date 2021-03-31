@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 import { FC } from 'react';
 import { ICard } from "interfaces/index";
 import Section from "src/styles/Section.module.css";
-import Image, { ImageLoaderProps } from "next/image";
+ 
 
 import LazyLoad from "react-lazyload";
 
@@ -14,14 +14,22 @@ import { BiSearch } from "react-icons/bi";
 
 import Link from "next/link";
 
-const myLoader = ({ src } : ImageLoaderProps) => {
-    return src;
-}
-
 const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, indexKey, code }) => {
 
     const numberWithCommas = (x : string | number) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
+    }
+    
+    const isValid = (priceSell : any, priceRent: any) => {
+        if(priceRent && typeof priceRent === "string") {
+            return numberWithCommas(priceRent);
+
+        }
+        
+        if(priceSell && typeof priceSell === "string") {
+            return numberWithCommas(priceSell);
+
+        }
     }
 
     return (
@@ -32,17 +40,15 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
             <div className={Section.card}>
                 <div className={Section.imageCardContainer}>         
                     {image && (
-                        <Image 
-                            loader={myLoader}
-                            src={image}
+                        <img 
+                                    src={image}
                             width="480"
                             height="320"
                         />
                     )} 
                     {!image && (
-                        <Image 
-                            loader={myLoader}
-                            src={require("../../public/images/missing-image.png")}
+                        <img 
+                                    src={"../../public/images/missing-image.png"}
                             width="480"
                             height="320"
                         />                    
@@ -80,7 +86,7 @@ const Card : FC<ICard> = ({ OfferMessage, bathrooms, bedrooms, garages, image, p
                         </div>
                     </div>
                     <div className={Section.cardPrice}>
-                        R$ {priceSell ? numberWithCommas(priceSell) : priceRent ? numberWithCommas(priceRent) : ""}
+                        R$ {isValid(priceSell, priceRent)}
                     </div>
                 </div>
             </div>

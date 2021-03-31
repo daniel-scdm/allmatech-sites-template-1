@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import convertXML from "xml-js";
 import { ICarga } from "interfaces";
 
 const headers = new Headers();
@@ -22,15 +21,12 @@ export const useFetch = () => {
     }, []);
 
     const _fetchData = () => {
-        fetch("http://localhost:3000/api/hello", myInit)
-            .then((data) => data.json())
-            .then(res => {
+        fetch("http://localhost/extractXml.php", myInit)
+            .then(res => res.json())
+            .then((data : any) => {
                 setState("processing");
-                const parsedXml = convertXML.xml2json(res.data, { compact: true, spaces: 4 });
-                const parsedJSON = JSON.parse(parsedXml);
-
-                if(parsedJSON) {
-                    setParsedXml(parsedJSON);                
+                if(data) {
+                    setParsedXml(data);                
                     setState("done");
                 }
             })

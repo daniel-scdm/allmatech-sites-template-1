@@ -9,7 +9,7 @@ import Form from "src/styles/Form.module.css";
 const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions, extraStyles, extraDropdownStyles, updateSimbling, defaultValue, onChangeValue, selectedValue, KeyName }) => {
 
     const handleChange = (event : any) => {
-        if(event.tager && event.target.value && updateSimbling) 
+        if(event.target && event.target.value && updateSimbling) 
             updateSimbling(event.target.value);
         
         onChangeValue(event.target.value, KeyName);

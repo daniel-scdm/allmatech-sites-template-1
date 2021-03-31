@@ -4,12 +4,7 @@ import { jsx } from 'theme-ui';
 import section from 'src/styles/Section.module.css';
 
 import Footer from "src/components/Footer";
-import Image, { ImageLoaderProps } from "next/image";
-
-const myLoader = ({ src } : ImageLoaderProps) => {
-    return src;
-}
-
+ 
 function Company() {
 
   return (
@@ -25,8 +20,7 @@ function Company() {
         <section className={section.containerStaticPage}>            
             <div className={section.companyContent}> 
                 <div className={section.imageCompany}>
-                    <Image     
-                        loader={myLoader}            
+                    <img     
                         src="https://www.roberthalf.com/sites/default/files/2017-08/company-pride-team-happier-rh-08-04-2017.jpg"
                         height="450"
                         width="450"

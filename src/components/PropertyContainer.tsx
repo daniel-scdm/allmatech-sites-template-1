@@ -5,18 +5,15 @@ import React, { useEffect, useState } from 'react';
 import property from 'src/styles/Property.module.css';
 
 import { IPropertyXML } from "interfaces/index";
-import EmptyImage from "public/images/empty.jpg"
 
 import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
 import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
 import dynamic from "next/dynamic";
 
 import Carousel from "src/components/Carousel";
-import Image, { ImageLoaderProps } from "next/image";
+ 
 
-const myLoader = ({ src } : ImageLoaderProps) => {
-    return src;
-}
+
 
 const MapWithNoSSR = dynamic(() => import("src/components/Map"), {
     ssr: false
@@ -51,7 +48,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
             name: e.target.name.value,
             email: e.target.email.value,
             website: e.target.website.value,
-            code: CodigoImovel?._text
+            code: CodigoImovel
         }
          */
         
@@ -68,20 +65,17 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
             />
             
             <h3 className={property.propertyTitle}>
-                {TituloImovel?._text}
+                {TituloImovel}
             </h3> 
             <div className={property.cardPrice}>
-                {PrecoVenda?._text && <span>Venda: R$ {numberWithCommas(PrecoVenda._text)}</span>}
+                {(PrecoVenda && !Array.isArray(PrecoVenda)) && <span>Venda: R$ {numberWithCommas(PrecoVenda)}</span>}
 
-                {PrecoLocacao?._text && <span>Aluguel: R$ {numberWithCommas(PrecoLocacao._text)}</span>}
+                {(PrecoLocacao && !Array.isArray(PrecoLocacao)) && <span>Aluguel: R$ {numberWithCommas(PrecoLocacao)}</span>}
             </div>
 
             <div className={property.image}>
-                <Image
-                    loader={myLoader}
-                    src={thumbnail ? thumbnail : EmptyImage}
-                    layout="responsive"
-                    width={800}
+                <img
+                    src={thumbnail ? thumbnail : "public/images/empty.jpg"}
                     height={500}
                 />
 
@@ -105,13 +99,13 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
             <div className={property.propertyInfoContainer}>
                 <div className={property.cardFeatures}>
                     <div>
-                        <GiPersonInBed size={38} /> <span>{QtdDormitorios ? QtdDormitorios._text : 0} </span>                           
+                        <GiPersonInBed size={38} /> <span>{QtdDormitorios ? QtdDormitorios : 0} </span>                           
                     </div>
                     <div>
-                        <GiBathtub size={32} /> <span>{QtdBanheiros ? QtdBanheiros._text : 0}</span>
+                        <GiBathtub size={32} /> <span>{QtdBanheiros ? QtdBanheiros : 0}</span>
                     </div>
                     <div className={property.garages}>
-                        <GiHomeGarage size={32} /> <span>{QtdVagas ? QtdVagas._text : 0}</span>
+                        <GiHomeGarage size={32} /> <span>{QtdVagas ? QtdVagas : 0}</span>
                     </div>
                 </div>
 
@@ -119,7 +113,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
                     <h3>Descrição</h3>
 
                     <p>
-                        {Observacao?._cdata}
+                        {Observacao}
                     </p> 
 
                     {Videos && (

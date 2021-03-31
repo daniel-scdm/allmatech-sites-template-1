@@ -69,7 +69,7 @@ function Property() {
     if(state === "done") {
         const { code } = query;
         if(parsedXml && typeof code === "string") {
-          const p = getPropertyByCode(parsedXml.Carga.Imoveis.Imovel, code);
+          const p = getPropertyByCode(parsedXml.Imoveis.Imovel, code);
           extractFeatures(p);
           setPrt(p);
         }         
@@ -99,17 +99,17 @@ function Property() {
           <div className={property.content}>
             <main>
               <LazyPropertyComponent 
-                  Cidade={{ _text: "" }}
+                  Cidade={""}
                   QtdBanheiros={prt?.QtdBanheiros}
                   QtdDormitorios={prt?.QtdDormitorios}
                   QtdVagas={prt?.QtdVagas}
-                  PrecoLocacao={prt?.PrecoLocacao}
-                  PrecoVenda={prt?.PrecoVenda}
+                  PrecoLocacao={prt ? prt.PrecoLocacao : ""}
+                  PrecoVenda={prt ? prt.PrecoVenda : ""}
                   Observacao={prt?.Observacao}
                   TituloImovel={prt?.TipoImovel}
                   CodigoImovel={prt?.CodigoImovel}
                   Fotos={prt?.Fotos}
-                  thumbnail={prt?.Fotos?.Foto[0].Link[1].URLArquivo._text}    
+                  thumbnail={prt?.Fotos?.Foto[0].Link[1].URLArquivo}    
                   features={features}
               />
             </main>

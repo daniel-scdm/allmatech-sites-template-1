@@ -1,6 +1,5 @@
 .sectionContainer {
     margin-top: 90px;
-    background-image: url("../../public/images/house.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
@@ -9,6 +8,13 @@
     display: flex;
     align-items: center;  
     justify-content: center;  
+}
+
+.sectionContainer > img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    min-height: 100%;
 }
 
 .container,
@@ -47,7 +53,6 @@
 
 .missingImageCard {    
     min-height: 280px;
-    background-image: url("../../public/images/missing-image.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;

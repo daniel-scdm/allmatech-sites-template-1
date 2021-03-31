@@ -189,6 +189,15 @@ footer ul li a:hover {
   height: 100%;
 }
 
+.carousel .slide img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    width: auto!important;
+    vertical-align: top;
+    border: 0;
+}
+
 .testimonial-gallery .carousel .slide {
   background: none!important;
 }
@@ -237,11 +246,5 @@ footer ul li a:hover {
 
   .footer-logo-container {
     justify-content: flex-start;
-  }
-}
-
-@media (min-width: 640px) {
-  .s-main {
-    
   }
 }

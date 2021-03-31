@@ -5,18 +5,12 @@ import { IArticle } from "interfaces";
 
 const initContext = {
   state: "",
-  parsedXml: {
-    Carga: {
-      _attributes: null,
-      Imoveis: {
-        Imovel: [
-          {
-            Cidade: { _text: "" }
-          }
-        ]
-      }
-    },
-    _declaration: null
+  parsedXml: {    
+    Imoveis: {
+      Imovel: [{
+        Cidade: ""
+      }]
+    }
   },
   _fetchData: () => {},
   Articles: [

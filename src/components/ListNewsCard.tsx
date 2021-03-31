@@ -5,26 +5,23 @@ import { FC } from 'react';
 import { ICardNews } from "interfaces/index";
 import property from "src/styles/Property.module.css";
 
-import Image, { ImageLoaderProps } from "next/image";
+ 
 
 import Link from "next/link";
 
 import { BiSearch } from "react-icons/bi";
 
-const myLoader = ({ src } : ImageLoaderProps) => {
-    return src;
-}
+
 
 const ListNewsCard : FC<ICardNews> = ({ image, text, title, indexKey }) => {
 
     return (        
         <div className={property.listCard} key={indexKey}>
             <div className={property.imageCardContainer}>   
-                <Image                     
+                <img                     
                     className={property.missingImageCard}
                     src={image}
-                    loader={myLoader}
-                    layout="fill"
+                    
                 />
                 <Link href={{
                     pathname: "/new",

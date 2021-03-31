@@ -3,7 +3,7 @@ import { IPropertyXML } from "interfaces";
 export const useFilter = () => {
 
     const getPropertyByCode = (properties : Array<IPropertyXML>, code: string) => {
-        const f = properties.filter((p : IPropertyXML) => p.CodigoImovel?._text === code);
+        const f = properties.filter((p : IPropertyXML) => p.CodigoImovel === code);
 
         if(f.length > 0) {
             return f[0];
@@ -23,13 +23,13 @@ export const useFilter = () => {
     }
 
     const filterTypeVenda = (value : IPropertyXML) => {
-        if(value.PrecoVenda && value.PrecoVenda._text) {
+        if(value.PrecoVenda && value.PrecoVenda) {
             return true;
         }
     }
 
     const filterTypeLocacao = (value : IPropertyXML) => {
-        if(value.PrecoLocacao && value.PrecoLocacao._text) {
+        if(value.PrecoLocacao && value.PrecoLocacao) {
             return true;
         }
     }
@@ -53,20 +53,20 @@ export const useFilter = () => {
                         break;
                     case "cidade":
 
-                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Cidade?._text === value['cidade']);
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Cidade === value['cidade']);
                         break;
 
                     case "bairro":
                     
-                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Bairro?._text === value['bairro']);
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Bairro === value['bairro']);
                         break;
     
                     case "banheiros":
 
                         if(!isZero(value['banheiros'])) {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                                if(property.QtdBanheiros && property.QtdBanheiros._text){
-                                    return parseInt(property.QtdBanheiros._text) >= parseInt(value['banheiros']);
+                                if(property.QtdBanheiros && property.QtdBanheiros){
+                                    return parseInt(property.QtdBanheiros) >= parseInt(value['banheiros']);
                                 }
                             });
                         }
@@ -77,8 +77,8 @@ export const useFilter = () => {
 
                         if(!isZero(value['garagem'])) {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                                if(property.QtdVagas && property.QtdVagas._text){
-                                    return parseInt(property.QtdVagas._text) >= parseInt(value['garagem']);
+                                if(property.QtdVagas && property.QtdVagas){
+                                    return parseInt(property.QtdVagas) >= parseInt(value['garagem']);
                                 }
                             });
                         }                       
@@ -89,8 +89,8 @@ export const useFilter = () => {
 
                         if(!isZero(value['quartos'])) {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                                if(property.QtdSuites && property.QtdSuites._text){
-                                    return parseInt(property.QtdSuites._text) >= parseInt(value['quartos']);
+                                if(property.QtdSuites && property.QtdSuites){
+                                    return parseInt(property.QtdSuites) >= parseInt(value['quartos']);
                                 }
                             });
                         }   
@@ -100,15 +100,15 @@ export const useFilter = () => {
 
                         if(isVenda) {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                                if(property.PrecoVenda && property.PrecoVenda._text){
-                                    const entreValores = parseInt(value['valores'][1]) >= parseInt(property.PrecoVenda._text) && parseInt(property.PrecoVenda._text) >= parseInt(value['valores'][0]);
+                                if(property.PrecoVenda && property.PrecoVenda && !Array.isArray(property.PrecoVenda)){
+                                    const entreValores = parseInt(value['valores'][1]) >= parseInt(property.PrecoVenda) && parseInt(property.PrecoVenda) >= parseInt(value['valores'][0]);
                                     return entreValores;
                                 }
                             });
                         } else {
                             propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                                if(property.PrecoLocacao && property.PrecoLocacao._text){
-                                    const entreValores = parseInt(value['valores'][1]) >= parseInt(property.PrecoLocacao._text) && parseInt(property.PrecoLocacao._text) >= parseInt(value['valores'][0]);
+                                if(property.PrecoLocacao && property.PrecoLocacao && !Array.isArray(property.PrecoLocacao)){
+                                    const entreValores = parseInt(value['valores'][1]) >= parseInt(property.PrecoLocacao) && parseInt(property.PrecoLocacao) >= parseInt(value['valores'][0]);
                                     return entreValores;
                                 }
                             });
@@ -171,7 +171,7 @@ export const useFilter = () => {
 
     }
 
-    const filterUnique = (value : any, index : number, self : any) => self.indexOf(value) === index;
+    const filterUnique = (value : any, index : number, self : any) => self.indexOf(value) === index && value !== undefined;
 
     const filterUndefined = (value : string | undefined) => {
         if(value !== undefined) {
@@ -183,7 +183,7 @@ export const useFilter = () => {
     const extractCity = (Imoveis : Array<IPropertyXML>) => {
         const mappedCities = Imoveis.map(imovel => {
           if(imovel && imovel.Cidade)
-            return imovel.Cidade._text;
+            return imovel.Cidade;
   
         });
   
