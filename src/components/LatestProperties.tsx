@@ -14,22 +14,41 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
     const [pList, setPList] = useState<Array<IPropertyXML>>([]);
     const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
     const [currentPage, setcurrentPage] = useState(1);
+    const [numberOfCards, setNumberOfCards] = useState(3);
 
     useEffect(() => {
         if(List && List.length > 0) {
-
             const orderedList = List.reverse().slice(0, 6);
-            setTotalPages(Math.ceil(orderedList.length / 3));
             setPList(orderedList);
+            setTotalPages(Math.ceil(orderedList.length / 3));
         }
     }, [List]);
 
     useEffect(() => {
+        const mediaQuery = window.matchMedia("(min-width: 860px)");
+        mediaQuery.addEventListener("change", handleMediaQueryChange);
+        handleMediaQueryChange(mediaQuery);
+        return () => {
+            mediaQuery.removeEventListener("change", handleMediaQueryChange);
+        };
+    }, []);
+
+    const handleMediaQueryChange = (mediaQuery : any) => {
+        if (mediaQuery.matches) {
+            setNumberOfCards(3);
+            setPaginationList(currentPage);        
+        } else {
+            setNumberOfCards(1);
+            setPaginationList(currentPage);        
+        }
+    };
+
+    useEffect(() => {
         setPaginationList(currentPage);
-    }, [currentPage, pList]);
+    }, [currentPage, pList, numberOfCards]);
 
     const setPaginationList = (page: number) => {
-        const slicedList = pList.slice((page - 1) * 3, 3 * page);
+        const slicedList = pList.slice((page - 1) * numberOfCards, numberOfCards * page);
         if(slicedList.length > 0) setPaginatedList(slicedList);
     }
 
@@ -42,7 +61,6 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
                 <p>Não há anuncios em destaques.</p>
             </section>
         );
-        
     }
 
     return (

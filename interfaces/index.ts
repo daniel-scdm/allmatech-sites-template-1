@@ -140,7 +140,7 @@ export type IVideo = {
 }
 
 export type IPropertyXML = {
-  Cidade : string,
+  Cidade? : string,
   AreaServico?: string,
   AreaTotal?: string,
   AreaUtil?: string,

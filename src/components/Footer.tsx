@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 
 import { FC } from 'react';
  
-
+import Logo_W from "../../public/images/logo_w.png";
 import { GiHouse, GiPhone, GiCalendar } from "react-icons/gi";
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
@@ -18,7 +18,7 @@ const Footer : FC = () => {
             <div className="footer-container">
                 <div className="footer-logo-container">
                     <img 
-                        src={"public/images/logo_w.png"}
+                        src={Logo_W}
                         height={50}
                         width={250}  
                         alt="Picture of the author"

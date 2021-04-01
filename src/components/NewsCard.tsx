@@ -17,7 +17,7 @@ const NewsCard : FC<INewsCard> = ({ image, code, text }) => {
             <div className={Section.newsCard}>
                 {image && (
                     <img
-                            src={image}
+                        src={image}
                         width="480"
                         height="320"
                         className={Section.imageNews}
@@ -26,7 +26,7 @@ const NewsCard : FC<INewsCard> = ({ image, code, text }) => {
 
                 {!image && (
                     <img 
-                            src={"public/images/missing-image.png"}
+                        src={"public/images/missing-image.png"}
                         width="480"
                         height="320"
                         className={Section.imageNews}

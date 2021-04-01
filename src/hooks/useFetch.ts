@@ -3,8 +3,9 @@ import { ICarga } from "interfaces";
 
 const headers = new Headers();
 
-headers.append("Content-Type", "application/xml; charset=utf-8");
-headers.append("X-Custom-Header", "ProcessThisImmediately");
+headers.append("Content-Type", "application/json; charset=utf-8");
+headers.append('Accept', 'application/json');
+headers.append('Origin','http://allmateste.com.br');
 
 const myInit = { 
     method: 'GET',
@@ -21,13 +22,14 @@ export const useFetch = () => {
     }, []);
 
     const _fetchData = () => {
-        fetch("http://localhost/extractXml.php", myInit)
+        fetch("https://allmateste.com.br/site-next/extractXml.php", myInit)
             .then(res => res.json())
             .then((data : any) => {
                 setState("processing");
                 if(data) {
                     setParsedXml(data);                
                     setState("done");
+                    console.log(data)
                 }
             })
             .catch(err => console.log(err));

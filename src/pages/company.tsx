@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui';
 
 import section from 'src/styles/Section.module.css';
+import Header from "src/components/header";
 
 import Footer from "src/components/Footer";
  
@@ -9,6 +10,12 @@ function Company() {
 
   return (
     <>
+        <Header 
+            logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+            logoHeight={40}
+            logoWidth={190}  
+            bgHeaderColor={"#f9f9f9"}      
+        />
         <div className={section.bannerCompany}>
             <div className={section.bannerOverlay}>
                 <div className={section.bannerText}>

@@ -11,6 +11,7 @@ import PropertyAuthor from "src/components/propertyAuthor";
 import FilterFormList from "src/components/FilterFormList";
 import Sponsor from "src/components/Sponsor";
 import Search from "src/components/Search";
+import Header from "src/components/header";
 
 import Footer from "src/components/Footer";
 import { IPropertyXML, IContext } from 'interfaces';
@@ -40,14 +41,13 @@ function List() {
   }, []);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if(app.parsedXml) {
-
       const { query } = router;
       const filteredProperties = filterProperties(app.parsedXml.Imoveis.Imovel, query); 
       setListProperties(filteredProperties);     
       setIsLoading(false);
-      setIsLoadingScreen(false);
-      
+      setIsLoadingScreen(false);      
     }           
   }, [app.parsedXml]);
 
@@ -87,6 +87,12 @@ function List() {
 
   return (
     <>
+      <Header 
+          logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+          logoHeight={40}
+          logoWidth={190}  
+          bgHeaderColor={"#f9f9f9"}      
+      />
       <section className={Section.container}>
           <div className={property.contentReverse}>
             <main>              

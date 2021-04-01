@@ -99,13 +99,13 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
             <div className={property.propertyInfoContainer}>
                 <div className={property.cardFeatures}>
                     <div>
-                        <GiPersonInBed size={38} /> <span>{QtdDormitorios ? QtdDormitorios : 0} </span>                           
+                        <GiPersonInBed size={38} /> <span>{typeof QtdDormitorios === "string" ? QtdDormitorios : 0} </span>                           
                     </div>
                     <div>
-                        <GiBathtub size={32} /> <span>{QtdBanheiros ? QtdBanheiros : 0}</span>
+                        <GiBathtub size={32} /> <span>{typeof QtdBanheiros === "string"  ? QtdBanheiros : 0}</span>
                     </div>
                     <div className={property.garages}>
-                        <GiHomeGarage size={32} /> <span>{QtdVagas ? QtdVagas : 0}</span>
+                        <GiHomeGarage size={32} /> <span>{typeof QtdVagas === "string"  ? QtdVagas : 0}</span>
                     </div>
                 </div>
 

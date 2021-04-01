@@ -8,6 +8,7 @@ import Footer from "src/components/Footer";
 
 import PropertyAuthor from "src/components/propertyAuthor";
 import FilterNewsList from "src/components/FilterNewsList";
+import Header from "src/components/header";
 
 import NewsContainer from "src/components/NewsContainer";
 
@@ -90,6 +91,12 @@ function New() {
 
   return (
     <>
+      <Header 
+          logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+          logoHeight={40}
+          logoWidth={190}  
+          bgHeaderColor={"#f9f9f9"}      
+      />
       <section className={Section.container}>          
           <div className={property.content}>
             <main>

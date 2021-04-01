@@ -39,10 +39,6 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
         };
     }, []);
 
-    useEffect(() => {        
-        setPaginationList(currentPage);        
-    }, [currentPage, pList, numberOfCards]);
-
     const handleMediaQueryChange = (mediaQuery : any) => {
         if (mediaQuery.matches) {
             setNumberOfCards(3);
@@ -53,6 +49,10 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
         }
 
     };
+
+    useEffect(() => {        
+        setPaginationList(currentPage);        
+    }, [currentPage, pList, numberOfCards]);
 
     const setPaginationList = (page: number) => {
         const slicedList = pList.slice((page - 1) * numberOfCards, numberOfCards * page);

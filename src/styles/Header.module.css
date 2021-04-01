@@ -55,9 +55,7 @@
     letter-spacing: 1px;
 }
 
-.Nav a:hover {
-    transform: scale(1.1);
-}
+
 
 @media (min-width: 1024px) {
 
@@ -67,7 +65,11 @@
         justify-content: space-between;
         width: 100vw;     
     }
-      
+
+    .Nav a:hover {
+        transform: scale(1.1);
+    }
+    
     .Logo {
         height: auto;
         width: auto;        
@@ -81,7 +83,7 @@
         padding: 0;
         width: auto;
     }
-
+    
     .Nav a {
         color: #222;
         font-size: 18px;
@@ -90,10 +92,12 @@
         text-decoration: none;
         padding: 0 1rem;
     }
-
+    
     .Nav a:hover {
         transform: scale(1.1);
     }
+      
+    
     
     .Burger {
         display: none;

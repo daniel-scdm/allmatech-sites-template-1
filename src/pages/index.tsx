@@ -25,6 +25,8 @@ import LatestProperties from "src/components/LatestProperties";
 import LatestOfferProperties from "src/components/LatestOfferProperties";
 import Testimonials from "src/components/Testimonials";
 import Partners from "src/components/Partners";
+import AnimatedLoadingScreen from "src/components/AnimatedLoadingScreen";
+import Header from "src/components/header";
 
 import LazyFeatures from "src/components/Features";
 
@@ -37,13 +39,17 @@ export default function Home() {
   const [streetsBuy, setStreetsBuy] = useState<Array<any>>([]);
   const [streetsRent, setStreetsRent] = useState<Array<any>>([]);
 
+  const [loadingScreen, setLoadingScreen] = useState<boolean>(true);
+
   const [latestNews] = useState(app.Articles.slice(app.Articles.length - 3, app.Articles.length));
 
   useEffect(() => {
       if(app.state === "done") {
           const extractedCities = extractCity(app.parsedXml.Imoveis.Imovel);
-          if(extractedCities) setCities(extractedCities);   
+          if(extractedCities) setCities(extractedCities);  
+          setLoadingScreen(false); 
       }
+
   }, [app.state]); 
 
   const extractStreetsBuy = (selectedCity : string) => {
@@ -68,8 +74,18 @@ export default function Home() {
     setStreetsRent(filteredStreets);    
   }
 
+  if(loadingScreen) {
+    return <AnimatedLoadingScreen />;
+  }
+
   return (
     <>
+      <Header 
+          logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+          logoHeight={40}
+          logoWidth={190}  
+          bgHeaderColor={"#f9f9f9"}      
+      />
       <SectionFull
       >
         <div className={Section.sectionDiv}>
@@ -141,7 +157,8 @@ export default function Home() {
             </section>
           </LazyLoad>  
 
-          <section className={styles.contactImage}>          
+          <section className={styles.contactImage}>    
+                 
           </section>          
       </section>
 

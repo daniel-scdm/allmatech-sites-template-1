@@ -272,13 +272,12 @@
 
   .contactContainer > section:nth-child(2) {
     display: block;
-    background-image: url("../../public/images/business-man.jpg");
+    background-image: url(https://allmateste.com.br/site-next/public/images/business-man.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
   }
-
 
 }
 

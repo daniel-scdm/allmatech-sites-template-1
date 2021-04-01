@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import React, { useState } from 'react';
 
 import section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
@@ -7,7 +8,7 @@ import property from 'src/styles/Property.module.css';
 import Footer from "src/components/Footer";
 import { GiHouse, GiPhone, GiCalendar } from "react-icons/gi";
 import { FiMail } from "react-icons/fi";
-import React, { useState } from 'react';
+import Header from "src/components/header";
 
 const headers = new Headers();
 
@@ -61,6 +62,12 @@ function Contact() {
 
     return (
         <>
+            <Header 
+                logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+                logoHeight={40}
+                logoWidth={190}  
+                bgHeaderColor={"#f9f9f9"}      
+            />
             <div className={section.banner}>
                 <div className={section.bannerText}>
                     <h1>Contatos</h1>

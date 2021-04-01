@@ -7,7 +7,7 @@ import styles from 'src/styles/Home.module.css';
 import Footer from "src/components/Footer";
 import TeamCard from "src/components/TeamCard";
 import AnimatedLoadingScreen from "src/components/AnimatedLoadingScreen";
-
+import Header from "src/components/header";
 
 function Team() {
 
@@ -23,6 +23,12 @@ function Team() {
 
     return (
         <>
+            <Header 
+                logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+                logoHeight={40}
+                logoWidth={190}  
+                bgHeaderColor={"#f9f9f9"}      
+            />
             <div className={section.bannerTeam}>
                 <div className={section.bannerOverlay}>
                     <div className={section.bannerText}>

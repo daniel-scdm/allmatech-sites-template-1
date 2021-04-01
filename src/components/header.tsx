@@ -39,8 +39,7 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
     
     const toggleNav = () => {
         setNavVisibility(!isNavVisible);
-    };
-
+    }
     return (
         <>
             <Head>
@@ -50,7 +49,7 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
 
             <header className={headerStyles.Header} sx={{ backgroundColor: bgHeaderColor }}>
                 <Box>
-                    <Link href="/">
+                    <Link href="https://allmateste.com.br/site-next/">
                         <a>
                             <img 
                                 src={logoUrl}
@@ -58,7 +57,7 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                                 height={logoHeight}
                                 alt="Picture of the author"
                                 className={styles.imageLogo}
-                                        />
+                            />
                         </a>
                     </Link>
                     
@@ -71,7 +70,7 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                     unmountOnExit
                 >
                     <nav className={headerStyles.Nav}>
-                        <Link href="/">
+                        <Link href="https://allmateste.com.br/site-next/">
                             <a>Home</a>
                         </Link>
                         <Link href="/company">
@@ -89,9 +88,9 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                         <Link href="/contact">
                             <a>Contatos</a>
                         </Link>
-                    </nav>
+                    </nav>                
                 </CSSTransition>    
-                {isSmallScreen && (
+                {isSmallScreen && (  
                     <Box 
                         aria-label='Toggle Menu'
                         className={headerStyles.Burger}

@@ -3,7 +3,8 @@ import { jsx } from 'theme-ui'
 
 import { FC } from 'react';
 import { ITeamCard } from "interfaces";
- 
+
+import MissingImage from "../../public/images/missing-image.png"; 
 
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Section from "src/styles/Section.module.css";
@@ -23,7 +24,7 @@ const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, link
                 )} 
                 {!image && (
                     <img 
-                        src={"public/images/missing-image.png"}
+                        src={MissingImage}
                         height="300"
                     />                    
                 )}              

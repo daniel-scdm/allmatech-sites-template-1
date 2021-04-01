@@ -47,7 +47,7 @@ const Card : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRent, pric
                     )} 
                     {!image && (
                         <img 
-                            src={"../../public/images/missing-image.png"}
+                            src={"public/images/missing-image.png"}
                             height="320"
                         />                    
                     )}       

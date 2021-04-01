@@ -9,6 +9,7 @@ import PropertyAuthor from "src/components/propertyAuthor";
 import FilterFormList from "src/components/FilterFormList";
 import Sponsor from "src/components/Sponsor";
 import Search from "src/components/Search";
+import Header from "src/components/header";
 
 import dynamic from "next/dynamic";
 
@@ -30,26 +31,26 @@ const LazyPropertyComponent = dynamic(
     loading: ({ error }) => {
       if(error) {
         return (
-          <SkeletonTheme color="#ddd" highlightColor="#ccc">
-              <div className={property.skeletonContainer}>
-                  <Skeleton className={property.skeletonImage} />
-                  <Skeleton className={property.skeletonBody} />
-                  <Skeleton className={property.skeletonMessage} />
+          <div className={property.emptyProperty}>
+              <div>
+                <FaHouseDamage />
               </div>
-          </SkeletonTheme>
+              <h3>
+                Imovel não encontrado.
+              </h3>
+          </div>
         );
       }
 
       return (
-        <div className={property.emptyProperty}>
-            <div>
-              <FaHouseDamage />
+        <SkeletonTheme color="#ddd" highlightColor="#ccc">
+            <div className={property.skeletonContainer}>
+                <Skeleton className={property.skeletonImage} />
+                <Skeleton className={property.skeletonBody} />
+                <Skeleton className={property.skeletonMessage} />
             </div>
-            <h3>
-              Imovel não encontrado.
-            </h3>
-        </div>
-      );
+        </SkeletonTheme>
+      );      
   },
   ssr: false
 }
@@ -66,6 +67,7 @@ function Property() {
 
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if(state === "done") {
         const { code } = query;
         if(parsedXml && typeof code === "string") {
@@ -95,6 +97,12 @@ function Property() {
 
   return (
     <>
+      <Header 
+          logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+          logoHeight={40}
+          logoWidth={190}  
+          bgHeaderColor={"#f9f9f9"}      
+      />
       <section className={Section.container}>          
           <div className={property.content}>
             <main>
