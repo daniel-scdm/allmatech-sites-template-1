@@ -17,6 +17,8 @@ import Footer from "src/components/Footer";
 import LazyLoad from "react-lazyload";
 
 import { useFilter } from "src/hooks/useFilter";
+import { useFetch } from "src/hooks/useFetch";
+
 import Link from "next/link";
 
 import { IContext } from "interfaces";
@@ -34,6 +36,7 @@ export default function Home() {
 
   const app : IContext = useAppContext();
   const { extractCity, filterUnique } = useFilter();
+  const { _fetchData } = useFetch();
 
   const [cities, setCities] = useState<Array<any>>([]);
   const [streetsBuy, setStreetsBuy] = useState<Array<any>>([]);
@@ -44,16 +47,27 @@ export default function Home() {
   const [latestNews] = useState(app.Articles.slice(app.Articles.length - 3, app.Articles.length));
 
   useEffect(() => {
-      if(app.state === "done") {
-          const extractedCities = extractCity(app.parsedXml.Imoveis.Imovel);
-          if(extractedCities) setCities(extractedCities);  
-          setLoadingScreen(false); 
-      }
+    if(app.properties.length === 0) {
+      init();
+    }
+  }, []);
 
-  }, [app.state]); 
+  const init = async () => {
+      const res = await _fetchData();
+
+      if(res && res.Imoveis) {
+        app.setProperties(res.Imoveis.Imovel);
+
+        const cities = extractCity(res.Imoveis.Imovel);
+        setCities(cities);
+      }      
+
+      setLoadingScreen(false);
+      
+  }
 
   const extractStreetsBuy = (selectedCity : string) => {
-      const mappedStreets = app.parsedXml.Imoveis.Imovel.map((imovel : any) => {
+      const mappedStreets = app.properties.map((imovel : any) => {
         if(imovel.Cidade === selectedCity && imovel.Bairro)
           return imovel.Bairro;
 
@@ -64,7 +78,7 @@ export default function Home() {
   }
 
   const extractStreetsRent = (selectedCity : string) => {
-    const mappedStreets = app.parsedXml.Imoveis.Imovel.map((imovel : any) => {
+    const mappedStreets = app.properties.map((imovel : any) => {
       if(imovel.Cidade === selectedCity && imovel.Bairro)
         return imovel.Bairro;
 
@@ -114,7 +128,7 @@ export default function Home() {
           </div>
 
           <LatestOfferProperties 
-              List={app.parsedXml.Imoveis.Imovel}
+              List={app.properties}
           />          
       </section>   
       
@@ -128,7 +142,7 @@ export default function Home() {
           </div>
 
           <LatestProperties 
-            List={app.parsedXml.Imoveis.Imovel}
+            List={app.properties}
           />
           
       </section>

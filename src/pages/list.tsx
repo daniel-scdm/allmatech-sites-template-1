@@ -18,6 +18,7 @@ import { IPropertyXML, IContext } from 'interfaces';
 
 import { useRouter } from 'next/router';
 import { useFilter } from "src/hooks/useFilter";
+import { useFetch } from "src/hooks/useFetch";
 
 import ListProperties from "src/components/ListProperties";
 
@@ -28,32 +29,51 @@ function List() {
   const app : IContext | any = useAppContext();
 
   const router = useRouter();
-  const { filterProperties } = useFilter();  
+
+  const { filterProperties } = useFilter(); 
+  const { _fetchData } = useFetch();
+ 
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingScreen, setIsLoadingScreen] = useState(true);
 
   const [listProperties, setListProperties] = useState<Array<IPropertyXML> | undefined>(undefined);
 
   useEffect(() => {
-    if(!app.parsedXml) {
-      app._fetchData();
-    }
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    if(app.parsedXml) {
-      const { query } = router;
-      const filteredProperties = filterProperties(app.parsedXml.Imoveis.Imovel, query); 
-      setListProperties(filteredProperties);     
-      setIsLoading(false);
-      setIsLoadingScreen(false);      
-    }           
-  }, [app.parsedXml]);
+    console.log(app.properties.length === 0)
+    if(app.properties.length === 0) {
+      init();
+    } else {
+      handleQuery();
+    }
+    
+  }, [app.properties]);
+
+  const init = async () => {
+
+      const res = await _fetchData();
+
+      if(res && res.Imoveis) {
+        await app.setProperties(res.Imoveis.Imovel);  
+  
+        handleQuery();
+      }            
+  }
+
+  const handleQuery = () => {
+    const { query } = router;
+    const filteredProperties = filterProperties(app.properties, query); 
+    setListProperties(filteredProperties);     
+    setIsLoading(false);
+    setIsLoadingScreen(false);          
+  }
 
   const handleFilter = (query: object) => {
     setIsLoading(true);  
-    const filteredProperties = filterProperties(app.parsedXml.Imoveis.Imovel, query); 
+    const filteredProperties = filterProperties(app.properties, query); 
     setListProperties(filteredProperties);  
     setIsLoading(false);     
   }
@@ -76,7 +96,7 @@ function List() {
         <>
           <PropertyAuthor />
           <FilterFormList 
-            propertyList={app.parsedXml.Imoveis.Imovel}
+            propertyList={app.properties}
             callbackList={handleFilter}
           />
           <Sponsor />

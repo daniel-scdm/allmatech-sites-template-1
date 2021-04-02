@@ -42,12 +42,13 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
     const handleMediaQueryChange = (mediaQuery : any) => {
         if (mediaQuery.matches) {
             setNumberOfCards(3);
+            setTotalPages(Math.ceil(pList.length / 3));
             setPaginationList(currentPage);        
         } else {
             setNumberOfCards(1);
+            setTotalPages(Math.ceil(pList.length));
             setPaginationList(currentPage);        
         }
-
     };
 
     useEffect(() => {        

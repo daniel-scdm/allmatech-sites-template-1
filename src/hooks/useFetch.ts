@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react";
-import { ICarga } from "interfaces";
-
 const headers = new Headers();
 
-headers.append("Content-Type", "application/json; charset=utf-8");
+//headers.append("Content-Type", "application/json; charset=utf-8");
 headers.append('Accept', 'application/json');
-headers.append('Origin','http://allmateste.com.br');
+//headers.append('Origin','http://allmateste.com.br');
 
 const myInit = { 
     method: 'GET',
@@ -14,26 +11,18 @@ const myInit = {
 
 export const useFetch = () => {
 
-    const [parsedXml, setParsedXml] = useState<ICarga>();
-    const [state, setState] = useState("waiting");
+    const _fetchData = async () => {
+        try {
+            const res = await fetch("http://localhost/extractXml.php", myInit);
+            const data = await res.json();
+  
+            return data;                    
 
-    useEffect(() => {
-        _fetchData();      
-    }, []);
-
-    const _fetchData = () => {
-        fetch("https://allmateste.com.br/site-next/extractXml.php", myInit)
-            .then(res => res.json())
-            .then((data : any) => {
-                setState("processing");
-                if(data) {
-                    setParsedXml(data);                
-                    setState("done");
-                    console.log(data)
-                }
-            })
-            .catch(err => console.log(err));
+        } catch (error) {
+            console.log("Error", error);
+            return "Failed";
+        }        
     }
 
-    return { parsedXml, state, _fetchData }
+    return { _fetchData }
 }

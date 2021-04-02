@@ -29,8 +29,6 @@ function Company() {
                 <div className={section.imageCompany}>
                     <img     
                         src="https://www.roberthalf.com/sites/default/files/2017-08/company-pride-team-happier-rh-08-04-2017.jpg"
-                        height="450"
-                        width="450"
                         title="Equipe"
                     /> 
                 </div>

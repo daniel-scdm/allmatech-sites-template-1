@@ -1,5 +1,4 @@
-import { createContext, useContext } from 'react';
-import { useFetch } from "src/hooks/useFetch";
+import { createContext, useContext, useState } from 'react';
 import { IArticle, IPropertyXML } from "interfaces";
 
 const Articles : Array<IArticle> = [
@@ -46,41 +45,29 @@ const Articles : Array<IArticle> = [
 ];
 
 const initContext = {
-  state: "",
-  parsedXml: {    
-    Imoveis: {
-      Imovel: [] as IPropertyXML[]
-    }
+  setProperties : (carga : Array<IPropertyXML>) => {
+    console.log(carga)
   },
-  _fetchData: () => {},
+  properties: [] as Array<IPropertyXML>,
   Articles
 }
 
 const AppContext = createContext(initContext);
 
 export function AppWrapper({ children } : any) {
-  const { parsedXml, state, _fetchData } = useFetch();
-  
-  if(parsedXml) {
-    const data = {
-      state,
-      parsedXml,
-      _fetchData,
-      Articles
-    }
+    const [properties, setProperties] = useState<Array<IPropertyXML>>([]);   
 
+    const data = {
+      setProperties,
+      properties,
+      Articles,
+    }
+    
     return (
       <AppContext.Provider value={data}>
         {children}
       </AppContext.Provider>
     );
-  }
-
-  return (
-    <AppContext.Provider value={initContext}>
-        {children}
-      </AppContext.Provider>
-  );
 }
 
 export function useAppContext() {

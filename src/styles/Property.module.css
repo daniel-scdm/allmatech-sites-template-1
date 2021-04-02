@@ -75,12 +75,7 @@
     font-size: 1.2rem;
     color: #222;
     font-weight: 600;
-    display: -webkit-box;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    min-height: 55px;
+    display: block;
 }
 
 .cardText {
@@ -302,6 +297,7 @@
     font-size: 0;
     color: transparent;
     position: relative;
+    min-height: 450px;
     width: 100%;
     background-color: #000;
     display: flex;
@@ -489,6 +485,20 @@
 
 .sliderGallery {
     height: 100%;
+}
+
+@media (min-width: 1024px) {
+    .cardInfo > p {
+        font-size: 1.2rem;
+        color: #222;
+        font-weight: 600;
+        display: block;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 55px;
+    }
 }
 
 @media (min-width: 1200px) {

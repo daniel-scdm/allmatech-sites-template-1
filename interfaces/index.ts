@@ -24,9 +24,8 @@ export type IFullSection = {
 }
 
 export type IContext = {
-  parsedXml: ICarga,
-  state: string,
-  _fetchData: () => void,
+  properties: Array<IPropertyXML>,
+  setProperties: (carga : Array<IPropertyXML>) => void,
   Articles: Array<IArticle>
 }
 

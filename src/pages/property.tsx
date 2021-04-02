@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { useEffect, useState } from "react";
+import { useAppContext } from "src/context/parseXml";
 
 import Section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
@@ -19,7 +20,7 @@ import { useFetch } from "src/hooks/useFetch";
 
 import { FaHouseDamage } from "react-icons/fa";
 
-import { IPropertyXML } from "interfaces";
+import { IContext, IPropertyXML } from "interfaces";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
@@ -58,25 +59,46 @@ const LazyPropertyComponent = dynamic(
 
 function Property() {
 
-  const { parsedXml, state } = useFetch();
-  const { query } = useRouter();
+  const app : IContext = useAppContext();
 
+  const { query } = useRouter();
   const { getPropertyByCode } = useFilter();
+  const { _fetchData } = useFetch();
+
   const [prt, setPrt] = useState<IPropertyXML | null>(null);
   const [features, setFeatures] = useState<Array<string>>([]);
 
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    if(state === "done") {
-        const { code } = query;
-        if(parsedXml && typeof code === "string") {
-          const p = getPropertyByCode(parsedXml.Imoveis.Imovel, code);
-          extractFeatures(p);
-          setPrt(p);
-        }         
-    }     
-  }, [state]);
+    console.log(app.properties.length === 0)
+
+    if(app.properties.length === 0) {
+      init();
+    } else {
+      handleQuery();
+    }
+    
+  }, [app.properties]);
+
+  const init = async () => {
+
+      const res = await _fetchData();
+
+      if(res && res.Imoveis) {
+        await app.setProperties(res.Imoveis.Imovel);  
+
+        handleQuery();
+      }            
+  }
+
+  const handleQuery = () => {
+    const { code } = query;
+    if(typeof code === "string") {
+      const p = getPropertyByCode(app.properties, code);
+      extractFeatures(p);
+      setPrt(p);
+    }          
+  }
 
   const extractFeatures = (property : IPropertyXML | null) => {
     if(property) {
