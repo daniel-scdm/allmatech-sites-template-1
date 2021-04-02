@@ -33,7 +33,7 @@ import Header from "src/components/header";
 import LazyFeatures from "src/components/Features";
 
 export default function Home() {
-
+  
   const app : IContext = useAppContext();
   const { extractCity, filterUnique } = useFilter();
   const { _fetchData } = useFetch();
@@ -49,8 +49,16 @@ export default function Home() {
   useEffect(() => {
     if(app.properties.length === 0) {
       init();
+    } else {
+      setLoadingScreen(false);
     }
   }, []);
+
+  useEffect(() => {
+    if(app.properties.length > 0 && cities.length > 0) {
+      setLoadingScreen(false);
+    }
+  }, [app.properties, cities]);
 
   const init = async () => {
       const res = await _fetchData();
@@ -60,10 +68,7 @@ export default function Home() {
 
         const cities = extractCity(res.Imoveis.Imovel);
         setCities(cities);
-      }      
-
-      setLoadingScreen(false);
-      
+      }            
   }
 
   const extractStreetsBuy = (selectedCity : string) => {

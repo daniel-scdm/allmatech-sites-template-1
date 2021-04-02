@@ -7,10 +7,7 @@ import { useAppContext } from "src/context/parseXml";
 import Section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
 
-import PropertyAuthor from "src/components/propertyAuthor";
 import FilterFormList from "src/components/FilterFormList";
-import Sponsor from "src/components/Sponsor";
-import Search from "src/components/Search";
 import Header from "src/components/header";
 
 import Footer from "src/components/Footer";
@@ -43,7 +40,6 @@ function List() {
   }, []);
 
   useEffect(() => {
-    console.log(app.properties.length === 0)
     if(app.properties.length === 0) {
       init();
     } else {
@@ -64,18 +60,22 @@ function List() {
   }
 
   const handleQuery = () => {
+
     const { query } = router;
     const filteredProperties = filterProperties(app.properties, query); 
     setListProperties(filteredProperties);     
     setIsLoading(false);
-    setIsLoadingScreen(false);          
+    setIsLoadingScreen(false);   
+          
   }
 
   const handleFilter = (query: object) => {
+
     setIsLoading(true);  
     const filteredProperties = filterProperties(app.properties, query); 
     setListProperties(filteredProperties);  
     setIsLoading(false);     
+
   }
 
   const renderContent = () => {
@@ -94,13 +94,10 @@ function List() {
 
       return (
         <>
-          <PropertyAuthor />
           <FilterFormList 
             propertyList={app.properties}
             callbackList={handleFilter}
           />
-          <Sponsor />
-          <Search />
         </>
       );
   }
@@ -115,15 +112,15 @@ function List() {
       />
       <section className={Section.container}>
           <div className={property.contentReverse}>
+           <aside>
+                {renderContent()}
+            </aside>
             <main>              
               <ListProperties 
                 List={listProperties}
                 isLoading={isLoading}
               />
-            </main>
-            <aside>
-                {renderContent()}
-            </aside>
+            </main>            
           </div>          
       </section>
       

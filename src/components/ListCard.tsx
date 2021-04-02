@@ -9,12 +9,12 @@ import property from "src/styles/Property.module.css";
 
 import Link from "next/link";
 
-import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
+import { GiHomeGarage, GiBathtub, GiPersonInBed, GiWinchesterRifle, GiPoolDive, GiSecurityGate } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
 
 
 
-const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, PrecoVenda, PrecoLocacao }) => {
+const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, PrecoVenda, PrecoLocacao, ArCondicionado, Piscina, Guarita }) => {
 
     const numberWithCommas = (x : string | number) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
@@ -53,11 +53,30 @@ const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorio
                         <GiPersonInBed size={38} /> <span>{typeof QtdDormitorios === "string" ? QtdDormitorios : 0} </span>                           
                     </div>
                     <div>
-                        <GiBathtub size={32} /> <span>{typeof QtdVagas === "string" ? QtdBanheiros : 0}</span>
+                        <GiBathtub size={32} /> <span>{typeof QtdBanheiros === "string" ? QtdBanheiros : 0}</span>
                     </div>
                     <div className={property.garages}>
                         <GiHomeGarage size={32} /> <span>{typeof QtdVagas === "string" ? QtdVagas : 0}</span>
                     </div>
+
+                    {ArCondicionado && (
+                        <div className={property.garages}>
+                            <GiWinchesterRifle size={32} />
+                        </div>
+                    )}
+
+                    {Piscina && (
+                        <div className={property.garages}>
+                            <GiPoolDive size={32} />
+                        </div>
+                    )}
+
+                    {Guarita && (
+                        <div className={property.garages}>
+                            <GiSecurityGate size={32} />
+                        </div>
+                    )}
+
                 </div>
                 <div className={property.cardPrice}>
                     {(PrecoVenda && typeof PrecoVenda === "string") && <span>Venda: R$ {numberWithCommas(PrecoVenda)}</span>}

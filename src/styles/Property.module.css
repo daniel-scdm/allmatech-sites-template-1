@@ -505,7 +505,7 @@
     .contentReverse,
     .content {
         display: grid;
-        grid-template-columns: auto 390px;
+        grid-template-columns: 390px auto;
         column-gap: 35px;
     }
 
@@ -521,7 +521,7 @@
     .contentReverse,
     .content {
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 1fr 3fr;
         column-gap: 25px;
     }
 }
@@ -530,7 +530,7 @@
     .contentReverse,
     .content {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 2fr;
         column-gap: 25px;
     }
 

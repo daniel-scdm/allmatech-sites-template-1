@@ -11,7 +11,7 @@ import { BiSearch } from "react-icons/bi";
 
 import Link from "next/link";
 
-const Card : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, code }) => {
+const Card : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, code, air }) => {
 
     const numberWithCommas = (x : string | number) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
@@ -71,6 +71,12 @@ const Card : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRent, pric
                     <div className={Section.garages}>
                         <GiHomeGarage /> {garages ? garages : 0}
                     </div>
+
+                    {air && (
+                        <div className={Section.garages}>
+                            <GiHomeGarage /> {garages ? garages : 0}
+                        </div>
+                    )}
                 </div>
                 <div className={Section.cardPrice}>
                     R$ {isValid(priceSell, priceRent)}

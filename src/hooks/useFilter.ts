@@ -41,6 +41,18 @@ export const useFilter = () => {
             Object.values(filterOptions).forEach((value) => {
                 const keyValue = Object.keys(value);
                 switch (keyValue[0]) {
+                    case "code":
+                        const rg = new RegExp(value['code'], "g");
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
+                            if(property && property.CodigoImovel) {
+                                const trimmed = property.CodigoImovel.trim();
+                                return rg.test(trimmed);
+                            }
+
+                            return false;
+                        });
+                        break;   
+                        
                     case "tipoImovel":
                         if(value["tipoImovel"]) {
                             isVenda = true;
@@ -115,6 +127,18 @@ export const useFilter = () => {
                         }                       
 
                         break;
+                    case "arCondicionado":
+
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.ArCondicionado === '1');
+                        break;
+                    case "piscina":
+
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Piscina === '1');
+                        break;
+                    case "seguranca":
+
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Guarita === '1');
+                        break;
                     default:
                         break;
                 }
@@ -130,6 +154,11 @@ export const useFilter = () => {
 
         const Filter = Object.entries(filterOptions).map((entries : Array<any>) => {
             switch(entries[0]) {
+                case "code": 
+                    if(entries[1] !== "") {
+                        return { [entries[0]]: entries[1] }
+                    }
+                    break;
                 case "cidade": 
                     if(entries[1] !== "" && entries[1] !== "Todos") {
                         return { [entries[0]]: entries[1] }
@@ -152,6 +181,21 @@ export const useFilter = () => {
                     break;
                 case "quartos": 
                     if(entries[1] !== 0) {
+                        return { [entries[0]]: entries[1] }
+                    }
+                    break;
+                case "arCondicionado": 
+                    if(entries[1]) {
+                        return { [entries[0]]: entries[1] }
+                    }
+                    break;
+                case "piscina": 
+                    if(entries[1]) {
+                        return { [entries[0]]: entries[1] }
+                    }
+                    break;
+                case "seguranca": 
+                    if(entries[1]) {
                         return { [entries[0]]: entries[1] }
                     }
                     break;

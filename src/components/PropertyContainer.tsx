@@ -6,7 +6,7 @@ import property from 'src/styles/Property.module.css';
 
 import { IPropertyXML } from "interfaces/index";
 
-import { GiHomeGarage, GiBathtub, GiPersonInBed } from "react-icons/gi";
+import { GiHomeGarage, GiBathtub, GiPersonInBed, GiWinchesterRifle, GiPoolDive, GiSecurityGate } from "react-icons/gi";
 import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
 import dynamic from "next/dynamic";
 
@@ -23,7 +23,7 @@ const numberWithCommas = (x : string | number) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
 }
 
-const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail, Fotos, features, Videos }) => {
+const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail, Fotos, features, Videos, ArCondicionado, Piscina, Guarita }) => {
 
     const [showGallery, setShowGallery] = useState(false);
     const [isSending, setIsSending] = useState(false);    
@@ -107,6 +107,24 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
                     <div className={property.garages}>
                         <GiHomeGarage size={32} /> <span>{typeof QtdVagas === "string"  ? QtdVagas : 0}</span>
                     </div>
+
+                    {ArCondicionado && (
+                        <div className={property.garages}>
+                            <GiWinchesterRifle size={32} />
+                        </div>
+                    )}
+
+                    {Piscina && (
+                        <div className={property.garages}>
+                            <GiPoolDive size={32} />
+                        </div>
+                    )}
+
+                    {Guarita && (
+                        <div className={property.garages}>
+                            <GiSecurityGate size={32} />
+                        </div>
+                    )}
                 </div>
 
                 <div className={property.propertyDescription}>

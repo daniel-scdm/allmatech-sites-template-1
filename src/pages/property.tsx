@@ -6,10 +6,6 @@ import { useAppContext } from "src/context/parseXml";
 import Section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
 
-import PropertyAuthor from "src/components/propertyAuthor";
-import FilterFormList from "src/components/FilterFormList";
-import Sponsor from "src/components/Sponsor";
-import Search from "src/components/Search";
 import Header from "src/components/header";
 
 import dynamic from "next/dynamic";
@@ -70,7 +66,6 @@ function Property() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    console.log(app.properties.length === 0)
 
     if(app.properties.length === 0) {
       init();
@@ -85,7 +80,7 @@ function Property() {
       const res = await _fetchData();
 
       if(res && res.Imoveis) {
-        await app.setProperties(res.Imoveis.Imovel);  
+        app.setProperties(res.Imoveis.Imovel);  
 
         handleQuery();
       }            
@@ -93,17 +88,20 @@ function Property() {
 
   const handleQuery = () => {
     const { code } = query;
+
     if(typeof code === "string") {
       const p = getPropertyByCode(app.properties, code);
       extractFeatures(p);
       setPrt(p);
-    }          
+    }
+
   }
 
   const extractFeatures = (property : IPropertyXML | null) => {
     if(property) {
       if(property.AreaServico) pushArray("Área de serviço");
       if(property.Sauna) pushArray("Sauna");
+      if(property.Guarita) pushArray("Guarita");
       if(property.Varanda) pushArray("Varanda");
       if(property.Jardim) pushArray("Jardim");
       if(property.QuartoWCEmpregada) pushArray("Quarto de empregada");
@@ -138,19 +136,14 @@ function Property() {
                   Observacao={prt?.Observacao}
                   TituloImovel={prt?.TipoImovel}
                   CodigoImovel={prt?.CodigoImovel}
+                  Piscina={prt?.Piscina}
+                  Guarita={prt?.Guarita}
+                  ArCondicionado={prt?.ArCondicionado}
                   Fotos={prt?.Fotos}
                   thumbnail={prt?.Fotos?.Foto[0].Link[1].URLArquivo}    
                   features={features}
               />
             </main>
-            <aside>
-                <PropertyAuthor />
-                <FilterFormList 
-                  callbackList={() => {}}
-                />
-                <Sponsor />
-                <Search />
-            </aside>
           </div>           
       </section>
       

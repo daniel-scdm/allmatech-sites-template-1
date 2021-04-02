@@ -74,6 +74,9 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
                             PrecoLocacao={p.PrecoLocacao}
                             Observacao={p.Observacao}
                             TituloImovel={p.TituloImovel}
+                            ArCondicionado={p.ArCondicionado}
+                            Piscina={p.Piscina}
+                            Guarita={p.Guarita}
                         />
                     ))}
                 </div>            

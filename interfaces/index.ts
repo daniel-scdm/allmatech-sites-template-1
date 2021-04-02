@@ -72,7 +72,16 @@ export type IDropDown = {
 export type IInputText = {
   Label : string,
   nameField: string,
-  placeholder: string
+  placeholder: string,
+  value: string,
+  onChange: (value : string, KeyName : string) => void
+}
+
+export type IInputCheck = {
+  Label : string,
+  nameField: string,
+  value: boolean,
+  onChange: (KeyName : string) => void
 }
 
 export type ISlider = {
@@ -85,12 +94,16 @@ export type ISlider = {
 
 export type IinitValues = {
   buy: boolean,
+  code?: string,
   cidade: string,
   bairro: string,
   valores: Array<number>,
   quartos: number,
   banheiros: number,
-  garagem: number
+  garagem: number,
+  piscina? : boolean,
+  arCondicionado? : boolean,
+  seguranca? : boolean
 }
 
 export type IAnimatedCatchPhrase = {
@@ -119,7 +132,8 @@ export type ICard = {
   garages? : string | number,
   indexKey? : string,
   priceSell? : string | number | Array<any>,
-  priceRent? : string | number | Array<any>
+  priceRent? : string | number | Array<any>,
+  air? : string | number
 }
 
 export type IFoto = {
@@ -147,6 +161,9 @@ export type IPropertyXML = {
   ArmarioEmbutido?: string,
   Bairro?: string,
   CEP?: string,
+  ArCondicionado? : string,
+  Piscina? : string,
+  Guarita? : string,
   CategoriaImovel?: string,
   Cerca?: string,
   Closet?: string,

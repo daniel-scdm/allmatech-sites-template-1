@@ -35,27 +35,11 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
 
     const handleMediaQueryChange = (mediaQuery : any) => {
         if (mediaQuery.matches) {
-            
             setNumberOfCards(3);
-            setTotalPages(Math.ceil(pList.length / 3));
-            const index = pList.indexOf(paginatedList[0]);
-
-            if(index !== -1) {
-                setPaginationList(currentPage);
-            } else {
-                setPaginationList(1);
-            }
-                    
+            setTotalPages(Math.ceil(pList.length / 3));                    
         } else {
             setNumberOfCards(1);
-            setTotalPages(Math.floor(pList.length));
-            const index = pList.indexOf(paginatedList[0]);
-
-            if(index !== -1) {
-                setPaginatedList([paginatedList[0]]);
-            } else {
-                setPaginationList(1);
-            }
+            setTotalPages(Math.ceil(pList.length));
         }
     };
 

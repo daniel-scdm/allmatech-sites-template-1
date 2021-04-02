@@ -23,6 +23,8 @@ const FilterNewsList : React.FC<IFilterNewsList> = ({ callbackList }) => {
                     Label="Titulo"
                     nameField="titulo"
                     placeholder="Titulo"
+                    onChange={() => {}}
+                    value={""}
                 />
 
                 <input 

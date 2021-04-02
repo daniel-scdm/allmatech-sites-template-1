@@ -38,12 +38,11 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
 
             return;
         }
-
+        
         setFormValues({
             ...formValues,
             [KeyName]: value
         });
-
     }
 
     const handleSliderChange = (values: Array<number>) => {
@@ -51,6 +50,18 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
             ...formValues,
             ["valores"] : values
         });
+    }
+
+    const handleCheck = (KeyName : string) => {
+        console.log(formValues[KeyName], KeyName)
+        if(typeof formValues[KeyName] === 'boolean') {
+            setFormValues({
+                ...formValues,
+                [KeyName]: !formValues[KeyName]
+            });
+        }
+        
+        console.log(formValues)
     }
 
     const handleForm = (e : React.FormEvent) => {
@@ -74,6 +85,7 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
         formValues, 
         handleChangeForm,
         handleForm,
+        handleCheck,
         handleSliderChange,
         errMessage
     }

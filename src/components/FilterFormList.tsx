@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, Checkbox } from 'theme-ui';
+import { jsx, Flex } from 'theme-ui';
 
 import { useState, useEffect, memo } from "react";
 
@@ -13,6 +13,8 @@ import { useFilter } from "src/hooks/useFilter";
 import { IFilterFormList, IPropertyXML } from "interfaces";
 import DropDownComponent from "src/components/DropDownComponent";
 import SliderComponent from "src/components/Slider";
+import InputTextComponent from "src/components/InputTextComponent";
+import CheckBoxComponent from "src/components/checkBoxComponent";
 
 const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList }) => {
 
@@ -25,17 +27,22 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
     const { 
         formValues, 
         handleChangeForm, 
+        handleCheck,
         handleSliderChange, 
         errMessage, 
         handleForm 
     } = useForm({
         buy: true,
+        code: "",
         cidade: "",
         bairro: "",
         valores: [0, 200000000],
         quartos: 0,
         banheiros: 0,
-        garagem: 0
+        garagem: 0,
+        arCondicionado: false,
+        piscina: false,
+        seguranca: false
     }, () => submitForm());
 
 
@@ -81,6 +88,15 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
     return (
         <div className={Section.filterForm}>
             <form className={Section.filterList} onSubmit={handleForm}>
+                
+                <InputTextComponent 
+                    nameField="code"
+                    Label="Código imovel"
+                    placeholder="VILLA000000"
+                    value={formValues['code'] ? formValues['code'] : ""}
+                    onChange={handleChangeForm}
+                />
+
                 <DropDownComponent 
                     Label="Tipo"
                     ListOptions={[
@@ -181,27 +197,27 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                 />
 
                 <div className={Section.checkContainer}>
-                    <Flex>
-                        <Checkbox 
-                            id="ar"
-                        />
-                        <label htmlFor="ar">Ar condicionado</label>
-                    </Flex>
-
-                    <Flex>
-                        <Checkbox 
-                            id="piscina"
-                        />
-                        <label htmlFor="piscina">Piscina</label>
-                    </Flex>
-
-                    <Flex>
-                        <Checkbox 
-                            id="seguranca"
-                        />
-                        <label htmlFor="seguranca">Segurança</label>
-                    </Flex>
                     
+                    <CheckBoxComponent 
+                        Label="arCondicionado"
+                        nameField="Ar Condicionado"
+                        value={formValues["arCondicionado"] ? formValues["arCondicionado"] : false}
+                        onChange={handleCheck}
+                    />
+
+                    <CheckBoxComponent 
+                        Label="piscina"
+                        nameField="Piscina"
+                        value={formValues["piscina"] ? formValues["piscina"] : false}
+                        onChange={handleCheck}
+                    />                    
+
+                    <CheckBoxComponent 
+                        Label="seguranca"
+                        nameField="Segurança"
+                        value={formValues["seguranca"] ? formValues["seguranca"] : false}
+                        onChange={handleCheck}
+                    />
                 </div>
 
                 <input 
