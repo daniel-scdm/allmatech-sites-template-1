@@ -20,18 +20,28 @@ const SliderComponent : React.FC<ISlider> = ({ Label, values, onChangeValue, err
     const handleChangeInputMin = (e : React.FormEvent<HTMLInputElement>) => {
         e.preventDefault();
 
-        const convertedValue = parseInt(e.currentTarget.value.split('.').join(""));
-        const updatedValues = [convertedValue, values[1]];
-        onChangeValue(updatedValues);
+        if(e.currentTarget.value) {
+            const convertedValue = parseInt(e.currentTarget.value.split('.').join(""));
+            const updatedValues = [convertedValue, values[1]];
+            onChangeValue(updatedValues);
+        } else {
+            const updatedValues = [0, values[1]];
+            onChangeValue(updatedValues);
+        }    
                     
     }
 
     const handleChangeInputMax = (e : React.FormEvent<HTMLInputElement>) => {
         e.preventDefault();
 
-        const convertedValue = parseInt(e.currentTarget.value.split('.').join(""));
-        const updatedValues = [values[0], convertedValue];
-        onChangeValue(updatedValues);        
+        if(e.currentTarget.value) {
+            const convertedValue = parseInt(e.currentTarget.value.split('.').join(""));
+            const updatedValues = [values[0], convertedValue];
+            onChangeValue(updatedValues); 
+        } else {
+            const updatedValues = [values[0], 0];
+            onChangeValue(updatedValues); 
+        }               
     }
 
     return (

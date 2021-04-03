@@ -26,6 +26,34 @@
     min-height: 60vh;
 }
 
+.lineLinks,
+.lineLinksItem {
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.lineLinks {
+    max-width: 1600px;
+}
+
+.lineLinksItem {
+    max-width: 1366px;
+    padding: 1rem 0;
+}
+
+.lineLinks span,
+.lineLinksItem span {
+    padding: 0 .2rem;
+}
+
+.lineLinks a,
+.lineLinksItem a {
+    color: cadetblue;
+    border-bottom: 1px solid cadetblue;
+    margin-left: 3px;
+    
+}
+
 .containerStaticPage {
     margin-top: 0;
 }
@@ -714,11 +742,6 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 25px;
     }
-
-    .content {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-    }
 }
 
 @media (max-width: 1366px) {
@@ -737,11 +760,6 @@
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 25px;
     }
-
-    .content {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-    }
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
@@ -749,12 +767,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 25px;
-    }
-
-    .content {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        column-gap: 20px;
     }
 
     .filterList > div,

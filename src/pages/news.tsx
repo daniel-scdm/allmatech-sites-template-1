@@ -8,7 +8,6 @@ import property from 'src/styles/Property.module.css';
 
 import ListNews from "src/components/NewsList";
 
-import PropertyAuthor from "src/components/propertyAuthor";
 import FilterNewsList from "src/components/FilterNewsList";
 import Header from "src/components/header";
 
@@ -18,6 +17,7 @@ import { ICardNews, IContext } from 'interfaces';
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { useAppContext } from "src/context/parseXml";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 function News() {
 
@@ -71,7 +71,6 @@ function News() {
 
       return (
         <>
-          <PropertyAuthor />
           <FilterNewsList 
             callbackList={handleFilter}
           />
@@ -88,16 +87,26 @@ function News() {
           bgHeaderColor={"#f9f9f9"}      
       />
       <section className={Section.container}>
-          <div className={property.contentReverse}>
+          <div className={Section.lineLinks}>
+
+            <Link href="https://allmateste.com.br/site-next/">
+              <a>
+                Home 
+              </a>
+            </Link>
+            <span>{">"}</span> 
+              Notícias
+          </div>
+          <div className={property.contentReverse}>            
+            <aside>
+                {renderContent()}
+            </aside>
             <main>
               <ListNews 
                 List={listNews}
                 isLoading={isLoading}
               />
             </main>
-            <aside>
-                {renderContent()}
-            </aside>
           </div>          
       </section>
       

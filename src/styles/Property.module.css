@@ -1,5 +1,7 @@
-.container > div {
-    min-height: 3350px;
+.listContainer,
+.listContainerCards {
+    min-height: 950px;
+    margin-bottom: 15px;
 }
 
 .containerProperty {
@@ -7,7 +9,38 @@
     width: auto;
 }
 
-.content {
+.containerProperty,
+.listOptionContainer {
+    margin-top: -40px;
+}
+
+.listOptionContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 18px;
+}
+
+.listOptionContainer {
+    display: none;
+}
+
+.listOptionContainer > button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 15px;
+    border: none;
+    background: none;
+    padding: 0px;
+    margin-right: 2px;
+}
+
+.listOptionContainer > button:focus { outline: none; }
+
+.content,
+.propertyDetailsContainer,
+.newsContainer {
     max-width: 1366px;
     margin: 0 auto;
     display: flex;
@@ -15,8 +48,10 @@
     margin-top: 3rem;
 }
 
+
+
 .contentReverse {
-    max-width: 1366px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column-reverse;
@@ -36,12 +71,17 @@
     width: 100%;
 }
 
-.listCard {
+.listCard,
+.listCardMobile {
     border: 1px solid #e9e9e9;
     max-width: 480px;
     margin-top: 3rem;
     background-color: #fff;
     box-shadow: 0 0 5px 2px rgb(0 0 0 / 5%);
+}
+
+.listCardMobile {
+    margin-bottom: 1rem;
 }
 
 .imageCardContainer {
@@ -110,11 +150,13 @@
     font-size: 1.6rem;
     font-weight: 600;
     padding-top: .5rem;
+    flex-wrap: wrap;
 }
 
 .cardFeatures > div {
     margin-left: .5rem;
     display: flex;
+    padding: .2rem;
     justify-content: center;
     align-items: flex-end;
 }
@@ -487,6 +529,15 @@
     height: 100%;
 }
 
+.listCardMobile .cardPrice {
+    padding: 1.4rem 0;
+}
+
+.listCardMobile .cardFeatures {
+    min-height: 91px;
+    align-items: flex-start;
+}
+
 @media (min-width: 1024px) {
     .cardInfo > p {
         font-size: 1.2rem;
@@ -513,10 +564,45 @@
         top: 30px;
         right: 50px;
     }
+
+    .listCardMobile {
+        margin-top: 0;
+    }    
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+
+    .listCardMobile {
+        margin-top: 0;
+    }
+
+    .listContainerCards {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 15px;
+    }    
+}
+
+@media screen and (min-width: 1500px) {
+
+    .listCardMobile {
+        margin-top: 0;    
+        max-width: 380px;   
+    }
+
+    .listContainerCards {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 15px;
+    }
     
 }
 
 @media (min-width: 960px) and (max-width: 1200px) {
+
+    .listCardMobile {
+        margin-top: 0;
+    }
 
     .contentReverse,
     .content {
@@ -524,6 +610,7 @@
         grid-template-columns: 1fr 3fr;
         column-gap: 25px;
     }
+    
 }
 
 @media (min-width: 640px) and (max-width: 960px) {
@@ -538,6 +625,10 @@
     .filterList > div select {
         font-size: .8rem;
     }
+
+    .listCardMobile {
+        margin-top: 0;
+    }
     
 }
 
@@ -549,7 +640,7 @@
     }
 
     .imageCardContainer {
-        max-height: 336px;
+        max-height: 345px;
         height: 100%;
         width: 100%;
     }
@@ -569,6 +660,10 @@
     
     .emptyProperty h3 {
         font-size: 3rem;
+    }
+
+    .listOptionContainer {
+        display: flex;
     }
 }
 

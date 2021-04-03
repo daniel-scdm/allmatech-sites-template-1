@@ -6,8 +6,6 @@ import Section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
 import Footer from "src/components/Footer";
 
-import PropertyAuthor from "src/components/propertyAuthor";
-import FilterNewsList from "src/components/FilterNewsList";
 import Header from "src/components/header";
 
 import NewsContainer from "src/components/NewsContainer";
@@ -19,13 +17,13 @@ import { FaNewspaper } from "react-icons/fa";
 
 import { ICardNews, IContext, IArticle } from "interfaces";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-
+import Link from "next/link";
 
 function New() {
 
   const { Articles } : IContext = useAppContext();
 
-  const { query, push } = useRouter();
+  const { query, back } = useRouter();
   const [news, setNews] = useState<ICardNews>();
 
   const [isLoading, setIsLoading] = useState(true);
@@ -40,17 +38,6 @@ function New() {
 
       setIsLoading(false);     
   }, []);
-
-  const handleFilter = (e: any) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    const text = e.target.titulo.value;
-    push({
-      pathname: "/news",
-      query: { text }
-    });
-  }
 
   const handlePropertyLoading = () => {
     if(!news && isLoading) {
@@ -97,20 +84,29 @@ function New() {
           logoWidth={190}  
           bgHeaderColor={"#f9f9f9"}      
       />
-      <section className={Section.container}>          
-          <div className={property.content}>
+      <section className={Section.container}>   
+          <div className={Section.lineLinksItem}>
+
+            <Link href="https://allmateste.com.br/site-next/">
+              <a>
+                Home 
+              </a>
+            </Link>
+            <span>{">"}</span> 
+            <Link href={"#"}>
+              <a onClick={() => back()}>
+                Notícias 
+              </a>
+            </Link>
+            <span>{">"}</span>
+            Notícia
+          </div>       
+          <div className={property.newsContainer}>
             <main>
                 {handlePropertyLoading()}
-            </main>
-            <aside>
-                <PropertyAuthor />
-                <FilterNewsList 
-                  callbackList={handleFilter}
-                />
-            </aside>
+            </main>            
           </div>           
       </section>
-      
       <Footer />
     </>    
   )

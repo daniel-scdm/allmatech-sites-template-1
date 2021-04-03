@@ -19,6 +19,7 @@ import { FaHouseDamage } from "react-icons/fa";
 import { IContext, IPropertyXML } from "interfaces";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import Link from "next/link";
 
 import Footer from "src/components/Footer";
 
@@ -57,7 +58,7 @@ function Property() {
 
   const app : IContext = useAppContext();
 
-  const { query } = useRouter();
+  const { query, back } = useRouter();
   const { getPropertyByCode } = useFilter();
   const { _fetchData } = useFetch();
 
@@ -123,8 +124,24 @@ function Property() {
           logoWidth={190}  
           bgHeaderColor={"#f9f9f9"}      
       />
-      <section className={Section.container}>          
-          <div className={property.content}>
+      <section className={Section.container}> 
+          <div className={Section.lineLinksItem}>
+
+            <Link href="https://allmateste.com.br/site-next/">
+              <a>
+                Home 
+              </a>
+            </Link>
+            <span>{">"}</span> 
+            <Link href={"#"}>
+              <a onClick={() => back()}>
+                Imóveis 
+              </a>
+            </Link>
+            <span>{">"}</span>
+            Imóvel
+          </div>         
+          <div className={property.propertyDetailsContainer}>
             <main>
               <LazyPropertyComponent 
                   Cidade={""}

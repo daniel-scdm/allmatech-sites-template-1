@@ -6,7 +6,7 @@ import property from 'src/styles/Property.module.css';
 
 import { IPropertyXML } from "interfaces/index";
 
-import { GiHomeGarage, GiBathtub, GiPersonInBed, GiWinchesterRifle, GiPoolDive, GiSecurityGate } from "react-icons/gi";
+import { GiHomeGarage, GiBathtub, GiPersonInBed, GiSnowflake1, GiPoolDive, GiSecurityGate } from "react-icons/gi";
 import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
 import dynamic from "next/dynamic";
 
@@ -110,7 +110,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
 
                     {ArCondicionado && (
                         <div className={property.garages}>
-                            <GiWinchesterRifle size={32} />
+                            <GiSnowflake1 size={32} />
                         </div>
                     )}
 

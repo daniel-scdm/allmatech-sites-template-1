@@ -20,6 +20,7 @@ import { useFetch } from "src/hooks/useFetch";
 import ListProperties from "src/components/ListProperties";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import Link from "next/link";
 
 function List() {
 
@@ -34,10 +35,6 @@ function List() {
   const [isLoadingScreen, setIsLoadingScreen] = useState(true);
 
   const [listProperties, setListProperties] = useState<Array<IPropertyXML> | undefined>(undefined);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   useEffect(() => {
     if(app.properties.length === 0) {
@@ -70,6 +67,7 @@ function List() {
   }
 
   const handleFilter = (query: object) => {
+    window.scrollTo(0, 0);
 
     setIsLoading(true);  
     const filteredProperties = filterProperties(app.properties, query); 
@@ -111,11 +109,21 @@ function List() {
           bgHeaderColor={"#f9f9f9"}      
       />
       <section className={Section.container}>
+          <div className={Section.lineLinks}>
+
+            <Link href="https://allmateste.com.br/site-next/">
+              <a>
+                Home 
+              </a>
+            </Link>
+            <span>{">"}</span> 
+            Imóveis
+          </div>
           <div className={property.contentReverse}>
            <aside>
                 {renderContent()}
             </aside>
-            <main>              
+            <main>                        
               <ListProperties 
                 List={listProperties}
                 isLoading={isLoading}

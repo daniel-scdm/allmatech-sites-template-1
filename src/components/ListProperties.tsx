@@ -6,7 +6,11 @@ import { IListProperties, IPropertyXML, IPageDetails } from "interfaces";
 import property from "src/styles/Property.module.css";
 
 import ListCard from "src/components/ListCard";
+import ListCardMobile from "src/components/ListCardMobile";
+
 import Pagination from "src/components/Pagination";
+
+import { FaThList, FaThLarge } from "react-icons/fa";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
@@ -15,6 +19,7 @@ const PAGE_LIMIT = 15;
 const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
 
     const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
+    const [isCard, setIsCard] = useState(false);
     
     useEffect(() => {
         if(List) {
@@ -60,26 +65,66 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
 
         return (
             <>
-                <div>                
-                    {paginatedList.map((p : IPropertyXML) => (
-                        <ListCard 
-                            key={p.CodigoImovel}
-                            Cidade={""}
-                            CodigoImovel={p.CodigoImovel}
-                            thumbnail={p.Fotos?.Foto[0].Link[0].URLArquivo}
-                            QtdBanheiros={p.QtdBanheiros}
-                            QtdDormitorios={p.QtdDormitorios}
-                            QtdVagas={p.QtdVagas}
-                            PrecoVenda={p.PrecoVenda}
-                            PrecoLocacao={p.PrecoLocacao}
-                            Observacao={p.Observacao}
-                            TituloImovel={p.TituloImovel}
-                            ArCondicionado={p.ArCondicionado}
-                            Piscina={p.Piscina}
-                            Guarita={p.Guarita}
+                <div className={property.listOptionContainer}>
+                    <button onClick={() => setIsCard(false)}>
+                        <FaThList 
+                            size={20} 
+                            color={'#aaa'} 
                         />
-                    ))}
-                </div>            
+                    </button>
+                    <button onClick={() => setIsCard(true)}>
+                        <FaThLarge 
+                            size={20} 
+                            color={'#aaa'} 
+                        />
+                    </button>
+                </div>
+                {!isCard && (
+                    <div className={property.listContainer}>                
+                        {paginatedList.map((p : IPropertyXML) => (
+                            <ListCard 
+                                key={p.CodigoImovel}
+                                Cidade={""}
+                                CodigoImovel={p.CodigoImovel}
+                                thumbnail={p.Fotos?.Foto[0].Link[0].URLArquivo}
+                                QtdBanheiros={p.QtdBanheiros}
+                                QtdDormitorios={p.QtdDormitorios}
+                                QtdVagas={p.QtdVagas}
+                                PrecoVenda={p.PrecoVenda}
+                                PrecoLocacao={p.PrecoLocacao}
+                                Observacao={p.Observacao}
+                                TituloImovel={p.TituloImovel}
+                                ArCondicionado={p.ArCondicionado}
+                                Piscina={p.Piscina}
+                                Guarita={p.Guarita}
+                            />
+                        ))}
+                    </div>
+                )}
+
+                {isCard && (
+                    <div className={property.listContainerCards}>                
+                        {paginatedList.map((p : IPropertyXML) => (
+                            <ListCardMobile 
+                                key={p.CodigoImovel}
+                                Cidade={""}
+                                CodigoImovel={p.CodigoImovel}
+                                thumbnail={p.Fotos?.Foto[0].Link[0].URLArquivo}
+                                QtdBanheiros={p.QtdBanheiros}
+                                QtdDormitorios={p.QtdDormitorios}
+                                QtdVagas={p.QtdVagas}
+                                PrecoVenda={p.PrecoVenda}
+                                PrecoLocacao={p.PrecoLocacao}
+                                Observacao={p.Observacao}
+                                TituloImovel={p.TituloImovel}
+                                ArCondicionado={p.ArCondicionado}
+                                Piscina={p.Piscina}
+                                Guarita={p.Guarita}
+                            />
+                        ))}
+                    </div>
+                )}
+                            
                 <Pagination
                     pageLimit={15}
                     pageNeighbours={2}

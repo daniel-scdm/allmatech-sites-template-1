@@ -9,7 +9,7 @@ import property from "src/styles/Property.module.css";
 
 import Link from "next/link";
 
-import { GiHomeGarage, GiBathtub, GiPersonInBed, GiWinchesterRifle, GiPoolDive, GiSecurityGate } from "react-icons/gi";
+import { GiHomeGarage, GiBathtub, GiPersonInBed, GiSnowflake1, GiPoolDive, GiSecurityGate } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
 
 
@@ -61,7 +61,7 @@ const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorio
 
                     {ArCondicionado && (
                         <div className={property.garages}>
-                            <GiWinchesterRifle size={32} />
+                            <GiSnowflake1 size={32} />
                         </div>
                     )}
 

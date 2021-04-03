@@ -52,16 +52,29 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
         });
     }
 
-    const handleCheck = (KeyName : string) => {
-        console.log(formValues[KeyName], KeyName)
-        if(typeof formValues[KeyName] === 'boolean') {
-            setFormValues({
-                ...formValues,
-                [KeyName]: !formValues[KeyName]
-            });
-        }
-        
-        console.log(formValues)
+    const handleCheck = (KeyName : any) => {
+        switch (KeyName) {
+            case 'piscina':
+                setFormValues({
+                    ...formValues,
+                    "piscina": !formValues.piscina
+                });
+                break;
+            case 'arCondicionado':
+                setFormValues({
+                    ...formValues,
+                    "arCondicionado": !formValues.arCondicionado
+                });
+                break;
+            case 'seguranca':
+                setFormValues({
+                    ...formValues,
+                    "seguranca": !formValues.seguranca
+                });
+                break;
+            default:
+                break;
+        }        
     }
 
     const handleForm = (e : React.FormEvent) => {
