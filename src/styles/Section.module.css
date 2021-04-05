@@ -18,6 +18,10 @@
     min-height: 100%;
 }
 
+.map {
+    min-height: 500px;
+}
+
 .container,
 .containerStaticPage {
     margin-top: 90px;

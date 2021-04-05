@@ -8,22 +8,32 @@ import { IPropertyXML } from "interfaces/index";
 
 import { GiHomeGarage, GiBathtub, GiPersonInBed, GiSnowflake1, GiPoolDive, GiSecurityGate } from "react-icons/gi";
 import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
-import dynamic from "next/dynamic";
+import BingMap from "src/components/BingMap";
 
 import Carousel from "src/components/Carousel";
- 
-
-
-
-const MapWithNoSSR = dynamic(() => import("src/components/Map"), {
-    ssr: false
-});
 
 const numberWithCommas = (x : string | number) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
 }
 
-const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, PrecoLocacao, PrecoVenda, QtdBanheiros, QtdVagas, QtdDormitorios, thumbnail, Fotos, features, Videos, ArCondicionado, Piscina, Guarita }) => {
+const PropertyContainer : React.FC<IPropertyXML> = ({ 
+    TituloImovel, 
+    Observacao, 
+    PrecoLocacao, 
+    PrecoVenda, 
+    QtdBanheiros, 
+    QtdVagas, 
+    QtdDormitorios, 
+    thumbnail, 
+    Fotos, 
+    features, 
+    Videos, 
+    ArCondicionado,
+    Piscina, 
+    Guarita,
+    Latitude,
+    Longitude
+ }) => {
 
     const [showGallery, setShowGallery] = useState(false);
     const [isSending, setIsSending] = useState(false);    
@@ -94,7 +104,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
                         </a>
                     </li>
                 </ul>
-            </div>                      
+            </div>
 
             <div className={property.propertyInfoContainer}>
                 <div className={property.cardFeatures}>
@@ -161,7 +171,13 @@ const PropertyContainer : React.FC<IPropertyXML> = ({ TituloImovel, Observacao, 
                 </div>
 
                 <div className={property.propertyMap}>
-                    <MapWithNoSSR />
+                    <BingMap 
+                        mapOptions={{
+                            center: [47.60357, -122.32945],
+                            credentials:
+                            "AjwUEXFZA8SMyy8CaJj59vJKVDoWohNXVFz_uGyHlT8N40Jgr-zrhvcxbTNRyDqn"
+                        }} 
+                    />
                 </div>
             </div>
 
