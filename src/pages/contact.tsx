@@ -8,65 +8,48 @@ import property from 'src/styles/Property.module.css';
 import Footer from "src/components/Footer";
 import { GiHouse, GiPhone, GiCalendar } from "react-icons/gi";
 import { FiMail } from "react-icons/fi";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+
 import Header from "src/components/header";
-
-const headers = new Headers();
-
-headers.append("Content-Type", "application/json; charset=utf-8");
-headers.append("X-Custom-Header", "ProcessThisImmediately");
-
-let myInit = { 
-    method: 'POST',
-    headers: headers,
-    body : null
-};
+import { useApi } from "src/hooks/useApi";
 
 function Contact() {
+    const { _sendEmail } = useApi();
 
     const [isSending, setIsSending] = useState(false);
     const [error, setError] = useState("");
+    const [sended, setSended] = useState(false);
 
-    const handleContactForm = (e : React.FormEvent) => {
+    const handleContactForm = async (e : any) => {
         e.preventDefault();
         setIsSending(true);
+        setSended(false);
         setError("");
 
-        /**
-         *  const formValues = {
+        const formValues = {
             name: e.target.name.value,
             email: e.target.email.value,
             subject: e.target.subject.value,
             message: e.target.message.value,
         }
 
-        myInit.body = JSON.stringify(formValues);
-         */
+        const isSuccessfull = await _sendEmail(formValues);
 
-       
+        if(!isSuccessfull) {
+            setError("Ocorreu um error ao enviar sua mensagem, tente mais tarde.");
+        }
+        setSended(true);
 
-        fetch("http://localhost:3000/api/email", myInit)
-            .then((data) => data.json())
-            .then(res => {
-
-                if(res.error) {
-                    setError("Ocorreu um error ao enviar sua mensagem, tente mais tarde.");
-                }
-
-                setIsSending(false);
-            })
-            .catch(() => {
-                setError("Ocorreu um error ao enviar sua mensagem, tente mais tarde.");
-            });
-
-    } 
+        setIsSending(false);
+    }
 
     return (
         <>
-            <Header 
+            <Header
                 logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
                 logoHeight={40}
-                logoWidth={190}  
-                bgHeaderColor={"#f9f9f9"}      
+                logoWidth={190}
+                bgHeaderColor={"#f9f9f9"}
             />
             <div className={section.banner}>
                 <div className={section.bannerText}>
@@ -74,7 +57,7 @@ function Contact() {
                 </div>
             </div>
 
-            <section className={section.containerStaticPage}>           
+            <section className={section.containerStaticPage}>
                 <div className={section.contactsContainer}>
                     <div className={section.contactstInfo}>
                         <form onSubmit={handleContactForm} className={property.comment}>
@@ -82,7 +65,7 @@ function Contact() {
                                 <div className={section.errorMessage}>
                                     {error}
                                 </div>
-                            )}                            
+                            )}
                             <div>
                                 <input type="text" name="name" id="" placeholder="Nome (Obrigatório)" />
                                 <input type="text" name="email" id="" placeholder="Email (Obrigatório)" />
@@ -90,12 +73,14 @@ function Contact() {
                             </div>
 
                             <textarea name="message" id="" placeholder="Sua mensagem" rows={10}>
-                                
-                            </textarea>
 
-                            <button type="submit" value="" disabled={isSending}>
-                                {isSending ? "Enviando..." : "Enviar mensagem"}
-                            </button>
+                            </textarea>
+                            <div className={property.formButton}>
+                                <button type="submit" value="" disabled={isSending}>
+                                    {isSending ? "Enviando..." : "Enviar mensagem"}
+                                </button>
+                                {sended && <IoIosCheckmarkCircleOutline size={35} color={"#24bd75"} />}
+                            </div>
                         </form>
 
                         <div className={section.infoContainer}>
@@ -141,19 +126,17 @@ function Contact() {
                                     Seg-Sex: 9:00 – 17:00
                                 </p>
                             </div>
-                            
+
                         </div>
                     </div>
 
                     <div className={section.mapContainer}>
-                        
                     </div>
-                    
+
                 </div>
             </section>
-        
             <Footer />
-        </>    
+        </>
     );
 }
 

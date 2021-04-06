@@ -8,9 +8,9 @@ import { IPropertyXML } from "interfaces/index";
 
 import { GiHomeGarage, GiBathtub, GiPersonInBed, GiSnowflake1, GiPoolDive, GiSecurityGate } from "react-icons/gi";
 import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
-import BingMap from "src/components/BingMap";
 
 import Carousel from "src/components/Carousel";
+import AzureMap from 'src/components/AzureMap';
 
 const numberWithCommas = (x : string | number) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
@@ -34,7 +34,6 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
     Latitude,
     Longitude
  }) => {
-
     const [showGallery, setShowGallery] = useState(false);
     const [isSending, setIsSending] = useState(false);    
 
@@ -61,7 +60,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
             code: CodigoImovel
         }
          */
-        
+
 
         setIsSending(false);
     }
@@ -73,7 +72,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                 setActiveModal={handleShowModal}
                 ListPhotos={Fotos?.Foto}
             />
-            
+
             <h3 className={property.propertyTitle}>
                 {TituloImovel}
             </h3> 
@@ -150,7 +149,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                             src="https://www.youtube.com/embed/tgbNymZ7vqY">
                         </iframe>
                     )}
-                    
+
                 </div>
 
                 <div className={property.propertyDescription}>
@@ -171,12 +170,9 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                 </div>
 
                 <div className={property.propertyMap}>
-                    <BingMap 
-                        mapOptions={{
-                            center: [47.60357, -122.32945],
-                            credentials:
-                            "AjwUEXFZA8SMyy8CaJj59vJKVDoWohNXVFz_uGyHlT8N40Jgr-zrhvcxbTNRyDqn"
-                        }} 
+                    <AzureMap 
+                        lt={Latitude}
+                        lg={Longitude}
                     />
                 </div>
             </div>
@@ -186,7 +182,6 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
 
                 <form onSubmit={handleContact} className={property.comment}>
                     <textarea name="comment" placeholder="Comentário" rows={10}>
-                        
                     </textarea>
 
                     <div>

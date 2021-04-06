@@ -17,7 +17,7 @@ import Footer from "src/components/Footer";
 import LazyLoad from "react-lazyload";
 
 import { useFilter } from "src/hooks/useFilter";
-import { useFetch } from "src/hooks/useFetch";
+import { useApi } from "src/hooks/useApi";
 
 import Link from "next/link";
 
@@ -36,7 +36,7 @@ export default function Home() {
   
   const app : IContext = useAppContext();
   const { extractCity, filterUnique } = useFilter();
-  const { _fetchData } = useFetch();
+  const { _fetchData } = useApi();
 
   const [cities, setCities] = useState<Array<any>>([]);
   const [streetsBuy, setStreetsBuy] = useState<Array<any>>([]);

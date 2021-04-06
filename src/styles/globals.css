@@ -222,6 +222,10 @@ footer ul li a:hover {
   transition: opacity 300ms, transform 300ms;
 }    
 
+.mapboxgl-map {
+  min-height: 291px;
+}
+
 @media (min-width: 490px) {
     footer ul {
         columns: 2;

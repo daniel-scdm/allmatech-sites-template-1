@@ -313,6 +313,7 @@
 .propertyMap {
     width: 100%;
     border: none;
+    min-height: 291px;
     margin-top: 1.4rem;
 }
 
@@ -444,7 +445,7 @@
     padding: 1rem;
 }
 
-.comment > button {
+.comment button {
     padding: 1rem;
     margin-top: 1rem;
     background-color: #f15455;
@@ -455,8 +456,17 @@
     font-size: 1.1rem;
 }
 
-.comment > button:hover {
+.comment button:hover {
     background-color: #fa2e2e;
+}
+
+.formButton {
+    display: flex;
+    align-items: center;
+}
+
+.formButton svg {
+    margin: 1rem 0 0 1rem;
 }
 
 .emptyList {

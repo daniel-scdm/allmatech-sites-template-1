@@ -15,7 +15,7 @@ import { IPropertyXML, IContext } from 'interfaces';
 
 import { useRouter } from 'next/router';
 import { useFilter } from "src/hooks/useFilter";
-import { useFetch } from "src/hooks/useFetch";
+import { useApi } from "src/hooks/useApi";
 
 import ListProperties from "src/components/ListProperties";
 
@@ -29,7 +29,7 @@ function List() {
   const router = useRouter();
 
   const { filterProperties } = useFilter(); 
-  const { _fetchData } = useFetch();
+  const { _fetchData } = useApi();
  
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingScreen, setIsLoadingScreen] = useState(true);

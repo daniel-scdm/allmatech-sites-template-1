@@ -12,7 +12,7 @@ import dynamic from "next/dynamic";
 
 import { useRouter } from 'next/router';
 import { useFilter } from "src/hooks/useFilter";
-import { useFetch } from "src/hooks/useFetch";
+import { useApi } from "src/hooks/useApi";
 
 import { FaHouseDamage } from "react-icons/fa";
 
@@ -60,7 +60,7 @@ function Property() {
 
   const { query, back } = useRouter();
   const { getPropertyByCode } = useFilter();
-  const { _fetchData } = useFetch();
+  const { _fetchData } = useApi();
 
   const [prt, setPrt] = useState<IPropertyXML | null>(null);
   const [features, setFeatures] = useState<Array<string>>([]);
@@ -84,7 +84,7 @@ function Property() {
         app.setProperties(res.Imoveis.Imovel);  
 
         handleQuery();
-      }            
+      }
   }
 
   const handleQuery = () => {
@@ -145,6 +145,8 @@ function Property() {
             <main>
               <LazyPropertyComponent 
                   Cidade={""}
+                  Latitude={prt?.Latitude}
+                  Longitude={prt?.Longitude}
                   QtdBanheiros={prt?.QtdBanheiros}
                   QtdDormitorios={prt?.QtdDormitorios}
                   QtdVagas={prt?.QtdVagas}
