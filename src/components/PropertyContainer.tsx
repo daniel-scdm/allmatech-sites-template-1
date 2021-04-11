@@ -169,12 +169,14 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
 
                 </div>
 
-                <div className={property.propertyMap}>
-                    <AzureMap 
-                        lt={Latitude}
-                        lg={Longitude}
-                    />
-                </div>
+                {(Latitude && Longitude) && (
+                    <div className={property.propertyMap}>
+                        <AzureMap 
+                            lt={Latitude}
+                            lg={Longitude}
+                        />
+                    </div>
+                )}
             </div>
 
             <div className={property.contactContainer}>

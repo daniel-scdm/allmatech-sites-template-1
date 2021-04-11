@@ -1,12 +1,10 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from 'theme-ui';
 
 import React from 'react';
  
 import { IFullSection } from "interfaces/index";
 import Section from "src/styles/Section.module.css";
-
-
 
 const FullSection : React.FC<IFullSection> = ({ children }) => {
 

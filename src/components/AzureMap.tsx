@@ -10,7 +10,7 @@ interface IMaps {
 const AzureMapComponent : FC<IMaps> = ({ lg, lt }) => {
   const renderCenter = () => {
     if(lg && lt) {
-      return [parseFloat(lt), parseFloat(lg)];
+      return [parseFloat(lg), parseFloat(lt)];
     }
 
     return [-47.8828057615547, -15.7939394201285];

@@ -4,7 +4,7 @@ import { IArticle, IPropertyXML } from "interfaces";
 const Articles : Array<IArticle> = [
   {
     title: "Lorem ipsum dolor sit amet",
-    image: "https://th.bing.com/th/id/R7a9d4c8bdbfbc0840d1f5819bc1ac0ad?rik=k%2bXxclSTi8Zaeg&riu=http%3a%2f%2fwww.interiorexteriorplan.com%2fwp-content%2fuploads%2f2011%2f08%2fLuxurious-Modern-House-Exterior-Design.jpg&ehk=HhrevJYwdLZAsbRBq8Y%2b1IXBTHeYMiHdI1JR5jhTAvs%3d&risl=&pid=ImgRaw",
+    image: "next-site/public/images/house.jpg",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere semper tellus, 
     sed gravida diam viverra sit amet. Vestibulum malesuada blandit tellus. Vestibulum pretium mattis rhoncus. 
     Interdum et malesuada fames ac ante ipsum primis in faucibus. 
@@ -14,7 +14,7 @@ const Articles : Array<IArticle> = [
   },
   {
     title: "Lorem ipsum dolor sit amet",
-    image: "https://th.bing.com/th/id/R7a9d4c8bdbfbc0840d1f5819bc1ac0ad?rik=k%2bXxclSTi8Zaeg&riu=http%3a%2f%2fwww.interiorexteriorplan.com%2fwp-content%2fuploads%2f2011%2f08%2fLuxurious-Modern-House-Exterior-Design.jpg&ehk=HhrevJYwdLZAsbRBq8Y%2b1IXBTHeYMiHdI1JR5jhTAvs%3d&risl=&pid=ImgRaw",
+    image: "next-site/public/images/house.jpg",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere semper tellus, 
     sed gravida diam viverra sit amet. Vestibulum malesuada blandit tellus. Vestibulum pretium mattis rhoncus. 
     Interdum et malesuada fames ac ante ipsum primis in faucibus. 
@@ -24,7 +24,7 @@ const Articles : Array<IArticle> = [
   },
   {
     title: "Lorem ipsum dolor sit amet",
-    image: "https://th.bing.com/th/id/R7a9d4c8bdbfbc0840d1f5819bc1ac0ad?rik=k%2bXxclSTi8Zaeg&riu=http%3a%2f%2fwww.interiorexteriorplan.com%2fwp-content%2fuploads%2f2011%2f08%2fLuxurious-Modern-House-Exterior-Design.jpg&ehk=HhrevJYwdLZAsbRBq8Y%2b1IXBTHeYMiHdI1JR5jhTAvs%3d&risl=&pid=ImgRaw",
+    image: "next-site/public/images/house.jpg",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere semper tellus, 
     sed gravida diam viverra sit amet. Vestibulum malesuada blandit tellus. Vestibulum pretium mattis rhoncus. 
     Interdum et malesuada fames ac ante ipsum primis in faucibus. 
@@ -34,7 +34,7 @@ const Articles : Array<IArticle> = [
   },
   {
     title: "Lorem ipsum dolor sit amet",
-    image: "https://th.bing.com/th/id/R7a9d4c8bdbfbc0840d1f5819bc1ac0ad?rik=k%2bXxclSTi8Zaeg&riu=http%3a%2f%2fwww.interiorexteriorplan.com%2fwp-content%2fuploads%2f2011%2f08%2fLuxurious-Modern-House-Exterior-Design.jpg&ehk=HhrevJYwdLZAsbRBq8Y%2b1IXBTHeYMiHdI1JR5jhTAvs%3d&risl=&pid=ImgRaw",
+    image: "next-site/public/images/house.jpg",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere semper tellus, 
     sed gravida diam viverra sit amet. Vestibulum malesuada blandit tellus. Vestibulum pretium mattis rhoncus. 
     Interdum et malesuada fames ac ante ipsum primis in faucibus. 

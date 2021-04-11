@@ -16,7 +16,7 @@ const filterTypeVenda = (value : IPropertyXML) => {
 
 const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
 
-    const [totalPages, setTotalPages] = useState(Math.ceil(List.length / 3));
+    const [totalPages, setTotalPages] = useState(2);
     const [pList, setPList] = useState<Array<IPropertyXML>>([]);
     const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
     const [currentPage, setcurrentPage] = useState(1);
@@ -24,11 +24,11 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
 
     useEffect(() => {
         if(List && List.length > 0) {
-            const newList = List.filter(filterTypeVenda);
+            const newList = List.filter(filterTypeVenda).reverse().slice(0, 6);
             setPList(newList);
             setTotalPages(Math.ceil(newList.length / 3));
         }
-    }, [List]);
+    }, []);
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(min-width: 860px)");
@@ -42,15 +42,15 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
     const handleMediaQueryChange = (mediaQuery : any) => {
         if (mediaQuery.matches) {
             setNumberOfCards(3);
-            setTotalPages(Math.ceil(pList.length / 3));
+            if(pList.length > 0) setTotalPages(Math.ceil(pList.length / 3));
         } else {
             setNumberOfCards(1);
-            setTotalPages(Math.ceil(pList.length));
+            if(pList.length > 0) setTotalPages(Math.ceil(pList.length));
         }
     };
 
-    useEffect(() => {        
-        setPaginationList(currentPage);        
+    useEffect(() => {
+        setPaginationList(currentPage);
     }, [currentPage, pList, numberOfCards]);
 
     const setPaginationList = (page: number) => {
@@ -66,7 +66,7 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
             <section className={styles.spacingContainer}>
                 <p>Não há anuncios em super destaques.</p>
             </section>
-        );        
+        );
     }
 
     return (
@@ -88,16 +88,16 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
                 ))}
             </div>
             <div className={styles.paginationButton}>
-                {currentPage !== 1 && (
+                {currentPage > 1 && (
                     <button onClick={back}>
                         {`<<`} 
                     </button>
                 )}
-                {currentPage !== totalPages && (
+                {currentPage < totalPages && (
                     <button onClick={foward}>
                         {`>>`}
                     </button>
-                )}              
+                )}
             </div>
         </section>
     );

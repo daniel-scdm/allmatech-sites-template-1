@@ -16,15 +16,15 @@ const ListCardMobile : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDorm
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
     }
 
-    return (        
+    return (
         <div className={property.listCardMobile}>
             <div className={property.imageCardContainer}>   
             {thumbnail && (
                 <>
-                    <img                     
+                    <img
                         className={property.missingImageCard}
                         src={thumbnail}
-                            
+
                     />
                     <Link href={{
                         pathname: "/property",
@@ -35,7 +35,7 @@ const ListCardMobile : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDorm
                         </a>
                     </Link>
                 </>  
-            )}                                     
+            )}
             </div>
             <div className={property.cardInfo}>
                 <p>

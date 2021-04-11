@@ -38,10 +38,11 @@ export const useApi = () => {
             body: JSON.stringify(formValues)
         }
 
-        const isSuccefull = fetch("https://allmateste.com.br/site-next/sendEmail.php", myInit)
+        const isSuccefull = fetch("http://localhost/index.php", myInit)
             .then((data) => data.json())
             .then(res => {
-                if(!res.Success) {
+                console.log(res)
+                if(!res && !res.Success) {
                     return false;
                 }
 

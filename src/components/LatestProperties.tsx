@@ -36,10 +36,10 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
     const handleMediaQueryChange = (mediaQuery : any) => {
         if (mediaQuery.matches) {
             setNumberOfCards(3);
-            setTotalPages(Math.ceil(pList.length / 3));                    
+            if(pList.length > 0) setTotalPages(Math.ceil(pList.length / 3));
         } else {
             setNumberOfCards(1);
-            setTotalPages(Math.ceil(pList.length));
+            if(pList.length > 0) setTotalPages(Math.ceil(pList.length));
         }
     };
 
@@ -82,16 +82,16 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
                 ))}
             </div>
             <div className={styles.paginationButton}>
-                {currentPage !== 1 && (
+                {currentPage > 1 && (
                     <button onClick={back}>
                         {`<<`}
                     </button>
                 )}
-                {currentPage !== totalPages && (
+                {currentPage < totalPages && (
                     <button onClick={foward}>
                         {`>>`}
                     </button>
-                )}              
+                )}
             </div>
         </section>
     );

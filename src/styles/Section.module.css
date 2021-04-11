@@ -1,6 +1,6 @@
 .sectionContainer {
     margin-top: 90px;
-    background-image: url(https://allmateste.com.br/site-next/_next/static/images/house-a95a89d710daa5f17f0451771d1a228b.jpg);
+    background-image: url(https://allmateste.com.br/site-next/public/images/house-section.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
@@ -16,10 +16,6 @@
     position: absolute;
     z-index: -1;
     min-height: 100%;
-}
-
-.map {
-    min-height: 500px;
 }
 
 .container,
@@ -55,7 +51,6 @@
     color: cadetblue;
     border-bottom: 1px solid cadetblue;
     margin-left: 3px;
-    
 }
 
 .containerStaticPage {
@@ -73,11 +68,6 @@
 
 .servicesContent {
     text-align: center;
-}
-
-.successIcon {
-    display: inline-block;
-    padding:  1rem;
 }
 
 .companyContent {
@@ -115,7 +105,7 @@
 }
 
 .bannerTeam {
-    background-image: url(https://www.aspeninstitute.org/wp-content/uploads/2016/06/Team-Unity-Friends-Meeting-Partnership-Concept-000090609447_Large.jpg);
+    background-image: url(https://allmateste.com.br/site-next/public/images/team.jpg);
     background-color: #f6f6f6;
     background-repeat: no-repeat;
     background-position: center center;
@@ -128,7 +118,7 @@
 }
 
 .bannerCompany {
-    background-image: url(https://ieglobal.vistra.com/sites/default/files/styles/retina_top_banner/public/Private-Company.jpg?itok=3A14luZt);
+    background-image: url(https://allmateste.com.br/site-next/public/images/company.jpg);
     background-color: #f6f6f6;
     background-repeat: no-repeat;
     background-position: center center;
@@ -141,7 +131,7 @@
 }
 
 .banner {
-    background-image: url(https://dunk.brickthemes.com/wp-content/uploads/2020/03/tt_bg.jpg);
+    background-image: url(https://allmateste.com.br/site-next/public/images/tt.jpg);
     background-color: #f6f6f6;
     background-repeat: no-repeat;
     background-position: center center;
@@ -298,19 +288,6 @@
     width: 100%;
 }
 
-.offer {
-    background-color: #f15455;
-    color: #fff;
-    border-radius: 0 15px 15px 0;
-    display: inline-block;
-    padding: 1.2rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-    position: absolute;
-    top: 35px;
-    left: 0;
-}
-
 .newsCard {
     position: relative;
 }
@@ -340,10 +317,6 @@
 .newsCard > a:hover {
     background:rgb(0, 0, 0, .4);
     opacity: 1;
-}
-
-.houseIcon {
-    text-align: center;
 }
 
 .cardInfo {
@@ -402,7 +375,6 @@
     font-weight: 600;
 }
 
-
 .cardFeatures {
     display: flex;
     justify-content: flex-start;
@@ -444,8 +416,7 @@
     margin-left: 1.5rem;
 }
 
-.diagonalBox,
-.diagonalFill {
+.diagonalBox {
     background-color: #eee; 
     position: relative;
 }
@@ -520,7 +491,7 @@
 }
 
 .BuyOrSell {
-    background-image: url("https://dunk.brickthemes.com/wp-content/uploads/2019/12/dane-deaner-bg.jpg");
+    background-image: url(https://allmateste.com.br/site-next/public/images/dane-deaner-bg.jpg);
     background-position: center left;
     background-size: cover;
     min-height: 670px;
@@ -590,18 +561,6 @@
     align-items: center;
 }
 
-.missingMemberImage {    
-    max-height: 400px;
-    max-width: 450px;
-    height: 100%;
-    width: 100%;
-    background-image: url("public/images/person-icon.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
-    background-size: cover;
-}
-
 .TeamContent > div:first-child {
     margin-top: 3.2rem;
     font-size: 2.4rem;
@@ -613,10 +572,6 @@
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: 500;
-}
-
-.TeamMembers {
-    margin-top: 1.4rem;
 }
 
 .teamCellphone {
@@ -749,14 +704,6 @@
     }
 }
 
-@media (min-width: 1200px) {
-    .TeamMembers {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap: 25px;
-    }
-}
-
 @media (max-width: 1366px) {
     .sectionDiv {
         max-width: 1124px;
@@ -767,21 +714,8 @@
     }
 }
 
-@media (min-width: 960px) and (max-width: 1200px) {
-    .TeamMembers {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 25px;
-    }
-}
 
 @media (min-width: 640px) and (max-width: 960px) {
-    .TeamMembers {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 25px;
-    }
-
     .filterList > div,
     .filterList > div select {
         font-size: .8rem;

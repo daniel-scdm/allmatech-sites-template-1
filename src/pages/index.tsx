@@ -14,7 +14,6 @@ import TeamCard from "src/components/TeamCard";
 import NewsCard from "src/components/NewsCard";
 
 import Footer from "src/components/Footer";
-import LazyLoad from "react-lazyload";
 
 import { useFilter } from "src/hooks/useFilter";
 import { useApi } from "src/hooks/useApi";
@@ -50,6 +49,8 @@ export default function Home() {
     if(app.properties.length === 0) {
       init();
     } else {
+      const cities = extractCity(app.properties);
+      setCities(cities);
       setLoadingScreen(false);
     }
   }, []);
@@ -68,7 +69,7 @@ export default function Home() {
 
         const cities = extractCity(res.Imoveis.Imovel);
         setCities(cities);
-      }            
+      }
   }
 
   const extractStreetsBuy = (selectedCity : string) => {
@@ -134,9 +135,9 @@ export default function Home() {
 
           <LatestOfferProperties 
               List={app.properties}
-          />          
-      </section>   
-      
+          />
+      </section>
+
 
       <section className={styles.recentPropertiesContainer}>
           <div>
@@ -149,36 +150,29 @@ export default function Home() {
           <LatestProperties 
             List={app.properties}
           />
-          
       </section>
 
       <section
         className={styles.contactContainer}
       >
-          <LazyLoad 
-            offset={100}  
-            debounce={true} 
-            once 
-          >
-            <section className={styles.advice}>
-              <h1>Precisa de conselho?</h1>
-              <p>Nossos agentes podem te ajudar</p>
-              <p>
-                  Fusce rutrum auctor odio vel sodales maecenas sit amet dignissim ex. 
-                  Sed volutpat hendrerit nisl eget at mattis praesent maximus lectus in 
-                  nulla fringilla, id euismod libero consequat etiam tellus justot.
-              </p>
-              <Link href="/contact">
-                <a>
-                  Contate 
-                </a>
-              </Link>
-            </section>
-          </LazyLoad>  
+          <section className={styles.advice}>
+            <h1>Precisa de conselho?</h1>
+            <p>Nossos agentes podem te ajudar</p>
+            <p>
+                Fusce rutrum auctor odio vel sodales maecenas sit amet dignissim ex.
+                Sed volutpat hendrerit nisl eget at mattis praesent maximus lectus in
+                nulla fringilla, id euismod libero consequat etiam tellus justot.
+            </p>
+            <Link href="/contact">
+              <a>
+                Contate
+              </a>
+            </Link>
+          </section>
 
-          <section className={styles.contactImage}>    
-                 
-          </section>          
+          <section className={styles.contactImage}>
+
+          </section>
       </section>
 
       <section 
@@ -312,9 +306,9 @@ export default function Home() {
                   image={a.image}
                   code={i}
                 />
-              ))}                            
-            </div>            
-          </section>          
+              ))}
+            </div>
+          </section>
       </section>
       <Footer />
     </>    

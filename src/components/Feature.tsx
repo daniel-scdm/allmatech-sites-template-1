@@ -7,15 +7,16 @@ import { IFeatureComponent } from "interfaces/index";
 const FeatureComponent : React.FC<IFeatureComponent> = ({ icon, text, title }) => {
   return (
     <LazyLoad
-        offset={100}  
-        debounce={true}      
+        offset={200}
+        debounce={true}
+        once
     >
       <div className={styles.feature}>
           <div>{icon}</div>
           <div>{title}</div>
           <div>{text}</div>
       </div> 
-    </LazyLoad>     
+    </LazyLoad>
   );
 }
 

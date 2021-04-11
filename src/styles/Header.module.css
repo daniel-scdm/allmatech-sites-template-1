@@ -92,14 +92,12 @@
         text-decoration: none;
         padding: 0 1rem;
     }
-    
+
     .Nav a:hover {
         transform: scale(1.1);
     }
-      
-    
-    
+
     .Burger {
         display: none;
-    }      
+    }
 }

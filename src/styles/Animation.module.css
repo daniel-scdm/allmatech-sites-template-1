@@ -405,14 +405,5 @@
     .SecoundAnimatedContainer {
         animation-name: secoundContainerSmaller;
     }
-    
+
 }
-
-
-
-/*
-
-25%  { left: 10px; transform: rotate(200deg) }
-50%  { left: 30px; transform: rotate(160deg) }
-75%  { left: 50px; transform: rotate(100deg) }
-*/

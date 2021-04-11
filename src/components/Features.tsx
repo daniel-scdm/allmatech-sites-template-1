@@ -5,13 +5,11 @@ import { GiTreasureMap, GiFamilyHouse, GiMoneyStack } from "react-icons/gi";
 
 import { MdBusinessCenter } from "react-icons/md";
 
-
 const Features = () => (
     <>
         <FeatureComponent 
             icon={
               <FaMapMarkedAlt 
-                  
                   color="#707070"
               />
             }
@@ -26,7 +24,6 @@ const Features = () => (
         <FeatureComponent 
             icon={
               <RiComputerLine 
-                  
                   color="#707070"
               />
             }
@@ -41,12 +38,11 @@ const Features = () => (
         <FeatureComponent 
             icon={
               <GiTreasureMap 
-                  
                   color="#707070"
               />
             }
             title="Localizador de alto comando"
-            text={`                
+            text={`
               Eos an high ceilings delicata. 
               Quo ei noted architect discere facilisi. 
               Eos dico historic delicata ex.
@@ -56,12 +52,11 @@ const Features = () => (
         <FeatureComponent 
             icon={
               <MdBusinessCenter 
-                  
                   color="#707070"
               />
             }
             title="Melhores consultores"
-            text={`                
+            text={`
               Eos an high ceilings delicata. 
               Quo ei noted architect discere facilisi. 
               Eos dico historic delicata ex.
@@ -71,7 +66,6 @@ const Features = () => (
         <FeatureComponent 
             icon={
               <GiFamilyHouse 
-                  
                   color="#707070"
               />
             }
@@ -86,12 +80,11 @@ const Features = () => (
         <FeatureComponent 
             icon={
               <GiMoneyStack 
-                  
                   color="#707070"
               />
             }
             title="Mais valorizado"
-            text={`                
+            text={`
               Eos an high ceilings delicata. 
               Quo ei noted architect discere facilisi. 
               Eos dico historic delicata ex.

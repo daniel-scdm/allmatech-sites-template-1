@@ -18,12 +18,12 @@ function Contact() {
 
     const [isSending, setIsSending] = useState(false);
     const [error, setError] = useState("");
-    const [sended, setSended] = useState(false);
+    const [sent, setSent] = useState(false);
 
     const handleContactForm = async (e : any) => {
         e.preventDefault();
         setIsSending(true);
-        setSended(false);
+        setSent(false);
         setError("");
 
         const formValues = {
@@ -37,9 +37,11 @@ function Contact() {
 
         if(!isSuccessfull) {
             setError("Ocorreu um error ao enviar sua mensagem, tente mais tarde.");
+            setIsSending(false);
+            return;
         }
-        setSended(true);
 
+        setSent(true);
         setIsSending(false);
     }
 
@@ -79,7 +81,7 @@ function Contact() {
                                 <button type="submit" value="" disabled={isSending}>
                                     {isSending ? "Enviando..." : "Enviar mensagem"}
                                 </button>
-                                {sended && <IoIosCheckmarkCircleOutline size={35} color={"#24bd75"} />}
+                                {sent && <IoIosCheckmarkCircleOutline size={35} color={"#24bd75"} />}
                             </div>
                         </form>
 

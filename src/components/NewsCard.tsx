@@ -30,7 +30,7 @@ const NewsCard : FC<INewsCard> = ({ image, code, text }) => {
                         width="480"
                         height="320"
                         className={Section.imageNews}
-                    />                    
+                    />
                 )}
 
                 <Link href={{

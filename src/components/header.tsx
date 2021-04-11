@@ -60,9 +60,9 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                             />
                         </a>
                     </Link>
-                    
+
                 </Box>
-                
+
                 <CSSTransition
                     in={!isSmallScreen || isNavVisible}
                     timeout={350}
@@ -88,21 +88,21 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                         <Link href="/contact">
                             <a>Contatos</a>
                         </Link>
-                    </nav>                
+                    </nav>
                 </CSSTransition>    
                 {isSmallScreen && (  
                     <Box 
                         aria-label='Toggle Menu'
                         className={headerStyles.Burger}
-                    >                                    
+                    >
                         <MenuButton 
                             onClick={toggleNav} 
                         />
                     </Box>
-                )}                            
+                )}
             </header>
         </>    
     );
 }
 
-export default HeaderComponent;
+export default React.memo(HeaderComponent);

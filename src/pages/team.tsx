@@ -27,23 +27,23 @@ function Team() {
                 logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
                 logoHeight={40}
                 logoWidth={190}  
-                bgHeaderColor={"#f9f9f9"}      
+                bgHeaderColor={"#f9f9f9"}
             />
             <div className={section.bannerTeam}>
                 <div className={section.bannerOverlay}>
                     <div className={section.bannerText}>
                         <h1>Equipe</h1>
                     </div>
-                </div>            
+                </div>
             </div>
 
-            <section className={section.containerStaticPage}>            
-                <div className={section.TeamContentFull}>               
+            <section className={section.containerStaticPage}>
+                <div className={section.TeamContentFull}>
                     <div className={styles.latestCards}>
                         <TeamCard 
                             name="Fatima Beatriz"
                             cellphone="+1 236 456 7898"
-                            image="https://dunk.brickthemes.com/wp-content/uploads/2020/01/5.jpg"
+                            image="public/images/woman.jpg"
                             linkFB="#"
                             linkLI="#"
                             linkTW="#"
@@ -77,7 +77,7 @@ function Team() {
                         <TeamCard 
                             name="Fatima Beatriz"
                             cellphone="+1 236 456 7898"
-                            image="https://dunk.brickthemes.com/wp-content/uploads/2020/01/5.jpg"
+                            image="public/images/woman.jpg"
                             linkFB="#"
                             linkLI="#"
                             linkTW="#"
@@ -115,11 +115,11 @@ function Team() {
                             linkTW="#"
                             linkI="#"
                         />
-                    </div>          
-                </div>            
-            </section>      
+                    </div>
+                </div>
+            </section>
             <Footer />
-        </>    
+        </>
     );
 }
 

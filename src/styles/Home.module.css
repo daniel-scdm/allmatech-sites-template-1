@@ -45,7 +45,6 @@
   position: relative;
   top: 0;
   opacity: 1;
-  
 }
 
 .feature > div:first-child {
@@ -121,7 +120,7 @@
   width: 100%;  
 }
 
-.contactContainer > div > section {
+.contactContainer > section {
   padding: 1.4rem;
   display: flex;
   justify-content: center;
@@ -132,28 +131,28 @@
   min-height: 561px;
 }
 
-.contactContainer > div > section > h1 {
+.contactContainer > section > h1 {
   font-size: 2.4rem;
   color: #fff;
 }
 
-.contactContainer > div > section > p:nth-child(2) {
+.contactContainer > section > p:nth-child(2) {
   font-size: 1.2rem;
   color: #f15455;
   font-weight: 600;
 }
 
-.contactContainer > div > section > p:nth-child(3) {
+.contactContainer > section > p:nth-child(3) {
   color: #eee;
   font-size: 1.1rem;
   line-height: 35px;
 }
 
-.contactContainer > div > section:nth-child(2) {
+.contactContainer > section:nth-child(2) {
   display: none;
 }
 
-.contactContainer > div > section > a {
+.contactContainer > section > a {
   padding: 1rem;
   border: 1px solid #f15455;
   background: none;
@@ -163,7 +162,7 @@
   transition: all .5s;
 }
 
-.contactContainer > div > section > a:hover {  
+.contactContainer > section > a:hover {  
   background: #f15455;
   color: #fff;  
 }
@@ -179,22 +178,21 @@
   padding: 8rem 1rem 4rem 1rem;
 }
 
-.LoadingScreen {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .partnersContainer {
   margin: 4rem 0;
+  min-height: 120px;
 }
 
 .partnersContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 55px;
+}
+
+.partnersContainer > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -230,6 +228,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 4rem 5rem;
+    min-height: 615px;
   } 
 
   .feature > div:first-child {
