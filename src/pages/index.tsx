@@ -5,6 +5,7 @@ import { useAppContext } from "src/context/parseXml";
 
 import styles from 'src/styles/Home.module.css';
 import Section from 'src/styles/Section.module.css';
+import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 
 import SectionFull from "src/components/fullSection";
 import SearchForm from "src/components/SearchForm";
@@ -28,6 +29,7 @@ import Testimonials from "src/components/Testimonials";
 import Partners from "src/components/Partners";
 import AnimatedLoadingScreen from "src/components/AnimatedLoadingScreen";
 import Header from "src/components/header";
+import Head from "next/head";
 
 import LazyFeatures from "src/components/Features";
 
@@ -100,8 +102,13 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Allmatech Imobiliária</title>
+        <meta name="description" content="O melhor portal de imóveis." />
+      </Head>
+
       <Header 
-          logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+          logoUrl={AllmatechLogo}
           logoHeight={40}
           logoWidth={190}  
           bgHeaderColor={"#f9f9f9"}      

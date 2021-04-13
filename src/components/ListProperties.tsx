@@ -9,10 +9,10 @@ import ListCard from "src/components/ListCard";
 import ListCardMobile from "src/components/ListCardMobile";
 
 import Pagination from "src/components/Pagination";
-
 import { FaThList, FaThLarge } from "react-icons/fa";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import MissingImage from "public/images/missing-image.png";
 
 const PAGE_LIMIT = 15;
 
@@ -20,20 +20,20 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
 
     const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
     const [isCard, setIsCard] = useState(false);
-    
+
     useEffect(() => {
         if(List) {
             paginate(1);    
-        }          
+        }
     }, [List]);
 
-    const paginate = (pg : number) => {      
+    const paginate = (pg : number) => {
         if(List) {
             const slicedList = List.slice((pg - 1) * PAGE_LIMIT, PAGE_LIMIT * pg);
             if(slicedList && slicedList.length > 0) {
                 setPaginatedList(slicedList);
             }
-        }        
+        }
     }
 
     const handlePageChange = (page : IPageDetails) => {
@@ -60,8 +60,8 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
                     </div>
                     Não foi possível encontrar imóveis
                 </div>
-            );            
-        }       
+            );
+        }
 
         return (
             <>
@@ -86,7 +86,7 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
                                 key={p.CodigoImovel}
                                 Cidade={""}
                                 CodigoImovel={p.CodigoImovel}
-                                thumbnail={p.Fotos?.Foto[0].Link[0].URLArquivo}
+                                thumbnail={(p.Fotos && p.Fotos.Foto && Array.isArray(p.Fotos.Foto)) ? p.Fotos?.Foto[0].Link[0].URLArquivo : MissingImage}
                                 QtdBanheiros={p.QtdBanheiros}
                                 QtdDormitorios={p.QtdDormitorios}
                                 QtdVagas={p.QtdVagas}
@@ -109,7 +109,7 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
                                 key={p.CodigoImovel}
                                 Cidade={""}
                                 CodigoImovel={p.CodigoImovel}
-                                thumbnail={p.Fotos?.Foto[0].Link[0].URLArquivo}
+                                thumbnail={(p.Fotos && p.Fotos.Foto && Array.isArray(p.Fotos.Foto)) ? p.Fotos?.Foto[0].Link[0].URLArquivo : "public/images/missing-image.png"}
                                 QtdBanheiros={p.QtdBanheiros}
                                 QtdDormitorios={p.QtdDormitorios}
                                 QtdVagas={p.QtdVagas}
@@ -130,15 +130,15 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
                     pageNeighbours={2}
                     total={List ? List.length : 0}
                     onPageChanged={handlePageChange} 
-                />                
+                />
             </> 
-        );     
+        );
     }
 
     return (
         <div className={property.container}>
-            {renderContainerList()}            
-        </div>            
+            {renderContainerList()}
+        </div>
     );
 }
 

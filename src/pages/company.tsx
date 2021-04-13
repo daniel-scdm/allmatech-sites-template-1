@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
+import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 import section from 'src/styles/Section.module.css';
 import Header from "src/components/header";
+import Head from "next/head";
 
 import Footer from "src/components/Footer";
  
@@ -10,8 +12,12 @@ function Company() {
 
   return (
     <>
+        <Head>
+            <title>Allmatech Imobiliária - Quem somos</title>
+            <meta name="description" content="Venha nos conhecer." />
+        </Head>
         <Header 
-            logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+            logoUrl={AllmatechLogo}
             logoHeight={40}
             logoWidth={190}  
             bgHeaderColor={"#f9f9f9"}      

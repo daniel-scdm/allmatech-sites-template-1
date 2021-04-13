@@ -3,6 +3,8 @@ import { jsx } from 'theme-ui';
 
 import section from 'src/styles/Section.module.css';
 import Header from "src/components/header";
+import Head from "next/head";
+import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 
 import Footer from "src/components/Footer";
  
@@ -10,8 +12,12 @@ function Services() {
 
   return (
     <>
+        <Head>
+            <title>Allmatech Imobiliária - Serviços</title>
+            <meta name="description" content="Vejas todos os nossos serviços." />
+        </Head>
         <Header 
-            logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+            logoUrl={AllmatechLogo}
             logoHeight={40}
             logoWidth={190}  
             bgHeaderColor={"#f9f9f9"}      

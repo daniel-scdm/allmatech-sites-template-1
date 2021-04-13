@@ -12,20 +12,20 @@ const AnimatedCatchPhrase : React.FC<IAnimatedCatchPhrase> = () => {
         <div className={Section.catchPhrase}>
             <Flex className={Animation.section}>
                 <div className={Animation.CPFirst}>
-                    <div>E</div>
-                    <div>N</div>
-                    <div>C</div>
-                    <div>O</div>
-                    <div>N</div>
-                    <div>T</div>
-                    <div>R</div>
-                    <div>E</div>
+                    <h1>E</h1>
+                    <h1>N</h1>
+                    <h1>C</h1>
+                    <h1>O</h1>
+                    <h1>N</h1>
+                    <h1>T</h1>
+                    <h1>R</h1>
+                    <h1>E</h1>
                 </div>
 
                 <div className={Animation.CPSecound}>
-                    <div>S</div>
-                    <div>U</div>
-                    <div>A</div>                
+                    <h1>S</h1>
+                    <h1>U</h1>
+                    <h1>A</h1>
                 </div>
             </Flex>
 

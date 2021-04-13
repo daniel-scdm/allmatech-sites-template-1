@@ -12,6 +12,8 @@
     "azure-maps-control": "^2.0.32",
     "image-trace-loader": "^1.0.2",
     "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "next-images": "^1.7.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^9.0.0",
     "jimp": "^0.16.1",
@@ -33,7 +35,9 @@
     "responsive-loader": "^2.3.0",
     "svg-sprite-loader": "^6.0.2",
     "text-mask-addons": "^3.8.0",
-    "theme-ui": "^0.3.5"
+    "theme-ui": "^0.3.5",
+    "url-loader": "^4.1.1",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.37",

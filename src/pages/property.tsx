@@ -7,19 +7,20 @@ import Section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
 
 import Header from "src/components/header";
-
 import dynamic from "next/dynamic";
 
 import { useRouter } from 'next/router';
 import { useFilter } from "src/hooks/useFilter";
 import { useApi } from "src/hooks/useApi";
+import Head from "next/head";
 
 import { FaHouseDamage } from "react-icons/fa";
-
 import { IContext, IPropertyXML } from "interfaces";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import Link from "next/link";
+import MissingImage from "public/images/missing-image.png";
+import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 
 import Footer from "src/components/Footer";
 
@@ -48,7 +49,7 @@ const LazyPropertyComponent = dynamic(
                 <Skeleton className={property.skeletonMessage} />
             </div>
         </SkeletonTheme>
-      );      
+      );
   },
   ssr: false
 }
@@ -118,8 +119,12 @@ function Property() {
 
   return (
     <>
+      <Head>
+          <title>Allmatech Imobiliária - {prt?.TituloImovel}</title>
+          <meta name="description" content="Apenas os melhores imóveis para você." />
+      </Head>
       <Header 
-          logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+          logoUrl={AllmatechLogo}
           logoHeight={40}
           logoWidth={190}  
           bgHeaderColor={"#f9f9f9"}      
@@ -140,7 +145,7 @@ function Property() {
             </Link>
             <span>{">"}</span>
             Imóvel
-          </div>         
+          </div>
           <div className={property.propertyDetailsContainer}>
             <main>
               <LazyPropertyComponent 
@@ -159,13 +164,13 @@ function Property() {
                   Guarita={prt?.Guarita}
                   ArCondicionado={prt?.ArCondicionado}
                   Fotos={prt?.Fotos}
-                  thumbnail={prt?.Fotos?.Foto[0].Link[1].URLArquivo}    
+                  thumbnail={(prt?.Fotos && prt.Fotos.Foto && Array.isArray(prt.Fotos.Foto)) ? prt.Fotos?.Foto[0].Link[0].URLArquivo : MissingImage}    
                   features={features}
               />
             </main>
-          </div>           
+          </div>
       </section>
-      
+
       <Footer />
     </>    
   )

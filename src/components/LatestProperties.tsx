@@ -1,6 +1,7 @@
 import { useEffect, useState, memo } from "react";
 import Card from "src/components/Card";
 import styles from 'src/styles/Home.module.css';
+import MissingImage from "public/images/missing-image.png";
 
 import { IPropertyXML } from "interfaces";
 
@@ -76,7 +77,7 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
                             bedrooms={p.QtdDormitorios}
                             garages={p.QtdVagas}
                             priceSell={p.PrecoVenda}
-                            image={p.Fotos?.Foto[0].Link[0].URLArquivo}
+                            image={(p.Fotos && p.Fotos.Foto && Array.isArray(p.Fotos.Foto)) ? p.Fotos?.Foto[0].Link[0].URLArquivo : MissingImage}
                             code={p.CodigoImovel}
                         />
                 ))}

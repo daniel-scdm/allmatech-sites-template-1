@@ -41,7 +41,6 @@ export const useApi = () => {
         const isSuccefull = fetch("http://localhost/index.php", myInit)
             .then((data) => data.json())
             .then(res => {
-                console.log(res)
                 if(!res && !res.Success) {
                     return false;
                 }

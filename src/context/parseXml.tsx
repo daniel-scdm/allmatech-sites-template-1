@@ -4,7 +4,7 @@ import { IArticle, IPropertyXML } from "interfaces";
 const Articles : Array<IArticle> = [
   {
     title: "Lorem ipsum dolor sit amet",
-    image: "next-site/public/images/house.jpg",
+    image: "public/images/house.jpg",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere semper tellus, 
     sed gravida diam viverra sit amet. Vestibulum malesuada blandit tellus. Vestibulum pretium mattis rhoncus. 
     Interdum et malesuada fames ac ante ipsum primis in faucibus. 
@@ -14,7 +14,7 @@ const Articles : Array<IArticle> = [
   },
   {
     title: "Lorem ipsum dolor sit amet",
-    image: "next-site/public/images/house.jpg",
+    image: "public/images/house.jpg",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere semper tellus, 
     sed gravida diam viverra sit amet. Vestibulum malesuada blandit tellus. Vestibulum pretium mattis rhoncus. 
     Interdum et malesuada fames ac ante ipsum primis in faucibus. 
@@ -24,7 +24,7 @@ const Articles : Array<IArticle> = [
   },
   {
     title: "Lorem ipsum dolor sit amet",
-    image: "next-site/public/images/house.jpg",
+    image: "public/images/house.jpg",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere semper tellus, 
     sed gravida diam viverra sit amet. Vestibulum malesuada blandit tellus. Vestibulum pretium mattis rhoncus. 
     Interdum et malesuada fames ac ante ipsum primis in faucibus. 
@@ -34,7 +34,7 @@ const Articles : Array<IArticle> = [
   },
   {
     title: "Lorem ipsum dolor sit amet",
-    image: "next-site/public/images/house.jpg",
+    image: "public/images/house.jpg",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere semper tellus, 
     sed gravida diam viverra sit amet. Vestibulum malesuada blandit tellus. Vestibulum pretium mattis rhoncus. 
     Interdum et malesuada fames ac ante ipsum primis in faucibus. 

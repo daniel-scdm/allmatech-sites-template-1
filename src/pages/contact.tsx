@@ -11,6 +11,8 @@ import { FiMail } from "react-icons/fi";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 import Header from "src/components/header";
+import Head from "next/head";
+import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 import { useApi } from "src/hooks/useApi";
 
 function Contact() {
@@ -47,8 +49,12 @@ function Contact() {
 
     return (
         <>
+            <Head>
+                <title>Allmatech Imobiliária - Contato</title>
+                <meta name="description" content="Venha tomar um café conosco." />
+            </Head>
             <Header
-                logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+                logoUrl={AllmatechLogo}
                 logoHeight={40}
                 logoWidth={190}
                 bgHeaderColor={"#f9f9f9"}

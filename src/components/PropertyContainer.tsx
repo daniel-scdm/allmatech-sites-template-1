@@ -67,11 +67,13 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
 
     return (
         <div className={property.containerProperty}>
-            <Carousel 
-                activeModal={showGallery}
-                setActiveModal={handleShowModal}
-                ListPhotos={Fotos?.Foto}
-            />
+            {(Fotos && Fotos.Foto && Array.isArray(Fotos?.Foto)) && (
+                <Carousel 
+                    activeModal={showGallery}
+                    setActiveModal={handleShowModal}
+                    ListPhotos={Fotos?.Foto}
+                />
+            )}
 
             <h3 className={property.propertyTitle}>
                 {TituloImovel}
@@ -84,19 +86,21 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
 
             <div className={property.image}>
                 <img
-                    src={thumbnail ? thumbnail : "public/images/empty.jpg"}
+                    src={thumbnail}
                     height={500}
                 />
 
                 <ul className={property.galleryButton}>
-                    <li>
-                        <a 
-                            href="#" 
-                            onClick={() => setShowGallery(true)}
-                        >
-                            <FaCamera size={20} color={"#fff"} />
-                        </a>
-                    </li>
+                    {(Fotos && Fotos.Foto && Array.isArray(Fotos?.Foto)) && (
+                        <li>
+                            <a 
+                                href="#" 
+                                onClick={() => setShowGallery(true)}
+                            >
+                                <FaCamera size={20} color={"#fff"} />
+                            </a>
+                        </li>
+                    )}
                     <li>
                         <a href="#">
                             <FaMapMarkedAlt size={20}  color={"#fff"}/>

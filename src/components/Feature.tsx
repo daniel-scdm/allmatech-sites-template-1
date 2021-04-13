@@ -8,7 +8,6 @@ const FeatureComponent : React.FC<IFeatureComponent> = ({ icon, text, title }) =
   return (
     <LazyLoad
         offset={200}
-        debounce={true}
         once
     >
       <div className={styles.feature}>

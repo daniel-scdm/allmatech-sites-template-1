@@ -1,8 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box, MenuButton } from "theme-ui";
 
-import Head from 'next/head'
-
 import Link from "next/link";
 
 import { IHeaderComponent } from "interfaces/index";
@@ -42,11 +40,6 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
     }
     return (
         <>
-            <Head>
-                <title>Allmatech Template 1</title>
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            </Head>
-
             <header className={headerStyles.Header} sx={{ backgroundColor: bgHeaderColor }}>
                 <Box>
                     <Link href="https://allmateste.com.br/site-next/">

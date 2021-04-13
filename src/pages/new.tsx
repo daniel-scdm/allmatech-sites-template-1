@@ -7,8 +7,10 @@ import property from 'src/styles/Property.module.css';
 import Footer from "src/components/Footer";
 
 import Header from "src/components/header";
+import Head from "next/head";
 
 import NewsContainer from "src/components/NewsContainer";
+import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 
 import { useRouter } from 'next/router';
 import { useAppContext } from "src/context/parseXml";
@@ -78,8 +80,12 @@ function New() {
 
   return (
     <>
+      <Head>
+          <title>Allmatech Imobiliária - {news?.text}</title>
+          <meta name="description" content="As notícias mais recentes sobre nossos imóveis." />
+      </Head>
       <Header 
-          logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+          logoUrl={AllmatechLogo}
           logoHeight={40}
           logoWidth={190}  
           bgHeaderColor={"#f9f9f9"}      

@@ -6,8 +6,11 @@ import section from 'src/styles/Section.module.css';
 import styles from 'src/styles/Home.module.css';
 import Footer from "src/components/Footer";
 import TeamCard from "src/components/TeamCard";
+
+import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 import AnimatedLoadingScreen from "src/components/AnimatedLoadingScreen";
 import Header from "src/components/header";
+import Head from "next/head";
 
 function Team() {
 
@@ -23,8 +26,12 @@ function Team() {
 
     return (
         <>
+            <Head>
+                <title>Allmatech Imobiliária - Equipe</title>
+                <meta name="description" content="Conheça a nossa equipe." />
+            </Head>
             <Header 
-                logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+                logoUrl={AllmatechLogo}
                 logoHeight={40}
                 logoWidth={190}  
                 bgHeaderColor={"#f9f9f9"}

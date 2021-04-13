@@ -9,6 +9,8 @@ import property from 'src/styles/Property.module.css';
 
 import FilterFormList from "src/components/FilterFormList";
 import Header from "src/components/header";
+import Head from "next/head";
+import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 
 import Footer from "src/components/Footer";
 import { IPropertyXML, IContext } from 'interfaces';
@@ -53,7 +55,7 @@ function List() {
         await app.setProperties(res.Imoveis.Imovel);  
   
         handleQuery();
-      }            
+      }
   }
 
   const handleQuery = () => {
@@ -63,7 +65,7 @@ function List() {
     setListProperties(filteredProperties);     
     setIsLoading(false);
     setIsLoadingScreen(false);   
-          
+
   }
 
   const handleFilter = (query: object) => {
@@ -102,11 +104,16 @@ function List() {
 
   return (
     <>
+      <Head>
+          <title>Allmatech Imobiliária - Imóveis</title>
+          <meta name="description" content="Apenas os melhores imóveis para você." />
+      </Head>
+
       <Header 
-          logoUrl={"public/images/Allmatech-logo-complete.jpeg"}
+          logoUrl={AllmatechLogo}
           logoHeight={40}
           logoWidth={190}  
-          bgHeaderColor={"#f9f9f9"}      
+          bgHeaderColor={"#f9f9f9"}
       />
       <section className={Section.container}>
           <div className={Section.lineLinks}>
@@ -123,17 +130,17 @@ function List() {
            <aside>
                 {renderContent()}
             </aside>
-            <main>                        
+            <main>
               <ListProperties 
                 List={listProperties}
                 isLoading={isLoading}
               />
-            </main>            
-          </div>          
+            </main>
+          </div>
       </section>
-      
+
       <Footer />
-    </>    
+    </>
   )
 }
 
