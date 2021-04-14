@@ -76,8 +76,8 @@
   background-color: #fff;
 }
 
-.recentPropertiesContainer > div:first-child,
-.partners > div:first-child{
+.recentPropertiesContainer > h1:first-child,
+.partners > h1:first-child{
   margin-top: 3.2rem;
   font-size: 2.4rem;
   font-weight: 600;
@@ -311,7 +311,7 @@
     font-size: .8rem;
   }
 
-  .recentPropertiesContainer > div:first-child {
+  .recentPropertiesContainer > h1:first-child {
     font-size: 1.8rem;    
   }
 }

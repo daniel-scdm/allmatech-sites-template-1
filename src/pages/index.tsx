@@ -5,7 +5,6 @@ import { useAppContext } from "src/context/parseXml";
 
 import styles from 'src/styles/Home.module.css';
 import Section from 'src/styles/Section.module.css';
-import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 
 import SectionFull from "src/components/fullSection";
 import SearchForm from "src/components/SearchForm";
@@ -108,7 +107,6 @@ export default function Home() {
       </Head>
 
       <Header 
-          logoUrl={AllmatechLogo}
           logoHeight={40}
           logoWidth={190}  
           bgHeaderColor={"#f9f9f9"}      
@@ -133,9 +131,9 @@ export default function Home() {
         }}
         className={styles.recentPropertiesContainer}
       >
-          <div>
+          <h1>
               Super destaques
-          </div>
+          </h1>
           <div sx={{ color: "#00205c" }}>
               Cheque alguns de nossos imóveis em  super destaque
           </div>
@@ -147,9 +145,9 @@ export default function Home() {
 
 
       <section className={styles.recentPropertiesContainer}>
-          <div>
+          <h1>
               Últimas aquisições
-          </div>
+          </h1>
           <div sx={{ color: "#00205c" }}>
               Cheque alguns de nossos imóveis em destaque
           </div>
@@ -206,9 +204,9 @@ export default function Home() {
       </div>
       
       <section className={styles.partners}>
-        <div>
+        <h1>
               Parceiros
-        </div>
+        </h1>
         <div className={styles.partnersContainer}>
             <Partners />
         </div>
@@ -223,9 +221,9 @@ export default function Home() {
         className={Section.BuyOrSell}
       >
         <div className={Section.BuyOrSellContent}>
-          <div>
+          <h1>
             Compre ou venda
-          </div>
+          </h1>
           <div>
             Procurando comprar um novo imóvel ou vender um existente?
           </div>
@@ -254,9 +252,9 @@ export default function Home() {
         className={Section.Team}
       >
         <div className={Section.TeamContent}>
-          <div>
+          <h1>
             Equipe
-          </div>
+          </h1>
           <div sx={{ color: "#00205c" }}>
             De uma olhada em nossa equipe
           </div>
@@ -294,9 +292,9 @@ export default function Home() {
       <section 
         className={styles.recentPropertiesContainer}
       >
-          <div>
+          <h1>
               Noticias e Atualizações
-          </div>
+          </h1>
           <div sx={{ color: "#00205c" }}>              
               Novas informações, novos dados, novas opções
           </div>

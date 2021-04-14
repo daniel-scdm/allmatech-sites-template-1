@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import React from 'react';
 
-const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logoHeight, bgHeaderColor }) => {
+const HeaderComponent : React.FC<IHeaderComponent> = ({ logoWidth, logoHeight, bgHeaderColor }) => {
 
     const [isNavVisible, setNavVisibility] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -42,10 +42,10 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
         <>
             <header className={headerStyles.Header} sx={{ backgroundColor: bgHeaderColor }}>
                 <Box>
-                    <Link href="https://allmateste.com.br/site-next/">
+                    <Link href="/">
                         <a>
                             <img 
-                                src={logoUrl}
+                                src={"public/images/Allmatech-logo-complete.jpeg"}
                                 width={logoWidth}
                                 height={logoHeight}
                                 alt="Picture of the author"
@@ -63,7 +63,7 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoUrl, logoWidth, logo
                     unmountOnExit
                 >
                     <nav className={headerStyles.Nav}>
-                        <Link href="https://allmateste.com.br/site-next/">
+                        <Link href="/">
                             <a>Home</a>
                         </Link>
                         <Link href="/company">

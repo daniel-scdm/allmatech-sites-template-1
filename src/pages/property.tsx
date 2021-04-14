@@ -20,7 +20,6 @@ import { IContext, IPropertyXML } from "interfaces";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import Link from "next/link";
 import MissingImage from "public/images/missing-image.png";
-import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 
 import Footer from "src/components/Footer";
 
@@ -124,7 +123,6 @@ function Property() {
           <meta name="description" content="Apenas os melhores imóveis para você." />
       </Head>
       <Header 
-          logoUrl={AllmatechLogo}
           logoHeight={40}
           logoWidth={190}  
           bgHeaderColor={"#f9f9f9"}      

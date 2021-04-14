@@ -56,6 +56,22 @@
 
 .containerStaticPage {
     margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerStaticPage > h1,
+.containerStaticPage > div {
+    width: 100%;
+}
+
+.pageError {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #707070;
 }
 
 .contactsContainer,
@@ -507,7 +523,7 @@
     padding: 0 50px;
 }
 
-.BuyOrSellContent > div:first-child {
+.BuyOrSellContent > h1:first-child {
     font-size: 2.4rem;
     padding: 1.6rem 0;
 }
@@ -562,7 +578,7 @@
     align-items: center;
 }
 
-.TeamContent > div:first-child {
+.TeamContent > h1:first-child {
     margin-top: 3.2rem;
     font-size: 2.4rem;
     font-weight: 600;

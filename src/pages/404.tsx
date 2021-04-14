@@ -7,13 +7,13 @@ import Head from "next/head";
 
 import Footer from "src/components/Footer";
  
-function Services() {
+function Custom404() {
 
   return (
     <>
         <Head>
-            <title>Allmatech Imobiliária - Serviços</title>
-            <meta name="description" content="Vejas todos os nossos serviços." />
+            <title>Allmatech Imobiliária - 404</title>
+            <meta name="description" content="404 - Página não encontrada." />
         </Head>
         <Header 
             logoHeight={40}
@@ -29,13 +29,13 @@ function Services() {
         </div>
 
         <section className={section.containerStaticPage}>
-            <div className={section.servicesContent}>
-                Conteudo definido pelo cliente
-            </div>
+            <h1 className={section.pageError}>
+                404 - Página não encontrada.
+            </h1>
         </section>
         <Footer />
     </>
   )
 }
 
-export default Services;
+export default Custom404;

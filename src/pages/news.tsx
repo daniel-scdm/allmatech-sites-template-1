@@ -9,7 +9,6 @@ import property from 'src/styles/Property.module.css';
 import ListNews from "src/components/NewsList";
 import FilterNewsList from "src/components/FilterNewsList";
 import Header from "src/components/header";
-import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 
 import Footer from "src/components/Footer";
 import { ICardNews, IContext } from 'interfaces';
@@ -86,7 +85,6 @@ function News() {
           <meta name="description" content="As notícias mais recentes sobre nossos imóveis." />
       </Head>
       <Header 
-          logoUrl={AllmatechLogo}
           logoHeight={40}
           logoWidth={190}  
           bgHeaderColor={"#f9f9f9"}      

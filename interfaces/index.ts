@@ -13,7 +13,6 @@ export type IArticle = {
 }
 
 export type IHeaderComponent = {
-  logoUrl: string,
   logoWidth: number,
   logoHeight: number,
   bgHeaderColor: string

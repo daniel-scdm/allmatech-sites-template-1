@@ -10,7 +10,6 @@ import Header from "src/components/header";
 import Head from "next/head";
 
 import NewsContainer from "src/components/NewsContainer";
-import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 
 import { useRouter } from 'next/router';
 import { useAppContext } from "src/context/parseXml";
@@ -85,7 +84,6 @@ function New() {
           <meta name="description" content="As notícias mais recentes sobre nossos imóveis." />
       </Head>
       <Header 
-          logoUrl={AllmatechLogo}
           logoHeight={40}
           logoWidth={190}  
           bgHeaderColor={"#f9f9f9"}      

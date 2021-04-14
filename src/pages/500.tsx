@@ -7,13 +7,13 @@ import Head from "next/head";
 
 import Footer from "src/components/Footer";
  
-function Services() {
+function Custom500() {
 
   return (
     <>
         <Head>
-            <title>Allmatech Imobiliária - Serviços</title>
-            <meta name="description" content="Vejas todos os nossos serviços." />
+            <title>Allmatech Imobiliária - 500</title>
+            <meta name="description" content="500 - Error interno no servidor." />
         </Head>
         <Header 
             logoHeight={40}
@@ -29,13 +29,13 @@ function Services() {
         </div>
 
         <section className={section.containerStaticPage}>
-            <div className={section.servicesContent}>
-                Conteudo definido pelo cliente
-            </div>
+            <h1 className={section.pageError}>
+                500 - Error interno no servidor.
+            </h1>
         </section>
         <Footer />
     </>
   )
 }
 
-export default Services;
+export default Custom500;

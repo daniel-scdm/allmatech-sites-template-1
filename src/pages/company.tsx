@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import AllmatechLogo from "public/images/Allmatech-logo-complete.jpeg";
 import section from 'src/styles/Section.module.css';
 import Header from "src/components/header";
 import Head from "next/head";
@@ -17,7 +16,6 @@ function Company() {
             <meta name="description" content="Venha nos conhecer." />
         </Head>
         <Header 
-            logoUrl={AllmatechLogo}
             logoHeight={40}
             logoWidth={190}  
             bgHeaderColor={"#f9f9f9"}      
