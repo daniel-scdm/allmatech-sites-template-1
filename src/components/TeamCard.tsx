@@ -14,21 +14,23 @@ import Section from "src/styles/Section.module.css";
 const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, linkTW, linkI }) => {
 
     return (
-        <div className={Section.card}>
-            <div>
+        <div className={Section.teamCard}>
                 {image && (
-                    <img 
-                        src={image}
-                        height="300"
-                    />
-                )} 
+                    <div className={Section.teamImage}>
+                        <img
+                            src={image}
+                            height="300"
+                        />
+                    </div>
+                )}
                 {!image && (
-                    <img 
-                        src={MissingImage}
-                        height="300"
-                    />                    
-                )}              
-            </div>
+                    <div className={Section.noImage}>
+                        <img
+                            src={MissingImage}
+                            height="300"
+                        />
+                    </div>
+                )}
             <div className={Section.cardInfo}>
                 <h2>
                     {name}

@@ -75,9 +75,9 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                 />
             )}
 
-            <h3 className={property.propertyTitle}>
+            <h1 className={property.propertyTitle}>
                 {TituloImovel}
-            </h3> 
+            </h1> 
             <div className={property.cardPrice}>
                 {(PrecoVenda && !Array.isArray(PrecoVenda)) && <span>Venda: R$ {numberWithCommas(PrecoVenda)}</span>}
 

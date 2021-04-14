@@ -1,7 +1,7 @@
 .Header {
     position: fixed;
     top: 0; /* Stick it to the top */
-    max-height: 90px;
+    max-height: 110px;
     height: 100%;
     width: 100vw;
 
@@ -55,7 +55,18 @@
     letter-spacing: 1px;
 }
 
+.icons {
+    display: none;
+}
 
+.icons a {
+    padding: 0 .5rem;
+    transition: all .3s;
+}
+
+.icons a:hover {
+    color: #f15455;
+}
 
 @media (min-width: 1024px) {
 
@@ -63,27 +74,27 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100vw;     
+        width: 100vw;
     }
 
     .Nav a:hover {
         transform: scale(1.1);
     }
-    
+
     .Logo {
         height: auto;
-        width: auto;        
+        width: auto;
     }
-    
+
     .Nav {
-        display: flex;    
-        position: initial;    
+        display: flex;
+        position: initial;
         align-items: center;
         background-color: #f9f9f9;
         padding: 0;
         width: auto;
     }
-    
+
     .Nav a {
         color: #222;
         font-size: 18px;
@@ -99,5 +110,14 @@
 
     .Burger {
         display: none;
+    }
+
+    .icons {
+        display: block;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 10px;
+        right: 2.4rem;
     }
 }

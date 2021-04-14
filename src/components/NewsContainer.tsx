@@ -6,22 +6,20 @@ import property from 'src/styles/Property.module.css';
 
 import { ICardNews } from "interfaces/index";
 
-
-
 const NewsContainer : React.FC<ICardNews> = ({ image, text, title }) => {
     return (
         <div className={property.containerProperty}>
-            
-            <h3 className={property.propertyTitle}>
+
+            <h1 className={property.propertyTitle}>
                 {title}
-            </h3>             
+            </h1>
 
             <div className={property.image}>
                 <img
                     src={image ? image : "public/images/empty.jpg"}
                     height={500}
-                />                
-            </div>    
+                />
+            </div>
 
             <div className={property.propertyInfoContainer}>
                 <div className={property.propertyDescription}>
@@ -29,7 +27,7 @@ const NewsContainer : React.FC<ICardNews> = ({ image, text, title }) => {
                         {text}
                     </p>
                 </div>
-            </div>            
+            </div>
         </div> 
     )
 }
