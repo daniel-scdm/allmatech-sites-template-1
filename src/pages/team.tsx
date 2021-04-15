@@ -29,9 +29,7 @@ function Team() {
                 <title>Allmatech Imobiliária - Equipe</title>
                 <meta name="description" content="Conheça a nossa equipe." />
             </Head>
-            <Header 
-                logoHeight={40}
-                logoWidth={190}  
+            <Header
                 bgHeaderColor={"#f9f9f9"}
             />
             <div className={section.bannerTeam}>

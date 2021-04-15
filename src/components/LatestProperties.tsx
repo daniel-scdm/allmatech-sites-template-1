@@ -1,9 +1,9 @@
 import { useEffect, useState, memo } from "react";
-import Card from "src/components/Card";
 import styles from 'src/styles/Home.module.css';
 import MissingImage from "public/images/missing-image.png";
 
 import { IPropertyXML } from "interfaces";
+import FeatureCard from "./featureCard";
 
 type ListPropterties = {
     List: Array<IPropertyXML>
@@ -64,12 +64,14 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
         );
     }
 
+    console.log(paginatedList)
+
     return (
         <section className={styles.spacingContainer}>
             <div className={styles.latestCards}>
                 {paginatedList.map(
                     (p) => (
-                        <Card 
+                        <FeatureCard 
                             key={p.CodigoImovel}
                             title={p.TituloImovel}
                             text={p.Observacao}
@@ -77,6 +79,7 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
                             bedrooms={p.QtdDormitorios}
                             garages={p.QtdVagas}
                             priceSell={p.PrecoVenda}
+                            priceRent={p.PrecoLocacao}
                             image={(p.Fotos && p.Fotos.Foto && Array.isArray(p.Fotos.Foto)) ? p.Fotos?.Foto[0].Link[0].URLArquivo : MissingImage}
                             code={p.CodigoImovel}
                         />

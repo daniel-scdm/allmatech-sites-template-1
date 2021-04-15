@@ -83,9 +83,7 @@ function New() {
           <title>Allmatech Imobiliária - {news?.text}</title>
           <meta name="description" content="As notícias mais recentes sobre nossos imóveis." />
       </Head>
-      <Header 
-          logoHeight={40}
-          logoWidth={190}  
+      <Header           
           bgHeaderColor={"#f9f9f9"}      
       />
       <section className={Section.container}>   

@@ -108,9 +108,7 @@ function List() {
           <meta name="description" content="Apenas os melhores imóveis para você." />
       </Head>
 
-      <Header 
-          logoHeight={40}
-          logoWidth={190}  
+      <Header
           bgHeaderColor={"#f9f9f9"}
       />
       <section className={Section.container}>

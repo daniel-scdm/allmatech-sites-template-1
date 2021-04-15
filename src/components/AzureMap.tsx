@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { AzureMap, AzureMapsProvider, IAzureMapOptions } from 'react-azure-maps'
+import { AzureMap, AzureMapsProvider, IAzureMapOptions } from 'react-azure-maps';
 import * as atlas from 'azure-maps-control';
 
 interface IMaps {
@@ -25,12 +25,14 @@ const AzureMapComponent : FC<IMaps> = ({ lg, lt }) => {
       center: renderCenter(),
       zoom: 15,
       language: atlas.getLanguage(),
-      showLogo: false
+      showLogo: false,
   }
 
   return (
     <AzureMapsProvider>
-      <AzureMap options={option} />
+      <div style={{ height: "340px "}}>
+        <AzureMap options={option} />
+      </div>
     </AzureMapsProvider>
   );
 

@@ -58,7 +58,7 @@ function Property() {
 
   const app : IContext = useAppContext();
 
-  const { query, back } = useRouter();
+  const { query } = useRouter();
   const { getPropertyByCode } = useFilter();
   const { _fetchData } = useApi();
 
@@ -122,22 +122,20 @@ function Property() {
           <title>Allmatech Imobiliária - {prt?.TituloImovel}</title>
           <meta name="description" content="Apenas os melhores imóveis para você." />
       </Head>
-      <Header 
-          logoHeight={40}
-          logoWidth={190}  
-          bgHeaderColor={"#f9f9f9"}      
+      <Header
+          bgHeaderColor={"#f9f9f9"}
       />
       <section className={Section.container}> 
           <div className={Section.lineLinksItem}>
 
-            <Link href="https://allmateste.com.br/site-next/">
+            <Link href="/">
               <a>
                 Home 
               </a>
             </Link>
             <span>{">"}</span> 
-            <Link href={"#"}>
-              <a onClick={() => back()}>
+            <Link href="/list">
+              <a>
                 Imóveis 
               </a>
             </Link>
@@ -162,7 +160,7 @@ function Property() {
                   Guarita={prt?.Guarita}
                   ArCondicionado={prt?.ArCondicionado}
                   Fotos={prt?.Fotos}
-                  thumbnail={(prt?.Fotos && prt.Fotos.Foto && Array.isArray(prt.Fotos.Foto)) ? prt.Fotos?.Foto[0].Link[0].URLArquivo : MissingImage}    
+                  thumbnail={(prt?.Fotos && prt.Fotos.Foto && Array.isArray(prt.Fotos.Foto)) ? prt.Fotos?.Foto[0].Link[1].URLArquivo : MissingImage}    
                   features={features}
               />
             </main>

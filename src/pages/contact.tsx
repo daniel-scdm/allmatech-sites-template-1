@@ -53,8 +53,6 @@ function Contact() {
                 <meta name="description" content="Venha tomar um café conosco." />
             </Head>
             <Header
-                logoHeight={40}
-                logoWidth={190}
                 bgHeaderColor={"#f9f9f9"}
             />
             <div className={section.banner}>

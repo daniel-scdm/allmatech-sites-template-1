@@ -2,465 +2,3192 @@
 <Carga xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Imoveis>
     <Imovel>
-      <CodigoImovel>VILLA27918V01</CodigoImovel>
-      <DataCadastro>3/24/2021 1:57:39 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 6:42:20 PM</DataUltimateracao>
-      <TipoImovel>Casa</TipoImovel>
-      <SubTipoImovel>Casa Padrao</SubTipoImovel>
-      <CategoriaImovel>Terrea</CategoriaImovel>
-      <Cidade>BRASILIA</Cidade>
-      <Bairro>Setor Hab. Jardim Botânico (Lago Sul)</Bairro>
-      <Endereco>Condominio Lago Sul</Endereco>
-      <Numero>01</Numero>
-      <CEP>71680361</CEP>
-      <UF>DF</UF>
-      <Latitude>-15.7939394201285</Latitude>
-      <Longitude>-47.8828057615547</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27918 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE.
-]]></Observacao>
-      <PrecoVenda>25000</PrecoVenda>
-      <PrecoLocacao />
-      <PrecoLocacaoTemporada />
-      <QtdDormitorios>4</QtdDormitorios>
-      <QtdSuites>4</QtdSuites>
-      <QtdBanheiros>3</QtdBanheiros>
-      <QtdSalas>2</QtdSalas>
-      <QtdVagas>5</QtdVagas>
-      <QtdElevador>3</QtdElevador>
-      <PrecoCondominio>300</PrecoCondominio>
-      <Quintal>1</Quintal>
-      <Hidromassagem>1</Hidromassagem>
-      <TipoOferta>1</TipoOferta>
-      <Fotos>
-        <Foto>
-          <Legenda>Área de lazer </Legenda>
-          <Link>
-            <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27918_267de33e-0e5d-46cf-a35c-6d8a7b55fa99_md.jpg</URLArquivo>
-          </Link>
-          <Link>
-            <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27918_267de33e-0e5d-46cf-a35c-6d8a7b55fa99.jpg</URLArquivo>
-          </Link>
-        </Foto>
-      </Fotos>
-    </Imovel>
-    <Imovel>
-      <CodigoImovel>VILLA27940V01</CodigoImovel>
-      <DataCadastro>4/9/2021 6:48:26 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 6:49:59 PM</DataUltimateracao>
-      <TipoImovel>Casa</TipoImovel>
-      <SubTipoImovel>Casa Padrao</SubTipoImovel>
-      <CategoriaImovel>Terrea</CategoriaImovel>
-      <Cidade>BRASILIA</Cidade>
-      <Bairro>Asa Norte</Bairro>
-      <Endereco>CLN 104 Bloco C</Endereco>
-      <Numero>01</Numero>
-      <CEP>70635815</CEP>
-      <UF>DF</UF>
-      <Latitude>-15.7939394201285</Latitude>
-      <Longitude>-47.8828057615547</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27940 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE.
-]]></Observacao>
-      <PrecoVenda>250000</PrecoVenda>
-      <PrecoLocacao />
-      <PrecoLocacaoTemporada />
-      <QtdDormitorios />
-      <TipoOferta>1</TipoOferta>
-      <Fotos>
-        <Foto>
-          <Legenda>Sala de estar </Legenda>
-          <Link>
-            <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27940_4956abab-faeb-49fb-938b-2b2cc734e458_md.jpg</URLArquivo>
-          </Link>
-          <Link>
-            <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27940_4956abab-faeb-49fb-938b-2b2cc734e458.jpg</URLArquivo>
-          </Link>
-        </Foto>
-      </Fotos>
-    </Imovel>
-    <Imovel>
-      <CodigoImovel>VILLA27941V01</CodigoImovel>
-      <DataCadastro>4/9/2021 6:51:39 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 6:53:12 PM</DataUltimateracao>
+      <CodigoImovel>VILLA72379A01</CodigoImovel>
+      <DataCadastro>8/18/2017 6:17:24 PM</DataCadastro>
+      <DataUltimateracao>4/15/2021 12:45:27 PM</DataUltimateracao>
       <TipoImovel>Apartamento</TipoImovel>
       <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
       <CategoriaImovel>Padrao</CategoriaImovel>
-      <Cidade>BRASILIA</Cidade>
-      <Bairro>Asa Sul</Bairro>
-      <Endereco>Quadra SHIGS 703 Bloco P</Endereco>
+      <Cidade>CRUZEIRO</Cidade>
+      <Bairro>CRUZEIRO VELHO</Bairro>
+      <Endereco>SRES Quadra 10 Bloco K1</Endereco>
       <Numero>01</Numero>
-      <CEP>70331716</CEP>
+      <Complemento> LINDO E FAMILIAR </Complemento>
+      <CEP>70645111</CEP>
       <UF>DF</UF>
-      <Latitude>-15.7939394201285</Latitude>
-      <Longitude>-47.8828057615547</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27941 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE]]></Observacao>
-      <PrecoVenda>25000</PrecoVenda>
-      <PrecoLocacao />
+      <Latitude>-15.7784299850464</Latitude>
+      <Longitude>-47.9286499023438</Longitude>
+      <TituloImovel> LINDO E FAMILIAR </TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA72379 - 202104151513
+TIMA OPORTUNIDADE DE MORAR BEM NO SUDOESTE
+
+CONDOMÍNIO: 500,00
+
+O MELHOR PONTO DO SUDOESTE, PRÓXIMO:
+- SHOPPING
+- SUPERMERCADOS
+- COMÉRCIOS
+
+CONDOMÍNIO: QUALIDADE DE VIDA PERTO DE VOCÊ
+- RECÉM-CONSTRUÍDO
+- 88 m²
+- CONDOMÍNIO FECHADO
+- RESIDENCIAL
+- EXCELENTE ADMINISTRAÇÃO
+- JARDIM
+- SALÃO DE FESTAS
+- PLAYGROUND
+- ARQUITETURA MODERNA
+
+IMÓVEL: MUITO BOM GOSTO
+- COM MUITOS ARMÁRIOS NA COZINHA E NOS QUARTOS
+- BOX EM VIDRO TEMPERADO
+- 01 VAGAS DE GARAGEM
+- EXCELENTE ACABAMENTO
+- 01 SUÍTE
+- LAZER
+
+SEGURANÇA: CONFORTO E TRANQUILIDADE
+
+- ÁREA TRANQUILA DE BOA VALORIZAÇÃO NO SUDOESTE
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda />
+      <PrecoLocacao>1300</PrecoLocacao>
       <PrecoLocacaoTemporada />
-      <QtdDormitorios />
-      <TipoOferta>1</TipoOferta>
+      <AreaTotal>65</AreaTotal>
+      <QtdDormitorios>5</QtdDormitorios>
+      <TipoOferta>2</TipoOferta>
       <Fotos>
         <Foto>
-          <Legenda>Copa </Legenda>
+          <Legenda>01</Legenda>
           <Link>
             <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27941_9bee87e7-e743-4c36-9a2d-9153d59c1a47_md.jpg</URLArquivo>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/72379_5e541659-4567-4a82-8673-57caf0bad66e_md.jpg</URLArquivo>
           </Link>
           <Link>
             <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27941_9bee87e7-e743-4c36-9a2d-9153d59c1a47.jpg</URLArquivo>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/72379_5e541659-4567-4a82-8673-57caf0bad66e.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>02</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/72379_988c469d-8c36-4daf-8004-b9a20cc5274c_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/72379_988c469d-8c36-4daf-8004-b9a20cc5274c.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>03</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/72379_e513c9d8-115d-4f8e-bb5a-c76225d29fcb_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/72379_e513c9d8-115d-4f8e-bb5a-c76225d29fcb.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>04</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/72379_54e586c5-6c1d-43a6-8f13-bf20a9d56576_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/72379_54e586c5-6c1d-43a6-8f13-bf20a9d56576.jpg</URLArquivo>
           </Link>
         </Foto>
       </Fotos>
     </Imovel>
     <Imovel>
-      <CodigoImovel>VILLA27942V01</CodigoImovel>
-      <DataCadastro>4/9/2021 6:54:50 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 7:01:01 PM</DataUltimateracao>
+      <CodigoImovel>VILLA80515V01</CodigoImovel>
+      <DataCadastro>11/22/2017 2:39:38 PM</DataCadastro>
+      <DataUltimateracao>5/3/2019 1:01:30 PM</DataUltimateracao>
       <TipoImovel>Casa</TipoImovel>
       <SubTipoImovel>Casa Padrao</SubTipoImovel>
       <CategoriaImovel>Terrea</CategoriaImovel>
-      <Cidade>BRASILIA</Cidade>
-      <Bairro>Asa Sul</Bairro>
-      <Endereco>Setor SHLS</Endereco>
+      <Cidade>Anápolis</Cidade>
+      <Bairro>Maracanã</Bairro>
+      <Endereco>Avenida Central</Endereco>
       <Numero>01</Numero>
-      <CEP>70390700</CEP>
-      <UF>DF</UF>
-      <Latitude>-15.7939394201285</Latitude>
-      <Longitude>-47.8828057615547</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27942 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE]]></Observacao>
-      <PrecoVenda>15000</PrecoVenda>
+      <Complemento>OTIMA CASA EM ANAPOLIS</Complemento>
+      <CEP>75040130</CEP>
+      <UF>GO</UF>
+      <Latitude>-16.4055004119873</Latitude>
+      <Longitude>-48.9822006225586</Longitude>
+      <TituloImovel>ÓTIMA CASA EM ANÁPOLIS</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA80515 - 202104151513
+OPORTUNIDADE!
+EXCELENTE CASA EM ANÁPOLIS , COMPOSTA POR: 
+* 3 QUARTOS (SENDO 2 SUÍTES)
+*SALA AMPLA
+*COPA
+*COZINHA COM ARMÁRIOS
+* NA LAJE
+*PISO: CERÂMICA
+*GARAGEM PARA 4 CARROS\
+BARRACO DOS FUNDOS COMPOSTO POR:
+* 2 QUARTOS
+*WC SOCIAL
+*NA LAJE
+*PISO: CERÂMICA
+* O TERRENO POSSUI 442M² E MUITO BEM LOCALIZADA. 
+LIGUE E AGENDE UMA VISITA
+
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda>990000</PrecoVenda>
       <PrecoLocacao />
       <PrecoLocacaoTemporada />
-      <QtdDormitorios />
+      <AreaTotal>160</AreaTotal>
+      <QtdDormitorios>3</QtdDormitorios>
+      <QtdVagas>3</QtdVagas>
       <TipoOferta>1</TipoOferta>
       <Fotos>
         <Foto>
-          <Legenda>Sala de estar</Legenda>
+          <Legenda>Foto 01</Legenda>
           <Link>
             <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27942_d7c32cb2-00ba-49f2-a689-3802e5e337d4_md.jpg</URLArquivo>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_90bf684a-2b2f-48fd-9ffa-e8dff78ac084_md.jpg</URLArquivo>
           </Link>
           <Link>
             <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27942_d7c32cb2-00ba-49f2-a689-3802e5e337d4.jpg</URLArquivo>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_90bf684a-2b2f-48fd-9ffa-e8dff78ac084.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Foto 02</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_3fb308e2-eca3-4f6c-abb4-c151e54ecd3d_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_3fb308e2-eca3-4f6c-abb4-c151e54ecd3d.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Foto 03</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_3368e4c6-eb65-43c7-9f74-1db71b0246e5_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_3368e4c6-eb65-43c7-9f74-1db71b0246e5.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Foto 04</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_f844e8b8-01f5-4361-b35e-e97dde214b04_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_f844e8b8-01f5-4361-b35e-e97dde214b04.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Foto 05</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_6b5292f4-5f03-4eef-9da5-b464818edddd_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_6b5292f4-5f03-4eef-9da5-b464818edddd.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Foto 06</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_fb2f4a4e-6124-410f-889f-8b10aec48cd3_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_fb2f4a4e-6124-410f-889f-8b10aec48cd3.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Foto 07</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_d26c94d0-1ec7-459a-aabf-0cd47fdd8cdc_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_d26c94d0-1ec7-459a-aabf-0cd47fdd8cdc.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Foto 08</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_1e3eaf88-ba1a-4a5f-9055-def84e365314_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_1e3eaf88-ba1a-4a5f-9055-def84e365314.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Foto 09</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_584f4d7c-ca67-4a9f-90a4-c53816ef685f_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_584f4d7c-ca67-4a9f-90a4-c53816ef685f.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Foto 10</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_725ad1cb-97ba-4a3f-a05e-dc23f7c5b239_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/80515_725ad1cb-97ba-4a3f-a05e-dc23f7c5b239.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+      <Videos>
+        <Video>
+          <Url>http://www.youtube.com/embed/6u842sW60BA</Url>
+        </Video>
+      </Videos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA107819A01</CodigoImovel>
+      <DataCadastro>10/16/2018 6:06:48 AM</DataCadastro>
+      <DataUltimateracao>5/3/2019 1:22:47 PM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>AGUAS CLARAS</Cidade>
+      <Bairro>SUL</Bairro>
+      <Endereco>Quadra 205</Endereco>
+      <Numero>01</Numero>
+      <Complemento>Apartamento de Alto padrao. </Complemento>
+      <CEP>71925000</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.7784299850464</Latitude>
+      <Longitude>-47.9286499023438</Longitude>
+      <TituloImovel>Apartamento de Alto padrão. </TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA107819 - 202104151513
+Apartamento com excelente planta, vazado, vista, bem dividido com área intima e área social. Piso em granito. Completo em armários planejados. 
+
+Área Íntima: 
+4 suítes amplas e com armários planejados. 
+
+Área Social: 
+Sala planejada para 2 ambiente e área livre para criação de hall de entrada 
+Varanda 
+Lavabo 
+Cozinha em L 
+Área de serviço separada da cozinha 
+DCE 
+2 VAGAS DE GARAGEM SOLTAS 
+Andar alto 
+
+Condomínio: 
+Área de lazer completa. 
+Churrasqueira, Forno de pizza 
+Campo de futebol, 
+Área fitness, 
+Salão gourmet, 
+Quadra de futebol, quadra poliesportiva, 
+Salão de festas, salão de jogos, 
+Spa, 
+Playground, 
+Piscina, piscina infantil, piscina aquecida, 
+Guarita, segurança 24 horas e CFTV. 
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda />
+      <PrecoLocacao>5500</PrecoLocacao>
+      <PrecoLocacaoTemporada />
+      <AreaUtil>135</AreaUtil>
+      <QtdDormitorios />
+      <QtdBanheiros>6</QtdBanheiros>
+      <QtdVagas>2</QtdVagas>
+      <Churrasqueira>1</Churrasqueira>
+      <Piscina>1</Piscina>
+      <Playground>1</Playground>
+      <QuadraPoliEsportiva>1</QuadraPoliEsportiva>
+      <SalaoFestas>1</SalaoFestas>
+      <SalaoJogos>1</SalaoJogos>
+      <Interfone>1</Interfone>
+      <SpaHidromassagem>1</SpaHidromassagem>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_6cf251d7-fec6-424f-ba8c-807d9dca12b6_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_6cf251d7-fec6-424f-ba8c-807d9dca12b6.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_c663a643-e21c-459a-a8af-c5bbbdae55e7_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_c663a643-e21c-459a-a8af-c5bbbdae55e7.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_0ce00773-cb38-4ba7-b873-7f235bd01f5a_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_0ce00773-cb38-4ba7-b873-7f235bd01f5a.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_ca899391-eb11-451a-9d42-63e4fb6a4257_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_ca899391-eb11-451a-9d42-63e4fb6a4257.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_fc0ac57e-7bda-4be8-8cc5-3ef8c14e8d54_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_fc0ac57e-7bda-4be8-8cc5-3ef8c14e8d54.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>SALA AMPLA LIGUE 98252-2828</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_f377ea2e-8681-45ed-9004-6bda3644bb7e_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_f377ea2e-8681-45ed-9004-6bda3644bb7e.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>WHATSAPP 98252-2828</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_1285b869-2dcb-4bf6-860f-9c5b7186f026_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_1285b869-2dcb-4bf6-860f-9c5b7186f026.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>WHATSAPP 98252-2828</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_4124eda3-bd22-4fa1-ae1a-1b5a62836650_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/107819_4124eda3-bd22-4fa1-ae1a-1b5a62836650.jpg</URLArquivo>
           </Link>
         </Foto>
       </Fotos>
     </Imovel>
     <Imovel>
-      <CodigoImovel>VILLA27943V01</CodigoImovel>
-      <DataCadastro>4/9/2021 7:03:43 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 7:05:34 PM</DataUltimateracao>
+      <CodigoImovel>VILLA108189V01</CodigoImovel>
+      <DataCadastro>10/16/2018 9:57:42 AM</DataCadastro>
+      <DataUltimateracao>2/27/2019 11:48:50 AM</DataUltimateracao>
       <TipoImovel>Casa</TipoImovel>
       <SubTipoImovel>Casa de Condominio</SubTipoImovel>
       <CategoriaImovel>Terrea</CategoriaImovel>
-      <Cidade>BRASILIA</Cidade>
-      <Bairro>Asa Norte</Bairro>
-      <Endereco>Quadra SQN 103 Bloco B</Endereco>
+      <Cidade>Brasília</Cidade>
+      <Bairro>	Setor Habitacional Vicente Pires</Bairro>
+      <Endereco>Rua 12</Endereco>
       <Numero>01</Numero>
-      <CEP>70732020</CEP>
+      <Complemento>RUA 12 MARAVILHOSA! AC TROCA EM AGUAS CLARAS</Complemento>
+      <CEP>72007480</CEP>
       <UF>DF</UF>
-      <Latitude>-15.7939394201285</Latitude>
-      <Longitude>-47.8828057615547</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27943 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE]]></Observacao>
-      <PrecoVenda>20000</PrecoVenda>
+      <Latitude>-15.794544</Latitude>
+      <Longitude>-48.0388364</Longitude>
+      <TituloImovel>RUA 12 MARAVILHOSA! AC TROCA EM ÁGUAS CLARAS</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA108189 - 202104151513
+Casa espetacular, 2 pavimentos com projeto de iluminação
+
+Aceita permuta em imóvel em Águas Claras próximo ao parque de 3 ou 4 quartos e imóvel de 1 quarto/kit.
+
+Térreo:
+
+- Living amplo com hall de entrada 
+- Sala de jantar 
+- Lavabo
+- Cozinha com armários 
+- Cozinha de apoio
+- DCE
+- Despensa
+- Área de serviço
+
+Piso superior:
+
+- Living intimo para 2 ambientes
+- Suite 1
+- Quarto 1 com banheiro social
+- Suite master com closet,  hidromassagem e sacada
+
+Área de Lazer com paisagismo:
+
+- Churrasqueira
+- banheiro de apoio
+- Sauna
+- Piscina
+- Área de descanso
+- Pomar e horta
+
+Casa com todas as plantas e documentação em dia.
+
+]]></Observacao>
+      <PrecoVenda>1580000</PrecoVenda>
       <PrecoLocacao />
       <PrecoLocacaoTemporada />
-      <QtdDormitorios />
-      <TipoOferta>1</TipoOferta>
+      <AreaTotal>800</AreaTotal>
+      <AreaUtil>438</AreaUtil>
+      <QtdDormitorios>3</QtdDormitorios>
+      <QtdBanheiros>5</QtdBanheiros>
+      <QtdVagas>2</QtdVagas>
+      <Churrasqueira>1</Churrasqueira>
+      <Piscina>1</Piscina>
+      <Varanda>1</Varanda>
+      <AreaServico>1</AreaServico>
+      <Interfone>1</Interfone>
+      <TipoOferta>2</TipoOferta>
       <Fotos>
         <Foto>
-          <Legenda>Sala de leitura</Legenda>
+          <Legenda>01</Legenda>
           <Link>
             <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27943_0aa09c33-bdfd-44a7-a191-92e475f76a0a_md.jpg</URLArquivo>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_fc0557ad-8683-4fc9-bff7-3897d7ea7b8e_md.jpg</URLArquivo>
           </Link>
           <Link>
             <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27943_0aa09c33-bdfd-44a7-a191-92e475f76a0a.jpg</URLArquivo>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_fc0557ad-8683-4fc9-bff7-3897d7ea7b8e.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546839.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_2d458645-b559-47c5-bfbc-eeea8ca46c32_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_2d458645-b559-47c5-bfbc-eeea8ca46c32.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546840.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_a4173715-4ed4-4ea4-ac5f-4108a9fb7992_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_a4173715-4ed4-4ea4-ac5f-4108a9fb7992.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546841.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_f33aeba0-5598-4d86-b6c4-151cc311b001_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_f33aeba0-5598-4d86-b6c4-151cc311b001.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546843.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_0dfa971a-19bf-4a44-9a2a-14474d0c3a83_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_0dfa971a-19bf-4a44-9a2a-14474d0c3a83.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546844.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_d71ea9a4-62d2-4b34-9d04-68931fed3e3a_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_d71ea9a4-62d2-4b34-9d04-68931fed3e3a.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546845.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_05b38249-a781-410e-b37f-db6f255f0ad5_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_05b38249-a781-410e-b37f-db6f255f0ad5.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546847.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_fb3a8399-56c1-4f96-bdcd-c14a00d578b1_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_fb3a8399-56c1-4f96-bdcd-c14a00d578b1.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546869.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_3c18355d-6019-466b-835b-be9ac8750321_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_3c18355d-6019-466b-835b-be9ac8750321.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546870.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_bea7f8f9-e443-4c8a-ada2-f46f541d02c5_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_bea7f8f9-e443-4c8a-ada2-f46f541d02c5.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546871.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_1e2e4547-e315-4403-a91b-b1f37ea63740_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_1e2e4547-e315-4403-a91b-b1f37ea63740.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546873.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_de3436bc-ffb7-445e-8223-2fa45276ddfe_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_de3436bc-ffb7-445e-8223-2fa45276ddfe.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546874.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_738e2602-3817-4638-b79a-44a4bdfb8b21_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_738e2602-3817-4638-b79a-44a4bdfb8b21.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546875.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_b5a9b47d-f17c-410b-aedf-3c9fd87384ee_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_b5a9b47d-f17c-410b-aedf-3c9fd87384ee.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546876.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_fe327df4-e61a-47cd-b056-02720efc3fc8_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_fe327df4-e61a-47cd-b056-02720efc3fc8.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546877.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_25476b07-c602-4576-9d58-604b13c4c6ec_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_25476b07-c602-4576-9d58-604b13c4c6ec.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546878.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_b5322552-7a90-43c0-8c0a-b4478674b4db_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_b5322552-7a90-43c0-8c0a-b4478674b4db.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546879.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_66fcb0af-7e0c-4f76-8acd-3f3c9b9a9557_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_66fcb0af-7e0c-4f76-8acd-3f3c9b9a9557.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546880.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_78426b27-b978-45b3-b3ef-4a88a35690bf_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_78426b27-b978-45b3-b3ef-4a88a35690bf.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546881.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_13b8cf63-590d-4e33-981c-3baefdb75dce_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_13b8cf63-590d-4e33-981c-3baefdb75dce.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546882.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_c5c73317-eac0-42d0-92bb-2723359adf1b_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_c5c73317-eac0-42d0-92bb-2723359adf1b.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546884.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_2f3e4d5f-a35c-42dd-a105-d92e9a879d52_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_2f3e4d5f-a35c-42dd-a105-d92e9a879d52.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>40546885.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_b167f37c-c145-43ad-884f-3cc5c94eca52_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108189_b167f37c-c145-43ad-884f-3cc5c94eca52.jpg</URLArquivo>
           </Link>
         </Foto>
       </Fotos>
     </Imovel>
     <Imovel>
-      <CodigoImovel>VILLA27944A01</CodigoImovel>
-      <DataCadastro>4/9/2021 7:07:25 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 7:09:15 PM</DataUltimateracao>
+      <CodigoImovel>VILLA108408V01</CodigoImovel>
+      <DataCadastro>10/16/2018 12:51:27 PM</DataCadastro>
+      <DataUltimateracao>5/3/2019 1:14:39 PM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>BRASILIA</Cidade>
+      <Bairro>Asa Norte</Bairro>
+      <Endereco>Quadra SHCGN 716</Endereco>
+      <Numero>01</Numero>
+      <Complemento>SHCGN 716 LINDO NASCENTE ELEVADOR</Complemento>
+      <CEP>70770730</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.7399301528931</Latitude>
+      <Longitude>-47.8996391296387</Longitude>
+      <TituloImovel>SHCGN 716 LINDO NASCENTE ELEVADOR</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA108408 - 202104151513
+LINDO APARTAMENTO
+TODO REFORMADO NO PORCELANATO 
+ARMARIOS PLANEJADOS EM TODO APARTAMENTO 
+NASCENTE 
+CANTO
+DCE 
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda>445500</PrecoVenda>
+      <PrecoLocacao />
+      <PrecoLocacaoTemporada />
+      <AreaUtil>50</AreaUtil>
+      <QtdDormitorios>2</QtdDormitorios>
+      <QtdBanheiros>2</QtdBanheiros>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>51668511.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108408_633c67ca-89d6-43ee-a3eb-ea0851fbdc2a_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108408_633c67ca-89d6-43ee-a3eb-ea0851fbdc2a.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>51668515.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108408_27b5e97e-3afb-417f-83b3-a01d6f4b1854_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108408_27b5e97e-3afb-417f-83b3-a01d6f4b1854.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>51668518.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108408_24256ae6-91f5-4981-9228-dda770ba2342_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108408_24256ae6-91f5-4981-9228-dda770ba2342.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>51668522.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108408_9cbeb846-4c10-470f-b916-1f5754dc313a_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108408_9cbeb846-4c10-470f-b916-1f5754dc313a.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>51668523.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108408_e5233d43-c2e3-43f8-a4f7-7bc350347801_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/108408_e5233d43-c2e3-43f8-a4f7-7bc350347801.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA111432A01</CodigoImovel>
+      <DataCadastro>10/30/2018 11:15:32 PM</DataCadastro>
+      <DataUltimateracao>5/7/2019 2:29:57 PM</DataUltimateracao>
       <TipoImovel>Casa</TipoImovel>
       <SubTipoImovel>Casa Padrao</SubTipoImovel>
       <CategoriaImovel>Terrea</CategoriaImovel>
-      <Cidade>BRASILIA</Cidade>
-      <Bairro>Asa Norte</Bairro>
-      <Endereco>Quadra SQN 402 Bloco B</Endereco>
-      <Numero>01</Numero>
-      <CEP>70834020</CEP>
-      <UF>DF</UF>
-      <Latitude>-15.793939420128476</Latitude>
-      <Longitude>-47.882805761554721</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27944 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE]]></Observacao>
-      <PrecoVenda />
-      <PrecoLocacao>250000</PrecoLocacao>
-      <PrecoLocacaoTemporada />
-      <QtdDormitorios />
-      <Piscina>1</Piscina>
-      <Quintal>1</Quintal>
-      <Varanda>1</Varanda>
-      <TipoOferta>1</TipoOferta>
-      <Fotos>
-        <Foto>
-          <Legenda>Entrada Lateral</Legenda>
-          <Link>
-            <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27944_ab1ad4e5-fe9d-4fbe-b80c-6fea44a9d60e_md.jpg</URLArquivo>
-          </Link>
-          <Link>
-            <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27944_ab1ad4e5-fe9d-4fbe-b80c-6fea44a9d60e.jpg</URLArquivo>
-          </Link>
-        </Foto>
-      </Fotos>
-    </Imovel>
-    <Imovel>
-      <CodigoImovel>VILLA27945A01</CodigoImovel>
-      <DataCadastro>4/9/2021 7:10:39 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 7:12:41 PM</DataUltimateracao>
-      <TipoImovel>Apartamento</TipoImovel>
-      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
-      <CategoriaImovel>Padrao</CategoriaImovel>
-      <Cidade>BRASILIA</Cidade>
-      <Bairro>Asa Norte</Bairro>
-      <Endereco>Quadra SQN 402 Bloco E</Endereco>
-      <Numero>01</Numero>
-      <CEP>70834050</CEP>
-      <UF>DF</UF>
-      <Latitude>-15.7939394201285</Latitude>
-      <Longitude>-47.8828057615547</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27945 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE]]></Observacao>
-      <PrecoVenda />
-      <PrecoLocacao>1200</PrecoLocacao>
-      <PrecoLocacaoTemporada />
-      <QtdDormitorios />
-      <TipoOferta>1</TipoOferta>
-      <Fotos>
-        <Foto>
-          <Legenda>Área de lazer </Legenda>
-          <Link>
-            <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27945_894fa421-247b-4745-abb4-75dbf9a7ed0e_md.jpg</URLArquivo>
-          </Link>
-          <Link>
-            <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27945_894fa421-247b-4745-abb4-75dbf9a7ed0e.jpg</URLArquivo>
-          </Link>
-        </Foto>
-      </Fotos>
-    </Imovel>
-    <Imovel>
-      <CodigoImovel>VILLA27946A01</CodigoImovel>
-      <DataCadastro>4/9/2021 7:16:46 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 7:18:36 PM</DataUltimateracao>
-      <TipoImovel>Apartamento</TipoImovel>
-      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
-      <CategoriaImovel>Padrao</CategoriaImovel>
       <Cidade>Brasília</Cidade>
-      <Bairro>Setor de Habitações Individuais Sul</Bairro>
-      <Endereco>Quadra SHIS QI 27 Conjunto 10</Endereco>
+      <Bairro>	Setor Habitacional Vicente Pires</Bairro>
+      <Endereco>Rua 4A Bloco 2</Endereco>
       <Numero>01</Numero>
-      <CEP>71675100</CEP>
+      <Complemento>QNL 17 BLOCO F CASA </Complemento>
+      <CEP>72006206</CEP>
       <UF>DF</UF>
-      <Latitude>-15.7939394201285</Latitude>
-      <Longitude>-47.8828057615547</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27946 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE.]]></Observacao>
+      <Latitude>-15.64753</Latitude>
+      <Longitude>-47.77832</Longitude>
+      <TituloImovel>QNL 17 BLOCO F CASA </TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA111432 - 202104151513
+Casa 
+- Sala ampla 
+- 02 Quartos com suites, 01 quarto possui banheira de hidromassagem 
+- Cozinha ampla com copa 
+- Banheiro social 
+- Quarto de empregada 
+- Dispensa 
+- Jardim de inverno 
+- Piscina 
+- Portão eletrônico
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
       <PrecoVenda />
-      <PrecoLocacao>1500</PrecoLocacao>
+      <PrecoLocacao>1600</PrecoLocacao>
       <PrecoLocacaoTemporada />
-      <QtdDormitorios />
+      <AreaUtil>165</AreaUtil>
+      <QtdDormitorios>2</QtdDormitorios>
+      <QtdBanheiros>3</QtdBanheiros>
+      <QtdVagas>4</QtdVagas>
+      <ValorIPTU>1500</ValorIPTU>
       <TipoOferta>1</TipoOferta>
       <Fotos>
         <Foto>
-          <Legenda>Entrada da casa</Legenda>
+          <Legenda>01</Legenda>
           <Link>
             <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27946_40ccbf5e-b80f-4abb-96a5-faa2d37a612f_md.jpg</URLArquivo>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_5a7b9ca0-3633-4826-a355-d3f8725e721b_md.jpg</URLArquivo>
           </Link>
           <Link>
             <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27946_40ccbf5e-b80f-4abb-96a5-faa2d37a612f.jpg</URLArquivo>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_5a7b9ca0-3633-4826-a355-d3f8725e721b.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>02</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_8900e066-2c03-4c1e-9840-125c93706cf0_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_8900e066-2c03-4c1e-9840-125c93706cf0.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>03</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_991c7fb0-fcf5-436e-aaf1-833a8e47c462_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_991c7fb0-fcf5-436e-aaf1-833a8e47c462.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>04</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_ec32452b-b8b5-4e99-b54d-cc0c3139abf3_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_ec32452b-b8b5-4e99-b54d-cc0c3139abf3.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>05</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_e873219c-724c-4827-a115-a7597a2a4e6c_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_e873219c-724c-4827-a115-a7597a2a4e6c.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>06</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_b9ca523d-1ea3-464c-ab19-dbcbf9cd9e6b_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_b9ca523d-1ea3-464c-ab19-dbcbf9cd9e6b.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>07</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_0caffbd7-c3bb-4ef9-ae15-92720d4296f6_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_0caffbd7-c3bb-4ef9-ae15-92720d4296f6.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>08</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_b1879f99-1ee4-4512-9ce6-f351e4c3a0a3_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_b1879f99-1ee4-4512-9ce6-f351e4c3a0a3.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>09</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_50b0161d-ede6-4412-8d28-7d5999848d6c_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_50b0161d-ede6-4412-8d28-7d5999848d6c.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>10</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_92baa960-8cc4-43f3-a484-c70097e7c856_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111432_92baa960-8cc4-43f3-a484-c70097e7c856.jpg</URLArquivo>
           </Link>
         </Foto>
       </Fotos>
     </Imovel>
     <Imovel>
-      <CodigoImovel>VILLA27947A01</CodigoImovel>
-      <DataCadastro>4/9/2021 7:19:28 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 7:21:30 PM</DataUltimateracao>
+      <CodigoImovel>VILLA111456A01</CodigoImovel>
+      <DataCadastro>10/30/2018 11:30:21 PM</DataCadastro>
+      <DataUltimateracao>5/7/2019 2:28:29 PM</DataUltimateracao>
       <TipoImovel>Apartamento</TipoImovel>
       <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
       <CategoriaImovel>Padrao</CategoriaImovel>
-      <Cidade>Brasília</Cidade>
-      <Bairro>Setor de Habitações Individuais Sul</Bairro>
-      <Endereco>Quadra SHIS QI 27 Conjunto 11</Endereco>
+      <Cidade>TAGUATINGA</Cidade>
+      <Bairro>TAGUATINGA NORTE</Bairro>
+      <Endereco>Quadra QNL 17 Bloco F</Endereco>
       <Numero>01</Numero>
-      <CEP>71675110</CEP>
+      <Complemento>AV. FLAMBOYANT ED. REAL PANORAMIC,1QT, MOBILIADO </Complemento>
+      <CEP>72151716</CEP>
       <UF>DF</UF>
-      <Latitude>-15.7939394201285</Latitude>
-      <Longitude>-47.8828057615547</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27947 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE.]]></Observacao>
-      <PrecoVenda />
-      <PrecoLocacao>1200</PrecoLocacao>
-      <PrecoLocacaoTemporada />
-      <QtdDormitorios />
-      <TipoOferta>1</TipoOferta>
-      <Fotos>
-        <Foto>
-          <Legenda>Entrada da casa</Legenda>
-          <Link>
-            <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27947_3c2b93b2-ff9b-4196-926b-93822073c9d0_md.jpg</URLArquivo>
-          </Link>
-          <Link>
-            <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27947_3c2b93b2-ff9b-4196-926b-93822073c9d0.jpg</URLArquivo>
-          </Link>
-        </Foto>
-      </Fotos>
-    </Imovel>
-    <Imovel>
-      <CodigoImovel>VILLA27948A01</CodigoImovel>
-      <DataCadastro>4/9/2021 7:22:20 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 7:23:24 PM</DataUltimateracao>
-      <TipoImovel>Apartamento</TipoImovel>
-      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
-      <CategoriaImovel>Padrao</CategoriaImovel>
-      <Cidade>Brasília</Cidade>
-      <Bairro>Setor de Habitações Individuais Sul</Bairro>
-      <Endereco>Quadra SHIS QI 27 Conjunto 12</Endereco>
-      <Numero>01</Numero>
-      <CEP>71675120</CEP>
-      <UF>DF</UF>
-      <Latitude>-15.7939394201285</Latitude>
-      <Longitude>-47.8828057615547</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27948 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE.]]></Observacao>
-      <PrecoVenda />
-      <PrecoLocacao>1105</PrecoLocacao>
-      <PrecoLocacaoTemporada />
-      <QtdDormitorios />
-      <TipoOferta>1</TipoOferta>
-      <Fotos>
-        <Foto>
-          <Legenda>Area de lazer</Legenda>
-          <Link>
-            <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27948_913950f8-ac83-4b4d-a64f-141b45821969_md.jpg</URLArquivo>
-          </Link>
-          <Link>
-            <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27948_913950f8-ac83-4b4d-a64f-141b45821969.jpg</URLArquivo>
-          </Link>
-        </Foto>
-      </Fotos>
-    </Imovel>
-    <Imovel>
-      <CodigoImovel>VILLA27949A01</CodigoImovel>
-      <DataCadastro>4/9/2021 7:24:35 PM</DataCadastro>
-      <DataUltimateracao>4/9/2021 7:25:55 PM</DataUltimateracao>
-      <TipoImovel>Apartamento</TipoImovel>
-      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
-      <CategoriaImovel>Padrao</CategoriaImovel>
-      <Cidade>Brasília</Cidade>
-      <Bairro>Setor de Habitações Individuais Sul</Bairro>
-      <Endereco>Quadra SHIS QI 9 Conjunto 10</Endereco>
-      <Numero>01</Numero>
-      <CEP>71625100</CEP>
-      <UF>DF</UF>
-      <Latitude>-15.7939394201285</Latitude>
-      <Longitude>-47.8828057615547</Longitude>
-      <Observacao><![CDATA[Codigo anúncio: VILLA27949 - 202104092719
-Magnífica casa recém construída com 1.400m² com detalhes em mármore. Possui design surreal com total integração a todos os ambientes. A sala principal possui pé direito triplo com 12 metros. Possui 4 suítes, todos os armários planejados, cozinha equipada e completa, área de serviço, dependência de empregados e área de armazenamento.
- Toda a área externa possui paisagismo apresentando uma vista espetacular. Possui duas piscinas, adulta de 20m e uma infantil, hidromassagem e sauna. Além de um amplo espaço gourmet para receber convidados.
- Há vagas cobertas para 5 veículos. Já existe um sistema pronto para receber circuito interno de câmeras de segurança, muros com 5 metros de altura e cercas elétricas. Há guarita para guarda na entrada.
- A casa está localizada numa rua totalmente residencial. Possui ruas largas e estruturadas. Próximo a praças e perto do Lago Paranoá. Há bares e restaurantes próximos.
- Não perca sua chance de conhecer essa incrível mansão em uma das melhores áreas do lago sul. Possui todo o conforto e segurança que você e sua família precisam!
-ESSE ANÚNCIO É FICTICIO COM FINALIDADE SOMENTE PARA DEMONTRAÇÃO DO SITE.]]></Observacao>
+      <Latitude>-15.82085</Latitude>
+      <Longitude>-48.08795</Longitude>
+      <TituloImovel>AV. FLAMBOYANT ED. REAL PANORAMIC,1QT, MOBILIADO </TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA111456 - 202104151513
+
+REAL PANORAMIC,1QT, MOBILIADO 
+
+NORTE (ÁGUAS CLARAS) REAL PANORAMIC, BRASÍLIA - DF 
+
+LINDO APTO 1 QTO 33,00M² MOBILIADO 
+SALA MOBILIADA VISTA LIVRE. 
+QUARTO MOBILIADO COMPLETO EM ÁRMÁRIOS 
+BANHEIRO COM ARMARIOS E AQUECIMENTO A GÁS 
+COZINHA COM ARMÁRIOS PLANEJADOS. 
+
+CONDOMÍNIO 
+
+PISCINA; 
+SAUNA 
+ESPAÇO GOURMET 
+SALA DE JOGOS, 
+SALÃO DE FESTAS, 
+FITNESS 
+LAVANDERIA 
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
       <PrecoVenda />
       <PrecoLocacao>1000</PrecoLocacao>
       <PrecoLocacaoTemporada />
+      <AreaTotal>33</AreaTotal>
+      <AreaUtil>33</AreaUtil>
+      <QtdDormitorios>1</QtdDormitorios>
+      <QtdBanheiros>1</QtdBanheiros>
+      <QtdVagas>1</QtdVagas>
+      <PrecoCondominio>350</PrecoCondominio>
+      <ValorIPTU>100</ValorIPTU>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>01</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111456_c2c7d707-5a22-4416-abf6-f7ec97588650_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111456_c2c7d707-5a22-4416-abf6-f7ec97588650.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>02</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111456_cb48ca70-59f0-404d-be93-20ffa2dec0cf_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111456_cb48ca70-59f0-404d-be93-20ffa2dec0cf.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>03</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111456_f1f7f816-20cb-4b90-9f08-b2d4873ee7ca_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111456_f1f7f816-20cb-4b90-9f08-b2d4873ee7ca.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA111578A01</CodigoImovel>
+      <DataCadastro>10/31/2018 2:03:53 AM</DataCadastro>
+      <DataUltimateracao>5/7/2019 2:25:22 PM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>BRASILIA</Cidade>
+      <Bairro>SETOR SUDOESTE</Bairro>
+      <Endereco>Quadra QRSW 8</Endereco>
+      <Numero>01</Numero>
+      <CEP>70675800</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.78277</Latitude>
+      <Longitude>-47.92942</Longitude>
+      <Observacao><![CDATA[Codigo anúncio: VILLA111578 - 202104151513
+SQS 307 BLOCO C 
+
+Excelente Quadra na Asa Sul muito bem arborizada. 
+
+Apartamento Totalmente Reformado. 
+
+*Armários Novos 
+
+*Piso Madeira 
+
+*Banheiro com Bancada e Armários 
+
+*Projeto de Iluminação 
+
+*Rede de Proteção em todas as Janelas 
+
+*Cozinha com Bancada em Granito e armários 
+
+*Área de Serviço 
+
+*DCE 
+
+*Gas Canalizado 
+
+*Salão de Festas 
+
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda />
+      <PrecoLocacao>2800</PrecoLocacao>
+      <PrecoLocacaoTemporada />
+      <AreaTotal>90</AreaTotal>
+      <AreaUtil>90</AreaUtil>
+      <QtdDormitorios>2</QtdDormitorios>
+      <QtdBanheiros>2</QtdBanheiros>
+      <QtdVagas>1</QtdVagas>
+      <PrecoCondominio>465</PrecoCondominio>
+      <ValorIPTU>244</ValorIPTU>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_8eb3ff86-b6db-493a-8c84-5084cd2a7a8b_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_8eb3ff86-b6db-493a-8c84-5084cd2a7a8b.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_0a453ecd-c03c-48d5-8d17-b8644dcce923_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_0a453ecd-c03c-48d5-8d17-b8644dcce923.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_3bfab6c1-f70a-4a33-b283-4483bf1242a7_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_3bfab6c1-f70a-4a33-b283-4483bf1242a7.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_c4d15c6e-c66d-4376-ae26-08658ed219c5_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_c4d15c6e-c66d-4376-ae26-08658ed219c5.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_7f0db77c-7f03-4e89-87df-66983ccfb9a6_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_7f0db77c-7f03-4e89-87df-66983ccfb9a6.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_3362bed2-b1a1-4986-93d9-bd2f7c495273_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_3362bed2-b1a1-4986-93d9-bd2f7c495273.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_2861ef01-f73c-49e2-8bbc-ed49529fa5ec_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_2861ef01-f73c-49e2-8bbc-ed49529fa5ec.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_27fc815d-d5d8-4485-858f-89641c83bbf1_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_27fc815d-d5d8-4485-858f-89641c83bbf1.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_65e04ec5-86cc-4e89-9b0f-142ba6dde6f7_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_65e04ec5-86cc-4e89-9b0f-142ba6dde6f7.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>casa_imagem_10</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_3b05b029-eb6b-4b9c-be5f-cd2986de5926_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111578_3b05b029-eb6b-4b9c-be5f-cd2986de5926.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA111793V01</CodigoImovel>
+      <DataCadastro>10/31/2018 3:46:51 AM</DataCadastro>
+      <DataUltimateracao>2/27/2019 11:37:17 AM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>GUARA</Cidade>
+      <Bairro>SETOR INDUSTRIAL</Bairro>
+      <Endereco>Setor SMAS</Endereco>
+      <Numero>01</Numero>
+      <Complemento>SMAS Ed. Jade! 8110-4776</Complemento>
+      <CEP>71215300</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.7784299850464</Latitude>
+      <Longitude>-47.9286499023438</Longitude>
+      <TituloImovel>SMAS Ed. Jade! 8110-4776</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA111793 - 202104151513
+ESTUDA PROPOSTA EM TROCA DE APARTAMENTO EM ÁGUAS CLARAS!
+
+*novo
+*mobiliado
+*ótimo investimento
+
+]]></Observacao>
+      <PrecoVenda>420000</PrecoVenda>
+      <PrecoLocacao />
+      <PrecoLocacaoTemporada />
+      <AreaUtil>40</AreaUtil>
+      <QtdDormitorios>1</QtdDormitorios>
+      <QtdBanheiros>1</QtdBanheiros>
+      <QtdVagas>1</QtdVagas>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>39034149.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_063990e9-ab4e-42cc-ad69-5a83029fa41c_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_063990e9-ab4e-42cc-ad69-5a83029fa41c.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>39034150.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_8de495ce-b1a1-4486-92ef-eecb2bb28be4_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_8de495ce-b1a1-4486-92ef-eecb2bb28be4.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>39034151.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_0b3b036b-18c8-4505-907e-87b281ec410d_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_0b3b036b-18c8-4505-907e-87b281ec410d.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>39034152.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_c289425f-5ffa-45e8-b317-389a674178c3_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_c289425f-5ffa-45e8-b317-389a674178c3.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>39034153.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_8c54934b-22ed-4554-a488-abb52ff0d1f3_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_8c54934b-22ed-4554-a488-abb52ff0d1f3.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>39034154.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_dc0d22ec-1eac-4d12-a78c-61e220ca2d3d_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_dc0d22ec-1eac-4d12-a78c-61e220ca2d3d.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>39034155.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_ac8b07b2-26e2-4b45-912b-b8c48ff5676a_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_ac8b07b2-26e2-4b45-912b-b8c48ff5676a.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>39034156.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_f524497d-08f1-4fa9-8330-53d9baebb455_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111793_f524497d-08f1-4fa9-8330-53d9baebb455.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA111800A01</CodigoImovel>
+      <DataCadastro>10/31/2018 3:50:03 AM</DataCadastro>
+      <DataUltimateracao>5/7/2019 2:23:23 PM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>AGUAS CLARAS</Cidade>
+      <Bairro>NORTE</Bairro>
+      <Endereco>Avenida Flamboyant</Endereco>
+      <Numero>01</Numero>
+      <Complemento>LINDO APTº REFORMADO!</Complemento>
+      <CEP>71917000</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.83696</Latitude>
+      <Longitude>-48.03129</Longitude>
+      <TituloImovel>LINDO APTº REFORMADO!</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA111800 - 202104151513
+APARTAMENTO COMPOSTO POR: 
+
+*SALA 
+*2 QUARTOS COM ARMÁRIOS 
+*BANHEIRO SOCIAL COM ARMÁRIO 
+*AR CONDICIONADO NA SALA E QUARTO 
+*ARMÁRIOS EM TODOS OS AMBIENTES 
+*PISO FLUTUANTE 
+*APARTAMENTO DE CANTO COM VENTILAÇÃO NATURAL NO BANHEIRO 
+*SALÃO DE FESTAS NO PRÉDIO 
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda />
+      <PrecoLocacao>2000</PrecoLocacao>
+      <PrecoLocacaoTemporada />
+      <AreaTotal>62</AreaTotal>
+      <AreaUtil>62</AreaUtil>
+      <QtdDormitorios>2</QtdDormitorios>
+      <QtdBanheiros>1</QtdBanheiros>
+      <PrecoCondominio>415</PrecoCondominio>
+      <ValorIPTU>80</ValorIPTU>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>01</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_1860abde-4e16-444c-9710-39cd561d858e_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_1860abde-4e16-444c-9710-39cd561d858e.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>02</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_70b03fd6-9857-47f5-84db-6248cb4440de_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_70b03fd6-9857-47f5-84db-6248cb4440de.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>03</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_46b67626-65fb-4361-abcd-6a98b7ff2173_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_46b67626-65fb-4361-abcd-6a98b7ff2173.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>4</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_2f162dff-1ee6-4859-b4a0-ecde19ab1713_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_2f162dff-1ee6-4859-b4a0-ecde19ab1713.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>5</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_8c76f8e2-2273-4083-9a17-462ed8b85112_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_8c76f8e2-2273-4083-9a17-462ed8b85112.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>6</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_a8d73a49-8ff6-4d5a-b3dc-841a1b68da7b_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_a8d73a49-8ff6-4d5a-b3dc-841a1b68da7b.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>7</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_81fe5b2c-0e16-46bd-a707-e6553cb70056_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_81fe5b2c-0e16-46bd-a707-e6553cb70056.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>8</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_a3594e4b-50d1-4465-badf-79007d495ebc_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_a3594e4b-50d1-4465-badf-79007d495ebc.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>9</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_f6eb23c0-40dc-494e-8000-2cb71648f099_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/111800_f6eb23c0-40dc-494e-8000-2cb71648f099.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112036V01</CodigoImovel>
+      <DataCadastro>11/7/2018 9:05:00 PM</DataCadastro>
+      <DataUltimateracao>5/3/2019 1:16:44 PM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>AGUAS CLARAS</Cidade>
+      <Bairro>SUL</Bairro>
+      <Endereco>Rua 25</Endereco>
+      <Numero>01</Numero>
+      <Complemento>25 Sul - Piazza Praticita </Complemento>
+      <CEP>71927180</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.8421665378903</Latitude>
+      <Longitude>-48.0300256288361</Longitude>
+      <TituloImovel>25 Sul - Piazza Praticitá </TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112036 - 202104151513
+
+- 42m2 de área privativa 
+- 01 Quarto 
+- Armários na cozinha e WC 
+- 01 WC 
+- Água e gás individualizados 
+- 01 vaga de garagem coberta, privativa. 
+- Varanda gourmet 
+- Vista panorâmica 
+- Lazer completo: 
+- Piscina aquecida 
+- Academia 
+- Salão de festas 
+- Salão de jogos 
+- Sauna 
+- Portaria 24 horas 
+- Sistema de câmeras 
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda>220000</PrecoVenda>
+      <PrecoLocacao />
+      <PrecoLocacaoTemporada />
+      <AreaUtil>42</AreaUtil>
+      <QtdDormitorios>1</QtdDormitorios>
+      <QtdBanheiros>1</QtdBanheiros>
+      <QtdVagas>1</QtdVagas>
+      <PrecoCondominio>290</PrecoCondominio>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_7178667e-1290-4e2b-9675-6e1d8ef6ee83_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_7178667e-1290-4e2b-9675-6e1d8ef6ee83.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_414aa0cd-e8a3-4214-8265-f4030837ae3b_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_414aa0cd-e8a3-4214-8265-f4030837ae3b.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_eba40f1b-8be3-4266-bf6a-e2b2f6758367_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_eba40f1b-8be3-4266-bf6a-e2b2f6758367.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_47e09f03-62c6-48b5-910e-9df32fbe851e_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_47e09f03-62c6-48b5-910e-9df32fbe851e.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_36ebaeac-458c-485b-a830-69371f868e4c_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_36ebaeac-458c-485b-a830-69371f868e4c.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_f8258643-bb44-4b98-bcec-5f53a268f337_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_f8258643-bb44-4b98-bcec-5f53a268f337.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_d1ae96ac-844d-4124-87b2-613c4ebf1eff_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_d1ae96ac-844d-4124-87b2-613c4ebf1eff.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_c5924d13-1d90-405c-9610-13d200d9a86c_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_c5924d13-1d90-405c-9610-13d200d9a86c.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_be098ffe-0c4e-4f2d-a585-7546b4bec986_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_be098ffe-0c4e-4f2d-a585-7546b4bec986.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_0af242bf-890b-49b6-8e11-61c0e4caa101_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_0af242bf-890b-49b6-8e11-61c0e4caa101.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_cf94d5cf-df16-4dbc-baa4-b566604b88f6_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_cf94d5cf-df16-4dbc-baa4-b566604b88f6.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_026046cb-dbe6-47b7-b071-21a1631958c1_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_026046cb-dbe6-47b7-b071-21a1631958c1.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_83f991b9-7617-4f9b-8897-ff60f47d08af_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_83f991b9-7617-4f9b-8897-ff60f47d08af.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_4e16844f-5e72-4d37-b10d-aa20b667b8bf_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_4e16844f-5e72-4d37-b10d-aa20b667b8bf.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_7134a48b-4b76-4dc2-b2b7-40a998bc21d0_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_7134a48b-4b76-4dc2-b2b7-40a998bc21d0.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_ce879d43-ba8f-4aaa-9c67-7cf8aafc43d2_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_ce879d43-ba8f-4aaa-9c67-7cf8aafc43d2.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_1b54bca3-89c4-4dfc-9b1d-d01bccd1405d_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_1b54bca3-89c4-4dfc-9b1d-d01bccd1405d.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_cf285290-a282-4817-b890-3de284637daa_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_cf285290-a282-4817-b890-3de284637daa.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_7bd04f10-1829-4d14-8bda-e142e5b504ca_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_7bd04f10-1829-4d14-8bda-e142e5b504ca.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_74c27503-4b2d-4c8e-96ab-bf92e4e97cb8_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_74c27503-4b2d-4c8e-96ab-bf92e4e97cb8.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_7f158e9f-159d-4e7d-8f9a-9ad4239fe76b_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_7f158e9f-159d-4e7d-8f9a-9ad4239fe76b.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_1cdf6269-21b3-4059-be5e-99cc1352d370_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_1cdf6269-21b3-4059-be5e-99cc1352d370.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_76acf5ef-c435-4756-bb5f-2ae1d757ebb7_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112036_76acf5ef-c435-4756-bb5f-2ae1d757ebb7.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112267A01</CodigoImovel>
+      <DataCadastro>11/12/2018 3:52:07 PM</DataCadastro>
+      <DataUltimateracao>4/15/2021 12:48:03 PM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
+      <CategoriaImovel>Cobertura</CategoriaImovel>
+      <Cidade>BRASILIA</Cidade>
+      <Bairro>Asa Sul</Bairro>
+      <Endereco>Quadra SQS 110</Endereco>
+      <Numero>01</Numero>
+      <Complemento>SQS 116 - Excelente Cobertura Duplex</Complemento>
+      <CEP>70373000</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.82004</Latitude>
+      <Longitude>-47.90857</Longitude>
+      <TituloImovel>SQS 116 - Excelente Cobertura Duplex</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112267 - 202104151513
+São 290 m² bem distribuídos: 
+4 quartos sendo 02 suítes com 1 Hidromassagem 
+2 banheiros 
+1 lavabo 
+Armários em todos os cômodos 
+Piso em porcelanato 
+Ar condicionado em todos os quartos 
+Cortinas 
+Cozinha Planejada 
+2 vagas de garagem 
+MODALIDADE DE GARANTIA: 
+- Fiadores 
+- Título de Capitalização (Brasil Cap) 
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda />
+      <PrecoLocacao>13000</PrecoLocacao>
+      <PrecoLocacaoTemporada />
+      <AreaTotal>290</AreaTotal>
+      <AreaUtil>290</AreaUtil>
+      <QtdDormitorios>4</QtdDormitorios>
+      <QtdBanheiros>3</QtdBanheiros>
+      <QtdVagas>2</QtdVagas>
+      <PrecoCondominio>1860</PrecoCondominio>
+      <Piscina>1</Piscina>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>01</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_9507e973-65c1-41fc-8eaf-3b1caeb44c96_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_9507e973-65c1-41fc-8eaf-3b1caeb44c96.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>02</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_030138f4-e382-4f2a-9d95-7d2807a85e59_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_030138f4-e382-4f2a-9d95-7d2807a85e59.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>03</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_eddbf585-2fda-471b-9792-964ac5ef5b57_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_eddbf585-2fda-471b-9792-964ac5ef5b57.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>04</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_17a39bb6-d5ca-4773-8563-136b93b5fe6f_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_17a39bb6-d5ca-4773-8563-136b93b5fe6f.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>05</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_7f76a44c-4fe3-4b49-bd9f-4fbae1125f44_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_7f76a44c-4fe3-4b49-bd9f-4fbae1125f44.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>06</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_f9a19c48-0bb4-4319-8760-20511cb7718e_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_f9a19c48-0bb4-4319-8760-20511cb7718e.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>07</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_d6dc0259-b2d0-4f00-b870-b061db8c6ef4_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_d6dc0259-b2d0-4f00-b870-b061db8c6ef4.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>08</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_80dec56a-089b-41c5-ae3a-af7a267c4596_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_80dec56a-089b-41c5-ae3a-af7a267c4596.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>09</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_69fac331-fd29-41ba-bd82-dce1b9539cc9_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_69fac331-fd29-41ba-bd82-dce1b9539cc9.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>10</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_fc9a69dd-a3fc-4da8-bdf4-45f2fdbfce95_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112267_fc9a69dd-a3fc-4da8-bdf4-45f2fdbfce95.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112284A01</CodigoImovel>
+      <DataCadastro>11/12/2018 3:58:54 PM</DataCadastro>
+      <DataUltimateracao>5/3/2019 1:31:46 PM</DataUltimateracao>
+      <TipoImovel>Comercial/Industrial</TipoImovel>
+      <SubTipoImovel>Loja/Salao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>BRASILIA</Cidade>
+      <Bairro>SETOR NOROESTE</Bairro>
+      <Endereco>Quadra CLNW 10/11</Endereco>
+      <Numero>01</Numero>
+      <Complemento>CLNW 10/11 BLOCO E ED. NEO 1º LOCACAO ESQUINA</Complemento>
+      <CEP>70686600</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.74343</Latitude>
+      <Longitude>-47.91169</Longitude>
+      <TituloImovel>CLNW 10/11 BLOCO E ED. NEO 1º LOCAÇÃO ESQUINA</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112284 - 202104151513
+Loja no Edifício NEO: o primeiro comércio local e a melhor oportunidade no Noroeste.
+
+Localizada a 200 metros do Parque Burle Max, comércio pronto para receber serviços (vestuário, lavanderia, pet shop, livraria, etc), próximo também a supermercados e shopping.
+
+Loja de esquina, possui 08 vagas de garagem, pé direito duplo, mezanino, estacionamento para clientes. 
+As vagas de garagem poderão ser utilizadas como depósito/sala e o mezanino poderá ser aumentado, possibilitando a utilização de uma metragem de 240m².
+
+MODALIDADE DE GARANTIA:
+
+-FIADORES
+-TITULO DE CAPITALIZAÇÃO (BRASIL CAP)
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda />
+      <PrecoLocacao>4440</PrecoLocacao>
+      <PrecoLocacaoTemporada />
+      <AreaUtil>240</AreaUtil>
+      <QtdDormitorios />
+      <QtdVagas>8</QtdVagas>
+      <PrecoCondominio>2305</PrecoCondominio>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>2016/11/46613868.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112284_d5c88985-2bc2-43f4-aeb8-a6ca50e6778c_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112284_d5c88985-2bc2-43f4-aeb8-a6ca50e6778c.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>2016/11/46613956.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112284_9947dc9b-6a0f-4751-ab24-359553e25672_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112284_9947dc9b-6a0f-4751-ab24-359553e25672.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>2016/11/46614059.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112284_c23c1e23-c47e-4d7e-a1b3-ba43af95af7d_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112284_c23c1e23-c47e-4d7e-a1b3-ba43af95af7d.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>2016/11/46614060.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112284_ad7db6c7-71f9-4484-99f8-c0e6347fd379_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112284_ad7db6c7-71f9-4484-99f8-c0e6347fd379.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112320A01</CodigoImovel>
+      <DataCadastro>11/12/2018 4:11:54 PM</DataCadastro>
+      <DataUltimateracao>5/3/2019 1:35:29 PM</DataUltimateracao>
+      <TipoImovel>Comercial/Industrial</TipoImovel>
+      <SubTipoImovel>Conjunto Comercial/Sala</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>BRASILIA</Cidade>
+      <Bairro>SETOR DE INDUSTRIA GRAFICAS</Bairro>
+      <Endereco>SIG Quadra 1</Endereco>
+      <Numero>01</Numero>
+      <Complemento>SHN QUADRA 01 LE QUARTIER</Complemento>
+      <CEP>70610410</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.78864</Latitude>
+      <Longitude>-47.90731</Longitude>
+      <TituloImovel>SHN QUADRA 01 LE QUARTIER</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112320 - 202104151513
+LE QUARTIER
+
+- SALA COMERCIAL 
+- AR CONDICIONADO CENTRAL
+- VISTA LIVRE
+- PRIMEIRA LOCAÇÃO
+
+MODALIDADE DE GARANTIA:
+- Fiadores
+- Título de Capitalização (Brasil Cap)
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda />
+      <PrecoLocacao>1000</PrecoLocacao>
+      <PrecoLocacaoTemporada />
+      <AreaUtil>26</AreaUtil>
+      <QtdDormitorios />
+      <QtdBanheiros>1</QtdBanheiros>
+      <QtdVagas>1</QtdVagas>
+      <PrecoCondominio>387</PrecoCondominio>
+      <TipoOferta>2</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>50735443.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_08c97366-da21-414b-883b-b815ec7eb452_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_08c97366-da21-414b-883b-b815ec7eb452.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>50735457.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_a8d2dd90-2efa-4a96-8614-0b15fc77e832_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_a8d2dd90-2efa-4a96-8614-0b15fc77e832.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>50735458.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_92c4ed65-811d-4b4c-b27f-8ef377f7f645_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_92c4ed65-811d-4b4c-b27f-8ef377f7f645.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>50735459.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_5a68e268-c8e7-44b5-a268-7534fb03283f_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_5a68e268-c8e7-44b5-a268-7534fb03283f.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>50735460.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_ca6ea109-1328-4d2e-8106-5d3346be2dda_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_ca6ea109-1328-4d2e-8106-5d3346be2dda.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>50735461.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_d1e17693-238d-4007-8a5f-4c8017beefc5_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_d1e17693-238d-4007-8a5f-4c8017beefc5.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>50735462.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_15bdd24e-4115-405e-bb84-10125199a6cc_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112320_15bdd24e-4115-405e-bb84-10125199a6cc.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112341A01</CodigoImovel>
+      <DataCadastro>11/12/2018 4:21:42 PM</DataCadastro>
+      <DataUltimateracao>5/3/2019 1:36:36 PM</DataUltimateracao>
+      <TipoImovel>Comercial/Industrial</TipoImovel>
+      <SubTipoImovel>Loja/Salao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>BRASILIA</Cidade>
+      <Bairro>SETOR DE INDUSTRIA GRAFICAS</Bairro>
+      <Endereco>SIG Quadra 1</Endereco>
+      <Numero>01</Numero>
+      <Complemento>SIG QUADRA 1 ED. PLATINUM OFFICE 61 3039 8400</Complemento>
+      <CEP>70610410</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.7894496917725</Latitude>
+      <Longitude>-47.908821105957</Longitude>
+      <TituloImovel>SIG QUADRA 1 ED. PLATINUM OFFICE 61 3039 8400</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112341 - 202104151513
+LOJA COM MEZANINO!!!
+
+ED. PLATINUM OFFICE
+
+
+MELHOR ENDEREÇO PARA SEU ESCRITÓRIO
+LOJA COM BANHEIRO 
+VAGA PRIVATIVA
+PRÉDIO COM EXCELENTE LOCALIZAÇÃO, AO LADO DO TJDF, DE FRENTE AO   CORREIO BRAZILIENSE, FÁCIL ACESSO AO EIXO MONUMENTAL, ESPLANADA DOS MINISTÉRIOS, PRÓXIMO AO PARQUE DA CIDADE A POUCOS MINUTOS DA CÂMARA LEGISLATIVA, PALÁCIO DO BURITI. 
+EDIFICO COM PORTARIA 24H, ELEVADORES.
+
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda />
+      <PrecoLocacao>40000</PrecoLocacao>
+      <PrecoLocacaoTemporada />
+      <AreaUtil>97</AreaUtil>
+      <QtdDormitorios />
+      <QtdVagas>1</QtdVagas>
+      <PrecoCondominio>1100</PrecoCondominio>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>46541928.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_319a6488-6ca5-4aeb-8eb6-ed15a9102d60_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_319a6488-6ca5-4aeb-8eb6-ed15a9102d60.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>46541930.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_e096743a-096e-4268-9eef-8f87c8b8e068_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_e096743a-096e-4268-9eef-8f87c8b8e068.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>46541931.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_32f4ad31-3b8b-42ec-a8fa-2b5179426341_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_32f4ad31-3b8b-42ec-a8fa-2b5179426341.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>46541932.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_5067eaaa-c0bc-4af9-8b5a-05af0781ac47_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_5067eaaa-c0bc-4af9-8b5a-05af0781ac47.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>46541934.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_1258e925-e1f6-49aa-b15a-7e7cd9a66eb9_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_1258e925-e1f6-49aa-b15a-7e7cd9a66eb9.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>46541936.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_8b766388-8f3f-4ef5-beb2-5392c9190202_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_8b766388-8f3f-4ef5-beb2-5392c9190202.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>46541938.jpg</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_eccada4d-ca94-4e1d-8366-6105ab6e1b5e_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112341_eccada4d-ca94-4e1d-8366-6105ab6e1b5e.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112372V01</CodigoImovel>
+      <DataCadastro>11/12/2018 4:33:04 PM</DataCadastro>
+      <DataUltimateracao>5/7/2019 2:42:35 PM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>GUARA</Cidade>
+      <Bairro>SETOR INDUSTRIAL</Bairro>
+      <Endereco>Setor SGCV</Endereco>
+      <Numero>01</Numero>
+      <Complemento>OTIMO APARTAMENTO </Complemento>
+      <CEP>71215100</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.82292</Latitude>
+      <Longitude>-47.95356</Longitude>
+      <TituloImovel>ÓTIMO APARTAMENTO </TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112372 - 202104151513
+-VAZADO
+-TRÊS QUARTOS
+-SALA DOIS AMBIENTES
+-COZINHA
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech
+]]></Observacao>
+      <PrecoVenda>1000000</PrecoVenda>
+      <PrecoLocacao />
+      <PrecoLocacaoTemporada />
+      <AreaUtil>63</AreaUtil>
+      <QtdDormitorios>3</QtdDormitorios>
+      <QtdBanheiros>1</QtdBanheiros>
+      <Interfone>1</Interfone>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>01</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112372_2956f89a-bb09-4d0c-8355-7a4f56edef8c_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112372_2956f89a-bb09-4d0c-8355-7a4f56edef8c.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>02</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112372_fe17c4e2-9709-4672-b1ad-ccc22555be2a_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112372_fe17c4e2-9709-4672-b1ad-ccc22555be2a.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>03</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112372_66ed1a30-6029-443c-8cdc-dfb1ef714ca5_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112372_66ed1a30-6029-443c-8cdc-dfb1ef714ca5.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>04</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112372_ab987c78-9ef5-48f5-b37f-35215c2ad5a8_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112372_ab987c78-9ef5-48f5-b37f-35215c2ad5a8.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>05</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112372_a04fb533-1229-4237-b3d2-a4ae4f028a3c_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112372_a04fb533-1229-4237-b3d2-a4ae4f028a3c_2x.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112373V01</CodigoImovel>
+      <DataCadastro>11/12/2018 4:33:24 PM</DataCadastro>
+      <DataUltimateracao>5/7/2019 2:42:11 PM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Kitchenette/Conjugados</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>BRASILIA</Cidade>
+      <Bairro>Asa Norte</Bairro>
+      <Endereco>Quadra CLN 307</Endereco>
+      <Numero>01</Numero>
+      <Complemento>QMSW 05 OPORTUNIDADE</Complemento>
+      <CEP>70746500</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.76844</Latitude>
+      <Longitude>-47.88632</Longitude>
+      <TituloImovel>QMSW 05 OPORTUNIDADE</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112373 - 202104151513
+LINDA KIT;
+
+-DIVIDIDA;
+-ARMÁRIOS;
+-EXCELENTE LOCALIZAÇÃO;
+-VISTA LIVRE;
+-NASCENTE;
+
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda>280000</PrecoVenda>
+      <PrecoLocacao />
+      <PrecoLocacaoTemporada />
+      <AreaUtil>25</AreaUtil>
+      <QtdDormitorios>1</QtdDormitorios>
+      <QtdBanheiros>1</QtdBanheiros>
+      <QtdVagas>1</QtdVagas>
+      <Interfone>1</Interfone>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>01</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_414f7477-c466-4899-b477-c8c138ce7e39_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_414f7477-c466-4899-b477-c8c138ce7e39.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>02</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_e9690812-ad6b-41b4-b2bb-81b34a8181a5_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_e9690812-ad6b-41b4-b2bb-81b34a8181a5.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>03</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_bddd3ed1-fd75-4e3b-9e10-256d88de6e89_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_bddd3ed1-fd75-4e3b-9e10-256d88de6e89.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>04</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_ae210264-1fa1-431f-a45a-cb7ecc2ab488_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_ae210264-1fa1-431f-a45a-cb7ecc2ab488.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>05</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_38076a43-aa20-4de4-a367-ddbad669f5fa_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_38076a43-aa20-4de4-a367-ddbad669f5fa.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>06</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_90f837bb-75b2-4de2-ab6b-ae7860532659_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112373_90f837bb-75b2-4de2-ab6b-ae7860532659.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112374A01</CodigoImovel>
+      <DataCadastro>11/12/2018 4:33:42 PM</DataCadastro>
+      <DataUltimateracao>5/7/2019 2:13:21 PM</DataUltimateracao>
+      <TipoImovel>Comercial/Industrial</TipoImovel>
+      <SubTipoImovel>Predio Inteiro</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>GUARA</Cidade>
+      <Bairro>SETOR INDUSTRIAL</Bairro>
+      <Endereco>Setor SGCV</Endereco>
+      <Numero>01</Numero>
+      <Complemento>SAAN QUADRA 3 - DE 690 AO FIM - LADO PAR OTIMA</Complemento>
+      <CEP>71215100</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.82292</Latitude>
+      <Longitude>-47.95356</Longitude>
+      <TituloImovel>SAAN QUADRA 3 - DE 690 AO FIM - LADO PAR ÓTIMA OPORTUNIDADE!</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112374 - 202104151513
+ÓTIMA OPORTUNIDADE!
+
+Prédio comercial, constituído por 5 pavimentos; 
+
+- 2º e 3º subsolos: Áreas destinadas a estacionamento, com pintura e numeração de vagas e faixas de segurança. 
+- 1º subsolo: Destinado á escritório composto de 04 unidades autônomas 
+
+- Pavimento térreo: Hall de entrada principal e duas unidades autônomas 
+- Pavimento Superior- Circulação, hall de elevadores e duas unidades autônomas Esquadrias em alumínio anodizado e vidros escuros. Dois elevadores (ala norte e sul), cada um deles com capacidade para 8 passageiros, escadaria em concreto armado, revestido em granito polido. Instalação de ar condicionado central que distribui o fluxo de ar, por meio de 15 \"fancoils\" distribuídos no primeiro subsolo, térreo e pavimento superior. O prédio também conta com sistema completo de instalação anti-incêndio, instalações completas de rede elétrica. Espaço bem planejado e amplo, ideal para empresas na área central de Brasília. 
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda />
+      <PrecoLocacao>100</PrecoLocacao>
+      <PrecoLocacaoTemporada />
+      <AreaUtil>1784</AreaUtil>
       <QtdDormitorios />
       <TipoOferta>1</TipoOferta>
       <Fotos>
         <Foto>
-          <Legenda>Sala principal </Legenda>
+          <Legenda>21534103.jpg</Legenda>
           <Link>
             <Tamanho>Medium</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27949_56e65f8d-ccf4-4d99-8c7c-4492b48250dd_md.jpg</URLArquivo>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112374_3393a7e3-21ca-4e93-b4df-6b4eeba77823_md.jpg</URLArquivo>
           </Link>
           <Link>
             <Tamanho>XXLarge</Tamanho>
-            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/27949_56e65f8d-ccf4-4d99-8c7c-4492b48250dd.jpg</URLArquivo>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112374_3393a7e3-21ca-4e93-b4df-6b4eeba77823.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112376V01</CodigoImovel>
+      <DataCadastro>11/12/2018 4:42:58 PM</DataCadastro>
+      <DataUltimateracao>5/7/2019 2:35:51 PM</DataUltimateracao>
+      <TipoImovel>Terreno</TipoImovel>
+      <SubTipoImovel>Terreno Padrao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>BRASILIA</Cidade>
+      <Bairro>SETOR SUDOESTE</Bairro>
+      <Endereco>Quadra QMSW 5</Endereco>
+      <Numero>01</Numero>
+      <Complemento>Terreno Vicente Pires - 300m2</Complemento>
+      <CEP>70680500</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.79557</Latitude>
+      <Longitude>-47.91989</Longitude>
+      <TituloImovel>Terreno Vicente Pires - 300m2</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112376 - 202104151513
+FEROLA, vencedora do prêmio Colibri pelo 7o ano consecutivo, a mais acessada em Brasília, vende: 
+Lote Vicente Pires 
+- Otimamente bem localizado (Próximo de Supermercados, comércio local, ponto de ônibus, etc.) 
+- Acesso rápido à EPTG 
+- 300m2 
+- Murado 
+- Condomínio fechado 
+- Guarita 
+- Aceita troca por apartamento em Águas Claras]]></Observacao>
+      <PrecoVenda>280000</PrecoVenda>
+      <PrecoLocacao />
+      <PrecoLocacaoTemporada />
+      <AreaUtil>300</AreaUtil>
+      <AreaConstruida>300</AreaConstruida>
+      <QtdDormitorios />
+      <QtdVagas>10</QtdVagas>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>01</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112376_86557916-3e7d-4da6-8321-16a0a8513247_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112376_86557916-3e7d-4da6-8321-16a0a8513247.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>02</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112376_5a8a8e52-96fe-495d-8788-24668d8f6fc8_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112376_5a8a8e52-96fe-495d-8788-24668d8f6fc8.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>03</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112376_0ea77cce-a041-41f9-bb7d-552f40497a81_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112376_0ea77cce-a041-41f9-bb7d-552f40497a81.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>04</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112376_12a74a37-9f8c-4317-a269-43e0e8aef535_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112376_12a74a37-9f8c-4317-a269-43e0e8aef535.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>05</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112376_11523303-8496-42f3-a8c7-a81e40986ed9_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112376_11523303-8496-42f3-a8c7-a81e40986ed9.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112382V01</CodigoImovel>
+      <DataCadastro>11/12/2018 4:46:01 PM</DataCadastro>
+      <DataUltimateracao>4/15/2021 12:40:31 PM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>AGUAS CLARAS</Cidade>
+      <Bairro>NORTE</Bairro>
+      <Endereco>Rua 36</Endereco>
+      <Numero>01</Numero>
+      <Complemento>Quadra 205 - Aguas Claras</Complemento>
+      <CEP>71919180</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.89819</Latitude>
+      <Longitude>-47.77159</Longitude>
+      <TituloImovel>Quadra 205 - Águas Claras</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112382 - 202104151513
+Apartamento Quadra 205 
+
+- Apartamento na melhor quadra de Águas Claras, próximo ao Shopping. 
+- Originalmente de 4 quartos transformado em 3 quartos, podendo reverter novamente; 
+- 97m2 de área útil 
+- DCE 
+- Armários planejados em todos os cômodos 
+- 02 vagas descobertas. 
+- Lazer completo (piscina, sauna, churrasqueira, salão de festas, etc.) 
+
+Somos correspondente bancário Caixa - aprovamos seu financiamento com agilidade. 
+
+Agende sua visita 
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda>500000</PrecoVenda>
+      <PrecoLocacao />
+      <PrecoLocacaoTemporada />
+      <AreaUtil>97</AreaUtil>
+      <QtdDormitorios>1</QtdDormitorios>
+      <QtdBanheiros>3</QtdBanheiros>
+      <QtdSalas>1</QtdSalas>
+      <QtdVagas>2</QtdVagas>
+      <PrecoCondominio>800</PrecoCondominio>
+      <Churrasqueira>1</Churrasqueira>
+      <Playground>1</Playground>
+      <QuadraPoliEsportiva>1</QuadraPoliEsportiva>
+      <SalaoFestas>1</SalaoFestas>
+      <SalaoJogos>1</SalaoJogos>
+      <Varanda>1</Varanda>
+      <Interfone>1</Interfone>
+      <SpaHidromassagem>1</SpaHidromassagem>
+      <TipoOferta>2</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>01</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_c068710f-a019-4469-a0ae-edcfffb9fdf3_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_c068710f-a019-4469-a0ae-edcfffb9fdf3.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>02</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_860cb999-061e-41c1-a4b0-cc20696f34b1_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_860cb999-061e-41c1-a4b0-cc20696f34b1.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>03</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_3698b214-a229-46bf-a695-78cb529a622f_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_3698b214-a229-46bf-a695-78cb529a622f.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>04</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_298c2f72-b2ac-4087-a22b-92ffc6431853_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_298c2f72-b2ac-4087-a22b-92ffc6431853.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>05</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_0907b629-32df-4886-8d28-fc0c7f77d0dc_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_0907b629-32df-4886-8d28-fc0c7f77d0dc.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>06</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_d8f7a07d-7c4b-4e1d-a224-e1b4fdba89c2_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_d8f7a07d-7c4b-4e1d-a224-e1b4fdba89c2.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>07</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_3430a2f9-d83a-456d-b758-87d38c4add8f_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_3430a2f9-d83a-456d-b758-87d38c4add8f.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>08</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_38a6249f-6d64-4e6c-917c-ac5d799b996f_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_38a6249f-6d64-4e6c-917c-ac5d799b996f.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>09</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_a218103c-dd50-4828-bb91-11b72568cd26_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_a218103c-dd50-4828-bb91-11b72568cd26.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>10</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_7905bcdf-a04b-4b05-9ae6-7082d668afa8_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112382_7905bcdf-a04b-4b05-9ae6-7082d668afa8.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+      <Videos>
+        <Video>
+          <Url>https://www.youtube.com/embed/QIOXc__1AiY</Url>
+        </Video>
+      </Videos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA112383V01</CodigoImovel>
+      <DataCadastro>11/12/2018 4:46:33 PM</DataCadastro>
+      <DataUltimateracao>5/3/2019 1:22:39 PM</DataUltimateracao>
+      <TipoImovel>Apartamento</TipoImovel>
+      <SubTipoImovel>Apartamento Padrao</SubTipoImovel>
+      <CategoriaImovel>Padrao</CategoriaImovel>
+      <Cidade>BRASILIA</Cidade>
+      <Bairro>LAGO NORTE</Bairro>
+      <Endereco>Quadra CA 6</Endereco>
+      <Numero>01</Numero>
+      <Complemento>Wave - Rua 18 norte - Aguas Claras </Complemento>
+      <CEP>71503506</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.80884</Latitude>
+      <Longitude>-48.03128</Longitude>
+      <TituloImovel>Wave - Rua 18 norte - Águas Claras </TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA112383 - 202104151513
+Wave Residence 
+- 67m2 de área útil 
+- 2 Quartos 
+- Armários na cozinha e banheiros 
+- 01 vaga no subsolo 
+- Varanda grande 
+- Lazer completo: 
+- Piscina coberta aquecida 
+- Sala de jogos 
+- Academia 
+- Spa 
+- Espaço Gourmet 
+- Portaria 24 horas 
+- Sistema de câmeras 
+- Próximo à estação Central do metrô 
+- Próximo ao Parque 
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda>50000</PrecoVenda>
+      <PrecoLocacao />
+      <PrecoLocacaoTemporada />
+      <AreaUtil>67</AreaUtil>
+      <QtdDormitorios>2</QtdDormitorios>
+      <QtdBanheiros>2</QtdBanheiros>
+      <QtdVagas>1</QtdVagas>
+      <PrecoCondominio>350</PrecoCondominio>
+      <Playground>1</Playground>
+      <SalaoFestas>1</SalaoFestas>
+      <SalaoJogos>1</SalaoJogos>
+      <Varanda>1</Varanda>
+      <Interfone>1</Interfone>
+      <SpaHidromassagem>1</SpaHidromassagem>
+      <TipoOferta>1</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_c608174e-d78b-4758-ba8a-e0c64f738415_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_c608174e-d78b-4758-ba8a-e0c64f738415.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_3c84adf8-22ef-4997-b5a4-aa9b2811746f_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_3c84adf8-22ef-4997-b5a4-aa9b2811746f.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_c73245bd-f52d-40a7-982e-59ca296f79f7_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_c73245bd-f52d-40a7-982e-59ca296f79f7.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_6768ce71-50bd-4793-ab3f-24304f286370_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_6768ce71-50bd-4793-ab3f-24304f286370.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_8532e855-35c5-4eed-b037-a0c6bdd8c278_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_8532e855-35c5-4eed-b037-a0c6bdd8c278.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_6deb8012-6513-4904-afd4-61cf6bcdfd87_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_6deb8012-6513-4904-afd4-61cf6bcdfd87.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_d52017e0-bbb9-4035-9119-408afb5117fb_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_d52017e0-bbb9-4035-9119-408afb5117fb.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_8c359bf9-032c-4dfd-9f4b-a8148cbc933e_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_8c359bf9-032c-4dfd-9f4b-a8148cbc933e.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_2abbdbe5-1d8d-4062-8603-582a3849a57b_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_2abbdbe5-1d8d-4062-8603-582a3849a57b.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_e550cd0a-fc66-4b1c-abf9-521d6f657649_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_e550cd0a-fc66-4b1c-abf9-521d6f657649.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_4cfe0a74-cca6-4b1b-a30c-a737cec52580_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_4cfe0a74-cca6-4b1b-a30c-a737cec52580.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_87cab6ea-0ed1-43b2-bc7f-074923e22069_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_87cab6ea-0ed1-43b2-bc7f-074923e22069.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_c9f13120-e0b7-40a5-896c-89ff740fbb9e_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_c9f13120-e0b7-40a5-896c-89ff740fbb9e.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_4285b970-a656-47c7-96a4-a05c6ce300a4_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_4285b970-a656-47c7-96a4-a05c6ce300a4.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_6abf47a6-3ada-47e0-b9da-59a7d0b122e7_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_6abf47a6-3ada-47e0-b9da-59a7d0b122e7.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_b161f9d8-321f-496f-8595-cefb69920e07_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_b161f9d8-321f-496f-8595-cefb69920e07.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda></Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_f053513a-a594-4351-885e-3a88386a1867_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_f053513a-a594-4351-885e-3a88386a1867.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>Jerusa 991271253 - Fachada</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_bbd4f6b0-71df-4a7b-a926-3f71d93b81d0_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://storage.allmatech.com.br/villa-fotos/112383_bbd4f6b0-71df-4a7b-a926-3f71d93b81d0.jpg</URLArquivo>
+          </Link>
+        </Foto>
+      </Fotos>
+    </Imovel>
+    <Imovel>
+      <CodigoImovel>VILLA113359V01</CodigoImovel>
+      <DataCadastro>12/7/2018 12:01:17 PM</DataCadastro>
+      <DataUltimateracao>5/3/2019 1:14:40 PM</DataUltimateracao>
+      <TipoImovel>Casa</TipoImovel>
+      <SubTipoImovel>Casa Padrao</SubTipoImovel>
+      <CategoriaImovel>Terrea</CategoriaImovel>
+      <Cidade>AGUAS CLARAS</Cidade>
+      <Bairro>NORTE</Bairro>
+      <Endereco>Rua 3</Endereco>
+      <Numero>404</Numero>
+      <CEP>71907360</CEP>
+      <UF>DF</UF>
+      <Latitude>-15.7784299850464</Latitude>
+      <Longitude>-47.9286499023438</Longitude>
+      <TituloImovel>excelente casa para familia</TituloImovel>
+      <Observacao><![CDATA[Codigo anúncio: VILLA113359 - 202104151513
+Apartamento com excelente planta, vazado, vista, bem dividido com área intima e área social. Piso em granito. Completo em armários planejados. 
+
+Área Íntima: 
+4 suítes amplas e com armários planejados. 
+
+Área Social: 
+Sala planejada para 2 ambiente e área livre para criação de hall de entrada 
+Varanda 
+Lavabo 
+Cozinha em L 
+Área de serviço separada da cozinha 
+DCE 
+2 VAGAS DE GARAGEM SOLTAS 
+Andar alto 
+
+Condomínio: 
+Área de lazer completa. 
+Churrasqueira, Forno de pizza 
+Campo de futebol, 
+Área fitness, 
+Salão gourmet, 
+Quadra de futebol, quadra poliesportiva, 
+Salão de festas, salão de jogos, 
+Spa, 
+Playground, 
+Piscina, piscina infantil, piscina aquecida, 
+Guarita, segurança 24 horas e CFTV. 
+
+
+*****
+Esse anuncio não é real. 
+Somente um teste para o site de demonstração da Allmatech]]></Observacao>
+      <PrecoVenda>58000</PrecoVenda>
+      <PrecoLocacao />
+      <PrecoLocacaoTemporada />
+      <AreaTotal>1</AreaTotal>
+      <AreaUtil>1</AreaUtil>
+      <QtdDormitorios>2</QtdDormitorios>
+      <QtdSuites>2</QtdSuites>
+      <QtdBanheiros>4</QtdBanheiros>
+      <QtdSalas>1</QtdSalas>
+      <QtdVagas>2</QtdVagas>
+      <QtdAndar>1</QtdAndar>
+      <PrecoCondominio>1</PrecoCondominio>
+      <ValorIPTU>1</ValorIPTU>
+      <Jardim>1</Jardim>
+      <Sauna>1</Sauna>
+      <QuartoWCEmpregada>1</QuartoWCEmpregada>
+      <Mobiliado>1</Mobiliado>
+      <TipoOferta>2</TipoOferta>
+      <Fotos>
+        <Foto>
+          <Legenda>A</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/113359_4367fdaf-6b3d-403a-bc5c-e96befb206e3_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/113359_4367fdaf-6b3d-403a-bc5c-e96befb206e3.jpg</URLArquivo>
+          </Link>
+        </Foto>
+        <Foto>
+          <Legenda>B</Legenda>
+          <Link>
+            <Tamanho>Medium</Tamanho>
+            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/113359_af0349eb-aa50-4b13-9ea0-b95811069a86_md.jpg</URLArquivo>
+          </Link>
+          <Link>
+            <Tamanho>XXLarge</Tamanho>
+            <URLArquivo>https://dev.storage.allmatech.com.br/villa-fotos/113359_af0349eb-aa50-4b13-9ea0-b95811069a86.jpg</URLArquivo>
           </Link>
         </Foto>
       </Fotos>

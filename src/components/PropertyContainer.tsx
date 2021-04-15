@@ -87,7 +87,6 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
             <div className={property.image}>
                 <img
                     src={thumbnail}
-                    height={500}
                 />
 
                 <ul className={property.galleryButton}>
@@ -156,10 +155,9 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
 
                 </div>
 
-                <div className={property.propertyDescription}>
-                    <h3>Mais detalhes</h3>
-
-                    {features && (
+                {features && features.length > 0 && (
+                    <div className={property.propertyDescription}>
+                        <h3>Mais detalhes</h3>
                         <ul className={property.featureList}>
                             {features.map((f, i) => {
                                 if(i % 2 === 1) {
@@ -169,9 +167,8 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                                 return <li className={property.featureEven} key={i.toString()}>{f}</li>;
                             })}
                         </ul>
-                    )}
-
-                </div>
+                    </div>
+                )}
 
                 {(Latitude && Longitude) && (
                     <div className={property.propertyMap}>

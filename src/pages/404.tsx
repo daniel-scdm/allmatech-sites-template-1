@@ -15,9 +15,7 @@ function Custom404() {
             <title>Allmatech Imobiliária - 404</title>
             <meta name="description" content="404 - Página não encontrada." />
         </Head>
-        <Header 
-            logoHeight={40}
-            logoWidth={190}  
+        <Header  
             bgHeaderColor={"#f9f9f9"}      
         />
         <div className={section.bannerCompany}>

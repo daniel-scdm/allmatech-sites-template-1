@@ -13,7 +13,7 @@ import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/f
 import { CSSTransition } from "react-transition-group";
 import React from 'react';
 
-const HeaderComponent : React.FC<IHeaderComponent> = ({ logoWidth, logoHeight, bgHeaderColor }) => {
+const HeaderComponent : React.FC<IHeaderComponent> = ({ bgHeaderColor }) => {
 
     const [isNavVisible, setNavVisibility] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -47,8 +47,6 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ logoWidth, logoHeight, b
                         <a>
                             <img 
                                 src={"public/images/AllmaImob.png"}
-                                width={logoWidth}
-                                height={logoHeight}
                                 alt="Picture of the author"
                                 className={styles.imageLogo}
                             />

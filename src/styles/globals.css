@@ -269,6 +269,10 @@ footer ul li a:hover {
   transition: opacity 300ms, transform 300ms;
 }
 
+.mapboxgl-map .atlas-map {
+  min-height: 340px;
+}
+
 @media (min-width: 490px) {
     footer ul {
         columns: 2;

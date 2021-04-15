@@ -106,9 +106,7 @@ export default function Home() {
         <meta name="description" content="O melhor portal de imóveis." />
       </Head>
 
-      <Header 
-          logoHeight={40}
-          logoWidth={190}  
+      <Header            
           bgHeaderColor={"#f9f9f9"}      
       />
       <SectionFull

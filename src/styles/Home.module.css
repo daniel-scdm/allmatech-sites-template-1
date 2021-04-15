@@ -142,6 +142,10 @@
   font-weight: 600;
 }
 
+.imageLogo {
+  display: none;
+}
+
 .contactContainer > section > p:nth-child(3) {
   color: #eee;
   font-size: 1.1rem;
@@ -278,6 +282,12 @@
     background-size: cover;
   }
 
+}
+
+@media (min-width: 1024px) {
+  .imageLogo {
+    display: block;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {

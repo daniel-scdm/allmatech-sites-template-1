@@ -16,8 +16,6 @@ function Custom500() {
             <meta name="description" content="500 - Error interno no servidor." />
         </Head>
         <Header 
-            logoHeight={40}
-            logoWidth={190}  
             bgHeaderColor={"#f9f9f9"}      
         />
         <div className={section.bannerCompany}>

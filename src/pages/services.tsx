@@ -16,8 +16,6 @@ function Services() {
             <meta name="description" content="Vejas todos os nossos serviços." />
         </Head>
         <Header 
-            logoHeight={40}
-            logoWidth={190}  
             bgHeaderColor={"#f9f9f9"}      
         />
         <div className={section.bannerCompany}>

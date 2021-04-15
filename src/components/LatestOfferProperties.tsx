@@ -1,5 +1,5 @@
 import React, { useEffect, useState, memo } from "react";
-import Card from "src/components/Card";
+import FeatureCard from "src/components/featureCard";
 import styles from 'src/styles/Home.module.css';
 
 import { IPropertyXML } from "interfaces";
@@ -74,7 +74,7 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
         <section className={styles.spacingContainer}>
             <div className={styles.latestCards}>
                 {paginatedList.map((p) => (
-                    <Card 
+                    <FeatureCard 
                         key={p.CodigoImovel}
                         title={p.TituloImovel}
                         text={p.Observacao}
