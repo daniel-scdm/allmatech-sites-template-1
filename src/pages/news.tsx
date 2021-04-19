@@ -82,10 +82,10 @@ function News() {
     <>
       <Head>
           <title>Allmatech Imobiliária - Notícias</title>
-          <meta name="description" content="As notícias mais recentes sobre nossos imóveis." />
+          <meta name="description" content="As notícias mais recentes sobre nossos imóveis. Lorem hendrerit suscipit, amet." />
       </Head>
-      <Header            
-          bgHeaderColor={"#f9f9f9"}      
+      <Header
+          bgHeaderColor={"#f9f9f9"}
       />
       <section className={Section.container}>
           <div className={Section.lineLinks}>
@@ -98,7 +98,7 @@ function News() {
             <span>{">"}</span> 
               Notícias
           </div>
-          <div className={property.contentReverse}>            
+          <div className={property.contentReverse}>
             <aside>
                 {renderContent()}
             </aside>
@@ -108,7 +108,7 @@ function News() {
                 isLoading={isLoading}
               />
             </main>
-          </div>          
+          </div>
       </section>
       
       <Footer />

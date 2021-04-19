@@ -13,7 +13,7 @@ function Custom404() {
     <>
         <Head>
             <title>Allmatech Imobiliária - 404</title>
-            <meta name="description" content="404 - Página não encontrada." />
+            <meta name="description" content="404 - Página não encontrada. Lorem hendrerit suscipit, amet." />
         </Head>
         <Header  
             bgHeaderColor={"#f9f9f9"}      

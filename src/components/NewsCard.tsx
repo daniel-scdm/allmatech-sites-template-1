@@ -20,6 +20,7 @@ const NewsCard : FC<INewsCard> = ({ image, code, text }) => {
                     src={thumb}
                     onError={replaceImage}
                     className={Section.imageNews}
+                    alt="Thumbnail"
                 />
             )}
 

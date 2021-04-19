@@ -6,17 +6,18 @@ import { IPartnerComponent } from "interfaces";
 const PartnerComponent : React.FC<IPartnerComponent> = ({ logoImage, height, width }) => {
   return (
     <LazyLoad
-        height={200}  
+        height={200}
         once
     >
       <div className={styles.partner}>
-        <img 
+        <img
             src={logoImage}
             width={width}
             height={height}
-        /> 
-      </div> 
-    </LazyLoad>     
+            alt="Parceiro"
+        />
+      </div>
+    </LazyLoad>
   );
 }
 

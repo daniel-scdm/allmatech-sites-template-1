@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import section from 'src/styles/Section.module.css';
 import property from 'src/styles/Property.module.css';
 
+//import AzureMap from 'src/components/AzureMap';
+
 import Footer from "src/components/Footer";
 import { GiHouse, GiPhone, GiCalendar } from "react-icons/gi";
 import { FiMail } from "react-icons/fi";
@@ -50,7 +52,7 @@ function Contact() {
         <>
             <Head>
                 <title>Allmatech Imobiliária - Contato</title>
-                <meta name="description" content="Venha tomar um café conosco." />
+                <meta name="description" content="Venha tomar um café conosco. Lorem hendrerit suscipit, amet." />
             </Head>
             <Header
                 bgHeaderColor={"#f9f9f9"}
@@ -133,10 +135,6 @@ function Contact() {
 
                         </div>
                     </div>
-
-                    <div className={section.mapContainer}>
-                    </div>
-
                 </div>
             </section>
             <Footer />
@@ -145,3 +143,14 @@ function Contact() {
 }
 
 export default Contact;
+
+/*
+ <div className={section.mapContainer}>
+    <AzureMap 
+        lt={"-15.831890000000"}
+        lg={"-48.016170"}
+        height={"450px"}                            
+    />
+</div>
+
+*/

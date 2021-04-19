@@ -20,15 +20,15 @@
     font-weight: 400;
 }
 
-.CPFirst > h1,
-.CPSecound > h1 {
+.CPFirst > div,
+.CPSecound > div {
     padding: .3rem 0;
     margin: .3rem 0;
     font-size: 3.4rem;
 }
 
-.CPFirst > h1,
-.CPSecound > h1,
+.CPFirst > div,
+.CPSecound > div,
 .SCPFirst > div,
 .SCPSecound > div,
 .SCPThird > div,

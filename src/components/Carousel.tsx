@@ -29,7 +29,7 @@ const Carousel : React.FC<ICarousel> = ({ activeModal, setActiveModal, ListPhoto
                             size={25}
                             color={"#707070"}
                         />
-                    </a>                    
+                    </a>
                 </div>
 
                 <div className={property.gallery}>
@@ -40,9 +40,9 @@ const Carousel : React.FC<ICarousel> = ({ activeModal, setActiveModal, ListPhoto
                     >
                         {ListPhotos?.map((photo : any, i : number) => (
                             <div className={property.imageContainer} key={i.toString()}>
-                                <img src={photo.Link[1].URLArquivo} width={1200} height={800} loading="lazy" placeholder="Carregando..." />
+                                <img src={photo.Link[1].URLArquivo} width={1200} height={800} loading="lazy" alt="Foto imóvel" placeholder="Carregando..." />
                             </div>
-                        ))}                
+                        ))}
                     </GalleryCarousel>
                 </div>
             </div>

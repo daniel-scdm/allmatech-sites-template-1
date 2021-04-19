@@ -33,6 +33,7 @@ import Head from "next/head";
 import LazyFeatures from "src/components/Features";
 
 export default function Home() {
+
   
   const app : IContext = useAppContext();
   const { extractCity, filterUnique } = useFilter();
@@ -103,14 +104,13 @@ export default function Home() {
     <>
       <Head>
         <title>Allmatech Imobiliária</title>
-        <meta name="description" content="O melhor portal de imóveis." />
+        <meta name="description" content="O melhor portal de imóveis. Lorem hendrerit suscipit, amet." />
       </Head>
 
-      <Header            
-          bgHeaderColor={"#f9f9f9"}      
+      <Header
+          bgHeaderColor={"#f9f9f9"}
       />
-      <SectionFull
-      >
+      <SectionFull>
         <div className={Section.sectionDiv}>
           <SearchForm 
             cityList={cities}
@@ -120,8 +120,8 @@ export default function Home() {
             streetListRent={streetsRent}
           />
           <CatchPhrase />
-        </div>        
-      </SectionFull>   
+        </div>
+      </SectionFull>
 
       <section 
         sx={{
@@ -159,7 +159,7 @@ export default function Home() {
         className={styles.contactContainer}
       >
           <section className={styles.advice}>
-            <h1>Precisa de conselho?</h1>
+            <h2>Precisa de conselho?</h2>
             <p>Nossos agentes podem te ajudar</p>
             <p>
                 Fusce rutrum auctor odio vel sodales maecenas sit amet dignissim ex.
@@ -219,9 +219,9 @@ export default function Home() {
         className={Section.BuyOrSell}
       >
         <div className={Section.BuyOrSellContent}>
-          <h1>
+          <h2>
             Compre ou venda
-          </h1>
+          </h2>
           <div>
             Procurando comprar um novo imóvel ou vender um existente?
           </div>

@@ -81,12 +81,12 @@ function New() {
     <>
       <Head>
           <title>Allmatech Imobiliária - {news?.text}</title>
-          <meta name="description" content="As notícias mais recentes sobre nossos imóveis." />
+          <meta name="description" content="As notícias mais recentes sobre nossos imóveis. Lorem hendrerit suscipit, amet." />
       </Head>
-      <Header           
-          bgHeaderColor={"#f9f9f9"}      
+      <Header
+          bgHeaderColor={"#f9f9f9"}
       />
-      <section className={Section.container}>   
+      <section className={Section.container}>
           <div className={Section.lineLinksItem}>
 
             <Link href="https://allmateste.com.br/site-next/">
@@ -102,12 +102,12 @@ function New() {
             </Link>
             <span>{">"}</span>
             Notícia
-          </div>       
+          </div>
           <div className={property.newsContainer}>
             <main>
                 {handlePropertyLoading()}
-            </main>            
-          </div>           
+            </main>
+          </div>
       </section>
       <Footer />
     </>    

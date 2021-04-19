@@ -24,7 +24,7 @@ const ListCardMobile : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDorm
                     <img
                         className={property.missingImageCard}
                         src={thumbnail}
-
+                        alt="Thumbnail"
                     />
                     <Link href={{
                         pathname: "/property",

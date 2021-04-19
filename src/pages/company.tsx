@@ -13,28 +13,28 @@ function Company() {
     <>
         <Head>
             <title>Allmatech Imobiliária - Quem somos</title>
-            <meta name="description" content="Venha nos conhecer." />
+            <meta name="description" content="Venha nos conhecer. Lorem hendrerit suscipit, amet." />
         </Head>
-        <Header             
-            bgHeaderColor={"#f9f9f9"}      
+        <Header
+            bgHeaderColor={"#f9f9f9"}
         />
         <div className={section.bannerCompany}>
             <div className={section.bannerOverlay}>
                 <div className={section.bannerText}>
                     <h1>Quem somos</h1>
                 </div>
-            </div>            
+            </div>
         </div>
 
-        <section className={section.containerStaticPage}>            
+        <section className={section.containerStaticPage}>
             <div className={section.companyContent}> 
                 <div className={section.imageCompany}>
-                    <img     
+                    <img
                         src="https://www.roberthalf.com/sites/default/files/2017-08/company-pride-team-happier-rh-08-04-2017.jpg"
                         title="Equipe"
-                    /> 
+                        alt="Equipe"
+                    />
                 </div>
-                             
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet enim ornare tortor consectetur bibendum non vitae elit. 
                     Vestibulum mi nisi, elementum eu porta sit amet, pulvinar id lacus. Fusce eget convallis nulla. 

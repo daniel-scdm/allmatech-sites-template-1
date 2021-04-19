@@ -38,6 +38,8 @@ function List() {
   const [listProperties, setListProperties] = useState<Array<IPropertyXML> | undefined>(undefined);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     if(app.properties.length === 0) {
       init();
     } else {
@@ -105,7 +107,7 @@ function List() {
     <>
       <Head>
           <title>Allmatech Imobiliária - Imóveis</title>
-          <meta name="description" content="Apenas os melhores imóveis para você." />
+          <meta name="description" content="Apenas os melhores imóveis para você. Lorem hendrerit suscipit, amet." />
       </Head>
 
       <Header

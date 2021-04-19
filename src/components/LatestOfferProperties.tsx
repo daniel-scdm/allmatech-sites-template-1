@@ -38,7 +38,7 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
         return () => {
             mediaQuery.removeEventListener("change", handleMediaQueryChange);
         };
-    }, []);
+    }, [pList]);
 
     const handleMediaQueryChange = (mediaQuery : any) => {
         if (mediaQuery.matches) {
@@ -51,8 +51,12 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
     };
 
     useEffect(() => {
+        setcurrentPage(1);
+    }, [numberOfCards]);
+
+    useEffect(() => {
         setPaginationList(currentPage);
-    }, [currentPage, pList, numberOfCards]);
+    }, [currentPage, pList]);
 
     const setPaginationList = (page: number) => {
         const slicedList = pList.slice((page - 1) * numberOfCards, numberOfCards * page);

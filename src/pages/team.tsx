@@ -27,7 +27,7 @@ function Team() {
         <>
             <Head>
                 <title>Allmatech Imobiliária - Equipe</title>
-                <meta name="description" content="Conheça a nossa equipe." />
+                <meta name="description" content="Conheça a nossa equipe. Lorem hendrerit suscipit, amet." />
             </Head>
             <Header
                 bgHeaderColor={"#f9f9f9"}

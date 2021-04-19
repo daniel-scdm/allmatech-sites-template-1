@@ -1,12 +1,17 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import React from 'react';  
+import React, { useState } from 'react';  
 
 import property from 'src/styles/Property.module.css';
 
 import { ICardNews } from "interfaces/index";
 
 const NewsContainer : React.FC<ICardNews> = ({ image, text, title }) => {
+
+    const [img, setImg] = useState(image);
+
+    const handleImageError = () => setImg("http://allmateste.com.br/site-next/public/images/missing-image.png");
+
     return (
         <div className={property.containerProperty}>
 
@@ -16,16 +21,18 @@ const NewsContainer : React.FC<ICardNews> = ({ image, text, title }) => {
 
             <div className={property.image}>
                 <img
-                    src={image ? image : "public/images/empty.jpg"}
+                    src={img}
                     height={500}
+                    onError={handleImageError}
+                    alt="Vazio"
                 />
             </div>
 
             <div className={property.propertyInfoContainer}>
                 <div className={property.propertyDescription}>
-                    <p>
+                    <pre>
                         {text}
-                    </p>
+                    </pre>
                 </div>
             </div>
         </div> 

@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
- 
-
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { IPropertyXML } from "interfaces/index";
 import property from "src/styles/Property.module.css";
 
@@ -16,6 +14,10 @@ import { BiSearch } from "react-icons/bi";
 
 const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, PrecoVenda, PrecoLocacao, ArCondicionado, Piscina, Guarita }) => {
 
+    const [imageError, setImageError] = useState(false);
+
+    const SetError = () => setImageError(true);
+
     const numberWithCommas = (x : string | number) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
     }
@@ -23,12 +25,13 @@ const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorio
     return (        
         <div className={property.listCard}>
             <div className={property.imageCardContainer}>   
-            {thumbnail && (
+            {(thumbnail && !imageError) && (
                 <>
-                    <img                     
+                    <img
                         className={property.missingImageCard}
                         src={thumbnail}
-                            
+                        onError={SetError}
+                        alt="Thumbnail"
                     />
                     <Link href={{
                         pathname: "/property",
@@ -38,8 +41,27 @@ const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorio
                             <BiSearch  size={40}/>
                         </a>
                     </Link>
-                </>  
-            )}                                     
+                </> 
+            )}
+
+            {imageError && (
+                <>
+                    <img
+                        className={property.missingImageCard}
+                        src={"http://allmateste.com.br/site-next/public/images/missing-image.png"}
+                        onError={SetError}
+                        alt="Imagem vazia"
+                    />
+                    <Link href={{
+                        pathname: "/property",
+                        query: { code: CodigoImovel }
+                    }}>
+                        <a>
+                            <BiSearch  size={40}/>
+                        </a>
+                    </Link>
+                </> 
+            )}
             </div>
             <div className={property.cardInfo}>
                 <p>

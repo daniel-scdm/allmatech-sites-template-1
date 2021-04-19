@@ -13,7 +13,7 @@ function Custom500() {
     <>
         <Head>
             <title>Allmatech Imobiliária - 500</title>
-            <meta name="description" content="500 - Error interno no servidor." />
+            <meta name="description" content="500 - Error interno no servidor. Lorem hendrerit suscipit, amet." />
         </Head>
         <Header 
             bgHeaderColor={"#f9f9f9"}      

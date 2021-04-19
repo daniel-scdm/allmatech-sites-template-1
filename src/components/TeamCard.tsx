@@ -20,6 +20,7 @@ const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, link
                         <img
                             src={image}
                             height="300"
+                            alt="Funcionário"
                         />
                     </div>
                 )}
@@ -28,6 +29,7 @@ const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, link
                         <img
                             src={MissingImage}
                             height="300"
+                            alt="Vazio"
                         />
                     </div>
                 )}

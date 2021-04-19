@@ -20,8 +20,8 @@ const Footer : FC = () => {
                     <div className="footer-logo-container">
                         <img 
                             src={Logo_W}
-                            alt="Picture of the author"
-                            />
+                            alt="Empresa logo"
+                        />
                     </div>
 
                     <div className="footer-info-container">

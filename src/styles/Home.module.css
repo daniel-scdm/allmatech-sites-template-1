@@ -131,7 +131,8 @@
   min-height: 561px;
 }
 
-.contactContainer > section > h1 {
+.contactContainer > section > h1,
+.contactContainer > section > h2 {
   font-size: 2.4rem;
   color: #fff;
 }
@@ -143,7 +144,8 @@
 }
 
 .imageLogo {
-  display: none;
+  width: 150px;
+  margin-top: 5px;
 }
 
 .contactContainer > section > p:nth-child(3) {
@@ -286,7 +288,8 @@
 
 @media (min-width: 1024px) {
   .imageLogo {
-    display: block;
+    width: auto;
+    margin-top: 0;
   }
 }
 

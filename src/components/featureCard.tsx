@@ -27,6 +27,7 @@ const FeatureCard : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRen
                         src={thumb}
                         onError={replaceImage}
                         height="320"
+                        alt="Thumbnail"
                     />
                 )}
 

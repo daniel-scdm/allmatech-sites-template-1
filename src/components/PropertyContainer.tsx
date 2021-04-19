@@ -87,6 +87,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
             <div className={property.image}>
                 <img
                     src={thumbnail}
+                    alt="Thumbnail"
                 />
 
                 <ul className={property.galleryButton}>
@@ -142,9 +143,9 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                 <div className={property.propertyDescription}>
                     <h3>Descrição</h3>
 
-                    <p>
+                    <pre>
                         {Observacao}
-                    </p> 
+                    </pre> 
 
                     {Videos && (
                         <iframe
@@ -175,6 +176,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                         <AzureMap 
                             lt={Latitude}
                             lg={Longitude}
+                            height={"350px"}
                         />
                     </div>
                 )}

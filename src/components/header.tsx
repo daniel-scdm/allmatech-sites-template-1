@@ -46,8 +46,8 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ bgHeaderColor }) => {
                     <Link href="/">
                         <a>
                             <img 
-                                src={"public/images/AllmaImob.png"}
-                                alt="Picture of the author"
+                                src={"https://allmateste.com.br/site-next/public/images/AllmaImob.png"}
+                                alt="Empresa logo"
                                 className={styles.imageLogo}
                             />
                         </a>
@@ -115,19 +115,18 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ bgHeaderColor }) => {
                     </CSSTransition>
                 </div>
 
-                    
-                {isSmallScreen && (  
-                    <Box 
+                {isSmallScreen && (
+                    <Box
                         aria-label='Toggle Menu'
                         className={headerStyles.Burger}
                     >
-                        <MenuButton 
-                            onClick={toggleNav} 
+                        <MenuButton
+                            onClick={toggleNav}
                         />
                     </Box>
                 )}
             </header>
-        </>    
+        </>
     );
 }
 

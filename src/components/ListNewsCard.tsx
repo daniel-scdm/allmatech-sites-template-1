@@ -5,23 +5,18 @@ import { FC } from 'react';
 import { ICardNews } from "interfaces/index";
 import property from "src/styles/Property.module.css";
 
- 
-
 import Link from "next/link";
-
 import { BiSearch } from "react-icons/bi";
-
-
 
 const ListNewsCard : FC<ICardNews> = ({ image, text, title, indexKey }) => {
 
-    return (        
+    return (
         <div className={property.listCard} key={indexKey}>
-            <div className={property.imageCardContainer}>   
-                <img                     
+            <div className={property.imageCardContainer}>
+                <img
                     className={property.missingImageCard}
                     src={image}
-                    
+                    alt="Thumbnail"
                 />
                 <Link href={{
                     pathname: "/new",
@@ -30,7 +25,7 @@ const ListNewsCard : FC<ICardNews> = ({ image, text, title, indexKey }) => {
                     <a>
                         <BiSearch size={40}/>
                     </a>
-                </Link>                     
+                </Link>
             </div>
             <div className={property.cardInfo}>
                 <p>

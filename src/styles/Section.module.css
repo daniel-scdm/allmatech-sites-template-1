@@ -1,5 +1,5 @@
 .sectionContainer {
-    margin-top: 90px;
+    margin-top: 80px;
     transition: background-image 1s linear;
     background-image: url(https://allmateste.com.br/site-next/public/images/house-section.jpg);
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@
 
 .container,
 .containerStaticPage {
-    margin-top: 90px;
+    margin-top: 80px;
     padding: 1.4rem;
     background-color: #eee;    
     min-height: 60vh;
@@ -103,7 +103,7 @@
     width: 100%;
 }
 
-.missingImageCard {    
+.missingImageCard {
     min-height: 280px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -176,7 +176,7 @@
 }
 
 .mapContainer {
-    margin: 2rem 0 0 1rem;
+    margin-top: 2rem;
 }
 
 .infoTitle {
@@ -217,6 +217,7 @@
 }
 
 .filterForm {
+    margin-top: 25px;
     padding: 35px;
 }
 
@@ -540,7 +541,7 @@
     padding: 0 50px;
 }
 
-.BuyOrSellContent > h1:first-child {
+.BuyOrSellContent > h2:first-child {
     font-size: 2.4rem;
     padding: 1.6rem 0;
 }
@@ -665,8 +666,17 @@
 
 
 @media (min-width: 1024px) {
+    .filterForm {
+        margin-top: 0;
+    }
+
+    .container {
+        margin-top: 110px;
+    }
+
     .sectionContainer {
         height: 750px;
+        margin-top: 110px;
     }
 
     .newsCard {
