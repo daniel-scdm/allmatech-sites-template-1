@@ -33,7 +33,7 @@ const ListNewsCard : FC<ICardNews> = ({ image, text, title, indexKey }) => {
                 </p>
                 <div className={property.cardText}>
                     {text}
-                </div>                
+                </div>
             </div>
         </div>
     );

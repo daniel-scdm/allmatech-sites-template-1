@@ -19,7 +19,6 @@ import { IContext, IPropertyXML } from "interfaces";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import Link from "next/link";
-import MissingImage from "public/images/missing-image.png";
 
 import Footer from "src/components/Footer";
 
@@ -160,7 +159,7 @@ function Property() {
                   Guarita={prt?.Guarita}
                   ArCondicionado={prt?.ArCondicionado}
                   Fotos={prt?.Fotos}
-                  thumbnail={(prt?.Fotos && prt.Fotos.Foto && Array.isArray(prt.Fotos.Foto)) ? prt.Fotos?.Foto[0].Link[1].URLArquivo : MissingImage}    
+                  thumbnail={(prt?.Fotos && prt.Fotos.Foto && Array.isArray(prt.Fotos.Foto)) ? prt.Fotos?.Foto[0].Link[1].URLArquivo : undefined}    
                   features={features}
               />
             </main>

@@ -9,6 +9,7 @@ import { IPropertyXML } from "interfaces/index";
 import { GiHomeGarage, GiBathtub, GiPersonInBed, GiSnowflake1, GiPoolDive, GiSecurityGate } from "react-icons/gi";
 import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
 
+import SuspenseImage from "src/components/SuspenseImage";
 import Carousel from "src/components/Carousel";
 import AzureMap from 'src/components/AzureMap';
 
@@ -35,7 +36,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
     Longitude
  }) => {
     const [showGallery, setShowGallery] = useState(false);
-    const [isSending, setIsSending] = useState(false);    
+    const [isSending, setIsSending] = useState(false);
 
     useEffect(() => {
         if(showGallery) {
@@ -85,7 +86,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
             </div>
 
             <div className={property.image}>
-                <img
+                <SuspenseImage
                     src={thumbnail}
                     alt="Thumbnail"
                 />
@@ -112,7 +113,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
             <div className={property.propertyInfoContainer}>
                 <div className={property.cardFeatures}>
                     <div>
-                        <GiPersonInBed size={38} /> <span>{typeof QtdDormitorios === "string" ? QtdDormitorios : 0} </span>                           
+                        <GiPersonInBed size={38} /> <span>{typeof QtdDormitorios === "string" ? QtdDormitorios : 0} </span>
                     </div>
                     <div>
                         <GiBathtub size={32} /> <span>{typeof QtdBanheiros === "string"  ? QtdBanheiros : 0}</span>

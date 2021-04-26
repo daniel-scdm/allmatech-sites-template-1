@@ -21,7 +21,7 @@ function Custom404() {
         <div className={section.bannerCompany}>
             <div className={section.bannerOverlay}>
                 <div className={section.bannerText}>
-                    <h1>Serviços</h1>
+                    <h1>404</h1>
                 </div>
             </div>
         </div>

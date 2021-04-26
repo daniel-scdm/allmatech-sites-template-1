@@ -9,6 +9,7 @@ import Link from "next/link";
 
 import { GiHomeGarage, GiBathtub, GiPersonInBed, GiSnowflake1, GiPoolDive, GiSecurityGate } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
+import SuspenseImage from "src/components/SuspenseImage";
 
 const ListCardMobile : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, PrecoVenda, PrecoLocacao, ArCondicionado, Piscina, Guarita }) => {
 
@@ -21,7 +22,7 @@ const ListCardMobile : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDorm
             <div className={property.imageCardContainer}>   
             {thumbnail && (
                 <>
-                    <img
+                    <SuspenseImage
                         className={property.missingImageCard}
                         src={thumbnail}
                         alt="Thumbnail"
@@ -46,7 +47,7 @@ const ListCardMobile : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDorm
                 </div>
                 <div className={property.cardFeatures}>
                     <div>
-                        <GiPersonInBed size={38} /> <span>{typeof QtdDormitorios === "string" ? QtdDormitorios : 0} </span>                           
+                        <GiPersonInBed size={38} /> <span>{typeof QtdDormitorios === "string" ? QtdDormitorios : 0} </span>
                     </div>
                     <div>
                         <GiBathtub size={32} /> <span>{typeof QtdBanheiros === "string" ? QtdBanheiros : 0}</span>

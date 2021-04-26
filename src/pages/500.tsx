@@ -21,7 +21,7 @@ function Custom500() {
         <div className={section.bannerCompany}>
             <div className={section.bannerOverlay}>
                 <div className={section.bannerText}>
-                    <h1>Serviços</h1>
+                    <h1>500</h1>
                 </div>
             </div>
         </div>

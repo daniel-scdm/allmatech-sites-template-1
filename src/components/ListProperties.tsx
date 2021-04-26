@@ -12,7 +12,6 @@ import Pagination from "src/components/Pagination";
 import { FaThList, FaThLarge } from "react-icons/fa";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import MissingImage from "public/images/missing-image.png";
 
 const PAGE_LIMIT = 15;
 
@@ -80,13 +79,13 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
                     </button>
                 </div>
                 {!isCard && (
-                    <div className={property.listContainer}>                
+                    <div className={property.listContainer}>
                         {paginatedList.map((p : IPropertyXML) => (
                             <ListCard 
                                 key={p.CodigoImovel}
                                 Cidade={""}
                                 CodigoImovel={p.CodigoImovel}
-                                thumbnail={(p.Fotos && p.Fotos.Foto && Array.isArray(p.Fotos.Foto)) ? p.Fotos?.Foto[0].Link[0].URLArquivo : MissingImage}
+                                thumbnail={(p.Fotos && p.Fotos.Foto && Array.isArray(p.Fotos.Foto)) ? p.Fotos?.Foto[0].Link[0].URLArquivo : undefined}
                                 QtdBanheiros={p.QtdBanheiros}
                                 QtdDormitorios={p.QtdDormitorios}
                                 QtdVagas={p.QtdVagas}
@@ -103,13 +102,13 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
                 )}
 
                 {isCard && (
-                    <div className={property.listContainerCards}>                
+                    <div className={property.listContainerCards}>
                         {paginatedList.map((p : IPropertyXML) => (
                             <ListCardMobile 
                                 key={p.CodigoImovel}
                                 Cidade={""}
                                 CodigoImovel={p.CodigoImovel}
-                                thumbnail={(p.Fotos && p.Fotos.Foto && Array.isArray(p.Fotos.Foto)) ? p.Fotos?.Foto[0].Link[0].URLArquivo : "public/images/missing-image.png"}
+                                thumbnail={(p.Fotos && p.Fotos.Foto && Array.isArray(p.Fotos.Foto)) ? p.Fotos?.Foto[0].Link[0].URLArquivo : undefined}
                                 QtdBanheiros={p.QtdBanheiros}
                                 QtdDormitorios={p.QtdDormitorios}
                                 QtdVagas={p.QtdVagas}
@@ -124,7 +123,6 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
                         ))}
                     </div>
                 )}
-                            
                 <Pagination
                     pageLimit={15}
                     pageNeighbours={2}
