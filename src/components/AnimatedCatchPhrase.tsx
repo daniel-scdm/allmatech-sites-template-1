@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Flex, jsx } from 'theme-ui'
+import { Flex, jsx } from 'theme-ui';
 
 import React from 'react';
 import { IAnimatedCatchPhrase } from "interfaces/index";
@@ -30,7 +30,7 @@ const AnimatedCatchPhrase : React.FC<IAnimatedCatchPhrase> = () => {
             </Flex>
 
             <div className={Animation.FirstAnimatedWhiteContainer}>
-                <div className={Animation.FirstAnimatedContainer}>
+                <div className={Animation.FirstAnimatedContainer} sx={{ backgroundColor: "secondary" }}>
                     <div className={Animation.SCPFirst}>
                         <div>P</div>
                         <div>R</div>
@@ -63,10 +63,10 @@ const AnimatedCatchPhrase : React.FC<IAnimatedCatchPhrase> = () => {
             </div>
 
             <div className={Animation.SecoundAnimatedWhiteContainer}>
-                <div className={Animation.SecoundAnimatedContainer}>
+                <div className={Animation.SecoundAnimatedContainer} sx={{ backgroundColor: "primary" }}>
                     <div className={Animation.TCPFirst}>
                         <div>E</div>
-                        <div>M</div>                        
+                        <div>M</div>
                     </div>
 
                     <div className={Animation.TCPSecound}>

@@ -41,12 +41,12 @@ const SliderComponent : React.FC<ISlider> = ({ Label, values, onChangeValue, err
         } else {
             const updatedValues = [values[0], 0];
             onChangeValue(updatedValues); 
-        }               
+        }
     }
 
     return (
         <div className={Form.sliderContainer}>
-            <label>
+            <label sx={{ color: 'title' }}>
                 {Label}
             </label>
             <Range 
@@ -62,20 +62,20 @@ const SliderComponent : React.FC<ISlider> = ({ Label, values, onChangeValue, err
             <div className={Form.SliderInputContainer}>
                 <div>
                     <CurrencyInput placeholder="R$0,00" type="text" value={values[0]} onChange={handleChangeInputMin} />
-                    <span>Min.</span>
+                    <span sx={{ color: 'title' }}>Min.</span>
                 </div>
 
                 <div>
                     <CurrencyInput placeholder="R$0,00" type="text" value={values[1]} onChange={handleChangeInputMax} />
-                    <span>Max.</span>
-                </div>                
+                    <span sx={{ color: 'title' }}>Max.</span>
+                </div>
             </div>
             {errorMessage && (
                 <div className={Form.ErrorMessage}>
                     <span>{errorMessage}</span>
                 </div>
             )}
-            
+
         </div>   
     );
 }

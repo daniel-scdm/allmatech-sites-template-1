@@ -129,10 +129,10 @@ export default function Home() {
         }}
         className={styles.recentPropertiesContainer}
       >
-          <h1>
+          <h1 sx={{ color: "deactivated" }}>
               Super destaques
           </h1>
-          <div sx={{ color: "#00205c" }}>
+          <div sx={{ color: "primary" }}>
               Cheque alguns de nossos imóveis em  super destaque
           </div>
 
@@ -143,10 +143,10 @@ export default function Home() {
 
 
       <section className={styles.recentPropertiesContainer}>
-          <h1>
+          <h1 sx={{ color: "deactivated" }}>
               Últimas aquisições
           </h1>
-          <div sx={{ color: "#00205c" }}>
+          <div sx={{ color: "primary" }}>
               Cheque alguns de nossos imóveis em destaque
           </div>
 
@@ -160,14 +160,14 @@ export default function Home() {
       >
           <section className={styles.advice}>
             <h2>Precisa de conselho?</h2>
-            <p>Nossos agentes podem te ajudar</p>
+            <p sx={{ color: "secondary" }}>Nossos agentes podem te ajudar</p>
             <p>
                 Fusce rutrum auctor odio vel sodales maecenas sit amet dignissim ex.
                 Sed volutpat hendrerit nisl eget at mattis praesent maximus lectus in
                 nulla fringilla, id euismod libero consequat etiam tellus justot.
             </p>
             <Link href="/contact">
-              <a>
+              <a sx={{ color: "secondary", borderColor: "secondary" }}>
                 Contate
               </a>
             </Link>
@@ -189,20 +189,20 @@ export default function Home() {
 
       <div 
         className={Section.diagonalBox} 
-      >        
+      >
       </div>
 
-      <section className={styles.specialOffer}>
-          <Testimonials />          
+      <section className={styles.specialOffer} sx={{ backgroundColor: "primary" }}>
+          <Testimonials />
       </section>
 
       <div 
         className={Section.invertedDiagonalBoxLeftBlue} 
-      >        
+      >
       </div>
-      
+
       <section className={styles.partners}>
-        <h1>
+        <h1 sx={{ color: "deactivated" }}>
               Parceiros
         </h1>
         <div className={styles.partnersContainer}>
@@ -212,7 +212,7 @@ export default function Home() {
 
       <div 
         className={Section.invertedDiagonalBox} 
-      >        
+      >
       </div>
 
       <section
@@ -234,15 +234,15 @@ export default function Home() {
             </button>
 
             <Link href="/list">
-              <a>
+              <a sx={{ backgroundColor: "secondary" }}>
                 Procure em nosso catálogo
               </a>
             </Link>
-          </div>          
+          </div>
         </div>
         <div 
           className={Section.invertedDiagonalBoxLeft} 
-        >        
+        >
         </div>
       </section>
 
@@ -250,13 +250,9 @@ export default function Home() {
         className={Section.Team}
       >
         <div className={Section.TeamContent}>
-          <h1>
+          <h1 sx={{ color: "deactivated" }}>
             Equipe
           </h1>
-          <div sx={{ color: "#00205c" }}>
-            De uma olhada em nossa equipe
-          </div>
-          
           <div className={styles.latestCards}>
             <TeamCard 
               name="Fatima Beatriz"
@@ -281,24 +277,23 @@ export default function Home() {
               linkLI="#"
               linkTW="#"
               linkI="#"
-            />            
-          </div>          
+            />
+          </div>
         </div>
-        
+
       </section>
 
       <section 
         className={styles.recentPropertiesContainer}
       >
-          <h1>
+          <h1 sx={{ color: "deactivated" }}>
               Noticias e Atualizações
           </h1>
-          <div sx={{ color: "#00205c" }}>              
+          <div sx={{ color: "primary" }}>
               Novas informações, novos dados, novas opções
           </div>
 
-
-          <section            
+          <section
             className={styles.spacingContainerNews}
           >
             <div className={styles.latestCards}>
@@ -314,6 +309,6 @@ export default function Home() {
           </section>
       </section>
       <Footer />
-    </>    
+    </>
   )
 }

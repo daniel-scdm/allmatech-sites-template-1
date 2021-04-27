@@ -15,7 +15,7 @@ const NewsContainer : React.FC<ICardNews> = ({ image, text, title }) => {
     return (
         <div className={property.containerProperty}>
 
-            <h1 className={property.propertyTitle}>
+            <h1 className={property.propertyTitle} sx={{ color: "title" }}>
                 {title}
             </h1>
 

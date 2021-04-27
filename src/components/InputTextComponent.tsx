@@ -14,7 +14,7 @@ const DropdownComponent : React.FC<IInputText> = ({ Label, nameField, placeholde
 
     return (
         <div className={Form.DropDownContainer}>
-            <label>
+            <label sx={{ color: "title" }}>
                 {Label}
             </label>
             <input type="text" name={nameField} placeholder={placeholder} value={value} onChange={handleChange} maxLength={12} />

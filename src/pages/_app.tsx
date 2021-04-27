@@ -7,7 +7,8 @@ import 'mapbox-gl/src/css/mapbox-gl.css';
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-
+import theme from "theme";
+import { ThemeProvider } from "theme-ui";
 import * as gtag from "lib/gtag";
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -29,9 +30,11 @@ function MyApp({ Component, pageProps } : AppProps) {
   }, [router.events]);
 
   return (
-    <AppWrapper>
-        <Component {...pageProps} />
-    </AppWrapper>
+    <ThemeProvider theme={theme}>
+      <AppWrapper>
+          <Component {...pageProps} />
+      </AppWrapper>
+    </ThemeProvider>
   );
 }
 

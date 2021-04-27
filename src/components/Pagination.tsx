@@ -135,7 +135,7 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
                 {pages.map((page, index) => {
 
                       if(page === LEFT_PAGE) return (
-                        <li key={index} className={property.pageItem}>
+                        <li key={index} sx={{ backgroundColor: "secondary" }}>
                             <a href="#" onClick={handleMoveLeft}>
                               <MdKeyboardArrowLeft />
                             </a>
@@ -143,7 +143,7 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
                       );
 
                       if(page === RIGHT_PAGE) return (
-                        <li key={index} className={property.pageItem}>
+                        <li key={index} sx={{ backgroundColor: "secondary" }}>
                             <a href="#" onClick={handleMoveRight}>
                               <MdKeyboardArrowRight />
                             </a>
@@ -151,7 +151,7 @@ const ListProperties : FC<IPagination> = ({ total, pageLimit, onPageChanged, pag
                       );
 
                       return (
-                        <li key={index} className={currentPage === page ? 'page-item-actived' : ''}>
+                        <li key={index} className={currentPage === page ? 'page-item-actived' : ''} sx={{ backgroundColor: "secondary" }}>
                             <a href="#" onClick={(e) => handleClick(e, page)}>{page}</a>
                         </li>
                       );

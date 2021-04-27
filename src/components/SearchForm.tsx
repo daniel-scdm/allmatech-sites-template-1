@@ -67,7 +67,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
             <ul>
                 <li 
                     sx={{
-                        backgroundColor: selectdTab ?  "#00205c" : "#444"
+                        backgroundColor: selectdTab ?  "primary" : "deactivated"
                     }}
                     onClick={() => setSelectdTab(true)}
                 >
@@ -75,7 +75,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                 </li>
                 <li
                     sx={{
-                        backgroundColor: !selectdTab ?  "#00205c" : "#444"
+                        backgroundColor: !selectdTab ?  "primary" : "deactivated"
                     }}
                     onClick={() => setSelectdTab(false)}
                 >
@@ -167,17 +167,18 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                                 "9+",
                                 "10+"
                             ]}
-                            selectedValue={formBuy.formValues["garagem"] + "+"}                                
+                            selectedValue={formBuy.formValues["garagem"] + "+"}
                             onChangeValue={formBuy.handleChangeForm}
                             KeyName="garagem"
                             defaultValue={"0+"}
                         />  
 
-                        <input 
+                        <input
+                            sx={{ backgroundColor: "primary" }} 
                             type="submit" 
                             value="Buscar" 
                             className={Form.SubmitButton}
-                        />                   
+                        />
                     </form>
                 )}
 
@@ -198,14 +199,14 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                             onChangeValue={formRent.handleChangeForm}
                             KeyName="bairro"
                         /> 
-                        
+
                         <SliderComponent 
                             Label="Valor (R$)"   
                             values={formRent.formValues["valores"]}  
                             onChangeValue={formRent.handleSliderChange} 
-                            errorMessage={formRent.errMessage}                      
+                            errorMessage={formRent.errMessage}
                         />
-                        
+
                         <Flex>
                             <DropDownComponent 
                                 Label="Qtd. Quartos"
@@ -221,7 +222,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                                     "9+",
                                     "10+"
                                 ]}
-                                selectedValue={formRent.formValues["quartos"] + "+"}                                
+                                selectedValue={formRent.formValues["quartos"] + "+"}
                                 extraStyles={{
                                     paddingRight: 25  
                                 }}
@@ -244,7 +245,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                                     "9+",
                                     "10+"
                                 ]}
-                                selectedValue={formRent.formValues["banheiros"] + "+"}                                
+                                selectedValue={formRent.formValues["banheiros"] + "+"}
                                 onChangeValue={formRent.handleChangeForm}
                                 defaultValue={"0+"}
                                 KeyName="banheiros"
@@ -264,20 +265,20 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                                 "9+",
                                 "10+"
                             ]}
-                            selectedValue={formRent.formValues["garagem"] + "+"}                                
+                            selectedValue={formRent.formValues["garagem"] + "+"}
                             onChangeValue={formRent.handleChangeForm}
                             KeyName="garagem"
                             defaultValue={"0+"}
                         /> 
 
                         <input 
+                            sx={{ backgroundColor: "primary" }}
                             type="submit" 
                             value="Buscar" 
                             className={Form.SubmitButton}
-                        />                    
+                        />
                     </form>
                 )}
-                
             </div>
         </div>
     );

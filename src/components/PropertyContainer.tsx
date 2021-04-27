@@ -76,13 +76,13 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                 />
             )}
 
-            <h1 className={property.propertyTitle}>
+            <h1 className={property.propertyTitle} sx={{ color: "title" }}>
                 {TituloImovel}
             </h1> 
             <div className={property.cardPrice}>
-                {(PrecoVenda && !Array.isArray(PrecoVenda)) && <span>Venda: R$ {numberWithCommas(PrecoVenda)}</span>}
+                {(PrecoVenda && !Array.isArray(PrecoVenda)) && <span sx={{ color: "spotlight" }}>Venda: R$ {numberWithCommas(PrecoVenda)}</span>}
 
-                {(PrecoLocacao && !Array.isArray(PrecoLocacao)) && <span>Aluguel: R$ {numberWithCommas(PrecoLocacao)}</span>}
+                {(PrecoLocacao && !Array.isArray(PrecoLocacao)) && <span sx={{ color: "spotlight" }}>Aluguel: R$ {numberWithCommas(PrecoLocacao)}</span>}
             </div>
 
             <div className={property.image}>
@@ -142,7 +142,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                 </div>
 
                 <div className={property.propertyDescription}>
-                    <h3>Descrição</h3>
+                    <h3 sx={{ color: "title" }}>Descrição</h3>
 
                     <pre>
                         {Observacao}
@@ -159,7 +159,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
 
                 {features && features.length > 0 && (
                     <div className={property.propertyDescription}>
-                        <h3>Mais detalhes</h3>
+                        <h3 sx={{ color: "title" }}>Mais detalhes</h3>
                         <ul className={property.featureList}>
                             {features.map((f, i) => {
                                 if(i % 2 === 1) {
@@ -184,7 +184,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
             </div>
 
             <div className={property.contactContainer}>
-                <h3>Contato</h3>
+                <h3 sx={{ color: "title" }}>Contato</h3>
 
                 <form onSubmit={handleContact} className={property.comment}>
                     <textarea name="comment" placeholder="Comentário" rows={10}>
@@ -196,7 +196,7 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                         <input type="text" name="website" id="" placeholder="Website" />
                     </div>
 
-                    <button type="submit" disabled={isSending}>
+                    <button type="submit" disabled={isSending} sx={{ backgroundColor: "secondary" }}>
                         {isSending ? "Enviando..." : "Enviar mensagem"}
                     </button>
                 </form>

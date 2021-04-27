@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import React, { useEffect, useState, memo } from "react";
 import FeatureCard from "src/components/featureCard";
 import styles from 'src/styles/Home.module.css';
@@ -68,7 +70,7 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
 
     if(List && pList.length === 0) {
         return (
-            <section className={styles.spacingContainer}>
+            <section className={styles.spacingContainerEmpty} sx={{ color: "title" }}>
                 <p>Não há anuncios em super destaques.</p>
             </section>
         );
@@ -94,12 +96,12 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
             </div>
             <div className={styles.paginationButton}>
                 {currentPage > 1 && (
-                    <button onClick={back}>
+                    <button onClick={back} sx={{ backgroundColor: "primary" }}>
                         {`<<`} 
                     </button>
                 )}
                 {currentPage < totalPages && (
-                    <button onClick={foward}>
+                    <button onClick={foward} sx={{ backgroundColor: "primary" }}>
                         {`>>`}
                     </button>
                 )}

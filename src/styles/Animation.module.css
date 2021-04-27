@@ -127,13 +127,11 @@
 }
 
 .FirstAnimatedContainer {
-    background-color: brown;
     padding: .5rem 0 .5rem .3rem;
     animation-delay: 1s;
 }
 
 .SecoundAnimatedContainer {
-    background-color: darkblue;
     padding: .5rem 0 .5rem .3rem;
     animation-delay: 1.2s;
 }
@@ -271,6 +269,7 @@
     transform: translate(-50%, -50%);
     height: 40px;
     display: flex;
+    background-color: #fff;
 }
 
 .obj {

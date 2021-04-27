@@ -64,7 +64,7 @@ const FeatureCard : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRen
                         </div>
                     )}
                 </div>
-                <div className={Section.cardPrice}>
+                <div className={Section.cardPrice} sx={{ color: "spotlight" }}>
                     {(priceRent && typeof priceRent === "string") && `R$ ${numberWithCommas(priceRent)}`}
 
                     {(priceSell && typeof priceSell === "string") && `R$ ${numberWithCommas(priceSell)}`}

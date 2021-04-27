@@ -57,28 +57,28 @@ const HeaderComponent : React.FC<IHeaderComponent> = ({ bgHeaderColor }) => {
 
                 <div>
                     <div className={headerStyles.icons}>
-                        <a href="">
+                        <a href="" sx={{ color: "title" }}>
                             <FaFacebookF 
                                 size={16}
                                 href={''}
                             />
                         </a>
 
-                        <a href="">
+                        <a href="" sx={{ color: "title" }}>
                             <FaLinkedinIn 
                                 size={18}
                                 href={''}
                             />
                         </a>
 
-                        <a href="">
+                        <a href="" sx={{ color: "title" }}>
                             <FaInstagram 
                                 size={18}
                                 href={''}
                             />
                         </a>
 
-                        <a href="">
+                        <a href="" sx={{ color: "title" }}>
                             <FaTwitter 
                                 size={16}
                                 href={''}

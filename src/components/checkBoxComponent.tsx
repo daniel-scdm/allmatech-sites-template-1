@@ -17,7 +17,7 @@ const CheckBoxComponent : React.FC<IInputCheck> = ({ Label, nameField, value, on
                 onChange={handleChange}
                 checked={value}
             />
-            <label htmlFor={Label}>{nameField}</label>
+            <label htmlFor={Label} sx={{ color: "title" }}>{nameField}</label>
         </Flex>   
     );
 }

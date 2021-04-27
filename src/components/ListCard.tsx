@@ -73,9 +73,9 @@ const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorio
 
                 </div>
                 <div className={property.cardPrice}>
-                    {(PrecoVenda && typeof PrecoVenda === "string") && <span>Venda: R$ {numberWithCommas(PrecoVenda)}</span>}
+                    {(PrecoVenda && typeof PrecoVenda === "string") && <span sx={{ color: "spotlight" }}>Venda: R$ {numberWithCommas(PrecoVenda)}</span>}
 
-                    {(PrecoLocacao && typeof PrecoLocacao === "string") && <span>Aluguel: R$ {numberWithCommas(PrecoLocacao)}</span>}
+                    {(PrecoLocacao && typeof PrecoLocacao === "string") && <span sx={{ color: "spotlight" }}>Aluguel: R$ {numberWithCommas(PrecoLocacao)}</span>}
                 </div>
             </div>
         </div>

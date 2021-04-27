@@ -578,10 +578,6 @@
     background-color: #1ea69a;
 }
 
-.BuyOrSellActions > a {
-    background-color: #f15455;
-}
-
 .Team {
     background-color: #eee;
 }
@@ -611,7 +607,6 @@
 
 .teamCellphone {
     text-align: center;
-    color: #f15455;
     padding-bottom: 1rem;
 }
 

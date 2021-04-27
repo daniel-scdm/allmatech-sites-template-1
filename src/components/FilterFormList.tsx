@@ -223,6 +223,7 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                 <input 
                     type="submit" 
                     value="Buscar" 
+                    sx={{ backgroundColor: "primary" }}
                     className={Form.SubmitButton}
                 />
             </form>

@@ -19,7 +19,7 @@ const DropdownComponent : React.FC<IDropDown> = ({ Label, ListOptions, extraStyl
         <div className={Form.DropDownContainer}
             sx={extraStyles}
         >
-            <label>
+            <label sx={{ color: 'title' }}>
                 {Label}
             </label>
             <select

@@ -78,7 +78,7 @@ const Footer : FC = () => {
                                 <h3>Insceva-se em nossa Newsletter</h3>
                                 <form>
                                     <input type="text" placeholder="Email" />
-                                    <input type="submit" />
+                                    <input type="submit" sx={{ backgroundColor: "secondary" }} />
                                 </form>
                             </div>
 

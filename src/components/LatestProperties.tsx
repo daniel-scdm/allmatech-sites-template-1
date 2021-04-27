@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import { useEffect, useState, memo } from "react";
 import styles from 'src/styles/Home.module.css';
 import MissingImage from "public/images/missing-image.png";
@@ -89,12 +91,12 @@ const LatestBuyProperties : React.FC<ListPropterties> = ({ List }) => {
             </div>
             <div className={styles.paginationButton}>
                 {currentPage > 1 && (
-                    <button onClick={back}>
+                    <button onClick={back} sx={{ backgroundColor: "primary" }}>
                         {`<<`}
                     </button>
                 )}
                 {currentPage < totalPages && (
-                    <button onClick={foward}>
+                    <button onClick={foward} sx={{ backgroundColor: "primary" }}>
                         {`>>`}
                     </button>
                 )}

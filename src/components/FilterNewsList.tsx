@@ -28,6 +28,7 @@ const FilterNewsList : React.FC<IFilterNewsList> = ({ callbackList }) => {
                 />
 
                 <input 
+                    sx={{ backgroundColor: "primary" }}
                     type="submit" 
                     value="Buscar" 
                     className={Form.SubmitButton}

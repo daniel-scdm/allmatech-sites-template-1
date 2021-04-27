@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx } from 'theme-ui';
 
 import { FC } from 'react';
 import { ITeamCard } from "interfaces";
@@ -34,10 +34,10 @@ const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, link
                     </div>
                 )}
             <div className={Section.cardInfo}>
-                <h2>
+                <h2 sx={{ color: "title" }}>
                     {name}
                 </h2>
-                <div className={Section.teamCellphone}>
+                <div className={Section.teamCellphone} sx={{ color: "secondary" }}>
                     {cellphone}
                 </div>
                 <div className={Section.teamLinks}>
@@ -46,7 +46,7 @@ const TeamCard : FC<ITeamCard> = ({ image, name, cellphone, linkFB, linkLI, link
                             size={16}
                             color={"#222"}
                             href={linkFB}
-                        />                        
+                        />
                     </div>
                     <div>
                         <FaLinkedinIn 
