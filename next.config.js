@@ -3,7 +3,7 @@ const withPlugins = require("next-compose-plugins");
 
 module.exports = withPlugins([
     [optimizedImages, {
-        
+
     }],
     {
         images: {
@@ -15,7 +15,3 @@ module.exports = withPlugins([
         basePath: "/site-next"
     }   
 ]);
-
-/*
-       
-*/

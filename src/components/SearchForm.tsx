@@ -82,7 +82,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                     Aluguel
                 </li>
             </ul>
-            <div className={Form.baseTab}></div>
+            <div className={Form.baseTab} sx={{ backgroundColor: "primary" }}></div>
             <div className={Form.container}>
                 {selectdTab && (
                     <form onSubmit={formBuy.handleForm}>

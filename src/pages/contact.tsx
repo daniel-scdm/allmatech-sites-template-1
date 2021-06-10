@@ -54,9 +54,7 @@ function Contact() {
                 <title>Allmatech Imobiliária - Contato</title>
                 <meta name="description" content="Venha tomar um café conosco. Lorem hendrerit suscipit, amet." />
             </Head>
-            <Header
-                bgHeaderColor={"#f9f9f9"}
-            />
+            <Header />
             <div className={section.banner}>
                 <div className={section.bannerText}>
                     <h1>Contatos</h1>

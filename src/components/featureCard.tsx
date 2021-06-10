@@ -5,13 +5,12 @@ import { FC, useState } from 'react';
 import { ICard } from "interfaces/index";
 import Section from "src/styles/Section.module.css";
  
-import { FaBed, FaBath } from "react-icons/fa";
-import { GiHomeGarage } from "react-icons/gi";
-import { BiSearch } from "react-icons/bi";
+import { GiHomeGarage, GiSnowflake1, GiBathtub, GiPersonInBed } from "react-icons/gi";
+import { BiSearch, BiArea } from "react-icons/bi";
 
 import Link from "next/link";
 
-const FeatureCard : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRent, priceSell, text, title, code, air }) => {
+const FeatureCard : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRent, priceSell, title, code, air, area, address, typeState }) => {
     const replaceImage = () => setThumb("http://allmateste.com.br/site-next/public/images/missing-image.png");
     const [thumb, setThumb] = useState<string>(image ? image : "http://allmateste.com.br/site-next/public/images/missing-image.png");
 
@@ -20,7 +19,7 @@ const FeatureCard : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRen
     }
 
     return (
-        <div className={Section.card}>
+        <div className={Section.card} sx={{ backgroundColor: "bgCard" }}>
             <div className={Section.imageCardContainer}>
                 {image && (
                     <img 
@@ -41,26 +40,34 @@ const FeatureCard : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRen
                 </Link>
             </div>
             <div className={Section.cardInfo}>
-                <h3>
+                <h3 sx={{ color: "white" }}>
                     {title}
                 </h3>
-                <div className={Section.cardText}>
-                    {text}
-                </div>
-                <div className={Section.cardFeatures}>
+
+                <h4 sx={{ color: "h4" }}>{address}</h4>
+
+                <span>{typeState}</span>
+
+                <div className={Section.cardFeatures} sx={{ color: "text" }}>
                     <div>
-                        <FaBed /> {(bedrooms && typeof bedrooms === "string") ? bedrooms : 0}                            
+                        <GiPersonInBed size={45} title="Quartos" /> {(bedrooms && typeof bedrooms === "string") ? bedrooms : 0}
                     </div>
                     <div>
-                        <FaBath /> {(bathrooms && typeof bathrooms === "string") ? bathrooms : 0}
+                        <GiBathtub size={40} title="Banheiros" /> {(bathrooms && typeof bathrooms === "string") ? bathrooms : 0}
                     </div>
                     <div className={Section.garages}>
-                        <GiHomeGarage /> {(garages && typeof garages === "string") ? garages : 0}
+                        <GiHomeGarage size={40} title="Vagas" /> {(garages && typeof garages === "string") ? garages : 0}
                     </div>
+
+                    {area && (
+                        <div className={Section.garages}>
+                            <BiArea size={40} title="Área total" /> <span sx={{ color: "text" }}>{typeof area === "string"  ? `${area} m²` : ""}</span>
+                        </div>
+                    )}
 
                     {air && (
                         <div className={Section.garages}>
-                            <GiHomeGarage /> {garages ? garages : 0}
+                            <GiSnowflake1 size={40} title="Ar condicionado" />
                         </div>
                     )}
                 </div>

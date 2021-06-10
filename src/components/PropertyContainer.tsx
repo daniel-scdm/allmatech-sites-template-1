@@ -187,14 +187,14 @@ const PropertyContainer : React.FC<IPropertyXML> = ({
                 <h3 sx={{ color: "title" }}>Contato</h3>
 
                 <form onSubmit={handleContact} className={property.comment}>
-                    <textarea name="comment" placeholder="Comentário" rows={10}>
-                    </textarea>
-
                     <div>
                         <input type="text" name="name" id="" placeholder="Nome (Obrigatório)" />
                         <input type="text" name="email" id="" placeholder="Email (Obrigatório)" />
                         <input type="text" name="website" id="" placeholder="Website" />
                     </div>
+
+                    <textarea name="comment" placeholder="Comentário" rows={10}>
+                    </textarea>
 
                     <button type="submit" disabled={isSending} sx={{ backgroundColor: "secondary" }}>
                         {isSending ? "Enviando..." : "Enviar mensagem"}

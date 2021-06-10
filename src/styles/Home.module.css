@@ -29,6 +29,7 @@
 .spacingContainerEmpty {
   padding: 1rem;
   min-height: 725px;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,13 +176,9 @@
   transition: all .5s;
 }
 
-.contactContainer > section > a:hover {  
-  background: #f15455;
-  color: #fff;  
-}
-
 .specialOffer {
   width: 100%;   
+  text-align: center;
   display: flex;
   justify-content: center;
   color: #fff;

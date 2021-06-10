@@ -84,9 +84,7 @@ function News() {
           <title>Allmatech Imobiliária - Notícias</title>
           <meta name="description" content="As notícias mais recentes sobre nossos imóveis. Lorem hendrerit suscipit, amet." />
       </Head>
-      <Header
-          bgHeaderColor={"#f9f9f9"}
-      />
+      <Header />
       <section className={Section.container}>
           <div className={Section.lineLinks}>
 

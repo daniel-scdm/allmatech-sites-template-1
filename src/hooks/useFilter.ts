@@ -1,4 +1,4 @@
-import { IPropertyXML } from "interfaces";
+import { IPropertyXML, IFilterOptions } from "interfaces";
 
 export const useFilter = () => {
 
@@ -23,124 +23,146 @@ export const useFilter = () => {
     }
 
     const filterTypeVenda = (value : IPropertyXML) => {
-        if(value.PrecoVenda && value.PrecoVenda) {
+        if(typeof value.PrecoVenda === 'string') {
             return true;
         }
     }
 
     const filterTypeLocacao = (value : IPropertyXML) => {
-        if(value.PrecoLocacao && value.PrecoLocacao) {
+        if(typeof value.PrecoLocacao === 'string') {
             return true;
         }
     }
 
-    const makeNewPropertyList = (properties : Array<IPropertyXML>, filterOptions : object) => {
+    const filterValues = (isVenda : string | boolean, propertiesArrayFiltered : Array<IPropertyXML>, value : Array<number | string>) => {
+
+        if(isVenda) {
+            propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
+                if(typeof property.PrecoVenda === 'string'){
+                    const entreValores = value[1] >= parseInt(property.PrecoVenda) && parseInt(property.PrecoVenda) >= value[0];
+                    return entreValores;
+                }
+            });
+
+            return propertiesArrayFiltered;
+        }
+
+        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
+            if(typeof property.PrecoLocacao === 'string'){
+                const entreValores = value[1] >= parseInt(property.PrecoLocacao) && parseInt(property.PrecoLocacao) >= value[0];
+                return entreValores;
+            }
+        });
+
+        return propertiesArrayFiltered;
+    }
+
+    const makeNewPropertyList = (properties : Array<IPropertyXML>, filterOptions : IFilterOptions) => {
             let propertiesArrayFiltered = properties;
             let isVenda = true;
 
-            Object.values(filterOptions).forEach((value) => {
-                const keyValue = Object.keys(value);
-                switch (keyValue[0]) {
-                    case "code":
-                        const rg = new RegExp(value['code'], "g");
-                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                            if(property && property.CodigoImovel) {
-                                const trimmed = property.CodigoImovel.trim();
-                                return rg.test(trimmed);
+            Object.keys(filterOptions).forEach(k => {
+
+                if(k === "tipoImovel") {
+                    const typeFilter = (filterOptions[k] === "true" || filterOptions[k] === true);
+
+                    if(typeFilter) {
+                        isVenda = true;
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeVenda);
+                    } else {
+                        isVenda = false;
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeLocacao);
+                    }
+
+                    return;
+                }
+
+                if(k === "valores") {
+                    propertiesArrayFiltered = filterValues(isVenda, propertiesArrayFiltered, filterOptions[k]);
+                    return;
+                }
+
+                if(k === "area") {
+                    propertiesArrayFiltered = propertiesArrayFiltered.filter(
+                        property => {
+                            if(typeof property.AreaUtil === 'string'){
+                                const entreValores = filterOptions[k][1] >= parseInt(property.AreaUtil, 10) && parseInt(property.AreaUtil, 10) >= filterOptions[k][0];
+                                return entreValores;
                             }
+                    })
 
-                            return false;
+                    return;
+                }
+
+                if(k === "code") {
+                    const upperCaseCode = filterOptions[k].toUpperCase().trim();
+                    const rg = new RegExp(upperCaseCode);
+                    propertiesArrayFiltered = propertiesArrayFiltered.filter(property => rg.test(property?.CodigoImovel));
+
+                    return;
+                }
+
+                if(k === "cidade") {
+                    propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Cidade === filterOptions[k]);
+                    return;
+                }
+
+                if(k === "bairro") {
+                    propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Bairro === filterOptions[k]);
+                    return;
+                }
+
+                if(k === "tipo") {
+                    propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.TipoImovel === filterOptions[k]);
+                    return;
+                }
+
+                if(k === "quartos") {
+                    if(!isZero(filterOptions[k])) {
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
+                            if(property.QtdDormitorios && property.QtdDormitorios){
+                                return parseInt(property.QtdDormitorios, 10) >= parseInt(filterOptions[k], 10);
+                            }
                         });
-                        break;   
-                        
-                    case "tipoImovel":
-                        if(value["tipoImovel"]) {
-                            isVenda = true;
-                            propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeVenda);
-                        } else {
-                            isVenda = false;
-                            propertiesArrayFiltered = propertiesArrayFiltered.filter(filterTypeLocacao);
-                        }    
-                        
-                        break;
-                    case "cidade":
+                    }
 
-                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Cidade === value['cidade']);
-                        break;
+                    return;
+                }
 
-                    case "bairro":
-                    
-                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Bairro === value['bairro']);
-                        break;
-    
-                    case "banheiros":
+                if(k === "banheiros") {
+                    if(!isZero(filterOptions[k])) {
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
+                            if(property.QtdBanheiros && property.QtdBanheiros){
+                                return parseInt(property.QtdBanheiros) >= parseInt(filterOptions[k]);
+                            }
+                        });
+                    }
 
-                        if(!isZero(value['banheiros'])) {
-                            propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                                if(property.QtdBanheiros && property.QtdBanheiros){
-                                    return parseInt(property.QtdBanheiros) >= parseInt(value['banheiros']);
-                                }
-                            });
-                        }
-    
-                        break;
-                    
-                    case "garagem":
+                    return;
+                }
 
-                        if(!isZero(value['garagem'])) {
-                            propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                                if(property.QtdVagas && property.QtdVagas){
-                                    return parseInt(property.QtdVagas) >= parseInt(value['garagem']);
-                                }
-                            });
-                        }                       
+                if(k === "garagem") {
+                    if(!isZero(filterOptions[k])) {
+                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
+                            if(property.QtdVagas && property.QtdVagas){
+                                return parseInt(property.QtdVagas) >= parseInt(filterOptions[k]);
+                            }
+                        });
+                    }
 
-                        break;
+                    return;
+                }
 
-                    case "quartos":
+                if(k === "arCondicionado") {
+                    propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.ArCondicionado === '1');
+                }
 
-                        if(!isZero(value['quartos'])) {
-                            propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                                if(property.QtdSuites && property.QtdSuites){
-                                    return parseInt(property.QtdSuites) >= parseInt(value['quartos']);
-                                }
-                            });
-                        }   
+                if(k === "piscina") {
+                    propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Piscina === '1');
+                }
 
-                        break; 
-                    case "valores":
-
-                        if(isVenda) {
-                            propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                                if(property.PrecoVenda && property.PrecoVenda && !Array.isArray(property.PrecoVenda)){
-                                    const entreValores = parseInt(value['valores'][1]) >= parseInt(property.PrecoVenda) && parseInt(property.PrecoVenda) >= parseInt(value['valores'][0]);
-                                    return entreValores;
-                                }
-                            });
-                        } else {
-                            propertiesArrayFiltered = propertiesArrayFiltered.filter(property => {
-                                if(property.PrecoLocacao && property.PrecoLocacao && !Array.isArray(property.PrecoLocacao)){
-                                    const entreValores = parseInt(value['valores'][1]) >= parseInt(property.PrecoLocacao) && parseInt(property.PrecoLocacao) >= parseInt(value['valores'][0]);
-                                    return entreValores;
-                                }
-                            });
-                        }                       
-
-                        break;
-                    case "arCondicionado":
-
-                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.ArCondicionado === '1');
-                        break;
-                    case "piscina":
-
-                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Piscina === '1');
-                        break;
-                    case "seguranca":
-
-                        propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Guarita === '1');
-                        break;
-                    default:
-                        break;
+                if(k === "seguranca") {
+                    propertiesArrayFiltered = propertiesArrayFiltered.filter(property => property.Guarita === '1');
                 }
 
             });
@@ -148,71 +170,34 @@ export const useFilter = () => {
             return propertiesArrayFiltered;
     }
 
-    const filterProperties = (properties : Array<IPropertyXML>, filterOptions : object) => {
+    const filterProperties = (properties : Array<IPropertyXML>, filterObj : IFilterOptions) => {
 
-        const removeEmpty = (value : any) => value !== undefined;
+        let filterOptions = filterObj;
 
-        const Filter = Object.entries(filterOptions).map((entries : Array<any>) => {
-            switch(entries[0]) {
-                case "code": 
-                    if(entries[1] !== "") {
-                        return { [entries[0]]: entries[1] }
-                    }
-                    break;
-                case "cidade": 
-                    if(entries[1] !== "" && entries[1] !== "Todos") {
-                        return { [entries[0]]: entries[1] }
-                    }
-                    break;
-                case "bairro": 
-                    if(entries[1] !== "" && entries[1] !== "Todos") {
-                        return { [entries[0]]: entries[1] }
-                    }
-                    break;
-                case "banheiros": 
-                    if(entries[1] !== 0) {
-                        return { [entries[0]]: entries[1] }
-                    }
-                    break;
-                case "garagem": 
-                    if(entries[1] !== 0) {
-                        return { [entries[0]]: entries[1] }
-                    }
-                    break;
-                case "quartos": 
-                    if(entries[1] !== 0) {
-                        return { [entries[0]]: entries[1] }
-                    }
-                    break;
-                case "arCondicionado": 
-                    if(entries[1]) {
-                        return { [entries[0]]: entries[1] }
-                    }
-                    break;
-                case "piscina": 
-                    if(entries[1]) {
-                        return { [entries[0]]: entries[1] }
-                    }
-                    break;
-                case "seguranca": 
-                    if(entries[1]) {
-                        return { [entries[0]]: entries[1] }
-                    }
-                    break;
-                case "valores":               
-                    return { [entries[0]]: entries[1] }
-                case "buy": 
-                    return { tipoImovel: (entries[1] === "true" || entries[1] === true) }
-                default: 
-                break;
+        Object.keys(filterOptions).forEach((k : string) => {
+            if(k === "tipoImovel") return;
+
+            if(!filterOptions[k] || filterOptions[k] === "0") {
+                delete filterOptions[k]; // remover chave do obj se o valor for 0 ou "" ou '0'
+
+                return;
             }
-            
-        }).filter(removeEmpty);
 
-        const propertyList = makeNewPropertyList(properties, Filter);
+            if(
+                filterOptions[k] === "Todos os bairros" || 
+                filterOptions[k] === "Todas as cidades" || 
+                filterOptions[k] === "Todos os tipos"
+            ) {
+                delete filterOptions[k];
 
-        return Object.values(propertyList);
+                return;
+            }
 
+        });
+
+        const propertyList = makeNewPropertyList(properties, filterOptions);
+
+        return propertyList;
     }
 
     const filterUnique = (value : any, index : number, self : any) => self.indexOf(value) === index && value !== undefined;
@@ -240,3 +225,8 @@ export const useFilter = () => {
 
     return { filterProperties, getPropertyByCode, extractCity, filterUnique, makeNewPropertyList }
 }
+
+/**
+ * 
+ * 
+ */

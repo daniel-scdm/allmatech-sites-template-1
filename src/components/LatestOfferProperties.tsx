@@ -12,61 +12,38 @@ type ListPropterties = {
 };
 
 const filterTypeVenda = (value : IPropertyXML) => {
-    if(value.TipoOferta && value.TipoOferta === "3") {
+    if(value.PrecoVenda && typeof value.PrecoVenda === "string") {
         return true;
     }
 }
 
+const compare = (a : IPropertyXML, b : IPropertyXML) => {
+    if(a.DataCadastro && b.DataCadastro) {
+        if(a.DataCadastro < b.DataCadastro){
+            return -1;
+        }
+    
+        if ( a.DataCadastro > b.DataCadastro ){
+            return 1;
+        }
+        return 0;
+    }
+
+    return 0;
+
+}
+
 const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
 
-    const [totalPages, setTotalPages] = useState(2);
     const [pList, setPList] = useState<Array<IPropertyXML>>([]);
-    const [paginatedList, setPaginatedList] = useState<Array<IPropertyXML>>([]);
-    const [currentPage, setcurrentPage] = useState(1);
-    const [numberOfCards, setNumberOfCards] = useState(3);
 
     useEffect(() => {
         if(List && List.length > 0) {
-            const newList = List.filter(filterTypeVenda).reverse().slice(0, 6);
+            const sortArray = List.sort(compare);
+            const newList = sortArray.filter(filterTypeVenda).slice(0, 3);
             setPList(newList);
-            setTotalPages(Math.ceil(newList.length / 3));
         }
-    }, []);
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia("(min-width: 860px)");
-        mediaQuery.addEventListener("change", handleMediaQueryChange);
-        handleMediaQueryChange(mediaQuery);
-        return () => {
-            mediaQuery.removeEventListener("change", handleMediaQueryChange);
-        };
-    }, [pList]);
-
-    const handleMediaQueryChange = (mediaQuery : any) => {
-        if (mediaQuery.matches) {
-            setNumberOfCards(3);
-            if(pList.length > 0) setTotalPages(Math.ceil(pList.length / 3));
-        } else {
-            setNumberOfCards(1);
-            if(pList.length > 0) setTotalPages(Math.ceil(pList.length));
-        }
-    };
-
-    useEffect(() => {
-        setcurrentPage(1);
-    }, [numberOfCards]);
-
-    useEffect(() => {
-        setPaginationList(currentPage);
-    }, [currentPage, pList]);
-
-    const setPaginationList = (page: number) => {
-        const slicedList = pList.slice((page - 1) * numberOfCards, numberOfCards * page);
-        if(slicedList.length > 0) setPaginatedList(slicedList);
-    }
-
-    const foward = () => setcurrentPage(currentPage + 1);
-    const back = () => setcurrentPage(currentPage - 1);
+    }, [List]);
 
     if(List && pList.length === 0) {
         return (
@@ -79,12 +56,14 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
     return (
         <section className={styles.spacingContainer}>
             <div className={styles.latestCards}>
-                {paginatedList.map((p) => (
+                {pList.map((p) => (
                     <FeatureCard 
                         key={p.CodigoImovel}
                         title={p.TituloImovel}
-                        text={p.Observacao}
+                        area={p.AreaTotal}
+                        address={p.Endereco}
                         bathrooms={p.QtdBanheiros}
+                        typeState={p.TipoImovel}
                         bedrooms={p.QtdDormitorios}
                         garages={p.QtdVagas}
                         priceSell={p.PrecoVenda}
@@ -93,18 +72,6 @@ const LatestOfferProperties : React.FC<ListPropterties> = ({ List }) => {
                         code={p.CodigoImovel}
                     />
                 ))}
-            </div>
-            <div className={styles.paginationButton}>
-                {currentPage > 1 && (
-                    <button onClick={back} sx={{ backgroundColor: "primary" }}>
-                        {`<<`} 
-                    </button>
-                )}
-                {currentPage < totalPages && (
-                    <button onClick={foward} sx={{ backgroundColor: "primary" }}>
-                        {`>>`}
-                    </button>
-                )}
             </div>
         </section>
     );

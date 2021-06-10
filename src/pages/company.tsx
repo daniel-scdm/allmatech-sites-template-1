@@ -15,9 +15,7 @@ function Company() {
             <title>Allmatech Imobiliária - Quem somos</title>
             <meta name="description" content="Venha nos conhecer. Lorem hendrerit suscipit, amet." />
         </Head>
-        <Header
-            bgHeaderColor={"#f9f9f9"}
-        />
+        <Header />
         <div className={section.bannerCompany}>
             <div className={section.bannerOverlay}>
                 <div className={section.bannerText}>

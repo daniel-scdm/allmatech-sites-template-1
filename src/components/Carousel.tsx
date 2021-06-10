@@ -5,7 +5,7 @@ import React, { Suspense } from 'react';
 import property from 'src/styles/Property.module.css';
 import { CSSTransition } from 'react-transition-group';
 
-import { GrClose } from "react-icons/gr";
+import { AiOutlineClose } from "react-icons/ai";
 
 import { ICarousel } from "interfaces";
 import { Carousel as GalleryCarousel } from 'react-responsive-carousel';
@@ -34,9 +34,10 @@ const Carousel : React.FC<ICarousel> = ({ activeModal, setActiveModal, ListPhoto
             <div className={property.modal}>
                 <div className={property.modalActions}>
                     <a href="#" onClick={closeModal}>
-                        <GrClose 
-                            size={25}
-                            color={"#707070"}
+                        <AiOutlineClose 
+                            size={35}
+                            color={"#eee"}
+
                         />
                     </a>
                 </div>

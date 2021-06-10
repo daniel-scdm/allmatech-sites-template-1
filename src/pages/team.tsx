@@ -29,9 +29,7 @@ function Team() {
                 <title>Allmatech Imobiliária - Equipe</title>
                 <meta name="description" content="Conheça a nossa equipe. Lorem hendrerit suscipit, amet." />
             </Head>
-            <Header
-                bgHeaderColor={"#f9f9f9"}
-            />
+            <Header />
             <div className={section.bannerTeam}>
                 <div className={section.bannerOverlay}>
                     <div className={section.bannerText}>
@@ -46,7 +44,7 @@ function Team() {
                         <TeamCard 
                             name="Fatima Beatriz"
                             cellphone="+1 236 456 7898"
-                            image="public/images/woman.jpg"
+                            image="http://allmateste.com.br/site-next/public/images/woman.jpg"
                             linkFB="#"
                             linkLI="#"
                             linkTW="#"
@@ -77,39 +75,6 @@ function Team() {
                             linkI="#"
                         />
 
-                        <TeamCard 
-                            name="Fatima Beatriz"
-                            cellphone="+1 236 456 7898"
-                            image="public/images/woman.jpg"
-                            linkFB="#"
-                            linkLI="#"
-                            linkTW="#"
-                            linkI="#"
-                        />
-                        <TeamCard 
-                            name="Frazer Mccann"
-                            cellphone="+1 236 456 7898"
-                            linkFB="#"
-                            linkLI="#"
-                            linkTW="#"
-                            linkI="#"
-                        />
-                        <TeamCard 
-                            name="Bret Walker"
-                            cellphone="+1 236 456 7898"
-                            linkFB="#"
-                            linkLI="#"
-                            linkTW="#"
-                            linkI="#"
-                        />
-                        <TeamCard 
-                            name="Jordanna Snow"
-                            cellphone="+1 236 456 7898"
-                            linkFB="#"
-                            linkLI="#"
-                            linkTW="#"
-                            linkI="#"
-                        />
                         <TeamCard 
                             name="Frazer Mccann"
                             cellphone="+1 236 456 7898"

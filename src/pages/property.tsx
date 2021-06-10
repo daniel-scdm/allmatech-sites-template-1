@@ -121,9 +121,7 @@ function Property() {
           <title>Allmatech Imobiliária - {prt?.TituloImovel}</title>
           <meta name="description" content="Apenas os melhores imóveis para você. Lorem hendrerit suscipit, amet." />
       </Head>
-      <Header
-          bgHeaderColor={"#f9f9f9"}
-      />
+      <Header />
       <section className={Section.container}> 
           <div className={Section.lineLinksItem}>
 

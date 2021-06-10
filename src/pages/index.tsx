@@ -107,9 +107,7 @@ export default function Home() {
         <meta name="description" content="O melhor portal de imóveis. Lorem hendrerit suscipit, amet." />
       </Head>
 
-      <Header
-          bgHeaderColor={"#f9f9f9"}
-      />
+      <Header />
       <SectionFull>
         <div className={Section.sectionDiv}>
           <SearchForm 
@@ -132,9 +130,6 @@ export default function Home() {
           <h1 sx={{ color: "deactivated" }}>
               Super destaques
           </h1>
-          <div sx={{ color: "primary" }}>
-              Cheque alguns de nossos imóveis em  super destaque
-          </div>
 
           <LatestOfferProperties 
               List={app.properties}
@@ -146,9 +141,6 @@ export default function Home() {
           <h1 sx={{ color: "deactivated" }}>
               Últimas aquisições
           </h1>
-          <div sx={{ color: "primary" }}>
-              Cheque alguns de nossos imóveis em destaque
-          </div>
 
           <LatestProperties 
             List={app.properties}
@@ -167,7 +159,7 @@ export default function Home() {
                 nulla fringilla, id euismod libero consequat etiam tellus justot.
             </p>
             <Link href="/contact">
-              <a sx={{ color: "secondary", borderColor: "secondary" }}>
+              <a sx={{ variant: "buttons.lineBtn" }}>
                 Contate
               </a>
             </Link>
@@ -193,6 +185,9 @@ export default function Home() {
       </div>
 
       <section className={styles.specialOffer} sx={{ backgroundColor: "primary" }}>
+          <h1>
+            Depoimentos
+          </h1>
           <Testimonials />
       </section>
 
@@ -257,6 +252,7 @@ export default function Home() {
             <TeamCard 
               name="Fatima Beatriz"
               cellphone="+1 236 456 7898"
+              image="http://allmateste.com.br/site-next/public/images/woman.jpg"
               linkFB="#"
               linkLI="#"
               linkTW="#"
@@ -289,9 +285,6 @@ export default function Home() {
           <h1 sx={{ color: "deactivated" }}>
               Noticias e Atualizações
           </h1>
-          <div sx={{ color: "primary" }}>
-              Novas informações, novos dados, novas opções
-          </div>
 
           <section
             className={styles.spacingContainerNews}

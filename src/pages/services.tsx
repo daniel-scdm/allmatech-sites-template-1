@@ -15,9 +15,7 @@ function Services() {
             <title>Allmatech Imobiliária - Serviços</title>
             <meta name="description" content="Vejas todos os nossos serviços. Lorem hendrerit suscipit, amet." />
         </Head>
-        <Header 
-            bgHeaderColor={"#f9f9f9"}      
-        />
+        <Header />
         <div className={section.bannerCompany}>
             <div className={section.bannerOverlay}>
                 <div className={section.bannerText}>

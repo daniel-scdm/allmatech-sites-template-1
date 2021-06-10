@@ -20,6 +20,10 @@ export type IFullSection = {
   children: ReactChild
 }
 
+export type IFilterOptions = {
+  [key : string] : any
+}
+
 export type IContext = {
   properties: Array<IPropertyXML>,
   setProperties: (carga : Array<IPropertyXML>) => void,
@@ -123,7 +127,9 @@ export type ICard = {
   code? : string,
   image? : string,
   title? : string,
-  text? : string,
+  address? : string,
+  typeState? : string,
+  area? : string | number,
   bedrooms? : string | number,
   bathrooms? : string | number,
   garages? : string | number,
@@ -164,7 +170,7 @@ export type IPropertyXML = {
   CategoriaImovel?: string,
   Cerca?: string,
   Closet?: string,
-  CodigoImovel?: string,
+  CodigoImovel : string,
   Complemento?: string,
   Copa?: string,
   DataCadastro?: string | number,
