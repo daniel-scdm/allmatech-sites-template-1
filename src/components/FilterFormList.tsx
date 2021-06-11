@@ -36,7 +36,7 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
         code: "",
         cidade: "",
         bairro: "",
-        tipo: "Todos os tipos",
+        tipo: "Todos",
         valores: [0, 200000000],
         quartos: 0,
         banheiros: 0,

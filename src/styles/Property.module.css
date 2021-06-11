@@ -54,10 +54,8 @@
     margin-top: 3rem;
 }
 
-
-
 .contentReverse {
-    max-width: 1600px;
+    max-width: 1270px;
     margin: 0 auto;
     display: flex;
     flex-direction: column-reverse;
@@ -79,8 +77,8 @@
 
 .listCard,
 .listCardMobile {
-    max-width: 480px;
-    margin-top: 3rem;
+    max-width: 480px;    
+    margin-top: 1.5rem;
     background-color: #fff;
     box-shadow: 0 0 5px 2px rgb(0 0 0 / 5%);
 }
@@ -119,11 +117,9 @@
     padding: 1rem;
 }
 
-.areas {
-    margin: .4rem 0;
-}
-
 .areas span {
+    margin: .4rem 0;
+    font-size: .9rem;
     display: block;
 }
 
@@ -151,8 +147,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 1.4rem;
-    font-size: 1.3rem;
+    padding-top: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
@@ -168,10 +164,14 @@
     flex-wrap: wrap;
 }
 
+.cardFeatures h4 {
+    padding: .4rem 0;
+}
+
 .cardFeatures > div {
     margin-left: .5rem;
     display: flex;
-    padding: .2rem;
+    padding: .2rem 0;
     justify-content: center;
     align-items: flex-end;
 }
@@ -236,7 +236,7 @@
 }
 
 .missingImageCard {    
-    min-height: 320px;
+    min-height: 275px;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
@@ -494,8 +494,8 @@
 }
 
 .skeleton {
-    height: 530px;
-    margin-top: 3rem;
+    height: 530px;    
+    margin-top: 1.5rem;
     border-radius: 0!important;
 }
 
@@ -543,7 +543,8 @@
 }
 
 .containerProperty > .cardPrice {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+    padding: .4rem 0;
 }
 
 .sliderGallery {
@@ -560,15 +561,25 @@
 
 @media (min-width: 1024px) {
     .cardInfo > p {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         font-weight: 600;
         display: block;
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        min-height: 26px;
     }
+
+    .cardInfo p, 
+    .cardInfo h4 {
+        margin: .4rem 0;
+    }
+
+    .listContainerCards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+    } 
 }
 
 @media (min-width: 1200px) {
@@ -586,35 +597,7 @@
 
     .listCardMobile {
         margin-top: 0;
-    }    
-}
-
-@media (min-width: 1024px) and (max-width: 1500px) {
-
-    .listCardMobile {
-        margin-top: 0;
     }
-
-    .listContainerCards {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 15px;
-    }    
-}
-
-@media screen and (min-width: 1500px) {
-
-    .listCardMobile {
-        margin-top: 0;    
-        max-width: 380px;   
-    }
-
-    .listContainerCards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 15px;
-    }
-    
 }
 
 @media (min-width: 960px) and (max-width: 1200px) {
@@ -680,7 +663,7 @@
 
     .skeleton {
         height: 280px;
-        margin-top: 3rem;
+        margin-top: 1.5rem;
     }
 
     .skeletonContainer > span > span:first-child {

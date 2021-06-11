@@ -77,30 +77,30 @@ const ListCard : FC<IPropertyXML> = ({
 
                     <div className={property.cardFeatures} sx={{ color: "text" }}>
                         <div>
-                            <GiPersonInBed size={38} title="Quartos"/> <span>{typeof QtdDormitorios === "string" ? QtdDormitorios : 0} </span>
+                            <GiPersonInBed size={32} title="Quartos"/> <span>{typeof QtdDormitorios === "string" ? QtdDormitorios : 0} </span>
                         </div>
                         <div>
-                            <GiBathtub size={32} title="Banheiros"/> <span>{typeof QtdBanheiros === "string" ? QtdBanheiros : 0}</span>
+                            <GiBathtub size={26} title="Banheiros"/> <span>{typeof QtdBanheiros === "string" ? QtdBanheiros : 0}</span>
                         </div>
                         <div className={property.garages}>
-                            <GiHomeGarage size={32} title="Vagas"/> <span>{typeof QtdVagas === "string" ? QtdVagas : 0}</span>
+                            <GiHomeGarage size={26} title="Vagas"/> <span>{typeof QtdVagas === "string" ? QtdVagas : 0}</span>
                         </div>
 
                         {ArCondicionado && (
                             <div className={property.garages}>
-                                <GiSnowflake1 size={32} title="Ar condicionado"/>
+                                <GiSnowflake1 size={26} title="Ar condicionado"/>
                             </div>
                         )}
 
                         {Piscina && (
                             <div className={property.garages}>
-                                <GiPoolDive size={32} title="Piscina"/>
+                                <GiPoolDive size={26} title="Piscina"/>
                             </div>
                         )}
 
                         {Guarita && (
                             <div className={property.garages}>
-                                <GiSecurityGate size={32} title="Guarita"/>
+                                <GiSecurityGate size={26} title="Guarita"/>
                             </div>
                         )}
 

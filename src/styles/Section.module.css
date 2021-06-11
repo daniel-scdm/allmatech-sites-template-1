@@ -30,11 +30,11 @@
 .lineLinks,
 .lineLinksItem {
     margin: 0 auto;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .lineLinks {
-    max-width: 1600px;
+    max-width: 1270px;
 }
 
 .lineLinksItem {
@@ -283,8 +283,8 @@
 
 .card,
 .teamCard {
-    max-width: 480px;
-    margin-top: 3rem;
+    max-width: 480px;    
+    margin-top: 1.5rem;
     background-color: #fff;
     box-shadow: 0 0 5px 2px rgb(0 0 0 / 5%);
     -webkit-box-shadow: 0 0 5px 2px rgb(0 0 0 / 5%);
@@ -700,6 +700,7 @@
     .sectionDiv {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
     }
 
 }

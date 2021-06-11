@@ -191,6 +191,8 @@ export const useFilter = () => {
 
         });
 
+        console.log(filterObj)
+
         const propertyList = makeNewPropertyList(properties, filterOptions);
 
         return propertyList;

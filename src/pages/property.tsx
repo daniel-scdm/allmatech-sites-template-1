@@ -61,7 +61,7 @@ function Property() {
   const { getPropertyByCode } = useFilter();
   const { _fetchData } = useApi();
 
-  const [prt, setPrt] = useState<IPropertyXML | null>(null);
+  const [prt, setPrt] = useState<IPropertyXML | null>();
   const [features, setFeatures] = useState<Array<string>>([]);
 
   useEffect(() => {
@@ -118,7 +118,7 @@ function Property() {
   return (
     <>
       <Head>
-          <title>Allmatech Imobiliária - {prt?.TituloImovel}</title>
+          <title>Allmatech Imobiliária - {prt?.TituloImovel || "Nao encontrado"}</title>
           <meta name="description" content="Apenas os melhores imóveis para você. Lorem hendrerit suscipit, amet." />
       </Head>
       <Header />
@@ -126,18 +126,18 @@ function Property() {
           <div className={Section.lineLinksItem}>
 
             <Link href="/">
-              <a>
+              <a sx={{ color: "primary" }}>
                 Home 
               </a>
             </Link>
             <span>{">"}</span> 
             <Link href="/list">
-              <a>
+              <a sx={{ color: "primary" }}>
                 Imóveis 
               </a>
             </Link>
             <span>{">"}</span>
-            Imóvel
+            <span sx={{ marginTop: "2px" }}>{prt?.TituloImovel}, {prt?.Cidade}, {prt?.Bairro}</span> 
           </div>
           <div className={property.propertyDetailsContainer}>
             <main>
@@ -152,7 +152,7 @@ function Property() {
                   PrecoVenda={prt ? prt.PrecoVenda : ""}
                   Observacao={prt?.Observacao}
                   TituloImovel={prt?.TipoImovel}
-                  CodigoImovel={prt?.CodigoImovel}
+                  CodigoImovel={prt?.CodigoImovel ? prt.CodigoImovel : "xxxx"}
                   Piscina={prt?.Piscina}
                   Guarita={prt?.Guarita}
                   ArCondicionado={prt?.ArCondicionado}

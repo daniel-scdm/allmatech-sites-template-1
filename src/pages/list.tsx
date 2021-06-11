@@ -115,7 +115,7 @@ function List() {
           <div className={Section.lineLinks}>
 
             <Link href="https://allmateste.com.br/site-next/">
-              <a>
+              <a sx={{ color: "primary" }}>
                 Home 
               </a>
             </Link>

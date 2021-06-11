@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IinitValues } from "interfaces/index";
 
 const formatKeys = ["banheiros", "garagem", "quartos"];
@@ -7,6 +7,13 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
 
     const [formValues, setFormValues] = useState(initValues);
     const [errMessage, setErrMessage] = useState("");
+
+    useEffect(() => {
+        setFormValues({
+            ...formValues,
+            bairro: "Todos"
+        });
+    }, [formValues.cidade]);
 
     const handleChangeForm = (value: string, KeyName : string) => {
 

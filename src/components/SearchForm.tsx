@@ -20,11 +20,11 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
         tipoImovel: selectdTab,
         cidade: "",
         bairro: "",
-        tipo: "Todos os tipos",
+        tipo: "Todos",
         valores: [0, 200000000],
         quartos: 0,
         banheiros: 0,
-        code: ""
+        garagem: 0
     }, () => submitform());
 
     const submitform = () => {
@@ -40,7 +40,7 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet })
         });
     }
 
-    return (        
+    return (
         <div className={Form.form}>
             <ul>
                 <li 

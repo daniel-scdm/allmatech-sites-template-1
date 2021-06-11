@@ -1,5 +1,5 @@
 .form {
-    max-width: 1366px;
+    max-width: 480px;
     width: 100%;
     min-height: 450px;
     position: relative;
@@ -47,6 +47,7 @@
     height: 100%;
     padding: 1.4rem 2.4rem;
     margin: 0;
+    background-color: rgba(220, 220, 220, .8);
 }
 
 .DropDownContainer,
