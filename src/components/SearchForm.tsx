@@ -11,48 +11,26 @@ import Form from "src/styles/Form.module.css";
 import DropDownComponent from "src/components/DropDownComponent";
 import SliderComponent from "src/components/Slider";
 
-const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRent, updateStreetBuy, updateStreetRent }) => {
+const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetList, updateStreet }) => {
 
     const [selectdTab, setSelectdTab] = useState(true);
     const router = useRouter();
 
-    const formBuy = useForm({
-        buy: true,
+    const form = useForm({
+        tipoImovel: selectdTab,
         cidade: "",
         bairro: "",
+        tipo: "Todos os tipos",
         valores: [0, 200000000],
         quartos: 0,
         banheiros: 0,
-        garagem: 0
-    }, () => submitFormBuy());
+        code: ""
+    }, () => submitform());
 
-    const formRent = useForm({
-        buy: false,
-        cidade: "",
-        bairro: "",
-        valores: [0, 200000000],
-        quartos: 0,
-        banheiros: 0,
-        garagem: 0
-    }, () => submitFormRent());
-
-    const submitFormBuy = () => {
+    const submitform = () => {
 
         const filterOptions = {
-            ...formBuy.formValues,
-            tipoImovel: selectdTab 
-        }
-
-        router.push({
-            pathname: "/list",
-            query: filterOptions
-        });
-    }
-
-    const submitFormRent = () => {
-
-        const filterOptions = {
-            ...formRent.formValues,
+            ...form.formValues,
             tipoImovel: selectdTab 
         }
 
@@ -84,77 +62,33 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
             </ul>
             <div className={Form.baseTab} sx={{ backgroundColor: "primary" }}></div>
             <div className={Form.container}>
-                {selectdTab && (
-                    <form onSubmit={formBuy.handleForm}>
+                <form onSubmit={form.handleForm}>
+                    <DropDownComponent 
+                        Label="Cidade"
+                        ListOptions={cityList}
+                        selectedValue={form.formValues["cidade"]}
+                        updateSimbling={updateStreet}
+                        onChangeValue={form.handleChangeForm}
+                        KeyName="cidade"
+                    /> 
+                    <DropDownComponent 
+                        Label="Bairro"
+                        ListOptions={streetList}
+                        selectedValue={form.formValues["bairro"]}
+                        onChangeValue={form.handleChangeForm}
+                        KeyName="bairro"
+                    /> 
+                    
+                    <SliderComponent 
+                        Label="Valor (R$)"   
+                        values={form.formValues["valores"]}  
+                        onChangeValue={form.handleSliderChange} 
+                        errorMessage={form.errMessage}                      
+                    />
+                    
+                    <Flex>
                         <DropDownComponent 
-                            Label="Cidade"
-                            ListOptions={cityList}
-                            selectedValue={formBuy.formValues["cidade"]}
-                            updateSimbling={updateStreetBuy}
-                            onChangeValue={formBuy.handleChangeForm}
-                            KeyName="cidade"
-                        /> 
-                        <DropDownComponent 
-                            Label="Bairro"
-                            ListOptions={streetListBuy}
-                            selectedValue={formBuy.formValues["bairro"]}
-                            onChangeValue={formBuy.handleChangeForm}
-                            KeyName="bairro"
-                        /> 
-                        
-                        <SliderComponent 
-                            Label="Valor (R$)"   
-                            values={formBuy.formValues["valores"]}  
-                            onChangeValue={formBuy.handleSliderChange} 
-                            errorMessage={formBuy.errMessage}                      
-                        />
-                        
-                        <Flex>
-                            <DropDownComponent 
-                                Label="Qtd. Quartos"
-                                ListOptions={[
-                                    "1+",
-                                    "2+",
-                                    "3+",
-                                    "4+",
-                                    "5+",
-                                    "6+",
-                                    "7+",
-                                    "8+",
-                                    "9+",
-                                    "10+"
-                                ]}
-                                selectedValue={formBuy.formValues["quartos"] + "+"}                                
-                                extraStyles={{
-                                    paddingRight: 25  
-                                }}
-                                onChangeValue={formBuy.handleChangeForm}
-                                defaultValue={"0+"}
-                                KeyName="quartos"
-                            />  
-
-                            <DropDownComponent 
-                                Label="Qtd. Banheiros"
-                                ListOptions={[
-                                    "1+",
-                                    "2+",
-                                    "3+",
-                                    "4+",
-                                    "5+",
-                                    "6+",
-                                    "7+",
-                                    "8+",
-                                    "9+",
-                                    "10+"
-                                ]}
-                                selectedValue={formBuy.formValues["banheiros"] + "+"}                                
-                                onChangeValue={formBuy.handleChangeForm}
-                                defaultValue={"0+"}
-                                KeyName="banheiros"
-                            />
-                        </Flex>
-                        <DropDownComponent 
-                            Label="Vagas"
+                            Label="Qtd. Quartos"
                             ListOptions={[
                                 "1+",
                                 "2+",
@@ -167,92 +101,17 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                                 "9+",
                                 "10+"
                             ]}
-                            selectedValue={formBuy.formValues["garagem"] + "+"}
-                            onChangeValue={formBuy.handleChangeForm}
-                            KeyName="garagem"
+                            selectedValue={form.formValues["quartos"] + "+"}                                
+                            extraStyles={{
+                                paddingRight: 25  
+                            }}
+                            onChangeValue={form.handleChangeForm}
                             defaultValue={"0+"}
+                            KeyName="quartos"
                         />  
 
-                        <input
-                            sx={{ backgroundColor: "primary" }} 
-                            type="submit" 
-                            value="Buscar" 
-                            className={Form.SubmitButton}
-                        />
-                    </form>
-                )}
-
-                {!selectdTab && (
-                    <form onSubmit={formRent.handleForm}>
                         <DropDownComponent 
-                            Label="Cidade"
-                            ListOptions={cityList}
-                            selectedValue={formRent.formValues["cidade"]}
-                            updateSimbling={updateStreetRent}
-                            onChangeValue={formRent.handleChangeForm}
-                            KeyName="cidade"
-                        /> 
-                        <DropDownComponent 
-                            Label="Bairro"
-                            ListOptions={streetListRent}
-                            selectedValue={formRent.formValues["bairro"]}
-                            onChangeValue={formRent.handleChangeForm}
-                            KeyName="bairro"
-                        /> 
-
-                        <SliderComponent 
-                            Label="Valor (R$)"   
-                            values={formRent.formValues["valores"]}  
-                            onChangeValue={formRent.handleSliderChange} 
-                            errorMessage={formRent.errMessage}
-                        />
-
-                        <Flex>
-                            <DropDownComponent 
-                                Label="Qtd. Quartos"
-                                ListOptions={[
-                                    "1+",
-                                    "2+",
-                                    "3+",
-                                    "4+",
-                                    "5+",
-                                    "6+",
-                                    "7+",
-                                    "8+",
-                                    "9+",
-                                    "10+"
-                                ]}
-                                selectedValue={formRent.formValues["quartos"] + "+"}
-                                extraStyles={{
-                                    paddingRight: 25  
-                                }}
-                                onChangeValue={formRent.handleChangeForm}
-                                defaultValue={"0+"}
-                                KeyName="quartos"
-                            />  
-
-                            <DropDownComponent 
-                                Label="Qtd. Banheiros"
-                                ListOptions={[
-                                    "1+",
-                                    "2+",
-                                    "3+",
-                                    "4+",
-                                    "5+",
-                                    "6+",
-                                    "7+",
-                                    "8+",
-                                    "9+",
-                                    "10+"
-                                ]}
-                                selectedValue={formRent.formValues["banheiros"] + "+"}
-                                onChangeValue={formRent.handleChangeForm}
-                                defaultValue={"0+"}
-                                KeyName="banheiros"
-                            />
-                        </Flex>
-                        <DropDownComponent 
-                            Label="Vagas"
+                            Label="Qtd. Banheiros"
                             ListOptions={[
                                 "1+",
                                 "2+",
@@ -265,20 +124,39 @@ const SearchForm : FC<ISearchFormBuy> = ({ cityList, streetListBuy, streetListRe
                                 "9+",
                                 "10+"
                             ]}
-                            selectedValue={formRent.formValues["garagem"] + "+"}
-                            onChangeValue={formRent.handleChangeForm}
-                            KeyName="garagem"
+                            selectedValue={form.formValues["banheiros"] + "+"}                                
+                            onChangeValue={form.handleChangeForm}
                             defaultValue={"0+"}
-                        /> 
-
-                        <input 
-                            sx={{ backgroundColor: "primary" }}
-                            type="submit" 
-                            value="Buscar" 
-                            className={Form.SubmitButton}
+                            KeyName="banheiros"
                         />
-                    </form>
-                )}
+                    </Flex>
+                    <DropDownComponent 
+                        Label="Vagas"
+                        ListOptions={[
+                            "1+",
+                            "2+",
+                            "3+",
+                            "4+",
+                            "5+",
+                            "6+",
+                            "7+",
+                            "8+",
+                            "9+",
+                            "10+"
+                        ]}
+                        selectedValue={form.formValues["garagem"] + "+"}
+                        onChangeValue={form.handleChangeForm}
+                        KeyName="garagem"
+                        defaultValue={"0+"}
+                    />  
+
+                    <input
+                        sx={{ backgroundColor: "primary" }} 
+                        type="submit" 
+                        value="Buscar" 
+                        className={Form.SubmitButton}
+                    />
+                </form>
             </div>
         </div>
     );

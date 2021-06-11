@@ -183,11 +183,7 @@ export const useFilter = () => {
                 return;
             }
 
-            if(
-                filterOptions[k] === "Todos os bairros" || 
-                filterOptions[k] === "Todas as cidades" || 
-                filterOptions[k] === "Todos os tipos"
-            ) {
+            if(filterOptions[k] === "Todos") {
                 delete filterOptions[k];
 
                 return;

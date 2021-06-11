@@ -11,72 +11,109 @@ import { GiHomeGarage, GiBathtub, GiPersonInBed, GiSnowflake1, GiPoolDive, GiSec
 import { BiSearch } from "react-icons/bi";
 import SuspenseImage from "src/components/SuspenseImage";
 
-const ListCard : FC<IPropertyXML> = ({ CodigoImovel, QtdBanheiros, QtdDormitorios, QtdVagas, thumbnail, Observacao, TituloImovel, PrecoVenda, PrecoLocacao, ArCondicionado, Piscina, Guarita }) => {
+const ListCard : FC<IPropertyXML> = ({ 
+    CodigoImovel, 
+    QtdBanheiros, 
+    AreaUtil, 
+    QtdDormitorios, 
+    QtdVagas, 
+    thumbnail, 
+    UF, 
+    Cidade, 
+    TipoImovel, 
+    ValorIPTU, 
+    Endereco, 
+    TituloImovel, 
+    PrecoVenda, 
+    AreaTotal, 
+    PrecoLocacao, 
+    ArCondicionado, 
+    Piscina, 
+    Guarita 
+}) => {
 
     const numberWithCommas = (x : string | number) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
     }
 
     return (        
-        <div className={property.listCard}>
+        <div className={property.listCard} sx={{ backgroundColor: "bgCard" }}>
             <div className={property.imageCardContainer}>   
-            <SuspenseImage
-                className={property.missingImageCard}
-                src={thumbnail}
-                alt="Thumbnail"
-            />
-            <Link href={{
-                pathname: "/property",
-                query: { code: CodigoImovel }
-            }}>
-                <a>
-                    <BiSearch  size={40}/>
-                </a>
-            </Link>
+                <SuspenseImage
+                    className={property.missingImageCard}
+                    src={thumbnail}
+                    alt="Thumbnail"
+                />
+                <Link href={{
+                    pathname: "/property",
+                    query: { code: CodigoImovel }
+                }}>
+                    <a>
+                        <BiSearch  size={40}/>
+                    </a>
+                </Link>
 
             </div>
             <div className={property.cardInfo}>
-                <p>
-                    {TituloImovel}
+                <p sx={{ color: "title" }}>
+                    {TituloImovel ? TituloImovel : "Título não definido"}
                 </p>
-                <div className={property.cardText}>
-                    {Observacao}
+
+                <h4 sx={{ color: "primary" }}>
+                    {Endereco}, {Cidade} - {UF}
+                </h4>
+
+                <div className={property.areas}>
+                    <span sx={{ fontSize: "1.2rem" }}>
+                        Área total: {AreaTotal ? `${AreaTotal} m²` : "Não definida"}
+                    </span>
+
+                    <span sx={{ fontSize: "1.12rem" }}>
+                        Área util: {AreaUtil ? `${AreaUtil} m²` : "Não definida"}
+                    </span>
                 </div>
-                <div className={property.cardFeatures}>
-                    <div>
-                        <GiPersonInBed size={38} /> <span>{typeof QtdDormitorios === "string" ? QtdDormitorios : 0} </span>
-                    </div>
-                    <div>
-                        <GiBathtub size={32} /> <span>{typeof QtdBanheiros === "string" ? QtdBanheiros : 0}</span>
-                    </div>
-                    <div className={property.garages}>
-                        <GiHomeGarage size={32} /> <span>{typeof QtdVagas === "string" ? QtdVagas : 0}</span>
-                    </div>
 
-                    {ArCondicionado && (
-                        <div className={property.garages}>
-                            <GiSnowflake1 size={32} />
+                    <span sx={{ paddingTop: ".5rem" }}>{TipoImovel}</span>
+
+                    <div className={property.cardFeatures} sx={{ color: "text" }}>
+                        <div>
+                            <GiPersonInBed size={38} title="Quartos"/> <span>{typeof QtdDormitorios === "string" ? QtdDormitorios : 0} </span>
                         </div>
-                    )}
-
-                    {Piscina && (
-                        <div className={property.garages}>
-                            <GiPoolDive size={32} />
+                        <div>
+                            <GiBathtub size={32} title="Banheiros"/> <span>{typeof QtdBanheiros === "string" ? QtdBanheiros : 0}</span>
                         </div>
-                    )}
-
-                    {Guarita && (
                         <div className={property.garages}>
-                            <GiSecurityGate size={32} />
+                            <GiHomeGarage size={32} title="Vagas"/> <span>{typeof QtdVagas === "string" ? QtdVagas : 0}</span>
                         </div>
-                    )}
 
-                </div>
-                <div className={property.cardPrice}>
-                    {(PrecoVenda && typeof PrecoVenda === "string") && <span sx={{ color: "spotlight" }}>Venda: R$ {numberWithCommas(PrecoVenda)}</span>}
+                        {ArCondicionado && (
+                            <div className={property.garages}>
+                                <GiSnowflake1 size={32} title="Ar condicionado"/>
+                            </div>
+                        )}
 
-                    {(PrecoLocacao && typeof PrecoLocacao === "string") && <span sx={{ color: "spotlight" }}>Aluguel: R$ {numberWithCommas(PrecoLocacao)}</span>}
-                </div>
+                        {Piscina && (
+                            <div className={property.garages}>
+                                <GiPoolDive size={32} title="Piscina"/>
+                            </div>
+                        )}
+
+                        {Guarita && (
+                            <div className={property.garages}>
+                                <GiSecurityGate size={32} title="Guarita"/>
+                            </div>
+                        )}
+
+                    </div>
+                    <div className={property.cardPrice}>
+                        {(PrecoVenda && typeof PrecoVenda === "string") && <span sx={{ color: "spotlight" }}>Venda: R$ {numberWithCommas(PrecoVenda)}</span>}
+
+                        {(ValorIPTU && typeof ValorIPTU === "string") && <span sx={{ color: "spotlight" }}>IPTU: R$ {numberWithCommas(ValorIPTU)}</span>}
+
+                        {(PrecoLocacao && typeof PrecoLocacao === "string") && <span sx={{ color: "spotlight" }}>Aluguel: R$ {numberWithCommas(PrecoLocacao)}</span>}
+                    </div>
+
+                
             </div>
         </div>
     );

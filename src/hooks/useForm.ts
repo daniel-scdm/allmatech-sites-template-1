@@ -10,11 +10,11 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
 
     const handleChangeForm = (value: string, KeyName : string) => {
 
-        if(KeyName === "buy") {
+        if(KeyName === "tipoImovel") {
             if(value === "Venda") {
                 setFormValues({
                     ...formValues,
-                    buy: true
+                    tipoImovel: true
                 });
                 return;
             } 
@@ -22,7 +22,7 @@ export const useForm = (initValues : IinitValues, submitForm : () => void) => {
             if(value === "Aluguél") {
                 setFormValues({
                     ...formValues,
-                    buy: false
+                    tipoImovel: false
                 });
                 return;
             }

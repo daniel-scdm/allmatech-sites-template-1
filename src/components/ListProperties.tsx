@@ -43,7 +43,7 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
 
         if(isLoading) {
             return (
-                <SkeletonTheme color="#ddd" highlightColor="#ccc">
+                <SkeletonTheme color="#3b3b3b" highlightColor="#636363">
                     <div className={property.skeletonContainer}>
                         <Skeleton className={property.skeleton} count={10} />
                     </div>
@@ -54,10 +54,10 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
         if(List && List.length === 0) {
             return (
                 <div className={property.emptyList}>
-                    <div>
+                    <div sx={{ color: "text" }}>
+                        Não foi possível encontrar imóveis
 
                     </div>
-                    Não foi possível encontrar imóveis
                 </div>
             );
         }
@@ -65,28 +65,40 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
         return (
             <>
                 <div className={property.listOptionContainer}>
-                    <button onClick={() => setIsCard(false)}>
-                        <FaThList 
-                            size={20} 
-                            color={'#aaa'} 
-                        />
-                    </button>
-                    <button onClick={() => setIsCard(true)}>
-                        <FaThLarge 
-                            size={20} 
-                            color={'#aaa'} 
-                        />
-                    </button>
+                    <div>
+                        Resultados: {List?.length}
+                    </div>
+                    <div>
+                        <button onClick={() => setIsCard(false)}>
+                            <FaThList 
+                                size={20} 
+                                color={'#aaa'} 
+                            />
+                        </button>
+                        <button onClick={() => setIsCard(true)}>
+                            <FaThLarge 
+                                size={20} 
+                                color={'#aaa'} 
+                            />
+                        </button>
+                    </div>
                 </div>
                 {!isCard && (
                     <div className={property.listContainer}>
-                        {paginatedList.map((p : IPropertyXML) => (
+                        {paginatedList.map((p) => (
                             <ListCard 
                                 key={p.CodigoImovel}
-                                Cidade={""}
+                                Cidade={p.Cidade}
+                                ValorIPTU={p.ValorIPTU}
+                                UF={p.UF}
+                                Complemento={p.Complemento}
+                                AreaTotal={p.AreaTotal}
                                 CodigoImovel={p.CodigoImovel}
                                 thumbnail={(p.Fotos && p.Fotos.Foto && Array.isArray(p.Fotos.Foto)) ? p.Fotos?.Foto[0].Link[0].URLArquivo : undefined}
                                 QtdBanheiros={p.QtdBanheiros}
+                                Endereco={p.Endereco}
+                                AreaUtil={p.AreaUtil}
+                                TipoImovel={p.TipoImovel}
                                 QtdDormitorios={p.QtdDormitorios}
                                 QtdVagas={p.QtdVagas}
                                 PrecoVenda={p.PrecoVenda}
@@ -103,13 +115,20 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
 
                 {isCard && (
                     <div className={property.listContainerCards}>
-                        {paginatedList.map((p : IPropertyXML) => (
+                        {paginatedList.map((p) => (
                             <ListCardMobile 
                                 key={p.CodigoImovel}
-                                Cidade={""}
+                                Cidade={p.Cidade}
+                                ValorIPTU={p.ValorIPTU}
+                                UF={p.UF}
+                                Complemento={p.Complemento}
+                                AreaTotal={p.AreaTotal}
                                 CodigoImovel={p.CodigoImovel}
                                 thumbnail={(p.Fotos && p.Fotos.Foto && Array.isArray(p.Fotos.Foto)) ? p.Fotos?.Foto[0].Link[0].URLArquivo : undefined}
                                 QtdBanheiros={p.QtdBanheiros}
+                                Endereco={p.Endereco}
+                                AreaUtil={p.AreaUtil}
+                                TipoImovel={p.TipoImovel}
                                 QtdDormitorios={p.QtdDormitorios}
                                 QtdVagas={p.QtdVagas}
                                 PrecoVenda={p.PrecoVenda}
@@ -124,7 +143,7 @@ const ListProperties : FC<IListProperties> = ({ List, isLoading }) => {
                     </div>
                 )}
                 <Pagination
-                    pageLimit={15}
+                    pageLimit={2}
                     pageNeighbours={2}
                     total={List ? List.length : 0}
                     onPageChanged={handlePageChange} 

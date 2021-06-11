@@ -40,8 +40,7 @@ export default function Home() {
   const { _fetchData } = useApi();
 
   const [cities, setCities] = useState<Array<any>>([]);
-  const [streetsBuy, setStreetsBuy] = useState<Array<any>>([]);
-  const [streetsRent, setStreetsRent] = useState<Array<any>>([]);
+  const [streets, setStreets] = useState<Array<any>>([]);
 
   const [loadingScreen, setLoadingScreen] = useState<boolean>(true);
 
@@ -74,7 +73,7 @@ export default function Home() {
       }
   }
 
-  const extractStreetsBuy = (selectedCity : string) => {
+  const extractStreets = (selectedCity : string) => {
       const mappedStreets = app.properties.map((imovel : any) => {
         if(imovel.Cidade === selectedCity && imovel.Bairro)
           return imovel.Bairro;
@@ -82,18 +81,7 @@ export default function Home() {
       });
 
       const filteredStreets = mappedStreets.filter(filterUnique);
-      setStreetsBuy(filteredStreets);    
-  }
-
-  const extractStreetsRent = (selectedCity : string) => {
-    const mappedStreets = app.properties.map((imovel : any) => {
-      if(imovel.Cidade === selectedCity && imovel.Bairro)
-        return imovel.Bairro;
-
-    });
-
-    const filteredStreets = mappedStreets.filter(filterUnique);
-    setStreetsRent(filteredStreets);    
+      setStreets(filteredStreets);    
   }
 
   if(loadingScreen) {
@@ -112,10 +100,8 @@ export default function Home() {
         <div className={Section.sectionDiv}>
           <SearchForm 
             cityList={cities}
-            updateStreetBuy={extractStreetsBuy}
-            updateStreetRent={extractStreetsRent}
-            streetListBuy={streetsBuy}
-            streetListRent={streetsRent}
+            updateStreet={extractStreets}
+            streetList={streets}
           />
           <CatchPhrase />
         </div>

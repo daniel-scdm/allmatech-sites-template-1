@@ -39,10 +39,8 @@ export type ICardNews = {
 
 export type ISearchFormBuy = {
     cityList? : Array<string>,
-    streetListBuy? : Array<string>,
-    updateStreetBuy? : (value : string) => void,
-    streetListRent? : Array<string>,
-    updateStreetRent? : (value : string) => void  
+    streetList? : Array<string>,
+    updateStreet? : (value : string) => void,
 }
 
 export type IFilterFormList = {
@@ -94,14 +92,15 @@ export type ISlider = {
 }
 
 export type IinitValues = {
-  buy: boolean,
-  code?: string,
-  cidade: string,
-  bairro: string,
-  valores: Array<number>,
-  quartos: number,
-  banheiros: number,
-  garagem: number,
+  tipoImovel : boolean,
+  code? : string,
+  cidade : string,
+  bairro : string,
+  tipo : string,
+  valores : Array<number>,
+  quartos : number,
+  banheiros : number,
+  garagem? : number,
   piscina? : boolean,
   arCondicionado? : boolean,
   seguranca? : boolean
@@ -205,6 +204,7 @@ export type IPropertyXML = {
   TipoImovel?: string,
   TipoOferta?: string,
   TituloImovel?: string,
+  ValorIPTU? : string,
   UF?: string,
   thumbnail? : string,
   features?: Array<string>,

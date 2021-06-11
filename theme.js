@@ -54,18 +54,7 @@ export default {
       }
     },
     colors: {
-      title: '#474747',
-      primary: '#00205c',
-      secondary: '#f15455',
-      deactivated: '#444',
-      text: '#a1a1a1',
-      card: '#222',
-      spotlight: '#24db75',
-      white: '#fff',
-      background: '#fff'
-    },
-    colors: {
-      title: '#474747',
+      title: '#262626',
       primary: '#01661c',
       secondary: '#00027a',
       deactivated: '#444',
@@ -73,7 +62,7 @@ export default {
       card: '#222',
       spotlight: '#007a5e',
       white: '#fff',
-      background: '#f5f5f5',
+      background: '#e8e8e8',
       backgroundLighter: "#eee",
       backgroundHeader: "#fff",
       bgHeader: "#fff",

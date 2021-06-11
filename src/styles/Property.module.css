@@ -16,7 +16,7 @@
 
 .listOptionContainer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 18px;
 }
@@ -25,7 +25,13 @@
     display: none;
 }
 
-.listOptionContainer > button {
+
+.listOptionContainer > div:nth-child(2) {
+    display: flex;
+    
+}
+
+.listOptionContainer button {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -36,7 +42,7 @@
     margin-right: 2px;
 }
 
-.listOptionContainer > button:focus { outline: none; }
+.listOptionContainer  button:focus { outline: none; }
 
 .content,
 .propertyDetailsContainer,
@@ -83,11 +89,13 @@
     margin-bottom: 1rem;
 }
 
-.imageCardContainer {
+.imageCardContainer,
+.imageCardContainerMobile {
     position: relative;
 }
 
-.imageCardContainer > a {
+.imageCardContainer > a,
+.imageCardContainerMobile > a {
     position: absolute;
     top: 0;
     left: 0;
@@ -101,13 +109,22 @@
     opacity: 0;
 }
 
-.imageCardContainer > a:hover {
+.imageCardContainer > a:hover,
+.imageCardContainerMobile > a:hover {
     background:rgb(0, 0, 0, .4);
     opacity: 1;
 }
 
 .cardInfo {
     padding: 1rem;
+}
+
+.areas {
+    margin: .4rem 0;
+}
+
+.areas span {
+    display: block;
 }
 
 .cardInfo > p {
@@ -118,7 +135,6 @@
 
 .cardText {
     font-size: 1.1rem;
-    text-align: justify;
     min-height: 95px;
     color: rgb(168, 168, 168);
     overflow: hidden;
@@ -129,10 +145,12 @@
     
 }
 
-.cardPrice {
+.cardPrice,
+.cardPriceMobile {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 1.4rem;
     font-size: 1.3rem;
     font-weight: 600;
@@ -212,9 +230,6 @@
     outline: none;
 }
 
-.pagination > li > a:hover {
-    background-color: #01661c;    
-}
 
 .pagination > li > a > svg {
     font-size: 1rem;
@@ -299,12 +314,7 @@
 .featureList > li {
     padding: 0 25px;
     margin-bottom: 0;
-    color: #000;
     line-height: 52px;
-}
-
-.featureEven {
-    background-color: #eee;
 }
 
 .propertyDescription > iframe {
@@ -545,21 +555,19 @@
 }
 
 .listCardMobile .cardFeatures {
-    min-height: 91px;
     align-items: flex-start;
 }
 
 @media (min-width: 1024px) {
     .cardInfo > p {
         font-size: 1.2rem;
-        color: #222;
         font-weight: 600;
         display: block;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        min-height: 55px;
+        min-height: 26px;
     }
 }
 
@@ -589,7 +597,7 @@
 
     .listContainerCards {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         column-gap: 15px;
     }    
 }
@@ -603,7 +611,7 @@
 
     .listContainerCards {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
         column-gap: 15px;
     }
     
@@ -645,16 +653,30 @@
 
 @media screen and (min-width: 960px) {
     .listCard {
-        display: grid;
-        grid-template-columns: 40% auto;
+        display: flex;
+        flex-direction: row;
         max-width: 100%;
     }
 
     .imageCardContainer {
-        max-height: 345px;
-        height: 100%;
+        max-width: 350px;
         width: 100%;
     }
+
+    .cardInfo {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .cardPrice {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+    
 
     .skeleton {
         height: 280px;

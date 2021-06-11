@@ -32,10 +32,11 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
         errMessage, 
         handleForm 
     } = useForm({
-        buy: true,
+        tipoImovel: (router.query && router.query.tipoImovel === "true" ? true : false),
         code: "",
         cidade: "",
         bairro: "",
+        tipo: "Todos os tipos",
         valores: [0, 200000000],
         quartos: 0,
         banheiros: 0,
@@ -86,9 +87,8 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
     }
 
     return (
-        <div className={Section.filterForm}>
+        <div className={Section.filterForm} sx={{ backgroundColor: "bgCard" }}>
             <form className={Section.filterList} onSubmit={handleForm}>
-                
                 <InputTextComponent 
                     nameField="code"
                     Label="Código imovel"
@@ -100,12 +100,12 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                 <DropDownComponent 
                     Label="Tipo"
                     ListOptions={[
-                        "Venda",
                         "Aluguél"
                     ]}
-                    selectedValue={formValues["buy"] ? "Venda" : "Aluguél"}
+                    defaultValue="Venda"
+                    selectedValue={formValues["tipoImovel"] ? "Venda" : "Aluguél"}
                     onChangeValue={handleChangeForm}
-                    KeyName="buy"
+                    KeyName="tipoImovel"
                 />
 
                 <DropDownComponent 
@@ -123,6 +123,21 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                     selectedValue={formValues["bairro"]}
                     onChangeValue={handleChangeForm}
                     KeyName="bairro"
+                />
+
+                <DropDownComponent 
+                    Label="Tipo de imovel"
+                    ListOptions={[
+                        "Apartamento",
+                        "Casa",
+                        "Comercial/Industrial",
+                        "Flat/Aparthotel",
+                        "Rural",
+                        "Terreno"
+                    ]}
+                    selectedValue={formValues["tipo"]}
+                    onChangeValue={handleChangeForm}
+                    KeyName="tipo"
                 />
 
                 <SliderComponent 
@@ -190,14 +205,14 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                         "9+",
                         "10+"
                     ]}
-                    selectedValue={formValues["garagem"] + "+"}                                
+                    selectedValue={formValues["garagem"] + "+"}
                     onChangeValue={handleChangeForm}
                     KeyName="garagem"
                     defaultValue={"0+"}
                 />
 
                 <div className={Section.checkContainer}>
-                    
+
                     <CheckBoxComponent 
                         Label="arCondicionado"
                         nameField="Ar Condicionado"
@@ -210,7 +225,7 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                         nameField="Piscina"
                         value={formValues["piscina"] ? formValues["piscina"] : false}
                         onChange={handleCheck}
-                    />                    
+                    />
 
                     <CheckBoxComponent 
                         Label="seguranca"
@@ -223,7 +238,7 @@ const FilterFormList : React.FC<IFilterFormList> = ({ propertyList, callbackList
                 <input 
                     type="submit" 
                     value="Buscar" 
-                    sx={{ backgroundColor: "primary" }}
+                    sx={{ variant: "buttons.primary" }}
                     className={Form.SubmitButton}
                 />
             </form>

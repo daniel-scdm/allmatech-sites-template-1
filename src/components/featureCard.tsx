@@ -40,7 +40,7 @@ const FeatureCard : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRen
                 </Link>
             </div>
             <div className={Section.cardInfo}>
-                <h3 sx={{ color: "white" }}>
+                <h3 sx={{ color: "title" }}>
                     {title}
                 </h3>
 
@@ -50,24 +50,24 @@ const FeatureCard : FC<ICard> = ({ bathrooms, bedrooms, garages, image, priceRen
 
                 <div className={Section.cardFeatures} sx={{ color: "text" }}>
                     <div>
-                        <GiPersonInBed size={45} title="Quartos" /> {(bedrooms && typeof bedrooms === "string") ? bedrooms : 0}
+                        <GiPersonInBed size={38} title="Quartos" /> {(bedrooms && typeof bedrooms === "string") ? bedrooms : 0}
                     </div>
                     <div>
-                        <GiBathtub size={40} title="Banheiros" /> {(bathrooms && typeof bathrooms === "string") ? bathrooms : 0}
+                        <GiBathtub size={32} title="Banheiros" /> {(bathrooms && typeof bathrooms === "string") ? bathrooms : 0}
                     </div>
                     <div className={Section.garages}>
-                        <GiHomeGarage size={40} title="Vagas" /> {(garages && typeof garages === "string") ? garages : 0}
+                        <GiHomeGarage size={32} title="Vagas" /> {(garages && typeof garages === "string") ? garages : 0}
                     </div>
 
                     {area && (
                         <div className={Section.garages}>
-                            <BiArea size={40} title="Área total" /> <span sx={{ color: "text" }}>{typeof area === "string"  ? `${area} m²` : ""}</span>
+                            <BiArea size={32} title="Área total" /> <span sx={{ color: "text" }}>{typeof area === "string"  ? `${area} m²` : ""}</span>
                         </div>
                     )}
 
                     {air && (
                         <div className={Section.garages}>
-                            <GiSnowflake1 size={40} title="Ar condicionado" />
+                            <GiSnowflake1 size={32} title="Ar condicionado" />
                         </div>
                     )}
                 </div>

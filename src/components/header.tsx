@@ -59,28 +59,24 @@ const HeaderComponent : React.FC = () => {
                         <a href="" sx={{ variant: "anchors.white" }}>
                             <FaFacebookF 
                                 size={16}
-                                href={''}
                             />
                         </a>
 
                         <a href="" sx={{ variant: "anchors.white" }}>
                             <FaLinkedinIn 
                                 size={18}
-                                href={''}
                             />
                         </a>
 
                         <a href="" sx={{ variant: "anchors.white" }}>
                             <FaInstagram 
                                 size={18}
-                                href={''}
                             />
                         </a>
 
                         <a href="" sx={{ variant: "anchors.white" }}>
                             <FaTwitter 
                                 size={16}
-                                href={''}
                             />
                         </a>
                     </div>

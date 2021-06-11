@@ -72,10 +72,6 @@
     transition: all .3s;
 }
 
-.icons a:hover {
-    color: #f15455;
-}
-
 @media (min-width: 1024px) {
     .Header {
         display: flex;
