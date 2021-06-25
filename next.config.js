@@ -12,6 +12,6 @@ module.exports = withPlugins([
         },
         distDir: 'build/site-next',
         assetPrefix: "/site-next",
-        basePath: "/site-next"
+        basePath: "/site-next",
     }   
 ]);
